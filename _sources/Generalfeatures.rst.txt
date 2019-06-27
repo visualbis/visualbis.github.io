@@ -1,0 +1,3627 @@
+General Features of ValQ Custom Visual
+======================================
+
+Instructions for ValQ Custom Visual 
+------------------------------------
+
+The ValQ Custom Visual provides various components that the Designer can
+use in conjunction with Microsoft Power BI. The ValQ custom visual also
+offers many configuration options.
+
+In this guide, we will describe the common end user functionality using
+a demo as an example. It is however important to understand that your
+specific implementation may differ.
+
+Once your designer has implemented and configured the ValQ Custom
+Visual, it will be accessed the same way you access your current Power
+BI Apps.
+
+When you open a ValQ Custom Visual, it will open in a similar manner at
+the screenshot below:
+
+.. figure:: _static/4.1.png
+    :align: center
+    :alt: alternate text
+
+    ValQ Screen
+
+The left panel is the navigation panel and on the canvas you will find
+the value driver tree. By default, the tree is open on collapsed mode at
+a level defined by the designer. This is typically completely collapsed.
+
+Input Data
+----------
+
+The ValQ Custom Visual works with two input data series – the primary
+and the comparison data series. A common way of using this is to compare
+Forecast vs Budget, Budget vs Last Year Actuals etc. The data series is
+at a certain time grain. This would typically be 1 year by 12 months or
+a multiyear view like 5 years plan by year.
+
+The selecting of the time series will often be based on Filters or
+Variables. A typical scenario is where the designer has defined 4
+variables on the underlying data sources:
+
+Primary:
+
+Version: ie. Defaulted to Forecast
+
+Year: ie. Defaulted to Current Year
+
+Comparison:
+
+Version ie. Defaulted to Budget
+
+Year ie. Defaulted to Current Year
+
+This allows the users to compare different versions and years in the
+value driver tree model.
+
+The ValQ Custom Visual can display individual periods but can also apply
+time aggregation such as Full Year, Year-to-Date. You can see the
+currently selected Value Display aggregation on the Navigation Panel. In
+the screenshot above, Full Year is selected. The primary value displayed
+on the Widgets is therefore in this instance the Full Year aggregated
+data.
+
+Tree Drill Down
+---------------
+
+Nodes that has children will have an expand ‘>’ button to the right of
+the Widget as highlighted below:
+
+.. figure:: _static/4.2.png
+    :align: center
+    :alt: alternate text
+
+    Nodes with children
+
+You can drill down the tree by clicking the expand button.
+
+The tree will focus on the branches that are being expanded. You can
+collapse any specific node by clicking the ‘<’ collapse button on the
+right of a widget.
+
+Value Driver Trees are in reality networks. The same driver may impact
+multiple aspects of the Tree. The component therefore contains a concept
+of linked nodes. Such nodes have a link |..image::_static/image4| icon that you can click
+which will jump to where the linked node is defined and highlight the
+node:
+
+.. figure:: _static/4.3.png
+    :align: center
+    :alt: alternate text
+
+    Link
+
+.. figure:: _static/4.4.png
+    :align: center
+    :alt: alternate text
+
+    Linked Nodes
+
+To collapse all nodes, click on the collapse icon on the bottom left of
+the canvas |..image::_static/image7|
+
+Zoom and Pan
+------------
+
+Value Driver Trees can be large. You can zoom and pan the canvas view.
+If you are using an iPad or iPhone, you can zoom by pinching and pan by
+dragging the same way you would navigate a map.
+
+If you are using a mouse with a scroll wheel, you can point your curser
+anywhere in the canvas and scroll the wheel to zoom in and out.
+
+To pan, click and hold the left bottom of the mouse and drag the tree
+around.
+
+You can also use the zoom button to zoom if your device doesn’t support
+other options |..image::_static/image8|
+
+Value Display and Simulation Period
+-----------------------------------
+
+.. figure:: _static/4.5.png
+    :align: center
+    :alt: alternate text
+
+    Value Display
+
+With the ‘Value Display’ functionality you can choose the time
+aggregation you want to display as the primary value. The designer can
+link certain nodes to a user selected scaling. You can select the scale
+you wish to display by selecting this under the Value Display section.
+Note that the options here can be configured so they may differ. It is
+important to note that not all notes are scaled using this as the value
+driver tree typically contains both amounts, prices, rates and physical
+volumes.
+
+In addition to the primary display value, the designer can also choose a
+secondary value to be displayed. I.e. if you are showing Full Year as
+primary, in the below example, it has been configured to visualize the
+Month data as secondary:
+
+.. figure:: _static/4.6.png
+    :align: center
+    :alt: alternate text
+
+    Value Display
+
+The time aggregation and display relates to the Simulation Period
+selected.
+
+When **Month** is selected, it shows the first month of the simulation
+interval selected. By default, the simulation period is the selected
+period and the future. This is an important concept as when we simulate,
+we generally don’t want to apply a change to the past as we can’t change
+it. It is possible to also set the ‘to’ period in a simulation, just
+click |..image::_static/image11| and highlight the month you want as the end period of a
+simulation. This is however a special scenario.
+
+.. figure:: _static/4.7.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Period
+
+**YTD** – the selected period -1 is the year to date data (eg. selected
+simulation period is September to December, the YTD data will be from
+Jan to August).
+
+Note: Simulation of future periods will not impact the YTD data.
+
+.. figure:: _static/4.8.png
+    :align: center
+    :alt: alternate text
+
+    Value Display and Simulation Period
+
+**Full Year** – Shows the full year cumulated data
+
+.. figure:: _static/4.9.png
+    :align: center
+    :alt: alternate text
+
+    Value Display and Simulation Period
+
+**Sim. Period** – to simulate a specific period, for example a 3 month
+rolling forecast from September to November, click the first month
+September then click |..image::_static/image15|\ and click the last month November for
+simulation. You can then choose to only show the values aggregated for
+the selected simulation periods
+
+.. figure:: _static/4.10.png
+    :align: center
+    :alt: alternate text
+
+    Value Display and Simulation Period
+
+Sub Models - Filters
+--------------------
+
+If your Value Driver Tree is large, the designer may have defined
+specific sub views. These would be listed under the Sub Models Section
+of the Navigation Panel. When clicking on one of these views, the tree
+will be filtered and the specific node will be made the top node.
+Calculation dependencies are still respected but this significantly
+improves the navigation as it focuses the tree on a specific area.
+
+In this example, the options defined are:
+
+-  Open all company level: Net Profit
+
+-  Open per department: Mining, Processing or the operational tree for
+   Mill Throughput
+
+.. figure:: _static/4.11.png
+    :align: center
+    :alt: alternate text
+
+    Sub Models – Filters
+
+KPIs
+----
+
+The Navigation Panel can be configured to list a set of KPI’s from the
+value driver tree. You are able to navigate to each of them for a fast
+view on the simulation impact on a given KPI. Click on the KPI to
+navigate to the node.
+
+.. figure:: _static/4.12.png
+    :align: center
+    :alt: alternate text
+
+    KPIs
+
+Data Simulation
+---------------
+
+There are 2 options to simulate:
+
+-  Hover over a desired node to simulate, slide the scaling button to
+   right for positive impact or left for negative impact. The simulation
+   will be showed on the right hand side. A window will open displaying
+   the changes. The pencil icon will display the change in percentage
+   that has been made: |..image::_static/image19|, and a legend with percentage showing
+   if the adjust has made the scenario better or worse |..image::_static/image20|.
+
+.. figure:: _static/4.13.png
+    :align: center
+    :alt: alternate text
+
+    Data Simulation
+
+-  Click on the arrow icon of the node |..image::_static/image22| then click ‘Edit Key
+   Input’ |..image::_static/image23| and manually edit the changes in simulation per
+   period. Click X to close manual input table.
+
+Notes
+
+-  You can update the periods highlighted in YELLOW based on the
+   selected simulation period.
+
+.. figure:: _static/4.14.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Periods
+
+The edit icon will indicate the months that have been edited.
+
+.. figure:: _static/4.15.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Periods
+
+-  You can update the ‘Variation’ column which will overwrite the
+   numbers in the selected simulation periods. Any manual updates in
+   period will not be overwritten by the ‘Variation’ column. In the
+   example below, in blue are the months which were manually edited and
+   in orange are highlighted the variation and in this case the month to
+   which the variation was applied.
+
+.. figure:: _static/4.16.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Periods
+
+Click reset icon to return to the original data |..image::_static/image27|.
+
+Key Inputs 
+-----------
+
+Key Inputs is available on the left side panel to directly simulate key
+cost drivers without going into the node details.
+
+Click the ‘Edit Key Input’ icon |..image::_static/image28| and manually edit the changes
+in simulation per periods.
+
+.. figure:: _static/4.17.png
+    :align: center
+    :alt: alternate text
+
+    Key Inputs
+
+Notes:
+
+-  Can update the periods highlighted in YELLOW based on the selected
+   simulation period. All the changes in the Key Assumptions are
+   highlighted in the left side panel side.
+
+.. figure:: _static/4.18.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Periods
+
+Click X to close manual input table.
+
+-  Click a Key Assumption or Key Performance Indicator and it will
+   highlight the source nodes to further check the details.
+
+.. figure:: _static/4.19.png
+    :align: center
+    :alt: alternate text
+
+    Key Inputs
+
+All simulations are highlighted in the upper right corner.
+
+|..image::_static/image32|
+
+Click |..image::_static/image33| to return to the original selected version without any
+simulation.
+
+Scenarios Functionality 
+------------------------
+
+You can create multiple scenarios in parallel, compare them as well as
+sharing the collection with others.
+
+This is how you do it.
+
+-  Create a Scenario 1 by clicking the “+” button in the Navigation
+   Panel (see Figure below).
+
+.. figure:: _static/sf1.png
+    :align: center
+    :alt: alternate text
+
+    Create Scenario
+
+-  You can view the Context Drop Down Menu as shown in the below Figure.
+
+.. figure:: _static/sf2.png
+    :align: center
+    :alt: alternate text
+    
+    Context Drop Down Menu
+
+-  After clicking the Context Drop Down Menu, you will be able to view
+   the Menu items such as Copy Scenario, Edit and Delete Functions (see
+   Figure below).
+
+.. figure:: _static/sf3.png
+    :align: center
+    :alt: alternate text
+
+    Context Drop Down Menu Items
+
+-  When you click the “Copy Scenario” Menu Item, you will be able to
+   create the Scenario 2 with the same configuration as done for
+   Scenario 1.
+
+.. figure:: _static/sf4.png
+    :align: center
+    :alt: alternate text
+
+    Scenario 1
+
+The above Figure shows the settings for Scenario 1. When you click the
+“Copy Scenario” Menu Item, you will be able to view the Scenario 2 being
+created with the same set of configuration done for Scenario 1 (see
+Figure below).
+
+.. figure:: _static/sf5.png
+    :align: center
+    :alt: alternate text
+
+    Scenario 2
+
+The copied scenario is the replicate of the last scenario (e.g. Scenario
+2 will have the same data from the copied Scenario 1.
+
+-  By clicking the “Edit” Menu Item, you will be able to edit the
+   Scenario (see Figure below).
+
+.. figure:: _static/sf6.png
+    :align: center
+    :alt: alternate text
+
+    Scenario 1 Edit
+
+From the above Figure, you can observe that you will be able to edit the
+labels for the Title and Description for the selected Scenario.
+
+-  By clicking the “Delete” Menu Item, you will be able to delete the
+   entire Scenario.
+
+-  Click ‘Create a new Scenario and make it the active scenario’ icon as shown below
+
+.. figure:: _static/sfi1.png
+    :align: center
+    :alt: alternate text
+
+    Create a new Scenario and make it the active scenario icon   
+
+This will create a new Scenario and will highlight the created Scenario as the active scenario.
+
+-  Click ‘Compare Scenario’ icon to generate a report comparison format with the key Assumptions and KPI’s (see Figure below).
+
+.. figure:: _static/sfi2.png
+    :align: center
+    :alt: alternate text
+
+    Compare Scenario icon
+
+-  Comparison report compares all scenarios that have been created in
+   the active collection. It also shows the Simulated Data Scenario
+   (Baseline: Full Year), Comparison Version (Full Year) and Simulated
+   Data Scenario Year to Date (Baseline: YTD).
+
+-  From the below Figure, the GREEN fonts denotes the most favorable
+   results and the RED fonts denotes the least favorable result in the
+   scenario comparison report
+
+.. figure:: _static/sf7.png
+    :align: center
+    :alt: alternate text
+
+    Full Year Scenario Comparison
+
+.. figure:: _static/sf8.png
+    :align: center
+    :alt: alternate text
+
+    Full Year Scenario Comparison
+
+-  You have the option to make additional simulation in the new scenario
+   or click the icon appearing in the top most right pane to
+   return to the original selected version without any simulation and
+   then make a new simulation (see Figure below).
+
+.. figure:: _static/sfi3.png
+    :align: center
+    :alt: alternate text
+
+    Reset All icon 
+
+-  Click the Download icon located in the Scenarios Section to extract the report in xml format (see Figure below).
+
+.. figure:: _static/sfi4.png
+    :align: center
+    :alt: alternate text
+
+    Download icon 
+
+-  Click the icon for write back functionality (see Figure below). By clicking 
+   this option you will be able to write back/post ValQ data to a
+   configured URL in the server.
+
+.. figure:: _static/sfi5.png
+    :align: center
+    :alt: alternate text
+
+    Write back icon 
+
+-  The created Scenarios can be reordered based on our choice by a
+   simple drag and drop options. For our example, you have reordered the
+   Scenarios as shown in the below Figure.
+
+.. figure:: _static/sf9.png
+    :align: center
+    :alt: alternate text
+
+    Reordered Scenarios
+
+Based on the reordered scenarios, you will be able to view the
+Comparison Report with the similar reordered hierarchy as shown in the
+below Figure.
+
+.. figure:: _static/sf10.png
+    :align: center
+    :alt: alternate text
+
+    Comparison Report with reordered Scenarios
+
+Constraints
+-----------
+
+Constraints are also available in the left side panel that identifies
+the metrics that are overcapacity (highlighted in RED fonts) or still
+have opportunities for further improvements (WHITE fonts).
+
+Notes:
+
+-  RED fonts means over capacity as compared to the maximum limit. (e.g.
+   Production Rate 1.680 tonnes per hour is over capacity as compared to
+   the maximum limit of 1.600 tonnes per hour).
+
+-  WHITE fonts means still have opportunities for improvement as
+   compared to the maximum limit.
+
+.. figure:: _static/4.23.png
+    :align: center
+    :alt: alternate text
+
+    Constraints
+
+.. figure:: _static/4.24.png 
+    :align: center
+    :alt: alternate text
+
+    Constraints
+
+Understanding Variances
+=======================
+
+The starting point for a simulation is a selection of two versions -
+**Primary Version** and a **Comparison Version** and a year. For
+instance a forecast vs current budget.
+
+Once we start simulating, changes are applied to the primary version. We
+call this changing version the Simulation.
+
+To understand the improvements we achieve, we also keep track of the
+original values from the primary version without simulation changes. We
+therefore have 3 data series in the model that we calculate and compare:
+
+1. Simulation (The Primary Version including applied variations)
+
+2. Original (The Primary Version without variations)
+
+3. Target (The Comparison Version)
+
+Based on the above, we calculate the following variances:
+
+-  Simulated Variance (Simulation vs Target)
+
+Q: If we changed these things, would we hit target?
+
+-  Simulation Impact (Simulation vs Original)
+
+Q: How much would we improve if we made these changes?
+
+-  Original Variance (Original vs. Target)
+
+Q: What was our variance if we did nothing?
+
+Understanding the Node Widget Information
+=========================================
+
+The Node Widget for a Value Driver displays key information such as
+value, variance, simulation impacts and trend without having to navigate
+further.
+
+.. figure:: _static/6.1.png
+    :align: center
+    :alt: alternate text
+
+    Node Widget Information
+
+Conducting what-if analysis
+===========================
+
+One of the main aspects of the ValQ Custom Visual is to be able to
+simulate the impacts changes to key drivers such as prices have on the
+full year forecast. As we can’t change the past, such a simulated change
+should only be applied to future period. The ValQ Custom Visual have
+this capability. When performing what-if analysis, the period that a
+simulation should be applied from is selected in the Side Panel (current
+period is default):
+
+.. figure:: _static/7.1.png
+    :align: center
+    :alt: alternate text
+
+    What-if-Analysis
+
+Assuming that we calculate fuel cost based on litre per month and price
+as $/l and we are at the end of period 9, the simulated cost should be
+calculated first at the monthly level with the % change applied to
+period 9 and onwards. Once the individual months are calculated, they
+can then be aggregated based on the rule of the node (sum for diesel
+cost, weighted average for diesel price):
+
+.. figure:: _static/formula.png
+    :align: center
+    :alt: alternate text
+
+When hovering over a node, the bottom half of the node becomes a slider.
+Drag the slider left to vary the node by a negatively, drag right for
+positive. As you drag, the values for the selected node is dynamically
+recalculated and displayed. When releasing, the tree will immediately
+recalculate all dependent nodes and show the result.
+
+.. figure:: _static/7.2.png 
+    :align: center
+    :alt: alternate text
+
+    Simulation
+
+A simulation change is either a pct. Change, a fixed future price or a
+pct. Growth depending on the simulation model defined for the value
+driver.
+
+The default method for the driver can be seen on the simulation tooltip.
+You can also change the selected model by selecting at the bottom of the
+tooltip.
+
+.. figure:: _static/7.3.png 
+    :align: center
+    :alt: alternate text
+
+    Simulation Tooltip
+
+Understanding that a change is applied to the selected periods only is
+particularly important to understand when displaying the Full Year value
+and the node is using a weighted average. The displayed value is the
+weighted average value for the full year, not the value for future
+periods.
+
+A simplified example will help understanding this critical concept.
+Let’s assume that the diesel price is $1.014 for all periods and the
+monthly fuel consumption is constant as well at 1m litres and we have
+selected period 9 as we want to apply the simulation to the remaining
+periods of the year.
+
+We now drag the slider for the fuel price to the right and the node will
+show the new weighted average value. Let’s say we drag it to the right
+so the full year weighted average is $1.030. As the first 8 periods were
+$1.014, the weighted average of $1.030 means that the simulated price
+change is equivalent of a future fuel price of $1.20. To better
+understand the individual future period simulations when looking a Full
+Year aggregated number, it is useful to pay attention to the Month Data
+also shown on the node. The real world is a little more complex as the
+price is not necessarily the same every month and the fuel consumed is
+unlikely to be constant as well. Below is an example of such a
+simulation based on a real data set:
+
+.. figure:: _static/7.4.png 
+    :align: center
+    :alt: alternate text
+
+    Simulation
+
+The weighted average price was 1.014. We now simulated a 2% increase in
+the prices selected and future periods which equates to a new weighted
+average price of 1.030. If you look at the month Value, you can see for
+the selected month, this equates to the higher price of 1.195.
+
+Multiple variations can be applied in parallel as they are expressed as
+pct. The top left % indicate the cumulative impact on this particular
+node of all simulation that impacts it.
+
+Any node with a variation will have the blue pen icon in the top middle
+showing the percentage the node has been varied with. For quick what-if
+analysis at any level and a dynamic work process from the general to the
+specific, you can apply a simulation on any level.
+
+Certain nodes may have been locked from changes in the model. This is
+generally when there is a specific reason not to vary this node directly
+for consistency purposes. A locked node will not have the grey pen icon
+|..image::_static/image48|\ or a slider when hovering.
+
+Certain nodes may be displayed multiple times in the tree. An example is
+Material Moved as it affects Mining and Mill Throughput. In these
+scenarios, one node is linked to the other. If you simulate a change in
+a linked node, the node it is pointing to is instead changed so it
+applies both to the selected node and anywhere else where the driver is
+used. If a node is a linked node, it has the Linked node text in the
+bottom right corner:
+
+.. figure:: _static/7.5.png 
+    :align: center
+    :alt: alternate text
+
+    Simulation
+
+Getting more information about a Value driver
+=============================================
+
+If you click on a node Widget, a detail screen is displayed with
+additional information on the selected node.
+
+.. figure:: _static/8.1.png
+    :align: center
+    :alt: alternate text
+
+    Information on Value Driver
+
+For some nodes, the designer may have added a description beyond the
+title. If so, this will be displayed below the title.
+
+If a node is calculated, a simplified version of the formula is
+displayed. This is the technical formula that is used to calculate
+individual period values. To calculate the real values, all simulation
+variations that affects the node are applied to selected and future
+periods and the aggregation rules for the node is applied (sum or
+weighted average).
+
+The trend chart compares the simulated value to the comparison version
+as well as showing the original value as the dotted line on the bar if
+simulation variations are active. If you hover over the bar, you will
+the see the details for the period.
+
+The table on the top right shows the period and full year values and the
+variance calculations as per the definition previously in this document.
+
+The ValQ Custom Visual also analyses all the active simulations to see
+if any impacts this particular node. If so, it then analyses how much
+each of the active simulation changes contributes to the overall impact
+on this node and generates a waterfall diagram with the break down which
+is displayed in the bottom right panel.
+
+In some scenarios, you may vary multiple factors impacting the same node
+in a compound nature. I.e. you vary both sales volume and sales price
+and want to know the impact on revenue. As the sum of both changes is
+more than the impact of each individually, the waterfall chart breaks
+down each of the individual impacts and a compound impact bar.
+
+Saving and Opening Scenarios 
+=============================
+
+The standard ValQ Custom Visual template contains functionality for
+saving and opening a scenario collection.
+
+When clicking the Edit button |..image::_static/image51| , you will be asked to provide a
+Scenario Title Name.
+
+.. figure:: _static/9.1.png
+    :align: center
+    :alt: alternate text
+
+    Scenario Title Name
+
+You will be also able to delete the existing scenario from there using
+the Delete button |..image::_static/image53|.
+
+There is also an option to export the value driver tree data set to xml.
+It will create an unformatted spreadsheet with the tree and all the node
+data.
+
+ValQ in Power BI
+================
+
+The ValQ Custom Visual has two different panels along with the
+VISUALIZATIONS and FIELDS input screen from Power BI. The left panel
+represents the Advanced Editor and Navigation Panel. The right canvas is
+provided with Enter Design Mode button |..image::_static/image54| and Exit Design Mode
+button |..image::_static/image55| at the top rightmost corner. When the Enter Design Mode
+is clicked, you will be able to view the Advanced Editor at the left and
+when the Exit Design Mode is clicked, you will be able to view the
+Navigation panel at the left.
+
+The right canvas also represents the Value Driver Tree with Nodes where
+the simulation can be done at the Node Level (see Figure below).
+
+.. figure:: _static/10.1.png
+    :align: center
+    :alt: alternate text
+
+    ValQ Panel in Power BI
+
+The left panel has five different Tab categories as Advanced Editor
+options and they are listed below:
+
+1. New Tab – To configure the design for the Value Driver Tree using the
+   options such as Sample Demo Tree, Create a Simple Dynamic Tree,
+   Import an Advanced Tree and Create a New value driver tree from the
+   scratch.
+
+2. Node Tab – To configure the settings of Nodes and Child Nodes for the
+   Value Driver Tree
+
+3. Data Series Tab – To configure the data settings such as Value Labels, Time
+   Period Labels, Time Aggregation Labels, Periods of Interest, Node
+   Mapping and Data Manager for the Value Driver Tree.
+
+4. Appearance Tab – To configure the appearance parameters such as
+   General Settings, Status Bar, Visualization and Colors for the Value
+   Driver Tree
+
+5. Settings Tab – To configure the Navigational Panel and Export
+   settings for the Value Driver Tree.
+
+In the next sections, you will be able to understand about these five
+different Tab categories in detail.
+
+Designing a Value Driver Tree in Power BI
+=========================================
+
+As an initial step, follow the below steps to configure the design for
+the value driver tree in Power BI.
+
+1. Navigate to the “Visualizations Panel” and “Fields” Panel in Power BI
+   (see Figure below).
+
+.. figure:: _static/11.1.png
+    :align: center
+    :alt: alternate text
+
+    Power BI with Visualizations and Fields Panel
+
+2. In the Visualizations Panel, select the ValQ Custom Visual and extend
+   the screen to its full view as shown in the Figure below.
+
+.. figure:: _static/eleven.png
+    :align: center
+    :alt: alternate text
+
+    ValQ Screen - Measures to be assigned
+
+3. To create a value driver tree (ValQ) in Power BI, it is mandatory to
+   assign a Data Source to the value driver tree. For our example, a
+   data source (sample data shown below) has been assigned to the value
+   driver tree.
+
+.. figure:: _static/11.2.png
+    :align: center
+    :alt: alternate text
+
+    Sample Data
+
+4. Now at least one Measure Value has to be assigned to the property
+   “Values” in Visualizations panel. In our example, we have assigned
+   the Measure Value “∑ Actual” to the property “Values” by clicking the
+   check box option against the Measure Value “∑ Actual” (see Figure
+   below).
+
+.. figure:: _static/11.3.png
+    :align: center
+    :alt: alternate text
+
+    Assigning the Measure Value
+
+New Tab
+=======
+
+The Value Driver Tree can be created in Power BI using the below listed
+options by clicking the New Tab in the left panel (see Figure below)
+
+-  Open a Sample Model
+
+-  Create a Dynamic Model
+
+-  Import as Advanced Model
+
+-  Create New from scratch
+
+.. figure:: _static/12.1.png
+    :align: center
+    :alt: alternate text
+
+    New Tab
+
+.. _OSM:
+
+Open a Sample Model
+-------------------
+
+Click the “New” Tab in the left panel. Now navigate to the Open a Sample
+Model option. You will be able to explore a Demo Tree. By clicking the
+Open a Sample Model option, you will be able to view the pop up as shown
+below.
+
+.. figure:: _static/12.2.png
+    :align: center
+    :alt: alternate text
+
+    Selection of sample model
+
+For our example, the sample “Mining Industry” has been selected. Based
+on the selection, you will be able to view the ValQ screen as shown
+below.
+
+.. figure:: _static/12.3.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Nodes settings
+
+The Nodes hierarchy will be displayed in the Advance Editor option as
+shown in the above Figure. Here you will be able to add number of child
+nodes from the parent node “Net Profit”. By clicking the Parent Node,
+you will be able to add number of child nodes as shown below. Also you
+will be able to expand, collapse and delete the entire Nodes Hierarchy
+using the options “Expand”, “Collapse” and “Delete” (see Figure above).
+
+By providing the Node Name in the Search option on the right canvas, you
+will be able to search for the particular Node when there are more
+number of nodes appearing on the right canvas.
+
+.. figure:: _static/12.4.png
+    :align: center
+    :alt: alternate text
+
+    Node Search option in right canvas
+
+For our example, the Node name is given as “Operating Hours” and based
+on the search you will be able to view the Node as shown in the Figure
+below.
+
+.. figure:: _static/12.5.png
+    :align: center
+    :alt: alternate text
+
+    Display of the Searched Node
+
+.. figure:: _static/12.6.png
+    :align: center
+    :alt: alternate text
+
+    Nodes Structure with Add option
+
+In the above Figure, you can observe that by clicking the “+” button, a
+Node “Copy of Net Profit” has been added. Similarly you can edit the
+Parent Node details by clicking the Edit button as shown below. For our
+example, the Edit button has been clicked.
+
+.. figure:: _static/12.7.png
+    :align: center
+    :alt: alternate text
+
+    Nodes Structure with Edit option
+
+By clicking the Edit option you will be able to view the Edit Settings
+for the Node. The Edit Settings are categorized as follows:
+
+1. General
+
+2. Configuration
+
+3. Display
+
+4. Simulation
+
+5. Business Definition
+
+General
+~~~~~~~
+
+In General settings you will be able to configure the Node details such
+as Unique ID, Title and the Title Prefix when outside the Tree with the
+values as shown in the below Figure. The Title Prefix can be set at Node
+Level and during simulation it is useful to identify at which node the
+parameter value changes. The additional properties of the Node Tab has
+been listed in Section 13.2.
+
+.. figure:: _static/12.8.png
+    :align: center
+    :alt: alternate text
+
+    Edit Node – General Settings
+
+Based on the above configuration, you will be able to view the ValQ
+screen as shown below.
+
+.. figure:: _static/12.9.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with General settings
+
+From the above Figure, you can observe that the Unique ID for the Parent
+Node is “TOP” and the Title of the Parent Node is “Net Profit”.
+
+In our other example as shown below, we have configured the Title Prefix
+for two different Nodes (see Figures below).
+
+.. figure:: _static/12.10.png
+    :align: center
+    :alt: alternate text
+
+    Node with Prefix value as Spouse 1
+
+.. figure:: _static/12.11.png
+    :align: center
+    :alt: alternate text
+
+    Node with Prefix value as Spouse 2
+
+Based on the above set of configurations, you will be able to view the
+ValQ screens as shown below.
+
+.. figure:: _static/12.12.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Spouse 1 Prefix
+
+.. figure:: _static/12.13.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Spouse 2 Prefix
+
+From the above two Figures you can observe that the “Gross Salary” is
+the common Title for two different Nodes. In order to differentiate
+them, we have provided the value for “Title Prefix when outside the
+Tree” as Spouse1 for one Node and Spouse 2 for the other Node. After
+simulation, you can see which Node’s value has been changed.
+
+Configuration 
+~~~~~~~~~~~~~~
+
+In Configuration Settings, you will be able to configure the Node
+details such as Calculation Method, Time Aggregation, Desired Trend and
+Value Range with the values as shown in the below Figure.
+
+.. figure:: _static/12.14.png
+    :align: center
+    :alt: alternate text
+
+    Edit Node – Configuration Settings
+
+Based on the above Configuration settings, you will be able to view the
+ValQ screen as shown in the below Figure.
+
+.. figure:: _static/12.15.png
+    :align: center
+    :alt: alternate text
+
+    ValQ with Configuration settings
+
+From the above Figure you can observe that in the Navigation Panel, the
+value that is displayed in the Constraints section will lie in the range
+from minimum 10 to maximum 100 for a specific month based on the
+configuration done for the Value Range. In our example, the calculation
+method is selected as “Subtract Children (a-b-c)” meaning that the child
+node having greater value will get subtracted from the child node having
+smaller value and its result will be displayed in the Parent Node. The
+Time Aggregation is set to Sum of Periods where we have considered 12
+months as period. As the result of simulation, each Node will display
+the values based on the Sum of Periods. Also the “Desired Trend” has
+been set to the Increase option. When simulated, the desired Trend for
+the Revenue will be increasing and the value for the Total Cost will be
+decreasing.
+
+Display 
+~~~~~~~~
+
+In the Display Settings, you will be able to configure the Node Display
+settings such as Node Display, Scale, Value Decimal Places, Value
+Prefix, Value Suffix, Simulation, Status Colors and Details with the
+values as shown in the below Figure.
+
+.. figure:: _static/12.16.png
+    :align: center
+    :alt: alternate text
+
+    Edit Node – Display Settings
+
+Based on the above Display settings, you will be able to view the ValQ
+screen as shown in the below Figure.
+
+.. figure:: _static/12.17.png
+    :align: center
+    :alt: alternate text
+
+    ValQ with Display settings
+
+From the above Figure, you can observe that the Node Display is set to
+“Show” option. The Scale has been set to the User Selected option and
+now you can edit the Scaling options in the Value Display under Settings
+Tab. When the Scale is set to other options you will not be able to edit
+the Scaling options in the Value Display. You can also view the Nodes
+with the values configured with Value Decimal Places as “0”, Value
+Prefix as “$” and Value Suffix as “r”. The Simulation option has been
+enabled which allows the real time change to Nodes value and its effect
+on others. The Status Colors option has been enabled which shows the
+colored status bar indicating positive or negative trend.
+
+Since the Details on Click option is enabled in the Display settings,
+you can observe the Detail Page being displayed after clicking the Node
+“Net Profit” (see Figure below). If the Details on Click option is
+disabled in the Display settings, then you will not be able to view the
+Detail page.
+
+.. figure:: _static/12.18.png
+    :align: center
+    :alt: alternate text
+
+    Detail Page
+
+Simulation
+~~~~~~~~~~
+
+In the Simulation Settings, you will be able to configure Simulation details such as selection 
+of Default Simulation Method and assigning the Node for the Linked Simulation (see Figure below). 
+You have the option to enable/disable the Simulation function for the Node (see Figure below).
+
+.. figure:: _static/12.19.png
+    :align: center
+    :alt: alternate text
+
+    ValQ with Simulation Settings
+
+In this Simulation Settings, you have selected the Default Method as
+“Constant" for the Simulation and you have selected the Node for the
+Linked Simulation as “First Node” (see Figure above). Based on the above
+settings you will be able to view the ValQ page as shown in the Figure
+below. The other options for the Default Simulation Method are Change
+Percentage, Manual and Growth Percentage.
+
+.. figure:: _static/12.20.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Constant value selection
+
+From the above Figure, you will be able to view the pop window as shown
+in the above screen by clicking the Arrow icon in the Net Profit Node as
+shown in the Figure below.
+
+.. figure:: _static/12.21.png
+    :align: center
+    :alt: alternate text
+
+    Net Profit Node
+
+Now click the Edit option in the pop window as shown in the Figure
+below.
+
+.. figure:: _static/12.22.png
+    :align: center
+    :alt: alternate text
+
+    Edit option
+
+By clicking the Edit option, you will be able to view and edit the input
+values for the Simulation Period (see Figure below).
+
+.. figure:: _static/12.23.png
+    :align: center
+    :alt: alternate text
+
+    Edit Inputs for Simulation Periods
+
+For our example, the value for March month has been edited and as a
+result it gets reflected for all the Nodes.
+
+Business Definition
+~~~~~~~~~~~~~~~~~~~
+
+Using this option, you will be able to configure the Business Definition
+details such as Description, Header, Footer and Technical Notes with the
+values as shown in the below Figure.
+
+.. figure:: _static/12.24.png
+    :align: center
+    :alt: alternate text
+
+    ValQ with Business Definition Settings
+
+Based on the above settings, you will be able to view the Business
+Definitions details in the Detail Page as shown below.
+
+.. figure:: _static/12.25.png
+    :align: center
+    :alt: alternate text
+
+    Detail Page with Business Definitions
+
+Create a Dynamic Model
+----------------------
+
+Using this option, it is very simple for the beginners to create a tree
+automatically based on their own data source. By clicking the Create a
+Dynamic Model option, you will be able to view the ValQ screen as shown
+in the below Figure.
+
+.. figure:: _static/12.26.png
+    :align: center
+    :alt: alternate text
+
+    Simple Dynamic Tree created with one single Measure
+
+By default, the Measure “Actual” has been selected as a Mandatory
+criteria for getting the Tree widget. Now you can select the other
+Measures and Dimensions based on your choice as indicated in the Figure
+below.
+
+.. figure:: _static/12.27.png
+    :align: center
+    :alt: alternate text
+
+    Simple Dynamic Tree created with Measures and Dimensions
+
+From the above Figure, you can observe that the other Measure “Forecast”
+is assigned to “Value” and the Dimensions namely Account and Product has
+been assigned to the “Category” and the Period_MON is assigned to “Time
+period”. Now based the assigned data source, the Tree is being
+configured. Hence now you can create a tree directly from your data. For
+step by step instructions on how to get started to build a Dynamic
+Model, please follow this link:
+`https://ValQ.com/wp-content/uploads/ValQ-for-microsoft-power-bi-beginners-tutorial.pdf <https://valq.com/wp-content/uploads/valq-for-microsoft-power-bi-beginners-tutorial.pdf>`__.
+
+**Note**: For Dynamic Model, you will be able to view the Root Node and
+first three Nodes in the next level hierarchy under the Sub Models
+section of the Navigation Panel (see Figure below).
+
+.. figure:: _static/dsm.png 
+    :align: center
+    :alt: alternate text
+
+    Sub Models Section showing the Root Node and first three Nodes in the next level hierarchy 
+
+
+Read only Dynamic Tree in Editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When Dynamic Model is selected, you will be able to only view the value
+driver tree with Parent and Children Nodes and you cannot undergo any
+configuration part on it. But you can generate a copy of the Parent Node
+and proceed with configuration part based on your choice (see Figure
+below).
+
+.. figure:: _static/12.28.png
+    :align: center
+    :alt: alternate text
+
+    Read Only Dynamic Tree
+
+Dynamic Scaling on Dynamic Tree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Based on your data source, the value driver tree will get generated and
+the Number Scaling for all the Nodes will be updated appropriately based
+on the data source (see Figure below). For our example, the Number
+Scaling is “0.0b”.
+
+.. figure:: _static/12.29.png
+    :align: center
+    :alt: alternate text
+
+    Dynamic Scaling on Dynamic Tree
+
+Import an Advanced Model
+------------------------
+
+Using the “Import an Advanced Model” option, you will be able to import
+data through two different options as shown below.
+
+.. figure:: _static/12.30.png
+    :align: center
+    :alt: alternate text
+
+    ValQ – Import from Excel
+
+Import from Excel
+~~~~~~~~~~~~~~~~~
+
+Using the option “Import from Excel”, you will be able to paste the JSON
+File Data Format text into the Text Editor as shown in the below Figure.
+
+.. figure:: _static/12.31.png
+    :align: center
+    :alt: alternate text
+
+    Configuration Data from Excel Format
+
+Now based on the above configuration, you will be able to view the Tree
+formed with Nodes in the ValQ screen.
+
+.. figure:: _static/12.32.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen derived from Excel Data
+
+Retain Existing Navigation Panel Configuration and overwrite only Tree Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Through this option, you will be able to retain the existing Navigation
+Panel configuration and apply the same for the next Tree configuration.
+For our example, the Figure below shows the Navigation panel for the
+first Tree configuration.
+
+.. figure:: _static/12.33.png
+    :align: center
+    :alt: alternate text
+
+    Navigation Panel for the first tree configuration
+
+Now navigate to the Import an Advanced Model option in New Tab and paste
+the JSON File Data Format text for the second tree into the Text Editor
+as shown in the below Figure.
+
+.. figure:: _static/12.34.png
+    :align: center
+    :alt: alternate text
+
+    Import a Tree
+
+Now select the option “I am reimporting the current model – retain my
+settings” so that you will able to view the second tree configuration
+being applied with the Navigation Panel settings already configured for
+the first tree (see Figure below).
+
+.. figure:: _static/12.35.png
+    :align: center
+    :alt: alternate text
+
+    Navigation Panel for the second tree configuration
+
+.. _IEF: 
+
+Import from an Export File
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using this option “Import from an Export File”, you will be able to
+paste the Export file data format from an already exported tree data as
+shown in the below Figure. This Export File will be generated by
+navigating to the Settings Tab and by clicking the Export button.
+
+.. figure:: _static/12.36.png
+    :align: center
+    :alt: alternate text
+
+    Configuration Data from Export File Data Format
+
+Now based on the above configuration, you will be able to view the Tree
+formed with Nodes in the ValQ screen.
+
+.. figure:: _static/12.37.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen derived from Export File Data Format
+
+Create New from Scratch
+-----------------------
+
+This option is used to create a Tree in ValQ manually Node by Node based
+on your choice. By clicking the Create New from Scratch option, you will
+be able to view the ValQ screen as shown in the below Figure.
+
+.. figure:: _static/12.38.png
+    :align: center
+    :alt: alternate text
+
+    Create New from Scratch
+
+For our example we have created a Parent Node and two child Nodes (see
+Figure below).
+
+.. figure:: _static/12.39.png
+    :align: center
+    :alt: alternate text
+
+    Tree with one Parent Node and two Child Nodes
+
+Now with the help of :ref:`Section: Open a Sample Model <OSM>`, you will be able
+to configure the General, Configuration, Display, Simulation and
+Business Definition settings for the Tree (Please refer  :ref:`Section: Open a Sample Model <OSM>` for
+more details).
+
+Additional Properties of New Tab
+--------------------------------
+
++-----------------------------------+-----------------------------------+
+| **Property**                      | **Description**                   |
++===================================+===================================+
+| Open a sample Model               | Using this model, you can load    |
+|                                   | the required model from the       |
+|                                   | sample ValQ Models. The sample    |
+|                                   | Models are Mining Industry, P&L   |
+|                                   | for Small and Medium-Size         |
+|                                   | Business, Personal Finance and    |
+|                                   | Simple Sales Projections.         |
++-----------------------------------+-----------------------------------+
+| Create a simple Dynamic Model     | Using this Model, you can build a |
+|                                   | Dynamic ValQ Model (For details,  |
+|                                   | please refer:                     |
+|                                   | `https://ValQ.com/wp-content/uplo |
+|                                   | ads/ValQ-for-microsoft-power-bi-b |
+|                                   | eginners-tutorial.pdf <https://va |
+|                                   | lq.com/wp-content/uploads/valq-fo |
+|                                   | r-microsoft-power-bi-beginners-tu |
+|                                   | torial.pdf>`__                    |
+|                                   | )                                 |
++-----------------------------------+-----------------------------------+
+| Import an Advanced Model          | Using this Model, you can import  |
+|                                   | a Tree by selecting the data from |
+|                                   | an Excel file or by selecting the |
+|                                   | data from an Export File.         |
++-----------------------------------+-----------------------------------+
+| Create New from Scratch           | This Model can be used for        |
+|                                   | creating a Tree with Nodes right  |
+|                                   | from the beginning.               |
++-----------------------------------+-----------------------------------+
+
+*Additional Properties of New Tab*
+
+Node Tab
+========
+
+Each node represents a metric, and can contain the following:
+
+-  Name of the value driver or KPI
+
+-  A sparkline graph indicating the recent trend
+
+-  The value of the metric in bold letters
+
+.. figure:: _static/13.1.png
+    :align: center
+    :alt: alternate text
+
+    Node Details
+
+In addition, each node also contains several performance metrics (see
+Figure below). They are listed as follows:
+
+-  The Fiscal Year variance of the metric vs. a benchmark (in this case,
+   Sales Forecast vs. Sales Budget) – this is shown in both % and
+   absolute terms
+
+-  Absolute value of the metric for the current month (usually the first
+   period in the series)
+
+-  Variance of the metric vs. a benchmark for the current month – this
+   is shown in both % and absolute terms.
+
+A node may be decorated by a performance indicator color band on the
+left – typically Green (for good), Amber (neither good nor bad) and Red
+(Poor).
+
+.. figure:: _static/13.2.png
+    :align: center
+    :alt: alternate text
+
+    Node Details
+
+The entire configuration part of the Node Tab has been already explained
+in detail in :ref:`Section: Open a Sample Model <OSM>`.
+
+Templated Nodes
+---------------
+
+Also you can create a Templated Node for the already existing Node. It
+is very specific that the Templated Nodes should not map the Parent
+Node. You need to select the particular Node and copy a Node under the
+selected Node for creating the Templated Node.
+
+In the below Figure as an example, you can observe that a copy of
+Revenue Node has been created by the right click copy and paste actions.
+Now the copied Revenue Node version is labelled as “Revenue 2” in
+General Property of the Edit Node Window (see Figure below).
+
+.. figure:: _static/13.3.png
+    :align: center
+    :alt: alternate text
+
+    Edit Node: Copy of Revenue Node labelled as Revenue 2
+
+Now navigate to the Configuration property of the Edit Node Window. Set
+the Calculation Method to the option Template based on the node. Also
+set the Node to use as Template to the option 1:Revenue (see Figure
+below).
+
+.. figure:: _static/13.4.png
+    :align: center
+    :alt: alternate text
+
+    Edit Node: Calculation Method selected as Template based on other node and Revenue Node to be used as Template
+
+Based on the above configuration, you will be able to view the Templated
+Node Revenue 2 having all its Nodes similar to the Revenue Node as per
+our example.
+
+.. figure:: _static/13.5.png
+    :align: center
+    :alt: alternate text
+
+    Templated Node
+
+Quick Edit in Node Tab
+----------------------
+
+Using the Quick Edit option in the Node Tab, you will be able to view
+the entire Tree Hierarchy in a Grid View. For our example, the below
+Figure shows the normal Tree Hierarchy View.
+
+.. figure:: _static/qe1.png
+    :align: center
+    :alt: alternate text
+
+    Normal Tree Hierarchy View
+
+After clicking the Quick Edit option as shown in the above Figure, you
+will be able to view the Grid View as shown below. You can observe that
+there will be a Business View information in the Formula column and it
+will get displayed when you select the Business View option (see Figure
+below).
+
+.. figure:: _static/qe2.png
+    :align: center
+    :alt: alternate text
+
+    Grid View
+
+In the Grid View, you will be able to edit the changes and save it so
+that the changes will get reflected in the Tree Structure which can be
+viewed in the canvas. In the Grid View, you can also Expand and Collapse
+the Node Structure using the Expand and Collapse icons (see Figure
+below).
+
+.. figure:: _static/qe3.png
+    :align: center
+    :alt: alternate text
+
+    Grid View in Expanded Form
+
+For our example, the above Figure shows the expanded form of the Grid
+View. The below Figure shows the collapsed form of the Grid View.
+
+.. figure:: _static/qe4.png
+    :align: center
+    :alt: alternate text
+
+    Grid View in Collapsed Form
+
+You will be able to import and export the data in the form of excel file
+using the Import from Excel and Export to Excel buttons as shown in the
+below Figure.
+
+.. figure:: _static/qe5.png
+    :align: center
+    :alt: alternate text
+
+    Grid View - Import from Excel and Export to Excel
+
+The Export to Excel File button will be only functional in the web
+version of the Power BI (see Figure below).
+
+.. figure:: _static/qe6.png
+    :align: center
+    :alt: alternate text
+
+    Export to Excel File
+
+The exported file can be edited and it can be imported by clicking the
+Import from Excel File button.
+
+.. figure:: _static/qe7.png
+    :align: center
+    :alt: alternate text
+
+    Import from Excel File
+
+The import function can be done by browsing the location of the file
+(see Figure below).
+
+.. figure:: _static/qe8.png
+    :align: center
+    :alt: alternate text
+
+    File Location
+
+The Columns cab be filtered based on the selection from “Selected
+Columns” Drop Down (see Figure below). All the Columns can be selected
+to get displayed in the grid or the user can select the columns of their
+choice.
+
+.. figure:: _static/qe9.png
+    :align: center
+    :alt: alternate text
+
+    Filtering Columns in the grid
+
+The below Figure shows that all the columns are being selected and they
+are displayed in the grid. The user can scroll the Horizontal scroll bar
+in order to view the remaining columns.
+
+.. figure:: _static/qe10.png
+    :align: center
+    :alt: alternate text
+
+    Grid Display with all the columns being selected.
+
+The below Figure shows that only the selected columns get displayed in
+the grid.
+
+.. figure:: _static/qe11.png
+    :align: center
+    :alt: alternate text
+
+    Grid Display with the selected columns
+
+Also the user has the option to edit the properties like Formula,
+Calculation Method and Aggregation Method directly in the Grid view
+where it gets updated in the actual properties in the Advanced Editor.
+In our example, you can view that the Formula has been double clicked
+for editing (see Figure below).
+
+.. figure:: _static/qe12.png
+    :align: center
+    :alt: alternate text
+
+    Grid view edit for Formula Column
+
+The above Figure shows that the Formula for the row item Copper Sold has
+been edited. As another example, the below Figure shows that the
+Calculation Method has been edited.
+
+.. figure:: _static/qe13.png
+    :align: center
+    :alt: alternate text
+
+    Grid view edit for Calculation Method Column
+
+In a similar way, the following columns can be edited in the Grid view.
+
+-  Manual Data for Primary
+
+-  Manual Data for Comparison
+
+The below Figures represents the screen shots for both Manual Data for
+Primary and Manual Data for Secondary.
+
+.. figure:: _static/qe14.png
+    :align: center
+    :alt: alternate text
+
+    Grid View Edit for Primary Data
+
+.. figure:: _static/qe15.png
+    :align: center
+    :alt: alternate text
+
+    Grid View Edit for Comparison Data
+
+The Node Search for the columns Linked Node, Linked Simulation Node and
+Weighted Average Node in the Data Grid will be in Drop Down List and the
+user can select the appropriate Node from the Drop Down List. For our
+example, the Node Search for the Linked Simulation Node has been done
+(see Figure below).
+
+.. figure:: _static/qe16.png
+    :align: center
+    :alt: alternate text
+
+    Node Search for Linked Simulation Node Column
+
+Similarly the Node Search for the Source Key Column will be in Drop Down
+List showing the Nodes from the assigned Data Source and the user can
+select the appropriate Node from the Drop Down List (see Figure below).
+
+.. figure:: _static/qe17.png
+    :align: center
+    :alt: alternate text
+
+    Node Search for Source Key Column
+
+There is an option to lock the simulation for the Node in the Grid View.
+The same function can be also done in the exported Excel File and the
+Excel file can be imported in the Grid to see the updates done for the
+locked simulation.
+
+The below Figure shows the Locked Simulation in the Grid View.
+
+.. figure:: _static/qe18.png
+    :align: center
+    :alt: alternate text
+
+    Locked Simulation in Grid View
+
+The below Figure shows the Locked Simulation in the Excel File which can
+be imported to the Grid view.
+
+.. figure:: _static/qe19.png
+    :align: center
+    :alt: alternate text
+
+    Locked Simulation in Excel File
+
+The rows can be reordered for the child nodes which exists under a
+Parent Node. The below Figure shows the Grid view before reordering the
+child nodes.
+
+.. figure:: _static/qe20.png
+    :align: center
+    :alt: alternate text
+
+    Grid view before reordering the child nodes
+
+The below Figure shows the Grid view after reordering the child nodes.
+
+.. figure:: _static/qe21.png
+    :align: center
+    :alt: alternate text
+
+    Grid view after reordering the child nodes
+
+Additional Properties of Node Tab
+---------------------------------
+
++-----------------------+-----------------------+-----------------------+
+| **Area**              | **Property**          | **Description**       |
++=======================+=======================+=======================+
+| General               | Unique ID             | This property shows   |
+|                       |                       | the Unique ID for the |
+|                       |                       | Node and it can be    |
+|                       |                       | edited.               |
++-----------------------+-----------------------+-----------------------+
+|                       | Title                 | This property sets    |
+|                       |                       | the Title for Node.   |
++-----------------------+-----------------------+-----------------------+
+|                       | Title Prefix when     | This property sets    |
+|                       | outside Tree          | the Title Prefix for  |
+|                       |                       | the Node when outside |
+|                       |                       | the Tree.             |
++-----------------------+-----------------------+-----------------------+
+| Configuration         | Calculation Method    | This property sets    |
+|                       |                       | the Calculation       |
+|                       |                       | Method for the Node.  |
+|                       |                       | The options are Data  |
+|                       |                       | Source, Sum Children  |
+|                       |                       | (a+b+c….), Subtract   |
+|                       |                       | Children (a-b-c….),   |
+|                       |                       | Multiply Children     |
+|                       |                       | (a*b*c….), Divide     |
+|                       |                       | Children (a/b/c….),   |
+|                       |                       | Formula, Linked to    |
+|                       |                       | Node, Manual and      |
+|                       |                       | Templated based on    |
+|                       |                       | other node.           |
+|                       |                       |                       |
+|                       |                       | **Note:** When the    |
+|                       |                       | Calc. Method is       |
+|                       |                       | selected as Linked to |
+|                       |                       | Node option, then you |
+|                       |                       | can select the        |
+|                       |                       | desired Node from the |
+|                       |                       | Nodes List.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Source Key            | This property sets    |
+|                       |                       | the Source Key for    |
+|                       |                       | the Node. You can map |
+|                       |                       | the Node value with   |
+|                       |                       | data source using the |
+|                       |                       | source key.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Time Aggregation      | This property sets    |
+|                       |                       | the Time Aggregation  |
+|                       |                       | for the Node. The     |
+|                       |                       | options are Sum of    |
+|                       |                       | Periods, Average,     |
+|                       |                       | Formula, Last and     |
+|                       |                       | Cumulative.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Desired Trend         | This property sets    |
+|                       |                       | the Desired Trend for |
+|                       |                       | the Node. The options |
+|                       |                       | are Decrease and      |
+|                       |                       | Increase.             |
+|                       |                       |                       |
+|                       |                       | For example, the      |
+|                       |                       | desired Trend for the |
+|                       |                       | Revenue usually       |
+|                       |                       | increases and the     |
+|                       |                       | desired Trend for the |
+|                       |                       | Cost decreases.       |
++-----------------------+-----------------------+-----------------------+
+|                       | Value Range           | This property sets    |
+|                       |                       | the Value Range for   |
+|                       |                       | the Node.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Dynamic Children from | If the referenced     |
+|                       | Data Source           | data source row is a  |
+|                       |                       | hierarchy node with   |
+|                       |                       | children or has       |
+|                       |                       | dimension below in    |
+|                       |                       | the data source, the  |
+|                       |                       | children can be       |
+|                       |                       | automatically         |
+|                       |                       | generated based on    |
+|                       |                       | the data source.      |
+|                       |                       |                       |
+|                       |                       | If Node Mapping       |
+|                       |                       | selected is           |
+|                       |                       | "Automatic based on   |
+|                       |                       | text" then any        |
+|                       |                       | special character and |
+|                       |                       | space in the member   |
+|                       |                       | text will be replaced |
+|                       |                       | by "__"(double        |
+|                       |                       | underscore) in the    |
+|                       |                       | Unique Id for the     |
+|                       |                       | Node. Eg. "Total      |
+|                       |                       | Cost" will become     |
+|                       |                       | "Total__Cost".        |
++-----------------------+-----------------------+-----------------------+
+|                       | Dynamic Children      | Children settings     |
+|                       | Simulation            | will generally be     |
+|                       |                       | cascaded from the     |
+|                       |                       | configuration of this |
+|                       |                       | node except           |
+|                       |                       | visualisation,        |
+|                       |                       | calculation method    |
+|                       |                       | and simulation. The   |
+|                       |                       | children will always  |
+|                       |                       | be with visual style  |
+|                       |                       | normal. Aggregation   |
+|                       |                       | formulas can          |
+|                       |                       | dynamically be        |
+|                       |                       | generated and         |
+|                       |                       | simulation feature    |
+|                       |                       | set based on the      |
+|                       |                       | below options like    |
+|                       |                       | All, Nodes w/o        |
+|                       |                       | children and None.    |
++-----------------------+-----------------------+-----------------------+
+| Display               | Node display          | This property decides |
+|                       |                       | on how the Node will  |
+|                       |                       | be displayed in the   |
+|                       |                       | Tree Widget. The      |
+|                       |                       | options are Show,     |
+|                       |                       | Derived and Hidden.   |
++-----------------------+-----------------------+-----------------------+
+|                       | Scale                 | This property sets    |
+|                       |                       | the Scale for the     |
+|                       |                       | Node. The options are |
+|                       |                       | None, User Selected,  |
+|                       |                       | 0m, 0k and Pct.       |
++-----------------------+-----------------------+-----------------------+
+|                       | Value Decimal Places  | This property sets    |
+|                       |                       | the Value Decimal     |
+|                       |                       | Places for the Node.  |
+|                       |                       | The range is from 0   |
+|                       |                       | to 7.                 |
++-----------------------+-----------------------+-----------------------+
+|                       | Value Prefix          | This property sets    |
+|                       |                       | the Prefix Value for  |
+|                       |                       | the Node.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Value Suffix          | This property sets    |
+|                       |                       | the Suffix Value for  |
+|                       |                       | the Node.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Simulation            | This property allows  |
+|                       |                       | the real time change  |
+|                       |                       | to nodes value and    |
+|                       |                       | its effect on others. |
++-----------------------+-----------------------+-----------------------+
+|                       | Status Colors         | This property shows   |
+|                       |                       | the colored status    |
+|                       |                       | bar that indicates    |
+|                       |                       | positive or negative  |
+|                       |                       | trend.                |
++-----------------------+-----------------------+-----------------------+
+|                       | Details On Click      | This property shows   |
+|                       |                       | the detail page upon  |
+|                       |                       | clicking.             |
++-----------------------+-----------------------+-----------------------+
+| Simulation            | Enable Simulation     | This property enables |
+|                       |                       | or disables the       |
+|                       |                       | Simulation.           |
++-----------------------+-----------------------+-----------------------+                       
+|                       | Default Method        | This property sets    |
+|                       |                       | the Default Method    |
+|                       |                       | for the Simulation.   |
+|                       |                       | The options are       |
+|                       |                       |                       |
+|                       |                       | 1. Change Percentage: |
+|                       |                       |                       |
+|                       |                       |    % Change applied   |
+|                       |                       |    to baseline in     |
+|                       |                       |    future periods.    |
+|                       |                       |                       |
+|                       |                       | 2. Manual:            |
+|                       |                       |                       |
+|                       |                       |    Values set         |
+|                       |                       |    manually for each  |
+|                       |                       |    period.            |
+|                       |                       |                       |
+|                       |                       | 3. Growth Percentage: |
+|                       |                       |                       |
+|                       |                       |    % Growth applied   |
+|                       |                       |    to baseline in     |
+|                       |                       |    future periods.    |
+|                       |                       |                       |
+|                       |                       | 4. Constant:          |
+|                       |                       |                       |
+|                       |                       |    Constant Value for |
+|                       |                       |    future periods.    |
++-----------------------+-----------------------+-----------------------+
+|                       | Linked Simulation     | Using this property,  |
+|                       |                       | you can select the    |
+|                       |                       | desired Node from the |
+|                       |                       | Nodes List for Link   |
+|                       |                       | Simulation.           |
++-----------------------+-----------------------+-----------------------+
+| Business Definition   |                       | This information will |
+|                       |                       | be included in each   |
+|                       |                       | node's details page   |
+|                       |                       | (open by clicking on  |
+|                       |                       | the node in the tree  |
+|                       |                       | widget). They are     |
+|                       |                       | listed as follows:    |
+|                       |                       |                       |
+|                       |                       | 1. Description:       |
+|                       |                       |                       |
+|                       |                       |    This property sets |
+|                       |                       |    the Description    |
+|                       |                       |    for the Node.      |
+|                       |                       |                       |
+|                       |                       | 2. Header:            |
+|                       |                       |                       |
+|                       |                       |    This property sets |
+|                       |                       |    the Header for the |
+|                       |                       |    Node.              |
+|                       |                       |                       |
+|                       |                       | 3. Footer:            |
+|                       |                       |                       |
+|                       |                       |    This property sets |
+|                       |                       |    the Footer for the |
+|                       |                       |    Node.              |
+|                       |                       |                       |
+|                       |                       | 4. Technical Notes:   |
+|                       |                       |                       |
+|                       |                       |    This property sets |
+|                       |                       |    the Technical      |
+|                       |                       |    Notes for the      |
+|                       |                       |    Node.              |
++-----------------------+-----------------------+-----------------------+
+
+*Additional Properties of Node Tab*
+
+Data Series Tab
+===============
+
+Using the “Data Series” Tab, you will be able to configure the Data settings
+for the Tree created in ValQ. There are 6 different options as listed
+below to configure the data settings for the Tree.
+
+1. Data Series Labels 
+
+2. Time Period Labels
+
+3. Time Aggregation Labels
+
+4. Periods of Interest
+
+5. Node Mapping
+
+6. Data Manager
+
+Data Series Labels
+------------------
+
+Using the option "Data Series Labels”, you will be able to configure the
+Baseline Series Label, Comparison Series Label and activate the option 
+“Include Comparison Data Series” using Comparison Series Label (see
+Figure below). 
+
+.. figure:: _static/14.1.png
+    :align: center
+    :alt: alternate text
+
+    Data Series Tab – Data Series Labels
+
+Based on the above configuration, you will be able to view the ValQ
+screen as shown below.
+
+.. figure:: _static/14.2.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Data Series Labels
+
+You can observe from the above Figure that after simulating the Node
+Copper Price, you will be able to view the Baseline data in comparison
+with Target data.
+
+Time Period Labels
+------------------
+
+Using the option “Time Period Labels”, you will be able to configure the
+Period Labels, Simulation Period Range, Active Period From and Active
+Period To settings (see Figure below).
+
+.. figure:: _static/14.3.png
+    :align: center
+    :alt: alternate text
+
+    Data Series Tab – Time Period Labels
+
+Based on the above configuration, you will be able to view the ValQ
+screen as shown below.
+
+.. figure:: _static/14.4.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with time period labels
+
+From the above Figure, you can observe that the Node Total Cost shows
+the Time Period Labels from January Month till December Month based on
+the configuration.
+
+Setting Active Period for Simulation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the Data Series Tab, you will be able to set the active period for
+simulation (see Figure below). You can observe that the property Enable
+Active Period is activated and the Simulation Period is set from month 3
+to month 5.
+
+.. figure:: _static/14.5.png
+    :align: center
+    :alt: alternate text
+
+    Set Active Period for Simulation
+
+Based on the above configuration, you will be able to view the
+Navigation Panel as shown in the below Figure. You can observe that the
+Simulation Period in the Navigation Panel is active from April to May.
+
+.. figure:: _static/14.6.png
+    :align: center
+    :alt: alternate text
+
+    Configured Simulation Period
+
+Time Aggregation Labels
+-----------------------
+
+Using the option “Time Aggregation Labels”, you will be able to
+configure the Active Period, Till Prior Period, All Periods and
+Simulation Period settings (see Figure below).
+
+.. figure:: _static/14.7.png
+    :align: center
+    :alt: alternate text
+
+    Data Label – Time Aggregation Labels
+
+Based on the above configuration, you will be able to view the ValQ
+screen as shown below.
+
+.. figure:: _static/14.8.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with time aggregation labels
+
+From the above Figure, you will be able to view the Time Aggregation
+Labels as highlighted in the ValQ screen.
+
+Periods of Interest
+-------------------
+
+Using the option “Periods of Interest”, you will be able to configure
+the Primary Value with the Secondary Values which involves Active
+Period, Total to Period, Total of Period and the Selected Interval. (see
+Figure below).
+
+.. figure:: _static/14.9.png
+    :align: center
+    :alt: alternate text
+
+    Data Label – Period of Interest
+
+Based on the above configuration, you will be able to view the ValQ
+screen as shown below.
+
+.. figure:: _static/14.10.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Periods of Interest
+
+From the above Figure, you can observe that the Primary Value “Full
+Year” is being compared with the simulated secondary values for Active
+Period, Total to Period, Total of Period and the Selected Interval.
+
+Node Mapping
+------------
+
+This setting captures how data from Power BI Queries is mapped to the
+Nodes in the Tree. These settings are enabled only if your Queries are
+mapped to this Custom Visual.
+
+In the Node Mapping settings in ValQ, there are 3 options available as
+listed below:
+
+1. Automatic mapping based on whole field value - For example, you can
+   use this option if the field value exactly matches your Node’s unique
+   ID (e.g., ‘Canada’)
+
+2. Automatic mapping based on a key-text paired field value - For
+   example, you can use this option if your field has a key-text format
+   (e.g., ‘CA:Canada’), and your Node’s ID corresponds to a key (e.g.,
+   ‘CA’).
+
+3. Manual Mapping – Using this option, you can map each Node manually.
+
+For our example, we would explore the settings for Automatic mapping
+based on a key-text paired field value. The data source which is
+assigned for the Node Mapping is shown below:
+
+.. figure:: _static/14.11.png
+    :align: center
+    :alt: alternate text
+
+    Excel Data Source with Node Mapping
+
+From the above Figure, you will be able to view the Node ID as 6 and
+Category as 6:SparklingWater_GrossSales.
+
+Based on the above configuration, you will be able to view the ValQ
+screen as shown below.
+
+.. figure:: _static/14.12.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Node Mapping
+
+From the above Figure, you will be able to observe that the key-text
+format here is 6:SparklingWater_GrossSales.
+
+You can also undergo Manual Data Override by using the option “Use
+Manual Data configured in the Nodes”.
+
+Data Manager
+------------
+
+Using the Data Manager settings, you will be able to view and customize
+your Data Source. You will be able to select the Sort fields, sort the
+data with Ascending or Descending Order and select the Start With field
+with the required Month (see Figure below).
+
+.. figure:: _static/14.13.png
+    :align: center
+    :alt: alternate text
+
+    Data Manager Settings
+
+Additional Properties of Data Series Tab
+----------------------------------------
+
++-----------------------+-----------------------+-----------------------+
+| Area                  | Property              | Description           |
++=======================+=======================+=======================+
+| Data Series Labels    |                       | ValQ uses a primary   |
+|                       |                       | data series as the    |
+|                       |                       | baseline for          |
+|                       |                       | simulation.           |
+|                       |                       | Optionally, you can   |
+|                       |                       | include a second data |
+|                       |                       | series for            |
+|                       |                       | comparison. This is   |
+|                       |                       | very powerful as it   |
+|                       |                       | allows you to perform |
+|                       |                       | analysis such as      |
+|                       |                       | forecast vs. budget   |
+|                       |                       | (out of the box) and  |
+|                       |                       | simulated forecast    |
+|                       |                       | vs. budget and        |
+|                       |                       | simulated forecast    |
+|                       |                       | vs. original forecast |
+|                       |                       | (available upon       |
+|                       |                       | simulation).          |
++-----------------------+-----------------------+-----------------------+
+|                       | Baseline Series Label | This series sets the  |
+|                       |                       | Baseline data series  |
+|                       |                       | for simulation        |
++-----------------------+-----------------------+-----------------------+
+|                       | Comparison Series     | This series can be    |
+|                       | Label                 | used to compare       |
+|                       |                       | against primary       |
+|                       |                       | series. For example,  |
+|                       |                       | primary series are    |
+|                       |                       | forecasted values for |
+|                       |                       | each period, while    |
+|                       |                       | comparison series are |
+|                       |                       | budgeted values       |
++-----------------------+-----------------------+-----------------------+
+|                       | Include comparison    | This property         |
+|                       | data series           | activates the         |
+|                       |                       | Comparison Series     |
+|                       |                       | Label option.         |
++-----------------------+-----------------------+-----------------------+
+| Time Period Labels    |                       | This property         |
+|                       |                       | overrides the time    |
+|                       |                       | period labels as      |
+|                       |                       | needed. These labels  |
+|                       |                       | are displayed in the  |
+|                       |                       | navigation panel and  |
+|                       |                       | popup screens.        |
+|                       |                       |                       |
+|                       |                       | **Caution**: In case  |
+|                       |                       | you are overriding    |
+|                       |                       | these values, please  |
+|                       |                       | ensure that your      |
+|                       |                       | Power BI query only   |
+|                       |                       | supplies data for     |
+|                       |                       | these specific        |
+|                       |                       | periods. Else your    |
+|                       |                       | application may show  |
+|                       |                       | incorrect labels.     |
++-----------------------+-----------------------+-----------------------+
+|                       | Period(s) per data    | This property         |
+|                       | series                | represents the number |
+|                       |                       | of values in the      |
+|                       |                       | series. For example,  |
+|                       |                       | a series with Jan,    |
+|                       |                       | Feb and Mar periods   |
+|                       |                       | would have 3 periods  |
++-----------------------+-----------------------+-----------------------+
+|                       | Period Label(s)       | This property         |
+|                       |                       | represents the number |
+|                       |                       | of values in the      |
+|                       |                       | series. For example,  |
+|                       |                       | a series with Jan,    |
+|                       |                       | Feb and Mar periods   |
+|                       |                       | would have 3 periods. |
+|                       |                       | Use comma to separate |
+|                       |                       | the different Labels. |
++-----------------------+-----------------------+-----------------------+
+|                       | Set Active Simulation | This property sets    |
+|                       | Period                | the Start of          |
+|                       |                       | Simulation Period     |
+|                       |                       | based on the current  |
+|                       |                       | date/time. If the     |
+|                       |                       | period type is        |
+|                       |                       | “Month” then current  |
+|                       |                       | month will be derived |
+|                       |                       | and used as the Start |
+|                       |                       | of the Simulation     |
+|                       |                       | Interval.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Enable Active Period  | This property         |
+|                       |                       | enables/disables the  |
+|                       |                       | Active Period for the |
+|                       |                       | Simulation.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Period Format         | This property sets    |
+|                       |                       | the Period Format for |
+|                       |                       | the Simulation. The   |
+|                       |                       | options are Day,      |
+|                       |                       | Week, Month and       |
+|                       |                       | Quarter.              |
++-----------------------+-----------------------+-----------------------+
+|                       | Simulation Period     | This property sets    |
+|                       | Range                 | the simulation        |
+|                       |                       | interval on your      |
+|                       |                       | periods. For example, |
+|                       |                       | apply simulation only |
+|                       |                       | on specific periods   |
+|                       |                       | such as Apr to Dec.   |
++-----------------------+-----------------------+-----------------------+
+|                       | Active Period From    | This property sets    |
+|                       |                       | the Active Period     |
+|                       |                       | From value.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Active Period To      | This property sets    |
+|                       |                       | the Active Period To  |
+|                       |                       | value.                |
++-----------------------+-----------------------+-----------------------+
+| Time Aggregation      |                       | These labels are used |
+| Labels                |                       | in the navigation     |
+|                       |                       | panel, nodes and      |
+|                       |                       | popup screens.        |
++-----------------------+-----------------------+-----------------------+
+|                       | Active period         | This property sets    |
+|                       |                       | only one period of    |
+|                       |                       | interest. A Label and |
+|                       |                       | a three letter        |
+|                       |                       | abbreviation can be   |
+|                       |                       | provided for this     |
+|                       |                       | property.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Till Prior Period     | This property sets    |
+|                       |                       | Total value from      |
+|                       |                       | beginning to a        |
+|                       |                       | specific period. A    |
+|                       |                       | Label and a three     |
+|                       |                       | letter abbreviation   |
+|                       |                       | can be provided for   |
+|                       |                       | this property.        |
++-----------------------+-----------------------+-----------------------+
+|                       | All periods           | This property sets    |
+|                       |                       | Total value of all    |
+|                       |                       | periods in the        |
+|                       |                       | series. A Label and a |
+|                       |                       | three letter          |
+|                       |                       | abbreviation can be   |
+|                       |                       | provided for this     |
+|                       |                       | property.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Simulation Period     | This property sets a  |
+|                       |                       | specific set of       |
+|                       |                       | continuous periods. A |
+|                       |                       | Label and a three     |
+|                       |                       | letter abbreviation   |
+|                       |                       | can be provided for   |
+|                       |                       | this property.        |
++-----------------------+-----------------------+-----------------------+
+| Periods of Interest   |                       | Each node displays    |
+|                       |                       | values for a primary  |
+|                       |                       | period (e.g. Full     |
+|                       |                       | Year) and a           |
+|                       |                       | comparison period     |
+|                       |                       | (e.g. Month). These   |
+|                       |                       | primary & comparison  |
+|                       |                       | periods are also used |
+|                       |                       | in the table in the   |
+|                       |                       | popup screens. The    |
+|                       |                       | waterfall chart in    |
+|                       |                       | the popup also shows  |
+|                       |                       | performance vs.       |
+|                       |                       | benchmark for the     |
+|                       |                       | primary period.       |
+|                       |                       |                       |
+|                       |                       | The Periods of        |
+|                       |                       | Interest determines   |
+|                       |                       | how the values are    |
+|                       |                       | displayed based on    |
+|                       |                       | periods aggregation.  |
++-----------------------+-----------------------+-----------------------+
+|                       | Primary Value         | This property sets    |
+|                       |                       | the Primary Value for |
+|                       |                       | the Node. The options |
+|                       |                       | are Month, YtD, Full  |
+|                       |                       | Year and Sim.Mths.    |
++-----------------------+-----------------------+-----------------------+
+|                       | Secondary Value       | This property         |
+|                       |                       | determines how        |
+|                       |                       | secondary value is    |
+|                       |                       | displayed for each    |
+|                       |                       | type of periods       |
+|                       |                       | aggregation.          |
++-----------------------+-----------------------+-----------------------+
+|                       | Secondary Value –     | This property sets    |
+|                       | Active Period         | the Secondary Value   |
+|                       |                       | for the Active        |
+|                       |                       | Period. The options   |
+|                       |                       | are YtD, Full Year    |
+|                       |                       | and Sim.Mths.         |
++-----------------------+-----------------------+-----------------------+
+|                       | Secondary Value –     | This property sets    |
+|                       | Total to Period       | the Secondary Value   |
+|                       |                       | for the Total to      |
+|                       |                       | Period. The options   |
+|                       |                       | are Month, Full Year  |
+|                       |                       | and Sim.Mths.         |
++-----------------------+-----------------------+-----------------------+
+|                       | Secondary Value –     | This property sets    |
+|                       | Total of Period       | the Secondary Value   |
+|                       |                       | for the Total of      |
+|                       |                       | Period. The options   |
+|                       |                       | are Month, YtD and    |
+|                       |                       | Sim.Mths.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Secondary Value –     | This property sets    |
+|                       | Selected Interval     | the Secondary Value   |
+|                       |                       | for the Selected      |
+|                       |                       | Interval. The options |
+|                       |                       | are Month, YtD and    |
+|                       |                       | Full Year.            |
++-----------------------+-----------------------+-----------------------+
+| Node Mapping          |                       | This setting captures |
+|                       |                       | how data from Power   |
+|                       |                       | BI queries is mapped  |
+|                       |                       | to the nodes in your  |
+|                       |                       | tree. These settings  |
+|                       |                       | are enabled only if   |
+|                       |                       | your queries are      |
+|                       |                       | mapped to this custom |
+|                       |                       | visual.               |
++-----------------------+-----------------------+-----------------------+
+|                       | Automatic mapping     | Use this property if  |
+|                       | based on whole field  | the field value       |
+|                       | value                 | exactly matches your  |
+|                       |                       | node's unique ID      |
+|                       |                       | (e.g. "Canada")       |
++-----------------------+-----------------------+-----------------------+
+|                       | Automatic mapping     | Use this property if  |
+|                       | based on a key-text   | your field has a      |
+|                       | paired field value    | key-text format (e.g. |
+|                       |                       | "CA:Canada"), and     |
+|                       |                       | your node's id        |
+|                       |                       | corresponds to a key  |
+|                       |                       | (e.g. "CA")           |
++-----------------------+-----------------------+-----------------------+
+|                       | Manual Mapping        | This property is used |
+|                       |                       | to map each node      |
+|                       |                       | manually.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Manual Data Override  | When this property is |
+|                       |                       | enabled, then use     |
+|                       |                       | manual data           |
+|                       |                       | configured in the     |
+|                       |                       | nodes if data for the |
+|                       |                       | nodes are missing in  |
+|                       |                       | the query.            |
++-----------------------+-----------------------+-----------------------+
+| Data Manager          |                       | This property is used |
+|                       |                       | to view and customize |
+|                       |                       | the data.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Choose Sort Fields    | This property sets    |
+|                       |                       | the Period.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Sort by               | This property sets    |
+|                       |                       | the Ascending or      |
+|                       |                       | Descending order for  |
+|                       |                       | the Period.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Start with            | This property sets    |
+|                       |                       | the Starting month.   |
++-----------------------+-----------------------+-----------------------+
+
+*Additional Properties of Data Series Tab*
+
+Appearance Tab
+==============
+
+Using the “Appearance” Tab, you will be able to configure the Appearance
+for the Node. There are 4 different options as listed below to configure
+the Appearance for the Node.
+
+1. General
+
+2. Status Bar
+
+3. Visualization
+
+4. Colors
+
+.. _general-1:
+
+General 
+--------
+
+In General settings you have the ability to configure the Top Node,
+setting the display of number of children Nodes for the Top Node, set
+the zoom ratio for the Node, set the Auto scale for the data format to
+be displayed in the Tree Widget and configure the scale suffix for the
+units Thousands, Millions and Billions at the Node level. You will be
+able to configure the Number Format Settings namely Display as Zero,
+Display Negative Value as, Decimal Separator and Thousand Separator and
+provide the Hint information at the top of the canvas (see Figure
+below).
+
+.. figure:: _static/fifteen.png
+    :align: center
+    :alt: alternate text
+
+    Appearance Tab
+
+Based on the above settings you will be able to view the ValQ screen as
+shown below.
+
+.. figure:: _static/15.1.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with configured Appearance settings
+
+From the above Figure, you can observe that the Top Node “Net Profit”
+shows only two levels namely Node “Revenue” and Node “Total Cost”. Also
+by switching to Navigation Panel, you can view the Hint in the canvas
+before simulation is done (see Figure below).
+
+.. figure:: _static/15.2.png
+    :align: center
+    :alt: alternate text
+
+    Hint Details
+
+Hide Empty Nodes
+~~~~~~~~~~~~~~~~
+
+For our example, activate the property Enable Hide Empty Nodes in the Appearance Tab (see Figure below).
+
+.. figure:: _static/en2.png 
+    :align: center
+    :alt: alternate text
+
+    Hide Empty Nodes 
+
+The below condition will be applied when the property Enable Hide Empty Nodes is enabled.
+
+When one of the child node has null value, then the specific child node will be hidden. 
+Also when the Writeback Functionality is enabled, then the child node with null values will not undergo the writeback functionality.
+
+Horizontal Waterfall Chart Type
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default, the Detail page will be displayed with the Vertical Chart
+type. You can also select the “Horizontal” Waterfall Chart Type by
+navigating to the appearance Tab as shown in the below Figure.
+
+.. figure:: _static/15.3.png
+    :align: center
+    :alt: alternate text
+
+    Appearance Tab with Horizontal Waterfall Chart Type selection
+
+Based on the above configuration, you will be able to view the Detail
+Page showing the Horizontal Waterfall Chart (see Figure below). For our
+example, the Revenue Node in the above Figure has been clicked to view
+the Detail Page.
+
+.. figure:: _static/15.4.png
+    :align: center
+    :alt: alternate text
+
+    Detail Page of the Revenue Node with Horizontal Waterfall Chart Type
+
+Status Bar
+----------
+
+In Status Bar settings, you have the ability to define the status bar
+for the Node and also define the meaning for the statuses. Each Node
+will display the status bar when there is a change in Variance,
+Simulation Impact and Hidden conditions (see Figure below). The status
+bar color changes based on the percentage of deviant from the initial
+value.
+
+.. figure:: _static/15.5.png
+    :align: center
+    :alt: alternate text
+
+    Status Bar for the Node
+
+Based on the above settings you will be able to view the ValQ screen
+having Nodes with different statuses bar (see Figure below).
+
+.. figure:: _static/15.6.png
+    :align: center
+    :alt: alternate text
+
+    Nodes with different status bars
+
+From the above Figure, you will be able to observe that the Nodes “Net
+Profit” and “Total Cost” has red status bar since the variance values
+for both the Nodes are below -10%. The Node “Revenue” has the green
+status bar since the variance value for this Node is above 1%.
+
+Visualization
+-------------
+
+In the Visualization settings, you will be able to configure the Node
+Style with three different options namely Standard, Full and Minimal.
+Also you will be able to enable/disable the contents like Variance,
+Trend Spark Line, Secondary Value/Variance and Node Operand in the Node. You can  
+set the Default Visual as Table or Tree option. For our example, the Default Visual 
+has been selected as Tree (see Figure below).
+
+.. figure:: _static/15.7.png
+    :align: center
+    :alt: alternate text
+
+    Visualization Settings for the Node
+
+Based on the above settings you will be able to view the ValQ screen
+having Nodes configured with Standard Node Style as Default Node Type
+(see Figure below).
+
+.. figure:: _static/15.8.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Default Node Style as Standard Type
+
+From the above Figure, you can observe that the Node Styles is set to
+“Standard” Type and the contents like Variance, Trend Spark Line,
+Secondary Value/Variance and Node Operand are displayed in the Node
+based on the configuration.
+
+Descendant Node Count
+~~~~~~~~~~~~~~~~~~~~~
+
+You will be able to view the Total Number of Node Counts by activating
+the property Show Node Count for collapsed Nodes in the Visualization
+settings in Appearance Tab (see Figure below).
+
+.. figure:: _static/15.9.png
+    :align: center
+    :alt: alternate text
+
+    Node Count option enabled in Advanced Editor
+
+After activating the Show Node Count for collapsed Nodes option, you
+will be able to view the value driver tree with the Nodes count for the
+collapsed Node as shown below in the below Figure.
+
+.. figure:: _static/15.10.png
+    :align: center
+    :alt: alternate text
+
+    Nodes Count display for the collapsed Node
+
+Colors
+------
+
+In the Colors settings, you will be able to manage all the color
+settings for the Nodes. You can either select the Light Theme or Dark
+Theme for the Nodes. You can also select the desired color for the
+canvas and also the color for the Tree Widget (see Figure below).
+
+.. figure:: _static/15.11.png
+    :align: center
+    :alt: alternate text
+
+    Color Settings
+
+Based on the above color settings you will be able to view the ValQ
+screen having different Theme color along with different colors selected
+for both the canvas as well as the tree widget based on the configured
+settings (see Figure below).
+
+.. figure:: _static/15.12.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with color settings
+
+Additional Properties of Appearance Tab 
+----------------------------------------
+
++-----------------------+-----------------------+-----------------------+
+| Area                  | Property              | Description           |
++=======================+=======================+=======================+
+| General               | Top Node              | This property sets    |
+|                       |                       | the Root node at the  |
+|                       |                       | lowest level with no  |
+|                       |                       | parent note. You can  |
+|                       |                       | select the Nodes from |
+|                       |                       | the list.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Show Levels           | Using this property,  |
+|                       |                       | you can expand the    |
+|                       |                       | hierarchy upto the    |
+|                       |                       | following number of   |
+|                       |                       | levels by default.    |
+|                       |                       | The minimum level is  |
+|                       |                       | 2.                    |
++-----------------------+-----------------------+-----------------------+
+|                       | Node Search           | This property         |
+|                       |                       | enables/disables the  |
+|                       |                       | Node Search.          |
++-----------------------+-----------------------+-----------------------+
+|                       | Hide Empty Nodes      | This property hide    |
+|                       |                       | Nodes that have no    |
+|                       |                       | value mapped to it or |
+|                       |                       | have null value for   |
+|                       |                       | all its periods.      |
++-----------------------+-----------------------+-----------------------+
+|                       | Default zoom (%)      | This property sets    |
+|                       |                       | the default zoom      |
+|                       |                       | ratio.                |
++-----------------------+-----------------------+-----------------------+
+|                       | Number Scaling        | This property sets    |
+|                       |                       | the data format to be |
+|                       |                       | displayed in the Tree |
+|                       |                       | Widget. The options   |
+|                       |                       | are 0.0t, 0.00t,      |
+|                       |                       | 0.0b, 0.00b, 0m,      |
+|                       |                       | 0.0m, 0.00m, 0k,      |
+|                       |                       | 0.0k, 0 and Auto.     |
++-----------------------+-----------------------+-----------------------+
+|                       | Scale Suffix          | This property sets    |
+|                       |                       | the Thousand, Million |
+|                       |                       | and Billion suffix    |
+|                       |                       | for the scale.        |
++-----------------------+-----------------------+-----------------------+
+|                       | Number Formatting     | This property sets    |
+|                       |                       | the Number Formatting |
+|                       |                       | for the following     |
+|                       |                       | fields:               |
+|                       |                       |                       |
+|                       |                       | 1. Display as Zero    |
+|                       |                       |    None, - or 0       |
+|                       |                       |                       |
+|                       |                       | 2. Display Negative   |
+|                       |                       |    Value as ( 0), -0  |
+|                       |                       |    or 0-              |
+|                       |                       |                       |
+|                       |                       | 3. Decimal Separator  |
+|                       |                       |                       |
+|                       |                       | 4. Thousand Separator |
++-----------------------+-----------------------+-----------------------+
+|                       | Hint                  | This property sets    |
+|                       |                       | the Hint which        |
+|                       |                       | appears at the top of |
+|                       |                       | the canvas.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Waterfall Chart Type  | This property sets    |
+|                       |                       | the Waterfall Chart   |
+|                       |                       | Type in the Detail    |
+|                       |                       | Page when a Node is   |
+|                       |                       | clicked. The options  |
+|                       |                       | are Vertical and      |
+|                       |                       | Horizontal.           |
++-----------------------+-----------------------+-----------------------+
+| Status Bar            |                       | Each node will have a |
+|                       |                       | status bar property   |
+|                       |                       | to indicate whether   |
+|                       |                       | the trend of values   |
+|                       |                       | is favorable and this |
+|                       |                       | property can be       |
+|                       |                       | configured.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Display status bar    | The options for this  |
+|                       | when there is a       | property are          |
+|                       | change in             | Variance, Simulation  |
+|                       |                       | Impact and Hidden.    |
++-----------------------+-----------------------+-----------------------+
+|                       | Color Indicator       | Status bar color will |
+|                       |                       | be changed based on   |
+|                       |                       | the percentage of     |
+|                       |                       | deviant from initial  |
+|                       |                       | value. The color      |
+|                       |                       | ranges are given      |
+|                       |                       | below:                |
+|                       |                       |                       |
+|                       |                       | 1. Red - Below:- 10%  |
+|                       |                       |                       |
+|                       |                       | 2. Yellow - Between:  |
+|                       |                       |    -10% to-1%         |
+|                       |                       |                       |
+|                       |                       | 3. White - Between:   |
+|                       |                       |    -1% to1%           |
+|                       |                       |                       |
+|                       |                       | 4. Green - Above: 1%  |
++-----------------------+-----------------------+-----------------------+
+| Visualization         |                       | This property is used |
+|                       |                       | to customize the Tree |
+|                       |                       | Widget Styles and     |
+|                       |                       | Elements.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Default Visual        | This property sets    |
+|                       |                       | the Default Visual as |
+|                       |                       | Tree or Table in the  |
+|                       |                       | right pane.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Default Node Style    | This property is used |
+|                       |                       | to configure the      |
+|                       |                       | style of the Node.    |
+|                       |                       | The options are       |
+|                       |                       | Standard, Full and    |
+|                       |                       | Minimal.              |
++-----------------------+-----------------------+-----------------------+
+|                       | Default Table Style   | This property is used |
+|                       |                       | to configure the      |
+|                       |                       | style of the Table.   |
+|                       |                       | The options are       |
+|                       |                       | Standard and Full.    |
++-----------------------+-----------------------+-----------------------+
+|                       | Contents              | This property is used |
+|                       |                       | to display the below  |
+|                       |                       | listed contents in    |
+|                       |                       | the Node:             |
+|                       |                       |                       |
+|                       |                       | 1. Variance           |
+|                       |                       |                       |
+|                       |                       | 2. Trend Sparkline    |
+|                       |                       |                       |
+|                       |                       | 3. Secondary          |
+|                       |                       |    Value/Variance     |
+|                       |                       |                       |
+|                       |                       | 4. Node Operand       |
++-----------------------+-----------------------+-----------------------+
+|                       | Node Count            | This property         |
+|                       |                       | activates the Node    |
+|                       |                       | Count for the         |
+|                       |                       | Collapsed Nodes.      |
++-----------------------+-----------------------+-----------------------+
+| Colors                | Choose Theme          | This Property sets    |
+|                       |                       | the Theme for the     |
+|                       |                       | Node. The options are |
+|                       |                       | Light Theme and Dark  |
+|                       |                       | Theme.                |
++-----------------------+-----------------------+-----------------------+
+|                       | Canvas                | This property sets    |
+|                       |                       | the Main Color and    |
+|                       |                       | Accent Color for the  |
+|                       |                       | Canvas.               |
++-----------------------+-----------------------+-----------------------+
+|                       | Tree Widget           | This property sets    |
+|                       |                       | the Font color,       |
+|                       |                       | Background color,     |
+|                       |                       | Derived Nodes color   |
+|                       |                       | and Highlighted color |
+|                       |                       | for the Tree Widget.  |
++-----------------------+-----------------------+-----------------------+
+
+*Additional Properties of Appearance Tab*
+
+Settings Tab
+============
+
+Using the Settings Tab, you will be able to configure the settings for
+the Navigation Panel and then configure the Export File settings.
+
+Navigation Panel
+----------------
+
+In the Navigation Panel settings, you will be able to configure the
+entire settings for the Navigation Panel. The following properties can
+be configured for the Navigation Panel.
+
+1. Main Properties – Here you can enable/disable the Navigation Panel
+   and also enable/disable the Display Section Headers property (see
+   Figure below).
+
+.. figure:: _static/16.1.png
+    :align: center
+    :alt: alternate text
+
+    Main Properties
+
+2. Theme – You can select the different Theme options for the Navigation
+   Panel (see Figure below).
+
+.. figure:: _static/16.2.png
+    :align: center
+    :alt: alternate text
+
+    Theme
+
+3. Scenarios - You can select the different Visibility options for the
+   Scenarios and also set the Title for the Scenario in the Navigation
+   Panel (see Figure below).
+
+.. figure:: _static/16.3.png
+    :align: center
+    :alt: alternate text
+
+    Scenarios
+
+You will be also able to download the xml files of the Scenarios from
+the Scenario Window in the Navigation Panel by clicking the Download
+option (see Figure below). In our example, the data for the Scenario 2
+has been downloaded.
+
+.. figure:: _static/16.4.png
+    :align: center
+    :alt: alternate text
+
+    xml download of the Scenario 2 data
+
+4. Sub Models - You can select the different Visibility options for the
+   Sub Models, set the Title for the Sub Models and further select the
+   Nodes from Tree/Sub-Tree List from the Navigation Panel. You can also
+   enable/disable the property for filtering the list based on the
+   selected sub tree (see Figure below).
+
+.. figure:: _static/smm1.png
+    :align: center
+    :alt: alternate text
+
+    Sub Models
+
+You can also search for the Node directly in the Search option as shown
+in the below Figure. This is common throughout all the properties in the
+Navigation Panel (see Figure below).
+
+.. figure:: _static/smm2.png
+    :align: center
+    :alt: alternate text
+
+    Search option for the Nodes
+
+5. Simulation Period - You can select the different Visibility options
+   for the Simulation Period and also set the Title for the Simulation
+   Period in the Navigation Panel (see Figure below).
+
+.. figure:: _static/16.6.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Period
+
+6. Value Display - You can select the different Visibility options for
+   the Value Display, set the Title for the Value Display and select the
+   Primary Period and Scaling options for the Value Display in the
+   Navigation Panel (see Figure below).
+
+.. figure:: _static/16.7.png
+    :align: center
+    :alt: alternate text
+
+    Value Display
+
+7. Key Assumptions Input - You can select the different Visibility
+   options for the Key Assumptions Input, set the Title for the Key
+   Assumptions Input and further select the Key Assumptions to be
+   displayed as List in the Navigation Panel (see Figure below).
+
+.. figure:: _static/16.8.png
+    :align: center
+    :alt: alternate text
+
+    Key Assumptions Input
+
+8. KPIs - You can select the different Visibility options for the KPIs,
+   set the Title for the KPIs and further select the KPIs to be
+   displayed as List in the Navigation Panel (see Figure below).
+
+.. figure:: _static/16.9.png
+    :align: center
+    :alt: alternate text
+
+    KPIs
+
+9. Constraints - You can select the different Visibility options for the
+   Constraints, set the Title for the Constraints and further select the
+   Constraints to be displayed as List in the Navigation Panel. You can
+   also enable/disable the property for sorting the constraints based on
+   utilization (see Figure below).
+
+.. figure:: _static/16.10.png
+    :align: center
+    :alt: alternate text
+
+    Constraints
+
+Based on the above set of configurations, you will be able to view the
+ValQ screen with Navigation Panel as shown below. By clicking the Edit
+button in the right canvas, you will be able to view the Navigation
+Panel (see Figure below).
+
+.. figure:: _static/16.11.png
+    :align: center
+    :alt: alternate text
+
+    ValQ screen with Navigation Panel
+
+Table View of the Nodes
+~~~~~~~~~~~~~~~~~~~~~~~
+
+In the Navigation Panel, you will be able to view the Table View of the
+value driver tree in the right canvas by clicking the Table option in
+the Navigation Panel (see Figure below).
+
+.. figure:: _static/16.12.png
+    :align: center
+    :alt: alternate text
+
+    Table option in Navigation Panel
+
+Navigation from Comparison Scenario to Clicked Scenario
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When there is more number of Comparison Scenarios, the user can click
+any one comparison slide in order to get navigated to the clicked
+scenario in the Navigation Panel. For our example, we have 3 comparison
+slides (as shown in the below Figure) being displayed by clicking the
+“Compare Scenarios in collection” in the Scenarios Window of the
+Navigation Panel.
+
+.. figure:: _static/16.13.png
+    :align: center
+    :alt: alternate text
+
+    Scenario Comparison Screen
+
+For our example , the arrow icon for the Scenario 2 slide has been
+clicked (see above Figure). Now you will be able to view the Navigation
+Panel with the scenario 2 option being selected by default (see Figure
+above).
+
+.. figure:: _static/16.14.png
+    :align: center
+    :alt: alternate text
+
+    Navigation Panel with Scenario 2 being selected by default
+
+Export
+------
+
+In the Export settings, you will be able to configure the export
+functionality. There is also an option to include the navigation
+settings panel in the Export File (see Figure below).
+
+.. figure:: _static/16.15.png
+    :align: center
+    :alt: alternate text
+
+    Export option
+
+The saved file can be exported and this exported file can be used in the
+“Import from an Excel file” option in “Import an Advanced Model”
+category (:ref:`Refer Section: Import from an Export File <IEF>`).
+
+Additional Properties of Settings Tab 
+--------------------------------------
+
++-----------------------+-----------------------+-----------------------+
+| Area                  | Property              | Description           |
++=======================+=======================+=======================+
+| Navigation Panel -    | Enable Navigation     | This property         |
+| Main Properties       | Panel                 | enables/disables the  |
+|                       |                       | Navigation Panel in   |
+|                       |                       | the ValQ screen.      |
++-----------------------+-----------------------+-----------------------+
+|                       | Display Section       | This property         |
+|                       | Headers               | enables/disables the  |
+|                       |                       | display of Section    |
+|                       |                       | Headers in the        |
+|                       |                       | Navigation Panel.     |
++-----------------------+-----------------------+-----------------------+
+| Navigation Panel -    | Choose a Theme        | This property sets    |
+| Theme                 |                       | the Theme for the     |
+|                       |                       | Navigation Panel. The |
+|                       |                       | options are Dark and  |
+|                       |                       | Light.                |
++-----------------------+-----------------------+-----------------------+
+| Navigation Panel -    | Visibility            | This property sets    |
+| Scenarios             |                       | the visibility of the |
+|                       |                       | Scenarios window in   |
+|                       |                       | the Navigation Panel. |
+|                       |                       | The options are       |
+|                       |                       | Visible, Collapsed    |
+|                       |                       | and Hidden.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Title                 | This property sets    |
+|                       |                       | the Title for the     |
+|                       |                       | Scenarios window.     |
++-----------------------+-----------------------+-----------------------+
+| Navigation Panel –    | Visibility            | This property sets    |
+| Sub Models            |                       | the visibility of the |
+|                       |                       | Value Driver Trees    |
+|                       |                       | window in the         |
+|                       |                       | Navigation Panel. The |
+|                       |                       | options are Visible,  |
+|                       |                       | Collapsed and Hidden. |
++-----------------------+-----------------------+-----------------------+
+|                       | Title                 | This property sets    |
+|                       |                       | the Title for the     |
+|                       |                       | Value Driver Trees    |
+|                       |                       | window.               |
++-----------------------+-----------------------+-----------------------+
+|                       | Choose Tree/Sub-Tree  | Using this property,  |
+|                       | list                  | you can select the    |
+|                       |                       | Tree and Subtree from |
+|                       |                       | the list which would  |
+|                       |                       | get displayed in the  |
+|                       |                       | Value Driver Trees    |
+|                       |                       | window.               |
++-----------------------+-----------------------+-----------------------+
+|                       | Filter lists based on | This property when    |
+|                       | selected Subtree      | activated will filter |
+|                       |                       | the lists based on    |
+|                       |                       | the selected Subtree. |
++-----------------------+-----------------------+-----------------------+
+| Navigation Panel –    | Visibility            | This property sets    |
+| Simulation Period     |                       | the visibility of the |
+|                       |                       | Simulation Period     |
+|                       |                       | window in the         |
+|                       |                       | Navigation Panel. The |
+|                       |                       | options are Visible,  |
+|                       |                       | Collapsed and Hidden. |
++-----------------------+-----------------------+-----------------------+
+|                       | Title                 | This property sets    |
+|                       |                       | the Title for the     |
+|                       |                       | Simulation Period     |
+|                       |                       | window.               |
+|                       |                       |                       |
+|                       |                       | **Note**: To change   |
+|                       |                       | the default To-From   |
+|                       |                       | Simulation Period,    |
+|                       |                       | navigate to Data >    |
+|                       |                       | Time Period Labels.   |
++-----------------------+-----------------------+-----------------------+
+| Navigation Panel –    | Visibility            | This property sets    |
+| Value Display         |                       | the visibility of the |
+|                       |                       | Value Display window  |
+|                       |                       | in the Navigation     |
+|                       |                       | Panel. The options    |
+|                       |                       | are Visible,          |
+|                       |                       | Collapsed and Hidden. |
++-----------------------+-----------------------+-----------------------+
+|                       | Title                 | This property sets    |
+|                       |                       | the Title for the     |
+|                       |                       | Value Display window. |
++-----------------------+-----------------------+-----------------------+
+|                       | Primary Period        | This property sets    |
+|                       |                       | the Primary Period in |
+|                       |                       | the Value Display     |
+|                       |                       | window of the         |
+|                       |                       | Navigation Panel.     |
++-----------------------+-----------------------+-----------------------+
+|                       | Scaling Options       | This property sets    |
+|                       |                       | the Scaling options   |
+|                       |                       | in the Value Display  |
+|                       |                       | window. The scaling   |
+|                       |                       | values are 00.0t,     |
+|                       |                       | 0.00t, 0.0b, 0.00b,   |
+|                       |                       | 0m, 0.0m, 0.00m, 0k,  |
+|                       |                       | 0.0k and 0.           |
+|                       |                       |                       |
+|                       |                       | **Note**: To change   |
+|                       |                       | the default scaling   |
+|                       |                       | settings, navigate to |
+|                       |                       | Appearance > Time     |
+|                       |                       | Settings from the Top |
+|                       |                       | Menu.                 |
++-----------------------+-----------------------+-----------------------+
+| Navigation Panel -    | Visibility            | This property sets    |
+| Key Inputs            |                       | the visibility of the |
+|                       |                       | Key Assumptions Input |
+|                       |                       | window in the         |
+|                       |                       | Navigation Panel. The |
+|                       |                       | options are Visible,  |
+|                       |                       | Collapsed and Hidden. |
++-----------------------+-----------------------+-----------------------+
+|                       | Title                 | This property sets    |
+|                       |                       | the Title for the Key |
+|                       |                       | Assumptions Input     |
+|                       |                       | window.               |
++-----------------------+-----------------------+-----------------------+
+|                       | Key Assumptions to be | This property shows   |
+|                       | displayed as List     | the selected Key      |
+|                       |                       | Assumptions as a List |
+|                       |                       | in the Key            |
+|                       |                       | Assumptions window.   |
++-----------------------+-----------------------+-----------------------+
+| Navigation Panel -    | Visibility            | This property sets    |
+| KPIs                  |                       | the visibility of the |
+|                       |                       | KPIs window in the    |
+|                       |                       | Navigation Panel. The |
+|                       |                       | options are Visible,  |
+|                       |                       | Collapsed and Hidden. |
++-----------------------+-----------------------+-----------------------+
+|                       | Title                 | This property sets    |
+|                       |                       | the Title for the     |
+|                       |                       | KPIs window.          |
++-----------------------+-----------------------+-----------------------+
+|                       | KPI‘s to be displayed | This property shows   |
+|                       | as List               | the selected KPI‘s as |
+|                       |                       | a List in the KPIs    |
+|                       |                       | window.               |
++-----------------------+-----------------------+-----------------------+
+| Navigation Panel -    | Visibility            | This property sets    |
+| Constraints           |                       | the visibility of the |
+|                       |                       | Constraints window in |
+|                       |                       | the Navigation Panel. |
+|                       |                       | The options are       |
+|                       |                       | Visible, Collapsed    |
+|                       |                       | and Hidden.           |
++-----------------------+-----------------------+-----------------------+
+|                       | Title                 | This property sets    |
+|                       |                       | the Title for the     |
+|                       |                       | Constraints window.   |
++-----------------------+-----------------------+-----------------------+
+|                       | Choose Constraints to | Using this property,  |
+|                       | be listed             | you can select the    |
+|                       |                       | required Constraints  |
+|                       |                       | to be listed in the   |
+|                       |                       | Constraints window.   |
++-----------------------+-----------------------+-----------------------+
+|                       | Sort Constraints      | This property when    |
+|                       | based on utilization  | activated sorts the   |
+|                       |                       | Constraints based on  |
+|                       |                       | utilization.          |
++-----------------------+-----------------------+-----------------------+
+| Export – Export       | Include navigation    | This property when    |
+| Configuration as File | panel settings in the | activated exports the |
+|                       | export file           | file along with       |
+|                       |                       | Navigation Panel      |
+|                       |                       | settings.             |
++-----------------------+-----------------------+-----------------------+
+|                       | Export Scenarios via  | Using this property,  |
+|                       | Write Back URL        | you can write back or |
+|                       |                       | consume the scenarios |
+|                       |                       | created in the        |
+|                       |                       | run-time using the    |
+|                       |                       | Sync Scenarios        |
+|                       |                       | Feature.              |
++-----------------------+-----------------------+-----------------------+
+|                       | Export URL            | This property         |
+|                       |                       | configures the URL to |
+|                       |                       | submit the Scenarios  |
+|                       |                       | data.                 |
++-----------------------+-----------------------+-----------------------+
+
+*Additional Properties of Settings Tab*
+
+Known Issues and Limitations
+============================
+
+Below are the known issue as of the writing of the document. This list
+will be updated in the online version to reflect the current state at
+any point in time.
+
++-----------------------------------+-----------------------------------+
+| **Known Issues and Limitations**  | **Description**                   |
++-----------------------------------+-----------------------------------+
+| Pinch zoom is not supported in IE | The Pinch zoom doesn’t work       |
+| on Windows touch enabled devices  | within Windows touch interfaces.  |
+|                                   | A zoom slider has been added to   |
+|                                   | ensure users has access to zoom   |
+|                                   | even when                         |
++-----------------------------------+-----------------------------------+
+
+*Known Issues and Limitations*
+
+.. |visualBI_final| image:: media/image1.png
+   :width: 2.30208in
+   :height: 0.88542in
+.. |..image::_static/image2| image:: media/image2.png
+   :width: 7.08194in
+   :height: 4.01458in
+.. |4| image:: media/image3.jpeg
+   :width: 5.90625in
+   :height: 3.61458in
+.. |..image::_static/image4| image:: media/image4.png
+   :width: 0.14583in
+   :height: 0.17708in
+.. |..image::_static/image7| image:: media/image7.png
+   :width: 1.26656in
+   :height: 0.19667in
+.. |..image::_static/image8| image:: media/image7.png
+   :width: 1.26656in
+   :height: 0.19667in
+.. |..image::_static/image9| image:: media/image8.png
+   :width: 2.81215in
+   :height: 1.11444in
+.. |..image::_static/image10| image:: media/image9.png
+   :width: 7.08194in
+   :height: 4.00833in
+.. |..image::_static/image11| image:: media/image10.png
+   :width: 0.25in
+   :height: 0.23958in
+.. |..image::_static/image12| image:: media/image11.png
+   :width: 7.08194in
+   :height: 3.97639in
+.. |..image::_static/image13| image:: media/image12.png
+   :width: 7.08194in
+   :height: 3.13681in
+.. |..image::_static/image14| image:: media/image13.png
+   :width: 7.08194in
+   :height: 3.22778in
+.. |..image::_static/image15| image:: media/image10.png
+   :width: 0.25in
+   :height: 0.23958in
+.. |..image::_static/image16| image:: media/image14.png
+   :width: 7.08194in
+   :height: 3.09583in
+.. |..image::_static/image17| image:: media/image15.png
+   :width: 2.79132in
+   :height: 1.02071in
+.. |..image::_static/image18| image:: media/image16.png
+   :width: 7.08194in
+   :height: 1.87431in
+.. |..image::_static/image19| image:: media/image17.png
+   :width: 0.28125in
+   :height: 0.29167in
+.. |..image::_static/image20| image:: media/image18.png
+   :width: 0.5625in
+   :height: 0.25in
+.. |..image::_static/image22| image:: media/image20.png
+   :width: 0.1875in
+   :height: 0.16667in
+.. |..image::_static/image23| image:: media/image21.png
+   :width: 0.16667in
+   :height: 0.1875in
+.. |..image::_static/image27| image:: media/image25.png
+   :width: 0.21875in
+   :height: 0.21875in
+.. |..image::_static/image28| image:: media/image26.png
+   :width: 0.16665in
+   :height: 0.18748in
+.. |..image::_static/image29| image:: media/image27.png
+   :width: 2.68716in
+   :height: 1.18735in
+.. |C:\Users\GANESH~1\AppData\Local\Temp\SNAGHTMLa5e88063.PNG| image:: media/image29.png
+   :width: 7.00759in
+   :height: 3.51042in
+.. |..image::_static/image32| image:: media/image30.png
+   :width: 2.31221in
+   :height: 0.31246in
+.. |..image::_static/image33| image:: media/image31.png
+   :width: 0.14581in
+   :height: 0.1354in
+.. |..image::_static/image34| image:: media/image32.png
+   :width: 0.21872in
+   :height: 0.14581in
+.. |..image::_static/image35| image:: media/image33.png
+   :width: 6.63459in
+   :height: 3.08295in
+.. |..image::_static/image36| image:: media/image34.png
+   :width: 0.35417in
+   :height: 0.20833in
+.. |..image::_static/image37| image:: media/image35.png
+   :width: 0.21872in
+   :height: 0.16665in
+.. |..image::_static/image38| image:: media/image36.png
+   :width: 0.17706in
+   :height: 0.1354in
+.. |..image::_static/image39| image:: media/image37.png
+   :width: 7.08194in
+   :height: 3.42222in
+.. |..image::_static/image41| image:: media/image39.png
+   :width: 2.82292in
+   :height: 0.97917in
+.. |6| image:: media/image41.jpeg
+   :width: 7.07292in
+   :height: 3.65625in
+.. |..image::_static/image44| image:: media/image42.png
+   :width: 7.08194in
+   :height: 2.85347in
+.. |7| image:: media/image43.jpeg
+   :width: 4.09375in
+   :height: 1.91667in
+.. |..image::_static/image48| image:: media/image46.png
+   :width: 0.19792in
+   :height: 0.13542in
+.. |8| image:: media/image48.jpeg
+   :width: 7.08194in
+   :height: 3.98194in
+.. |..image::_static/image51| image:: media/image49.png
+   :width: 0.21872in
+   :height: 0.19789in
+.. |..image::_static/image52| image:: media/image50.png
+   :width: 3.43707in
+   :height: 2.6455in
+.. |..image::_static/image53| image:: media/image51.png
+   :width: 0.18748in
+   :height: 0.15623in
+.. |..image::_static/image54| image:: media/image52.png
+   :width: 0.20833in
+   :height: 0.19231in
+.. |..image::_static/image55| image:: media/image53.png
+   :width: 0.17708in
+   :height: 0.17708in
+.. |..image::_static/image56| image:: media/image54.png
+   :width: 7.08194in
+   :height: 3.30625in
+.. |..image::_static/image57| image:: media/image55.png
+   :width: 7.08194in
+   :height: 3.29722in
+.. |..image::_static/image58| image:: media/image56.png
+   :width: 7.08194in
+   :height: 3.39097in
+.. |..image::_static/image59| image:: media/image57.png
+   :width: 6.90625in
+   :height: 4.96147in
+.. |..image::_static/image60| image:: media/image58.png
+   :width: 7.08194in
+   :height: 3.42639in
+.. |..image::_static/image61| image:: media/image59.png
+   :width: 2.66597in
+   :height: 5.02083in
+.. |..image::_static/image62| image:: media/image60.png
+   :width: 4.34375in
+   :height: 3.64192in
+.. |..image::_static/image63| image:: media/image61.png
+   :width: 7.08194in
+   :height: 3.24931in
+.. |..image::_static/image64| image:: media/image62.png
+   :width: 7.08194in
+   :height: 4.00694in
+.. |C:\Users\GANESH~1\AppData\Local\Temp\SNAGHTML95dcd268.PNG| image:: media/image63.png
+   :width: 6.50377in
+   :height: 3.66038in
+.. |..image::_static/image66| image:: media/image64.png
+   :width: 2.75in
+   :height: 3.59891in
+.. |..image::_static/image67| image:: media/image65.png
+   :width: 6.07292in
+   :height: 3.72426in
+.. |..image::_static/image68| image:: media/image66.png
+   :width: 4.28555in
+   :height: 3.59375in
+.. |..image::_static/image69| image:: media/image67.png
+   :width: 7.08194in
+   :height: 4.00139in
+.. |..image::_static/image70| image:: media/image68.png
+   :width: 4.25in
+   :height: 3.55574in
+.. |..image::_static/image71| image:: media/image69.png
+   :width: 4.20365in
+   :height: 3.54167in
+.. |..image::_static/image72| image:: media/image70.png
+   :width: 7.08194in
+   :height: 3.76458in
+.. |..image::_static/image73| image:: media/image71.png
+   :width: 7.08194in
+   :height: 3.68819in
+.. |..image::_static/image74| image:: media/image72.png
+   :width: 3.8934in
+   :height: 3.25in
+.. |..image::_static/image75| image:: media/image73.png
+   :width: 6.25795in
+   :height: 3.22639in
+.. |..image::_static/image76| image:: media/image74.png
+   :width: 3.68627in
+   :height: 4.40625in
+.. |..image::_static/image77| image:: media/image75.png
+   :width: 7.08194in
+   :height: 3.99583in
+.. |..image::_static/image78| image:: media/image76.png
+   :width: 7.08194in
+   :height: 3.99722in
+.. |..image::_static/image79| image:: media/image77.png
+   :width: 3.47938in
+   :height: 2.95008in
+.. |..image::_static/image80| image:: media/image78.png
+   :width: 5.79813in
+   :height: 4.35661in
+.. |C:\Users\GANESH~1\AppData\Local\Temp\SNAGHTMLba665f5.PNG| image:: media/image79.png
+   :width: 4.0625in
+   :height: 3.04352in
+.. |..image::_static/image82| image:: media/image78.png
+   :width: 2.03125in
+   :height: 2.65625in
+.. |..image::_static/image83| image:: media/image80.png
+   :width: 6.70694in
+   :height: 3.88056in
+.. |..image::_static/image84| image:: media/image81.png
+   :width: 3.75319in
+   :height: 3.67708in
+.. |..image::_static/image85| image:: media/image82.png
+   :width: 7.08194in
+   :height: 4.00625in
+.. |..image::_static/image86| image:: media/image83.png
+   :width: 7.08194in
+   :height: 3.29722in
+.. |..image::_static/image87| image:: media/image84.png
+   :width: 7.08194in
+   :height: 3.28125in
+.. |..image::_static/image88| image:: media/image85.png
+   :width: 7.08194in
+   :height: 3.525in
+.. |..image::_static/image89| image:: media/image86.png
+   :width: 7.08194in
+   :height: 3.09097in
+.. |..image::_static/image90| image:: media/image87.png
+   :width: 4.29613in
+   :height: 3.59375in
+.. |..image::_static/image91| image:: media/image88.png
+   :width: 4.45313in
+   :height: 3.75in
+.. |..image::_static/image92| image:: media/image89.png
+   :width: 7.08194in
+   :height: 4.03542in
+.. |..image::_static/image93| image:: media/image90.png
+   :width: 7.08194in
+   :height: 4.03056in
+.. |..image::_static/image94| image:: media/image91.png
+   :width: 4.58276in
+   :height: 3.89535in
+.. |..image::_static/image95| image:: media/image92.png
+   :width: 7.08194in
+   :height: 3.98889in
+.. |..image::_static/image96| image:: media/image93.png
+   :width: 4.19429in
+   :height: 3.44792in
+.. |..image::_static/image97| image:: media/image94.png
+   :width: 7.08194in
+   :height: 4.02639in
+.. |..image::_static/image98| image:: media/image95.png
+   :width: 7.08194in
+   :height: 4.00833in
+.. |..image::_static/image99| image:: media/image96.png
+   :width: 7.08194in
+   :height: 4.06042in
+.. |..image::_static/image100| image:: media/image97.png
+   :width: 5.17221in
+   :height: 1.625in
+.. |..image::_static/image101| image:: media/image98.png
+   :width: 5.08333in
+   :height: 1.72568in
+.. |..image::_static/image102| image:: media/image99.png
+   :width: 3.95314in
+   :height: 3.33333in
+.. |..image::_static/image103| image:: media/image100.png
+   :width: 4.2054in
+   :height: 3.53125in
+.. |..image::_static/image104| image:: media/image101.png
+   :width: 7.08194in
+   :height: 3.96181in
+.. |..image::_static/image105| image:: media/image102.png
+   :width: 7.08194in
+   :height: 4.05208in
+.. |..image::_static/image106| image:: media/image103.png
+   :width: 7.08194in
+   :height: 4.01181in
+.. |..image::_static/image107| image:: media/image104.png
+   :width: 7.08194in
+   :height: 1.71042in
+.. |..image::_static/image108| image:: media/image105.png
+   :width: 2.51042in
+   :height: 5.21734in
+.. |..image::_static/image109| image:: media/image106.png
+   :width: 7.08194in
+   :height: 4.05625in
+.. |..image::_static/image110| image:: media/image107.png
+   :width: 2.34375in
+   :height: 6.9482in
+.. |..image::_static/image111| image:: media/image108.png
+   :width: 7.08194in
+   :height: 4.02986in
+.. |..image::_static/image112| image:: media/image109.png
+   :width: 2.56915in
+   :height: 5.23958in
+.. |..image::_static/image113| image:: media/image110.png
+   :width: 7.08194in
+   :height: 3.33889in
+.. |..image::_static/image114| image:: media/image111.png
+   :width: 2.39583in
+   :height: 5.7632in
+.. |..image::_static/image115| image:: media/image112.png
+   :width: 7.08194in
+   :height: 4.06389in
+.. |..image::_static/image116| image:: media/image113.png
+   :width: 2.28516in
+   :height: 7.03831in
+.. |..image::_static/image117| image:: media/image114.png
+   :width: 7.08194in
+   :height: 4.025in
+.. |..image::_static/image118| image:: media/image115.png
+   :width: 6.64094in
+   :height: 3.27033in
+.. |..image::_static/image119| image:: media/image116.png
+   :width: 7.08194in
+   :height: 4.03056in
+.. |..image::_static/image120| image:: media/image117.png
+   :width: 7.08194in
+   :height: 3.93611in
+.. |..image::_static/image121| image:: media/image118.png
+   :width: 2.26458in
+   :height: 9.81806in
+.. |..image::_static/image122| image:: media/image119.png
+   :width: 7.08194in
+   :height: 3.99028in
+.. |..image::_static/image123| image:: media/image120.png
+   :width: 7.08194in
+   :height: 3.93542in
+.. |..image::_static/image124| image:: media/image121.png
+   :width: 7.08194in
+   :height: 3.93194in
+.. |..image::_static/image125| image:: media/image122.png
+   :width: 6.97917in
+   :height: 3.92963in
+.. |..image::_static/image126| image:: media/image123.png
+   :width: 2.34536in
+   :height: 4.85499in
+.. |..image::_static/image127| image:: media/image124.png
+   :width: 7.08194in
+   :height: 3.99792in
+.. |..image::_static/image128| image:: media/image125.png
+   :width: 2.4349in
+   :height: 5.83566in
+.. |..image::_static/image129| image:: media/image126.png
+   :width: 7.08194in
+   :height: 3.99792in
+.. |..image::_static/image130| image:: media/image127.png
+   :width: 2.5538in
+   :height: 4.0625in
+.. |..image::_static/image131| image:: media/image128.png
+   :width: 7.08194in
+   :height: 3.525in
+.. |..image::_static/image132| image:: media/image129.png
+   :width: 2.08905in
+   :height: 5.4474in
+.. |..image::_static/image133| image:: media/image130.png
+   :width: 7.08194in
+   :height: 3.9625in
+.. |..image::_static/image134| image:: media/image131.png
+   :width: 3.00341in
+   :height: 1.85724in
+.. |..image::_static/image135| image:: media/image131.png
+   :width: 3.5245in
+   :height: 1.25111in
+.. |..image::_static/image136| image:: media/image131.png
+   :width: 3.27752in
+   :height: 1.92063in
+.. |..image::_static/image137| image:: media/image132.png
+   :width: 7.08194in
+   :height: 3.98125in
+.. |..image::_static/image138| image:: media/image131.png
+   :width: 2.66026in
+   :height: 2.71066in
+.. |..image::_static/image139| image:: media/image131.png
+   :width: 2.87005in
+   :height: 2.02208in
+.. |..image::_static/image140| image:: media/image131.png
+   :width: 2.5347in
+   :height: 2.93203in
+.. |..image::_static/image141| image:: media/image131.png
+   :width: 2.75138in
+   :height: 2.44786in
+.. |..image::_static/image142| image:: media/image131.png
+   :width: 2.71702in
+   :height: 2.45061in
+.. |..image::_static/image143| image:: media/image131.png
+   :width: 2.11442in
+   :height: 3.2169in
+.. |..image::_static/image144| image:: media/image133.png
+   :width: 7.08194in
+   :height: 3.93819in
+.. |..image::_static/image145| image:: media/image134.png
+   :width: 7.0625in
+   :height: 3.525in
+.. |..image::_static/image146| image:: media/image135.png
+   :width: 7.08194in
+   :height: 4.11667in
+.. |..image::_static/image147| image:: media/image136.png
+   :width: 7.08194in
+   :height: 2.86667in
+.. |..image::_static/image148| image:: media/image137.png
+   :width: 1.95in
+   :height: 4.0581in
