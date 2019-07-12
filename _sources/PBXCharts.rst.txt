@@ -1,0 +1,1405 @@
+﻿Visual BI Extensions for Microsoft Power BI (PBX) Charts
+=============================================================================================
+
+With the PBX suite you receive a large set of additional charts. In the following sections we will review the detailed functionality of the different chart types. 
+
+Multiple Axes Charts
+********************
+
+The Multiple Axes Chart provides the option to setup a chart with minimum of 5 axis as you have measures in the assigned data source, meaning you could create a chart with an axis for each measure. The below Figure 
+represents the Multiple Axes Chart with 1 dimension - Product with 3 Measures - Discount Amount, Order Amount and Order Quantity. There are 3 Value Axis being shown in the Figure below.
+
+.. figure:: _static/m1.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart
+
+How to use the Multiple Axes Chart in Power BI? 
+-----------------------------------------------
+
+In the following steps we will outline how you can setup a new Multiple Axes Chart in Power BI Platform.
+For our example we will assume that we are going to use a data source with a dimension Product 
+and measures Discount Amount, Order Amount and Order Quantity.
+
+1. Create a new project in Power BI Platform. 
+2. Click Get Data Source and select the Excel File with the data source similar to the description outlined previously. 
+3. Add a Multiple Axes Chart from the Visualization Section to your Power BI project. 
+4. Assign the data source to the Multiple Axes Chart. For our example, assign the 
+   Dimension  - Product to the property Axis and assign the Measures -  Discount Amount, Order Amount and Order Quantity to the property Value Axis 1 in the Category Fields (see Figure below).
+
+.. figure:: _static/m2.png
+    :align: center
+    :alt: alternate text
+
+    Visualization Settings 
+
+In the above example, you can also assign the Measures and Dimensions to the Power BI Project by clicking the 
+respective check boxes against the Dimension and Measures in the Fields Section (see Figure above). 
+
++----------------------------------------------------------------------------------------------------------------------------+
+| Value Axis                                                                                                                 |
++============================================================================================================================+
+| The Measures can be assigned to any one of the 5 Value Axis and the Chart gets plotted based on the assigned Value Axis.   |                                                                       
++----------------------------------------------------------------------------------------------------------------------------+
+
+5. Navigate to the property Tooltips in the Category Fields. Here the Measures and Dimensions can be dragged into this property so that you will be able to view the Measures and Dimensions as a Tooltip (see Figure below).
+
+.. figure:: _static/m3.png
+    :align: center
+    :alt: alternate text
+
+    Visualization Settings 
+
+In the above example, the Measure Discount Amount has been used as Tooltip (see Figure above).  
+
+6. Now navigate to the Category Format in the Visualization Section. The Category Format for the Multiple Axes Chart 
+   has the following areas:
+
+   1. License
+   2. General
+   3. Global Fonts
+   4. X Axis
+   5. Y Axis Configuration
+   6. Series Type
+   7. Data Colors
+   8. Data Labels
+   9. Plot Area
+   10. Analytics
+   11. Legend
+   12. Tooltip
+   13. Miscellaneous
+   14. Data Measures
+   15. Utility Menu 
+
+The following sections will highlight the individual configuration of the properties for the Multiple Axes Chart.
+
+License
+~~~~~~~
+The License Area will display the License details of the PBX Component (see Figure below).
+
+.. figure:: _static/m4.png
+    :align: center
+    :alt: alternate text
+
+    License
+
+General
+~~~~~~~
+
+1. In the General Area, set the property Chart Orientation to the option Vertical. The other option is Horizontal (see Figure below).
+
+.. figure:: _static/m5.png
+    :align: center
+    :alt: alternate text
+
+    General 
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart having vertical column bars.
+
+2. The property Align Threshold can be enabled in case when all the Value Axis needs to be aligned to start from 0. For our example, we use a Data Source which is similar to the Figure as shown below.
+
+.. figure:: _static/m6.png
+    :align: center
+    :alt: alternate text
+
+    Data Source
+
+For our example, the Measures Order Amount and Order Quantity has been assigned to the Value Axis 1 and the Measure Discount Amount has been assigned to the 
+Value Axis 2. Now based on the settings, the Multiple Axes Chart appears as shown in the below Figure.
+
+.. figure:: _static/mt1.png
+    :align: center
+    :alt: alternate text
+
+    Measures assigned in Value Axis 1 and Value Axis 2
+
+Now navigate to the Format Category. In the Area General, enable the property Align Threshold (see Figure below).
+
+.. figure:: _static/mt2.png
+    :align: center
+    :alt: alternate text
+
+    Measures assigned in Value Axis 1 and Value Axis 2
+
+From the above Figure, it is observed that the Value Axis 1 and Value Axis 2 has been aligned to start from 0. 
+
+Global Fonts
+~~~~~~~~~~~~
+
+Navigate to the Area Global Fonts in the category Format. Set the property Font Family to the option Arial (see Figure below). There are many Fonts that you will be able to set as Global Fonts. The entire Fonts that occurs in the Chart will get changed accordingly.
+
+.. figure:: _static/m7.png
+    :align: center
+    :alt: alternate text
+
+    Global Fonts
+
+The below Figure represents the Multiple Axes Chart with Fonts being configured as Arial.
+
+.. figure:: _static/m8.png
+    :align: center
+    :alt: alternate text
+
+    Global Fonts in Multiple Axes Chart
+
+X Axis
+~~~~~~
+1. Navigate to the Area X Axis in the category Format. You have the option to enable the X Axis (see Figure below). Now set the property Position to the option Right/Top (see Figure below). The other option is Left/Bottom which is default. 
+
+.. figure:: _static/m9.png
+    :align: center
+    :alt: alternate text
+
+    Position in X Axis
+
+The below Figure represents the Multiple Axes Chart with X Axis Position being configured as Right/Top. 
+
+.. figure:: _static/m10.png
+    :align: center
+    :alt: alternate text
+
+    Right/Top Position of X Axis in Multiple Axes Chart   
+
+2. Set the property Color to the color Red (see Figure below).
+
+.. figure:: _static/m11.png
+    :align: center
+    :alt: alternate text
+
+    Color in X Axis
+
+The below Figure represents the Multiple Axes Chart with Font Color for the X Axis being configured as Red.
+
+.. figure:: _static/m12.png
+    :align: center
+    :alt: alternate text
+
+    Red Color Font in X Axis
+
+3. Set the property No. of Data Series Displayed to the value 2 (see Figure below).
+
+.. figure:: _static/m13.png
+    :align: center
+    :alt: alternate text
+
+    No. of Data Series Display in X Axis     
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart displaying 2 Data Series at a stretch and the remaining Data Series can be viewed by using the horizontal scroll bars (see Figure below).
+
+.. figure:: _static/m14.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with 2 Data Series Display 
+
+4. You will be able to use the slider to increase the Inner Padding percentage through the property Inner Padding (see Figure below). 
+
+.. figure:: _static/m15.png
+    :align: center
+    :alt: alternate text
+
+    Inner Padding in X Axis     
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with Inner Padding Percentage increased to 60 % (see Figure below).
+
+.. figure:: _static/m16.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Inner Padding Percentage increased to 60 % 
+
+5. Enable the property Title (see Figure below). Set the Title as "Product Details". 
+
+.. figure:: _static/m17.png
+    :align: center
+    :alt: alternate text
+
+    Title in X Axis     
+
+Based on the above configuration, you will be able to view the Title for the X Axis as shown in the below Figure. 
+
+.. figure:: _static/m18.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Title for X Axis 
+
+6. Set the Title Text Size to the value 12 and the Title Text will be configured accordingly.
+
+7. Enable the property Reverse Axis (see Figure below).
+
+.. figure:: _static/m19.png
+    :align: center
+    :alt: alternate text
+
+    Reverse Axis
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with the Dimension members being displayed in the Reverse Order (see Figure below).
+
+.. figure:: _static/m20.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Reverse Axis 
+
+8. Enable the property Axis Label (see Figure below).
+
+.. figure:: _static/m21.png
+    :align: center
+    :alt: alternate text
+
+    Axis Label
+
+Based on the above configuration, you will be able to view the X Axis Labels for the Dimension members as shown in the below Figure. When the property Axis Label is disabled, then the you will not be able to view the Multiple Axes Chart with X Axis Labels for the Dimension members.
+
+.. figure:: _static/m22.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Axis Label 
+
+9. Set the Label Text Size to the value 12 and the X Axis Label Text will be configured accordingly.
+
+10. Set the property Maximum Height (%) to the value 100 (see Figure below). 
+
+.. figure:: _static/m23.png
+    :align: center
+    :alt: alternate text
+
+    Maximum Height (%) 
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with Maximum Height configured for the X Axis Text Label as 100 %. It can be observed when you have more number of dimension members in the X Axis (see Figure below).
+
+.. figure:: _static/m23a.png
+    :align: center
+    :alt: alternate text
+
+    X Axis Text Label with Maximum Height  
+
+11. Set the property Show Nth Label as 2 as shown in the below Figure.
+
+.. figure:: _static/m24.png
+    :align: center
+    :alt: alternate text
+
+    Show Nth Label
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart displaying the X Axis Labels for 1, 3 and 5th Dimension members.  
+
+.. figure:: _static/m25.png
+    :align: center
+    :alt: alternate text
+
+    Show Nth Label as 2
+
+12. Set the property Axis Color to the color Red and set the property Axis Width to the value 5 (see Figure below).
+
+.. figure:: _static/m26.png
+    :align: center
+    :alt: alternate text
+
+    Axis Color and Axis Width
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with Axis Color configured as Red and Axis Width configured as 5 (see Figure below).
+
+.. figure:: _static/m27.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Axis Color as Red and Axis Width as 5
+
+Y Axis Configuration
+~~~~~~~~~~~~~~~~~~~~
+
+1. For our example, we have 1 Y Axis being configured. Now Navigate to the Area Y-Axis 1 Configuration in the category Format. You have the option to enable the Y-Axis 1 Configuration (see Figure below). Now set the property Position to the option Right/Top (see Figure below). The other option is Left/Bottom which is default. 
+
+.. figure:: _static/m28.png
+    :align: center
+    :alt: alternate text
+
+    Position in Y-Axis 1 Configuration
+
+The below Figure represents the Multiple Axes Chart with Y Axis Position being configured as Right/Top. 
+
+.. figure:: _static/m29.png
+    :align: center
+    :alt: alternate text
+
+    Right/Top Position of Y Axis in Multiple Axes Chart 
+
+2. Set the property Scale Type to the option Linear and enable the property Auto Scaling (see Figure below). The other option for Scale Type is Log.
+
+.. figure:: _static/m30.png
+    :align: center
+    :alt: alternate text
+
+    Scale Type and Auto Scaling
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with Scale Type selected as Linear and also configured as Auto Scaling (see Figure below).
+
+.. figure:: _static/m31.png
+    :align: center
+    :alt: alternate text
+
+    Scale Type and Auto Scaling in Multiple Axes Chart
+
+3. The properties like Color, Title, Axis Label, Axis Label Text Size, Show Nth Label, Axis Line Color and Axis Line Width follows the same settings as explained for X Axis configuration. The below Figure represents the 
+   Multiple Axes Chart configured with those properties.
+
+   .. figure:: _static/m32.png 
+    :align: center
+    :alt: alternate text
+
+    Properties configured for Y Axis
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with the above mentioned properties.
+
+   .. figure:: _static/m32a.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with properties configured for Y Axis  
+
+4. Set the property Display Units to the option Thousands and set the property Value Decimal Places to the value 1 (see Figure below).
+
+   .. figure:: _static/m33.png 
+    :align: center
+    :alt: alternate text
+
+    Display Units and Value Decimal Places    
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with Display Units and Value Decimal Places for Y Axis (see Figure below).   
+
+   .. figure:: _static/m34.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart configured with Display Units and Value Decimal Places for Y Axis
+
+Series Type
+~~~~~~~~~~~
+
+Navigate to the Area Series Type in the category Format. You have the option to select the Chart Types for each Measure (see Figure below)
+
+   .. figure:: _static/m35.png 
+    :align: center
+    :alt: alternate text
+
+    Series Type Selection
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with Measures being configured with different series types (see Figure below).
+
+.. figure:: _static/m36.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart configured with different series types 
+
+Data Colors
+~~~~~~~~~~~
+
+Navigate to the Area Data Colors in the category Format. In General, the Data Colors will follow the Theme pattern and by default the property Enable Theme will be disabled. You have the option to select the color for each Measure by enabling the property Enable Theme (see Figure below).
+
+   .. figure:: _static/m37.png 
+    :align: center
+    :alt: alternate text
+
+    Series Type Selection
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with each Measure having different colors (see Figure below).
+
+.. figure:: _static/m38.png
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart configured with different data colors 
+
+Data Labels
+~~~~~~~~~~~
+
+Navigate to the Area Data Labels in the category Format. You have the option to enable the Data Labels (see Figure below). 
+
+   .. figure:: _static/m39.png 
+    :align: center
+    :alt: alternate text
+
+    Data Label Settings
+
+For our example, configure the below listed Data Label properties for the Multiple Axes Chart as shown in the Figure above.
+
+-  Color  - Set the Data Label color as Black. 
+-  Size - Set the Data Label Font Size to 12.
+-  Orientation - Set the Data Label Orientation to the option Horizontal, The other option is Vertical.
+-  Overlap - Enable the Overlap option. This will be visible when there are lot of Dimension members.
+-  Background - Enable the Data Label Background option.
+-  Background Color - Set the Data Label Background Color to Yellow.
+-  Transparency - Set the Data Label Transparency level to 50%.
+-  Data Label Default Formatting - Enable the Data Label Default Formatting option.
+-  Decimal Separator  - Set the Data Label Decimal Separator to ".".
+-  Thousand Separator - Set the Data Label Thousand Separator to ",".
+-  Value Decimal Places - Set the Data Label Value Decimal Places to the value 2.
+-  Display Units - Set the Data Label Display Units to the option Thousands.
+-  Prefix - Set the Data Label Prefix to "p".
+-  Suffix - Set the Data Label Suffix to "s".
+-  Semantic Formatting - Enable the Semantic Formatting option for the Data Label.
+-  Negative Value Format - Set the Data Label Negative Value Format to the option -X.
+-  Negative Value Color - Set the Data Label Negative Value Color to the color Red.
+-  Positive Value Format - Set the Data Label Positive Value Format to the option X.  
+-  Positive Value Color - Set the Data Label Positive Value Color to the color Green.
+
+Based on the above set of configuration, you will be able to view the Multiple Axes Chart being configured the Data Label properties (see Figure below).
+
+   .. figure:: _static/m39a.png 
+    :align: center
+    :alt: alternate text
+
+    Data Label Properties configured in Multiple Axes Chart
+
+It is to be noted that the overlap option will be functional only when there are lot of Dimension members (see Figure below).
+
+   .. figure:: _static/m40.png 
+    :align: center
+    :alt: alternate text
+
+    Overlap option in Multiple Axes Chart     
+
+Also it is to be noted that when there is a negative measure for a dimension member, then the Negative Value Format and Color would be highlighted as shown in the below Figure.
+
+   .. figure:: _static/m41.png 
+    :align: center
+    :alt: alternate text
+
+    Negative Value Format and Color in Multiple Axes Chart
+
+Plot Area
+~~~~~~~~~
+
+Navigate to the Plot Area in the category Format. You have the option to enable the alternate horizontal and vertical grids and select the respective colors for them. 
+For our example, set the color for both the alternate horizontal and vertical grids as Grey (see Figure below).
+
+   .. figure:: _static/m42.png 
+    :align: center
+    :alt: alternate text
+
+    Alternate horizontal and vertical grids  
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with alternate horizontal and vertical grids (see Figure below).
+
+   .. figure:: _static/m43.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Alternate horizontal and vertical grids
+
+Analytics 
+~~~~~~~~~
+
+1. Navigate to the Area Analytics in the category Format. You have the option to enable the Error Bars and configure the settings for the Error Bars (see Figure below). In General, the Error Bars can be used to provide an additional visual representation of the variability of the data and are normally used on graphs to indicate the error range.
+   For our example, set the property Error Amount to the option Percentage Value and set the value as 5. Set the Stem Color to Red as shown in the Figure below.
+
+   .. figure:: _static/m44.png 
+    :align: center
+    :alt: alternate text
+
+    Error Bars 
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with the settings for Error Bars (see Figure below).
+
+   .. figure:: _static/m45.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Error Bars 
+
+2. Enable the property Horizontal Band as shown in the below Figure. Set the Start Value to the value 0 and the End Value to the value 2000. Set the property Color to the color Purple (see Figure below).
+
+   .. figure:: _static/m46.png 
+    :align: center
+    :alt: alternate text
+
+    Horizontal Band
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with Horizontal Band settings.
+
+   .. figure:: _static/m47.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Horizontal Band settings
+
+3. Enable the property Vertical Band as shown in the below Figure. Set the Start Value to the value 0 and the End Value to the value 3. Set the property Color to the color Purple (see Figure below).
+
+   .. figure:: _static/m48.png 
+    :align: center
+    :alt: alternate text
+
+    Horizontal Band
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with Vertical Band settings.
+
+   .. figure:: _static/m49.png 
+    :align: center
+    :alt: alternate text 
+
+    Multiple Axes Chart with Vertical Band settings
+
+4. Enable the property Horizontal Reference Line as shown in the below Figure. Set the Value to the value 1000. Set the property Color to the color Red and set the Label Text as H Line (see Figure below).
+
+   .. figure:: _static/m50.png 
+    :align: center
+    :alt: alternate text
+
+    Horizontal Reference Line
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with Horizontal Reference Line settings.
+
+   .. figure:: _static/m51.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Horizontal Reference Line settings 
+
+5. Enable the property Vertical Reference Line as shown in the below Figure. Set the Value to the value 3. Set the property Color to the color Red and set the Label Text as V Line (see Figure below). 
+
+   .. figure:: _static/m52.png 
+    :align: center
+    :alt: alternate text
+
+    Vertical Reference Line
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with Vertical Reference Line settings.
+
+   .. figure:: _static/m53.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Vertical Reference Line settings
+
+6. Activate the property Enable Deviation as shown in the below Figure. 
+
+   .. figure:: _static/m54.png 
+    :align: center
+    :alt: alternate text
+
+    Enable Deviation
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart configured with Deviation Line (see Figure below).
+
+   .. figure:: _static/m55.png 
+    :align: center
+    :alt: alternate text
+
+    Deviation Line in Multiple Axes Chart
+
+Legend 
+~~~~~~
+
+1. Navigate to the Area Legend in the category Format. You have the option to enable the Legend and configure the settings for the Legend (see Figure below). 
+   
+   .. figure:: _static/m56.png 
+    :align: center
+    :alt: alternate text
+
+    Enable Legend
+
+For our example, configure the below listed Legend properties for the Multiple Axes Chart as shown in the Figure above.
+
+-  Vertical Alignment - Set the Vertical Alignment as Top for the Legend. The other options are Bottom and Middle. 
+-  Horizontal Alignment - Set the Horizontal Alignment as Left for the Legend. The other options are Center and Right.
+-  Title - Activate the property Title.
+-  Title Text - Set the property Title Text to the Title Legend.
+-  Font Color - Set the property Font Color to the color Red.
+-  Title Text Size - Set the property Title Text Size to the value 12.
+-  Font Weight  - Set the property Font Weight to the option Normal. The other option is Bold.
+
+Based on the above set of configuration, you will be able to view the Multiple Axes Chart being configured with the Legend properties (see Figure below).
+
+   .. figure:: _static/m57.png 
+    :align: center
+    :alt: alternate text
+
+    Legend Settings in Multiple Axes Chart
+
+2. Activate the property Enable RTL Support as shown in the below Figure.
+
+   .. figure:: _static/m58.png 
+    :align: center
+    :alt: alternate text
+
+    Enable RTL Support
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart being configured with the RTL Support meaning that the Icons and the Text for the Legend appears in the Reverse order (see Figure below).
+
+   .. figure:: _static/m59.png 
+    :align: center
+    :alt: alternate text
+
+    Legends with RTL Support
+
+2. Activate the property Show Single Series as shown in the below Figure.
+
+   .. figure:: _static/m60.png 
+    :align: center
+    :alt: alternate text
+
+    Enable Show Single Series 
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart being configured with Single Data Series (see Figure below). Here you need to click the Measure Legend Item and then click Only link to view the Single Data Series. 
+In our example, the Measure Order Amount has been clicked and the Single Data Series for the Measure Order Amount has been displayed (see Figure below).
+
+   .. figure:: _static/m61.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Data Series 
+
+Tooltip
+~~~~~~~
+
+1. Navigate to the Area Tooltip in the category Format. You have the option to enable the Tooltip and configure the settings for the Tooltip (see Figure below).
+
+   .. figure:: _static/m62.png 
+    :align: center
+    :alt: alternate text
+
+    Enable Tooltip 
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart being configured with the Tooltip.
+
+   .. figure:: _static/m63.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Tooltip 
+
+2. Activate the property Shared Tooltip as shown in the below Figure.
+
+   .. figure:: _static/m64.png 
+    :align: center
+    :alt: alternate text
+
+    Enable Shared Tooltip  
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart showing the Tooltip for all the Measure values of the selected Dimension member (see Figure below).
+
+   .. figure:: _static/m65.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Shared Tooltip 
+
+3. A Report can be also shown as a Tooltip when clicking the chart area. For our example, we have the Multiple Axes Chart assigned in Page 1. Now assign a Pie chart in Page 2 with the same set of data which we used for the Multiple Axes Chart. The Pie Chart will be similar to the Figure shown below:
+
+   .. figure:: _static/m66.png 
+    :align: center
+    :alt: alternate text
+
+    Pie Chart in Page 2
+
+4. Now navigate to the Page 2 Format Category (see Figure below). In the Area Page Information, activate the property Tooltip as shown in the below Figure.
+
+   .. figure:: _static/m67.png 
+    :align: center
+    :alt: alternate text
+
+    Page 2 Format Category   
+
+5. Now navigate to the Format Category of the Multiple Axes Chart in Page 1. In the Area Tooltip, set the property Type to the option Report page and set the property Page to the option Page 2 (see Figure below).
+
+   .. figure:: _static/m68.png 
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart Format Category in Page 1
+
+Now when you hover the Pie Chart, the Tooltip will show the Multiple Axes Chart as a Report Page based on the above set of configuration (see Figure below).
+
+   .. figure:: _static/m69.png 
+    :align: center
+    :alt: alternate text
+
+    Pie Chart showing Multiple Axes Chart as a Report in the Tooltip
+
+Miscellaneous
+~~~~~~~~~~~~~
+
+1. Navigate to the Area Miscellaneous in the category Format. You have the option to activate the property Enable Pan and Zoom and configure the settings for Pan and Zoom. (see Figure below).
+
+   .. figure:: _static/m70.png 
+    :align: center
+    :alt: alternate text
+
+    Enable Pan and Zoom
+
+The Pan and Zoom property will be used to activate the zooming option for the X-Axis or Y-Axis. 
+You can use the mouse pointer and drag out a rectangle in the chart itself, and the selected area 
+will be used for zooming. Unlike pinch zooming, you can't pan the zoomed area, but has to zoom out 
+on a new area. On touch devices, you can zoom by pinching in the chart area. On these devices, 
+you may also move the zoomed area by panning with one finger across the chart.  
+
+2. The below properties can be set for the Pan and Zoom option in both Desktop and Mobile Device (see Figure above).
+
+-  Panning Key - Sets the Panning Key for the Desktop . The options are Shift and Ctrl. 
+-  Mouse Zoom Type  - Sets the Mouse Zoom Type for the Desktop. The options are X, Y or XY.
+-  Pinch & Zoom Type - Sets the Pinch & Zoom Type for the Mobile Device. The options are X, Y or XY.
+
+3. Now activate the property Enable Footer as shown in the below Figure. For our example, set the property URL as visuabi.com and set the property Text as Visual Bi Solutions. (see Figure below).
+
+   .. figure:: _static/m71.png 
+    :align: center
+    :alt: alternate text
+
+    Enable Footer 
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart showing the configured Footer settings as shown below. 
+
+   .. figure:: _static/m72.png 
+    :align: center
+    :alt: alternate text
+
+    Footer in Multiple Axes Chart
+
+4. Activate the property Enable Hierarchy as shown in the below Figure.
+
+   .. figure:: _static/m73.png  
+    :align: center
+    :alt: alternate text
+
+    Enable Hierarchy
+
+Data Measures
+~~~~~~~~~~~~~
+
+1. Navigate to the Area Data Measures in the category Format (see Figure below). For our example, there are three Measures - Discount Amount, Order Amount and Order Quantity and one dimension - Product. By default, all the Measures will be enabled. When any one Measure is disabled, 
+   the Multiple Axes Chart will get displayed without the display of the disabled Measure. For our example, the measure Discount Amount has been disabled.
+   
+   .. figure:: _static/m74.png 
+    :align: center
+    :alt: alternate text
+
+    Data Measures 
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart without the display of the Measure Discount Amount (see Figure below).
+
+   .. figure:: _static/m75.png  
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart without the display of the Measure-Discount Amount
+
+Utility Menu
+~~~~~~~~~~~~
+
+1. Navigate to the Area Utility Menu in the category Format. You have the option to enable the Utility Menu and configure the settings for the Utility Menu (see Figure below).
+
+   .. figure:: _static/m76.png  
+    :align: center
+    :alt: alternate text
+
+    Enable Utility Menu
+
+2. By enabling the Utility Menu, you will be able to view a Context Menu in the Chart area with the list of all these properties (see Figure below). 
+
+   .. figure:: _static/m77.png  
+    :align: center
+    :alt: alternate text
+
+    Context Menu 
+
+The function of all the Utility options are listed below:
+
+-  Enable JPEG -  This property sets the download option of the jpeg image for the chart. This option can be viewed only in the web version of the Power BI.
+-  Enable PDF -  This property sets the download option of the pdf file for the chart. This option can be viewed only in the web version of the Power BI.
+-  Lasso - The Lasso option will select those elements in the chart that are inside the selected area. For our example, we will use a Multiple Axes Chart with three measures – Discount Amount, Order Amount and Order Quantity – and several dimension members (see Figure below). 
+   After you have activated the Lasso option from the chart menu, you can then select the elements in the chart (see Figure below)– in our example the measures for dimension members Chair and TV Stand have been selected. 
+  
+
+   .. figure:: _static/m78.png  
+    :align: center
+    :alt: alternate text
+
+    Lasso Selection  
+
+After you selected the items, the selected items will be visible leaving the unselected items as a smoky layer (see Figure below). 
+
+   .. figure:: _static/m78a.png  
+    :align: center
+    :alt: alternate text
+
+    Lasso Selection
+
+-  Reverse Lasso - The Reverse Lasso option will select those elements in the chart that are outside the selected area. For our example, we will use a Multiple Axes Chart with three measures – Discount Amount, Order Amount and Order Quantity – and several dimension members (see Figure below).
+   After you have activated the Reverse Lasso option from the chart menu, you can then select the element in the chart (see Figure below)– in our example the measures for dimension member Chair have been selected.
+   
+   .. figure:: _static/m79.png  
+    :align: center
+    :alt: alternate text
+
+    Reverse Lasso Selection  
+
+After you have selected the items, the unselected items will be visible leaving the selected items as a smoky layer (see Figure below).
+
+   .. figure:: _static/m79a.png  
+    :align: center
+    :alt: alternate text
+
+    Reverse Lasso Selection
+
+-  Zoom - This property enables the zoom function for the selected area in the chart. In our example, the Measures for the Dimension members Chair and TV Stand has been selected for Zoom option (see Figure below).
+
+   .. figure:: _static/m80.png  
+    :align: center
+    :alt: alternate text
+
+    Before Zoom Selection  
+
+The below Figure shows the zoomed view of the selected dimension members.
+
+   .. figure:: _static/m81.png   
+    :align: center
+    :alt: alternate text
+
+    After Zoom Selection  
+
+-  Export File Name - This property sets the name of the file to be exported. The file will get exported with the configured name.
+
+Advance Editor
+--------------
+
+You will be able to view the Advance Editor icon at the right top of the chart area (see Figure below).
+
+   .. figure:: _static/m82.png   
+    :align: center
+    :alt: alternate text
+
+    Advance Editor option 
+
+When clicked it will navigate to the Advance Editor window (see Figure below).
+
+   .. figure:: _static/m83.png   
+    :align: center
+    :alt: alternate text
+
+    Advance Editor Window  
+
+The Advance Editor Window has three different tabs - Conditional Formatting, Custom API and Custom CSS as shown in the above Figure.
+
+
+How to use Conditional Formatting in the Multiple Axes Chart? 
+-------------------------------------------------------------
+
+1. Navigate to the Conditional Formatting Tab in the Advance Editor Window. By default all the Measures would get displayed as shown in the below Figure.
+
+   .. figure:: _static/m84.png   
+    :align: center
+    :alt: alternate text
+
+    Conditional Formatting Tab   
+
+2. For our example, add the Rule by clicking the Add Rule icon as shown in the below Figure.
+
+   .. figure:: _static/m85.png   
+    :align: center
+    :alt: alternate text
+
+    Add Icon  
+
+Steps for the configuration of Comparison Type as Number
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. In Condition 1, set the Rule Name as Rule 1 (see Figure below). 
+
+   .. figure:: _static/m86.png    
+    :align: center
+    :alt: alternate text
+
+    Condition Formatting Rule   
+
+2. Set the property Rule Color to Blue.
+3. Set the property Based On to the option Discount Amount.
+4. Select the Operator as ">"
+5. Set the property Comparison Type to the option Number. The other options are Data Selection, Value and Calculation.
+6. Set the property Comparison Value to the value 250.
+7. Based on the above set of configuration for Rule 1, the Multiple Axes Chart will be displayed with the blue colored column bars having the Discount Amount values greater than the value 250 (see Figure below).
+
+   .. figure:: _static/m87.png    
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Conditional Formatting Rule - Comparison Type as Number     
+
+By configuring the other options for the property Comparison Type, you will be able to view the Multiple Axes Charts with the different conditional formatting rules and they are highlighted as follows:
+
+Steps for the configuration of Comparison Type as Data Selection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Set the Rule Name as Rule 1 (see Figure below). 
+
+   .. figure:: _static/m88.png    
+    :align: center
+    :alt: alternate text
+
+    Condition Formatting Rule   
+
+2. Set the property Rule Color to Blue.
+3. Set the property Based On to the option Discount Amount.
+4. Select the Operator as ">"
+5. Set the property Comparison Type to the option Data Selection. You will be able to select the number from the assigned data source. For our example, the data value has been selected as 453.91 (see Figure below).
+
+   .. figure:: _static/m89.png    
+    :align: center
+    :alt: alternate text
+
+    Data Sheet 
+
+6. Based on the above set of configuration for Rule 1, the Multiple Axes Chart will be displayed with the blue colored column bars having the Discount Amount values greater than the value 453.91 (see Figure below).
+
+   .. figure:: _static/m90.png    
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Conditional Formatting Rule - Comparison Type as Data Selection    
+
+Steps for the configuration of Comparison Type as Value 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Set the Rule Name as Rule 1 (see Figure below). 
+
+   .. figure:: _static/m91.png    
+    :align: center
+    :alt: alternate text
+
+    Condition Formatting Rule   
+
+2. Set the property Rule Color to Blue.
+3. Set the property Based On to the option Order Quantity.
+4. Select the Operator as ">".
+5. Set the property Comparison Type to the option Value.
+6. Set the property Calculation Value to the option Order Amount. 
+7. Based on the above set of configuration for Rule 1, the Multiple Axes Chart will be displayed with the blue colored column bars having the Order Quantity values greater than the Order Amount values (see Figure below).
+
+   .. figure:: _static/m92.png    
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Conditional Formatting Rule - Value 
+
+Steps for the configuration of Comparison Type as Calculation 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Set the Rule Name as Rule 1 (see Figure below). 
+
+   .. figure:: _static/m93.png    
+    :align: center
+    :alt: alternate text
+
+    Condition Formatting Rule   
+
+2. Set the property Rule Color to Blue.
+3. Set the property Based On to the option Discount Amount. 
+4. Select the Operator as ">".
+5. Set the property Comparison Type to the option Calculation. 
+6. Set the property Calculation Type 1 to the option Data Selection. The other options are Number and Value which are similar to the operations already explained in the previous sections.   
+7. Now you will be able to select the number from the assigned data source. For our example, the data value has been selected as 453.91 (see Figure below). This value will get displayed in the property Calculation Value 1.
+
+   .. figure:: _static/m94.png    
+    :align: center
+    :alt: alternate text
+
+    Data Sheet 1
+
+8. Set the property Calculation Operator to the option "-". 
+9. Set the property Calculation Type 2 to the option Data Selection.
+10. Now you will be able to select the number from the assigned data source. For our example, the data value has been selected as 241.31 (see Figure below). This value will get displayed in the property Calculation Value 2.  
+
+   .. figure:: _static/m95.png    
+    :align: center
+    :alt: alternate text
+
+    Data Sheet 2
+
+11. Based on the above set of configuration for Rule 1, the Multiple Axes Chart will be displayed with the blue colored column bars with accordance to the Calculation {(Discount Amount) > (Calculation Value 1 - Calculation Value 2)} (see Figure below).
+
+   .. figure:: _static/m96.png    
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Conditional Formatting Rule - Calculation  
+
+Steps for the configuration of Color Scale 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. For our example, add the Color Scale by clicking the Color Scale icon in the Conditional Formatting screen as shown in the below Figure.
+
+   .. figure:: _static/m96a.png   
+    :align: center
+    :alt: alternate text
+
+    Color Scale Icon  
+
+2. Set the Rule Name to Rule 1 (see Figure below).
+
+   .. figure:: _static/m96b.png   
+    :align: center
+    :alt: alternate text
+
+    Condition Formatting Rule 
+
+3. Activate the property Custom scale.
+4. Set the range - From Value to 0 and To value to 1000.
+5. Set the color to Yellow.
+6. Based on the above set of configuration for Rule 1, the Multiple Axes Chart will be displayed with column bars showing yellow color which fits in the value range from 0 to 1000. (see Figure below).  
+
+   .. figure:: _static/m96c.png    
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Conditional Formatting Rule - Custom Scale 
+
+Steps for the configuration of Color Scheme Type 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Set the Rule Name to Rule 1 (see Figure below).
+
+   .. figure:: _static/m96d.png   
+    :align: center
+    :alt: alternate text
+
+    Condition Formatting Rule 
+
+2. Set the property Color Scheme Type to the option Qualitative. The other options are Sequential and Diverging.
+3. For our example, set the Color Scheme Type to Accent Dark.
+4. Set the property Number of Ranges to the value 5.
+5. Based on the above set of configuration for Rule 1, the Multiple Axes Chart will be displayed with column bars showing the Accent Dark color scheme (see Figure below). 
+
+   .. figure:: _static/m96e.png    
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with Conditional Formatting Rule - Color Scheme Type  
+
+AND or OR Logical Functions in Conditional Formatting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In case when there are more than one Condition, then you will be able to view the option for AND or OR Logical Function as shown in the below Figure.
+
+   .. figure:: _static/m96f.png   
+    :align: center
+    :alt: alternate text
+
+    AND or OR Logical Function 
+
+It is to be noted that the multiple conditions can be created using the "+" button as shown in the Figure above.
+For our example, the below Figure shows the configuration for Condition 1.
+
+   .. figure:: _static/m96g.png   
+    :align: center
+    :alt: alternate text
+
+    Condition 1
+
+The below Figure shows the  configuration for Condition 2.
+
+   .. figure:: _static/m96h.png   
+    :align: center
+    :alt: alternate text
+
+    Condition 2
+
+OR Function:
+
+When any one condtion set for the Rule gets satisfied, then the conditional formatting for the OR Function gets applied. As a result of the OR Function, you will be able to view the Multiple Axes Chart as shown below.
+
+   .. figure:: _static/m96i.png   
+    :align: center
+    :alt: alternate text
+
+    Conditional Formatting for OR Function 
+
+AND Function:
+
+When all condtions get satisfied, then the conditional formatting for the AND Function gets applied.As a result of the AND Function, you will be able to view the Multiple Axes Chart as shown below. 
+
+   .. figure:: _static/m96j.png   
+    :align: center
+    :alt: alternate text
+
+    Conditional Formatting for AND Function 
+
+Custom API
+----------
+
+Using Custom API Tab, you will be able to create a customized Template based on the generated JSON Script. Set the property Choose Template to the option Template 1 (see Figure below).
+
+   .. figure:: _static/m97.png    
+    :align: center
+    :alt: alternate text
+
+    Template 1
+
+Now copy the JSON script from the Editor (see Figure below).
+
+   .. figure:: _static/m98.png    
+    :align: center
+    :alt: alternate text
+
+    JSON Script from Template 1 
+
+Now select the option Custom from the property Choose Template. Paste the copied JSON script into the Editor screen of the Custom option. For our example the Title has been changed as "Multiple Axes Chart" in the JSON Script (see Figure below).
+
+   .. figure:: _static/m99.png    
+    :align: center
+    :alt: alternate text
+
+    JSON Script in Custom option
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with the Title being changed as Multiple Axes Chart (see Figure below).
+
+   .. figure:: _static/m100.png    
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with configured Custom API
+
+Custom CSS
+----------
+
+Using Custom CSS, you will be able to customize the CSS style for the chart. For our example, the background color code has been changed for the chart (see Figure below).
+
+   .. figure:: _static/m101.png    
+    :align: center
+    :alt: alternate text
+
+    Chart Background Color Change in CSS  
+
+Based on the above configuration, you will be able to view the Multiple Axes Chart with the Background Color being changed to Grey Color (see Figure below).
+
+   .. figure:: _static/m102.png    
+    :align: center
+    :alt: alternate text
+
+    Multiple Axes Chart with configured CSS 
+
+Context Menu
+------------
+
+Using Context Menu, you will be able to perform specific actions in the Chart. You will have the ability to leverage functions, such as auto size single column, autosize all columns, filtering and setting the Pivot Mode configuration.
+Now click the Context Menu icon as shown in the below Figure.
+
+   .. figure:: _static/m103.png    
+    :align: center
+    :alt: alternate text
+
+    Context Menu in Chart    
+
+After clicking the Context Menu icon, you will be able to view the Table as shown in the below Figure.
+
+   .. figure:: _static/m104.png    
+    :align: center
+    :alt: alternate text
+
+    Table view
+
+Pin Column
+~~~~~~~~~~
+
+Using the Pin Column Context Menu, the selected column will be moved the left first column or the last right column.
+By clicking the Pin Column options, you will be allowed to select the Pin Left or Pin Right options (see Figure below).
+
+   .. figure:: _static/m107.png    
+    :align: center
+    :alt: alternate text
+
+    Pin Column 
+
+Autosize This Column
+~~~~~~~~~~~~~~~~~~~~
+
+The Context Menu Autosize This Column allows you to size the selected column based on the width of Column Header Text (see Figure below).
+
+   .. figure:: _static/m105.png    
+    :align: center
+    :alt: alternate text
+
+    Autosize This Column 
+
+Autosize All columns
+~~~~~~~~~~~~~~~~~~~~
+
+The Context Menu Autosize All Columns allows you to size all the columns based on the width of Column Header Text (see Figure below).
+
+   .. figure:: _static/m106.png    
+    :align: center
+    :alt: alternate text
+
+    Autosize All Columns  
+
+Filter options
+~~~~~~~~~~~~~~
+
+You will be able to filter the members using the Logical conditions as shown below.
+
+   .. figure:: _static/m107a.png    
+    :align: center
+    :alt: alternate text
+
+    Filter option
+
+You will be also able to filter the members by the respective check box selection as shown below.
+
+   .. figure:: _static/m107b.png    
+    :align: center
+    :alt: alternate text
+
+    Filter option
+
+Pivot Mode
+~~~~~~~~~~
+
+The Pivot Mode option in the Context Menu of the Chart allows you to swap between the selected dimensions in the columns with the Row Groups and apply the functions such as avg, count, first, last, max, min and sum for the measures selected against those dimensions. 
+
+   .. figure:: _static/m108.png    
+    :align: center
+    :alt: alternate text
+
+    Pivot option
+
+For our example, we have swapped the dimension Product to the Row Groups and applied the function Count for the measure Discount Amount, function First for the Order Amount and function Max for the Order Quantity (see Figure above). Based on the configuration, we would be able to visualize the Table as shown in the below Figure. 
+
+   .. figure:: _static/m109.png    
+    :align: center
+    :alt: alternate text
+
+    Table showing configured Pivot option 
+
+Note: If there are more than one dimension being selected in the Pivot Mode option, then the Table will be representing a Hierarchical Structure with first Dimension as Parent and the consequent Dimensions as child (see Figure below).
+
+   .. figure:: _static/m110.png    
+    :align: center
+    :alt: alternate text
+
+    Table showing configured Pivot option for more than one dimension 
+
+Horizon Charts
+**************
+
+Horizon charts are small multiple area charts visualization. 
+They can be quite useful for visualizing changes in distributions over time or space. 
+It is small-multiple area charts that allow greater precision for a given vertical space by 
+using colored bands. These charts can also be used with diverging color scales to 
+differentiate positive and negative values.
+
+Horizon charts are partially overlapping line plots that create the impression of a mountain range (see Figure below).
+
+.. figure:: _static/h1.png
+    :align: center
+    :alt: alternate text
+
+    Horizon Chart
+
+How to use the Horizon Chart in Power BI? 
+-----------------------------------------
+
+In the following steps we will outline how you can setup a new Horizon Chart in Power BI Platform.
+For our example we will assume that we are going to use a data source with two dimensions - Product and Date  
+and measures Discount Amount, Order Amount and Order Quantity.
+
+1. Create a new project in Power BI Platform. 
+2. Click Get Data Source and select the Excel File with the data source similar to the description outlined previously. 
+3. Add a Horizon Chart from the Visualization Section to your Power BI project. 
+4. Assign the data source to the Horizon Chart. For our example, assign the 
+   Dimension Product to the property Category and assign the Dimension Date to the property Time Period. Assign the Measure Order Quantity to the property Value (see Figure below).
+
+.. figure:: _static/h2.png
+    :align: center
+    :alt: alternate text
+
+    Visualization Settings 
+
+In the above example, you can also assign the Measures and Dimensions to the Power BI Project by clicking the 
+respective check boxes against the Dimension and Measures in the Fields Section (see Figure above). 
+
+5. Now navigate to the Category Format in the Visualization Section. The Category Format for the Horizon Chart 
+   has the following areas:
+
+   1. License
+   2. General
+   3. Base Value
+   4. Layers
+   5. Color Scheme
+   6. Legend
+   7. Number Formatting
+   8. Global Fonts
+   
+The following sections will highlight the individual configuration of the properties for the Horizon Chart.
+
+License
+~~~~~~~
+
+The License Area will display the License details of the PBX Component (see Figure below).
+
+.. figure:: _static/h3.png
+    :align: center
+    :alt: alternate text
+
+    License
+
+General
+~~~~~~~
+
+1. For our example, set the property Chart Margin to the value 100 in the Area General (see Figure below).
+
+.. figure:: _static/h4.png
+    :align: center
+    :alt: alternate text
+
+    General 
+
+2. Set the property Tick Interval to the value 1.
+3. Set the property X Position to the value 8.
+4. Set the property Y Position to the value 0.
+5. Set the property Width to the value 1270.
+6. Set the property Height to the value 719.
+7. Set the property Alt Text to the description of your choice.
+8. Based on the above set of configurations, you will be able to view the Horizon Chart as shown below.
+
+.. figure:: _static/h5.png
+    :align: center
+    :alt: alternate text
+
+    Horizon Chart with General configuration  
+
+From the above Figure, you can observe that the Measures based on the Product and Time Stamp will be viewed as small-multiple area charts. As you hover the mouse over those charts, you will be able to
+view the distributed values of the Measures in that range.
+
+Base value
+~~~~~~~~~~
+
+Base Value are the value from which the Positive or Negative changes are plotted on the Chart. Now navigate to the Area Base Value. Set the property Base Value to the value 100 (see Figure below).
+
+.. figure:: _static/h6.png
+    :align: center
+    :alt: alternate text
+
+    Base Value 
+
+Based on the above Base Value configuration, you will be able to view the Horizon Chart with a Layer representing the Base Value (see Figure below).
+
+.. figure:: _static/h7.png
+    :align: center
+    :alt: alternate text
+
+    Horizon Chart with Base Value configuration  
+
+
+
+
+
+
+
+
+
+
+
+
