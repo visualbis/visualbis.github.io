@@ -1,0 +1,174 @@
+Value Display and Simulation Period
+-----------------------------------
+
+.. figure:: _static/4.5.png
+    :align: center
+    :alt: alternate text
+
+    Value Display
+
+With the ‘Value Display’ functionality you can choose the time
+aggregation you want to display as the primary value. The designer can
+link certain nodes to a user selected scaling. You can select the scale
+you wish to display by selecting this under the Value Display section.
+Note that the options here can be configured so they may differ. It is
+important to note that not all notes are scaled using this as the value
+driver tree typically contains both amounts, prices, rates and physical
+volumes.
+
+In addition to the primary display value, the designer can also choose a
+secondary value to be displayed. I.e. if you are showing Full Year as
+primary, in the below example, it has been configured to visualize the
+Month data as secondary:
+
+.. figure:: _static/4.6.png
+    :align: center
+    :alt: alternate text
+
+    Value Display
+
+The time aggregation and display relates to the Simulation Period
+selected.
+
+When **Month** is selected, it shows the first month of the simulation
+interval selected. By default, the simulation period is the selected
+period and the future. This is an important concept as when we simulate,
+we generally don’t want to apply a change to the past as we can’t change
+it. It is possible to also set the ‘to’ period in a simulation, just
+click |..image::_static/image11| and highlight the month you want as the end period of a
+simulation. This is however a special scenario.
+
+.. figure:: _static/4.7.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Period
+
+**YTD** – the selected period -1 is the year to date data (eg. selected
+simulation period is September to December, the YTD data will be from
+Jan to August).
+
+Note: Simulation of future periods will not impact the YTD data.
+
+.. figure:: _static/4.8.png
+    :align: center
+    :alt: alternate text
+
+    Value Display and Simulation Period
+
+**Full Year** – Shows the full year cumulated data
+
+.. figure:: _static/4.9.png
+    :align: center
+    :alt: alternate text
+
+    Value Display and Simulation Period
+
+**Sim. Period** – to simulate a specific period, for example a 3 month
+rolling forecast from September to November, click the first month
+September then click |..image::_static/image15|\ and click the last month November for
+simulation. You can then choose to only show the values aggregated for
+the selected simulation periods
+
+.. figure:: _static/4.10.png
+    :align: center
+    :alt: alternate text
+
+    Value Display and Simulation Period
+
+Sub Models - Filters
+--------------------
+
+If your Value Driver Tree is large, the designer may have defined
+specific sub views. These would be listed under the Sub Models Section
+of the Navigation Panel. When clicking on one of these views, the tree
+will be filtered and the specific node will be made the top node.
+Calculation dependencies are still respected but this significantly
+improves the navigation as it focuses the tree on a specific area.
+
+In this example, the options defined are:
+
+-  Open all company level: Net Profit
+
+-  Open per department: Mining, Processing or the operational tree for
+   Mill Throughput
+
+.. figure:: _static/4.11.png
+    :align: center
+    :alt: alternate text
+
+    Sub Models – Filters
+
+KPIs
+----
+
+The Navigation Panel can be configured to list a set of KPI’s from the
+value driver tree. You are able to navigate to each of them for a fast
+view on the simulation impact on a given KPI. Click on the KPI to
+navigate to the node.
+
+.. figure:: _static/4.12.png
+    :align: center
+    :alt: alternate text
+
+    KPIs
+
+Data Simulation
+---------------
+
+There are 2 options to simulate:
+
+-  Hover over a desired node to simulate, slide the scaling button to
+   right for positive impact or left for negative impact. The simulation
+   will be showed on the right hand side. A window will open displaying
+   the changes. The pencil icon will display the change in percentage
+   that has been made: |..image::_static/image19|, and a legend with percentage showing
+   if the adjust has made the scenario better or worse |..image::_static/image20|.
+
+.. figure:: _static/4.13.png
+    :align: center
+    :alt: alternate text
+
+    Data Simulation
+
+-  Click on the arrow icon of the node |..image::_static/image22| then click ‘Edit Key
+   Input’ |..image::_static/image23| and manually edit the changes in simulation per
+   period. Click X to close manual input table.
+
+Notes
+
+-  You can update the periods highlighted in YELLOW based on the
+   selected simulation period.
+
+.. figure:: _static/4.14.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Periods
+
+The edit icon will indicate the months that have been edited.
+
+.. figure:: _static/4.15.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Periods
+
+-  You can update the ‘Variation’ column which will overwrite the
+   numbers in the selected simulation periods. Any manual updates in
+   period will not be overwritten by the ‘Variation’ column. In the
+   example below, in blue are the months which were manually edited and
+   in orange are highlighted the variation and in this case the month to
+   which the variation was applied.
+
+.. figure:: _static/4.16.png
+    :align: center
+    :alt: alternate text
+
+    Simulation Periods
+
+Click reset icon to return to the original data |..image::_static/Simulation/Simulation1|.
+
+.. |..image::_static/Simulation/Simulation1| image:: media/Simulation/Simulation1.png
+   :width: 0.21875in
+   :height: 0.21875in
