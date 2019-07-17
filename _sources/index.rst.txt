@@ -20,9 +20,3 @@ Welcome to valQ Custom Visual for Microsoft Power BI!
    
   
   
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

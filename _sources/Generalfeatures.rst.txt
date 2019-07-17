@@ -315,6 +315,19 @@ The edit icon will indicate the months that have been edited.
 
 Click reset icon to return to the original data |..image::_static/image27|.
 
+As part of the New Release, you can simulate the Node having "0" as the value. When the slider is moved to the right end, it will show positive values and when the 
+slider is moved to the left end, it will show negative values. The property of the Simulation remains the same for the Change Percentage,
+Manual, Growth Percentage and Constant options.
+
+.. figure:: _static/zero1.png
+    :align: center
+    :alt: alternate text
+
+    Simulated Node having "0" as values
+
+From the above Figure, you can observe that the Growth Percentage has been selected as an option.
+
+
 Key Inputs 
 -----------
 
@@ -359,6 +372,16 @@ All simulations are highlighted in the upper right corner.
 
 Click |..image::_static/image33| to return to the original selected version without any
 simulation.
+
+When more number of simulations are done, you will be able to view the More button in the upper right corner. By clicking
+the More button, you will be able to see the remaining simulations as shown in the below Figure.
+
+.. figure:: _static/more.png
+    :align: center
+    :alt: alternate text
+
+    Simulations - More option button
+
 
 Scenarios Functionality 
 ------------------------
@@ -459,7 +482,7 @@ This will create a new Scenario and will highlight the created Scenario as the a
 
 -  From the below Figure, the GREEN fonts denotes the most favorable
    results and the RED fonts denotes the least favorable result in the
-   scenario comparison report
+   scenario comparison report.
 
 .. figure:: _static/sf7.png
     :align: center
@@ -473,7 +496,7 @@ This will create a new Scenario and will highlight the created Scenario as the a
 
     Full Year Scenario Comparison
 
-As part of the New Release, you will be able to download the excel file of the compared scenarios by clicking the "Download to Excel" option
+As part of the New Release, you will be able to download the excel file of the compared scenarios based on your choice by clicking the "Download to Excel" option
 in the Scenario Comparison screen as shown below. 
 
 .. figure:: _static/scom1.png
@@ -481,6 +504,14 @@ in the Scenario Comparison screen as shown below.
     :alt: alternate text
 
     Download option in Scenario Comparison screen 
+
+You can select the Scenario and download the excel file as shown in the below Figure.
+
+.. figure:: _static/scom2.png
+    :align: center
+    :alt: alternate text
+
+    Scenario selection
 
 
 -  You have the option to make additional simulation in the new scenario
@@ -511,6 +542,16 @@ in the Scenario Comparison screen as shown below.
     :alt: alternate text
 
     Write back icon 
+
+By clicking the Configure URL to write back the current scenario option, you will be able to select any one among the two different options to write back the current scenario   
+to the configured URL in the server (see Figure below).
+
+.. figure:: _static/wb1.png
+    :align: center
+    :alt: alternate text
+
+    Write back options 
+
 
 -  The created Scenarios can be reordered based on our choice by a
    simple drag and drop options. For our example, you have reordered the
