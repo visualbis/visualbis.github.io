@@ -619,6 +619,41 @@ Notes:
 
     Constraints
 
+Visualization
+-------------
+
+Visualization is available in the left side Navigation panel which helps the users view the Tree in the Table or Tree format based on their choice.
+By using the View Mode, the user can select three different view modes namely Full, Standard and Minimal to view the 
+Tree or Table Format.
+
+The below Figure represents the Tree View Format with the View Mode being selected as "Full". Here you can observe that the 
+Nodes will be displayed in Full mode.
+
+.. figure:: _static/4.25.png 
+    :align: center
+    :alt: alternate text
+
+    Visualization - Display as Tree and View Mode selected as Full
+
+The below Figure represents the Table View Format with the View Mode being selected as "Standard". Here you can observe that the 
+Table view will show the Primary value, Comparison value, Variance and Variance % values for the Full Year. 
+
+.. figure:: _static/4.26.png 
+    :align: center
+    :alt: alternate text
+
+    Visualization - Display as Table and View Mode selected as Standard 
+
+When the View Mode is selected as "Full", then you will be able to view the Table with Primary value, Comparison value, Variance and Variance % values for the Full Year and also the same set of values for the Month.
+
+When the View Mode is selected as "Minimal", then you will be able to view only the Primary value and Comparison value for the Full Year.
+
+
+
+
+
+
+
 Understanding Variances
 =======================
 
