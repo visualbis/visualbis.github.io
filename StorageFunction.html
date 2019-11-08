@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Storage Functionality for valQ &mdash; valQ Custom Visual for Microsoft Power BI 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Known Issues and Limitations" href="Knownissues.html" />
+    <link rel="prev" title="Analyze Category" href="AnalyzeCategory.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> valQ Custom Visual for Microsoft Power BI
+          
+
+          
+            
+            <img src="_static/vbilogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Copyright.html">Copyright</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#trademark-information">Trademark Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#patent-information">Patent Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#microsoft-power-bi-trademarks">Microsoft Power BI Trademarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#document-history">Document History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#who-should-read-this-guide">Who should read this guide?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#what-is-the-visual-bi-valq-for-power-bi-as-a-custom-visual-component">What is the Visual BI valQ for Power BI as a Custom Visual Component?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html">General Features of valQ Custom Visual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#instructions-for-valq-custom-visual">Instructions for valQ Custom Visual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#input-data">Input Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#tree-drill-down">Tree Drill Down</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#zoom-and-pan">Zoom and Pan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#expand-collapse-of-tree-view">Expand/Collapse of Tree View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#value-display-and-simulation-period">Value Display and Simulation Period</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#sub-models-filters">Sub Models - Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#kpis">KPIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#data-simulation">Data Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#key-inputs">Key Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#scenarios-functionality">Scenarios Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#constraints">Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#contextual-help-information">Contextual Help Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#understanding-variances">Understanding Variances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#understanding-the-node-widget-information">Understanding the Node Widget Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#conducting-what-if-analysis">Conducting what-if analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#getting-more-information-about-a-value-driver">Getting more information about a Value driver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#saving-and-opening-scenarios">Saving and Opening Scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valQ.html">valQ in Power BI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ModelCategory.html">Model Category</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#new-tab">New Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#open-a-sample-model">Open a Sample Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#constant-nodes">Constant Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#calculation-method-as-formula">Calculation method as Formula</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#logical-functions">Logical Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#math-functions">Math Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#finance-functions">Finance Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#range-functions">Range Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#template-nodes-selection-in-calculation-method">Template Nodes selection in Calculation Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#composite-node-display">Composite Node Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#simulation">Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#business-definition">Business Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#conditional-formatting">Conditional Formatting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#secondary-kpi">Secondary KPI</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#create-a-simple-model">Create a Simple Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#read-only-dynamic-tree-in-editor">Read only Dynamic Tree in Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#dynamic-scaling-on-dynamic-tree">Dynamic Scaling on Dynamic Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#create-an-advanced-model">Create an Advanced Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#import-an-advanced-model">Import an Advanced Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#import-from-excel">Import from Excel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#import-from-an-export-file">Import from an Export File</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-new-tab">Additional Properties of New Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#node-tab">Node Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#quick-editor-in-node-tab">Quick Editor in Node Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-node-tab">Additional Properties of Node Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#data-series-tab">Data Series Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#data-series-manager">Data Series Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#time-aggregation-labels">Time Aggregation Labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#data-sorting">Data Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-data-series-tab">Additional Properties of Data Series Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#settings-tab">Settings Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#navigation-panel">Navigation Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#nodes">Nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#contribution-and-performance-variance-percentage">Contribution and Performance Variance Percentage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#canvas">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#number-formatting">Number Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#id1">Conditional Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#color-theme">Color Theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-settings-tab">Additional Properties of Settings Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#general-tab">General Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#license-registration">License Registration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#export">Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#writeback">Writeback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-the-general-tab">Additional Properties of the General Tab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PlanCategory.html">Plan Category</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#input-editor-functionality">Input Editor Functionality</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-1">Scenario 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-2">Scenario 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-3">Scenario 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-4">Scenario 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-5">Scenario 5</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#other-common-features-of-the-input-editor">Other common features of the Input Editor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#allocate-children">Allocate Children</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#adding-a-note">Adding a Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#view-history">View History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#nodes-filtering">Nodes Filtering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnalyzeCategory.html">Analyze Category</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#weekly">Weekly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#monthly">Monthly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#quarter-to-date">Quarter-to-date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#quarter">Quarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#half-year">Half Year</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#half-year-to-date">Half Year-to-date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#year-to-date">Year-to-date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#year-to-go">Year-to-go</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#full-year">Full Year</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Storage Functionality for valQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Knownissues.html">Known Issues and Limitations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">valQ Custom Visual for Microsoft Power BI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Storage Functionality for valQ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="storage-functionality-for-valq">
+<h1>Storage Functionality for valQ<a class="headerlink" href="#storage-functionality-for-valq" title="Permalink to this headline">¶</a></h1>
+<p>The Storage Function involves the following functionalities:</p>
+<ol class="arabic simple">
+<li>Creating the authentication for the first time logged in user.</li>
+<li>Synchronize the data which is derived out of the tree creation to the internal server (storage tenant) along with the comments of various users.</li>
+<li>Export the data in the form of JSON and csv file formats by generating the respective URL so that the data can be fetched.</li>
+<li>Maintains the History Log for the changes like adding and deleting a Node, Simulation changes, creating a model, creating a scenario and allocation series.</li>
+</ol>
+<p>The below steps can be followed to achieve the storage function:</p>
+<ol class="arabic simple">
+<li>Navigate to the top most panel of the valQ screen. You will be able to view the login logo at the right side (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id1">
+<img alt="alternate text" src="_images/sfv1.png" />
+<p class="caption"><span class="caption-text">Login icon</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>By clicking the login logo, you will be able to view the Login with Office 365 option as shown below.</li>
+</ol>
+<div class="figure align-center" id="id2">
+<img alt="alternate text" src="_images/sfv2.png" />
+<p class="caption"><span class="caption-text">Login to Office 365</span></p>
+</div>
+<p>3.      By clicking the “Login with Office 365” option, it authorizes the valQ and fetches the following user information details.
+a.      User Name
+b.      Email ID
+c.      Profile Picture</p>
+<ol class="arabic simple" start="4">
+<li>Once it is authorized,  you will be able to view the user profile picture along with the “Sync” and “Comment” icons (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id3">
+<img alt="alternate text" src="_images/sfv3.png" />
+<p class="caption"><span class="caption-text">Profile Picture with Sync and Comment options</span></p>
+</div>
+<p>By clicking the “Sync” icon, you will be able to view the Sync panel with Sync details (see Figure below). In our example, the Model Name has been changed to “Copper Sales”.</p>
+<div class="figure align-center" id="id4">
+<img alt="alternate text" src="_images/sfv4.png" />
+<p class="caption"><span class="caption-text">Sync panel</span></p>
+</div>
+<ol class="arabic simple" start="5">
+<li>By clicking the “Comment” icon, you will be able to view the comments provided by different authorized users for the Scenario 1 (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id5">
+<img alt="alternate text" src="_images/sfv5.png" />
+<p class="caption"><span class="caption-text">Comment details</span></p>
+</div>
+<p>The Model Name that was updated in the Sync panel and the Comment details from the Comment panel will be stored in the Storage Tenant and it will be fetched at any time.</p>
+<ol class="arabic simple" start="6">
+<li>A Web Data Source can be also created based on our selection of specific scenarios and Allocation Series in valQ. For our example, click the option “Create a web data source” as shown in the below Figure.</li>
+</ol>
+<div class="figure align-center" id="id6">
+<img alt="alternate text" src="_images/sfv6.png" />
+<p class="caption"><span class="caption-text">Create a Web Data Source option</span></p>
+</div>
+<ol class="arabic simple" start="7">
+<li>By clicking the Web Data Source option, you will be able to select the scenarios and allocation series  for creating the web data source (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id7">
+<img alt="alternate text" src="_images/sfv7.png" />
+<p class="caption"><span class="caption-text">Web Data Source creation</span></p>
+</div>
+<p>In the above Figure, you can export the data as JSON or csv file format by clicking the Export as option.</p>
+<ol class="arabic simple" start="8">
+<li>After selecting the scenarios and allocation series, click the Create option and you will be able to view the Export Window with the URL details being created (see Figure below).  You can also download the data by clicking the Download csv option and this download option will be available only in the web version of the Power BI.</li>
+</ol>
+<div class="figure align-center" id="id8">
+<img alt="alternate text" src="_images/sfv8.png" />
+<p class="caption"><span class="caption-text">Export Window with URL details</span></p>
+</div>
+<ol class="arabic simple" start="9">
+<li>By activating the “Upload as a new model” option, the user can upload a duplicated page for the first time (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id9">
+<img alt="alternate text" src="_images/sfv9.png" />
+<p class="caption"><span class="caption-text">Upload as a new model</span></p>
+</div>
+<ol class="arabic simple" start="10">
+<li>You will be able to view the History Log by navigating to the User Name - &gt; History Log (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id10">
+<img alt="alternate text" src="_images/sfv10.png" />
+<p class="caption"><span class="caption-text">History Log</span></p>
+</div>
+<ol class="arabic simple" start="11">
+<li>Here the history details will be updated for the activities like adding and deleting a Node, Simulation changes, creating a model, creating a scenario and allocation series, For our example, a scenario has been created/updated and a Model has been created (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id11">
+<img alt="alternate text" src="_images/sfv11.jpg" />
+<p class="caption"><span class="caption-text">History Log details</span></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Knownissues.html" class="btn btn-neutral float-right" title="Known Issues and Limitations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="AnalyzeCategory.html" class="btn btn-neutral" title="Analyze Category" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Visual BI Solutions.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

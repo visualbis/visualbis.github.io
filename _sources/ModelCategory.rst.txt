@@ -356,6 +356,629 @@ constant value as "120000" (see Figure below).
 
     Node "Revenue" with  Constant value  
 
+Calculation method as Formula
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Different Formulas can be configured at the Node Level using the Configuration option. 
+For our example, we have the Parent Node as Products and 4 different child nodes Books, Furniture, Garments 
+and Sum of Products under the Parent Node. 
+
+.. figure:: _static/form1a.png
+    :align: center
+    :alt: alternate text
+
+    Product Node with child nodes 
+
+Using the custom formula, you will be able to arrive the sum of these products at the separate Node level.
+For achieving the same, navigate to the Edit Node option of Sum of Products Node and click the Configuration option 
+as shown in the below Figure.
+
+.. figure:: _static/form1.png
+    :align: center
+    :alt: alternate text
+
+    Calculation Method as "Formula"
+
+In the Calculation method, select the "Formula" option. For our example, provide the Formula input as 
+"SUM(N1,N2,N3)" in the Custom Formula Field. As an end result, you will be able to view the valQ screen
+with the "Sum of Products" Node showing the sum of all these 3 products (see Figure below).
+
+.. figure:: _static/form2.png
+    :align: center
+    :alt: alternate text
+
+    valQ screen showing the Sum of Products 
+
+Similarly, there are lot more formulas. The below consecutive Tables show the different types of formula that can 
+be used as custom formulas.
+
+Logical Functions
+~~~~~~~~~~~~~~~~~
+
++-----------------------------------+-----------------------------------+
+| **Function**                      | **Description**                   |
++===================================+===================================+
+| If                                | If (CP1>5,N1,N2) - It returns N1  |
+|                                   | node for period index greater     |
+|                                   | than 5 and N2 for other cases.    |
++-----------------------------------+-----------------------------------+
+| Switch                            | Switch(CP1, 1, N1, N2, N3) - It   |
+|                                   | returns N1 node for period index  |
+|                                   | 1 and N2 node for period index 2  |
+|                                   | and N3 node for all others.       |
++-----------------------------------+-----------------------------------+
+| AND                               | IF(AND(CPI>5,CPI<10),N1,N2) – It  |
+|                                   | returns N1 node when both the     |
+|                                   | conditions inside the braces is   |
+|                                   | True or False and N2 for other    |
+|                                   | cases.                            |
++-----------------------------------+-----------------------------------+
+| OR                                | IF(OR(CPI>5,CPI<10),N1,N2) – It   |
+|                                   | returns N1 node when any one      |
+|                                   | condition inside the braces is    |
+|                                   | True and N2 for other cases.      |
++-----------------------------------+-----------------------------------+
+| NOT                               | IF (NOT(CPI>5),N1,N2) - It        |
+|                                   | returns N1 node for the period    |
+|                                   | index lesser than 5 and N2 for    |
+|                                   | other cases.                      |
++-----------------------------------+-----------------------------------+
+| XOR                               | IF(XOR(CPI>5,CPI<10),N1,N2) - It  |
+|                                   | returns N1 node for the period    |
+|                                   | index lesser than 5 and the       |
+|                                   | period index greater than 10 and  |
+|                                   | N2 for other cases.               |
++-----------------------------------+-----------------------------------+
+
+*Logical Functions*
+
+Math Functions
+~~~~~~~~~~~~~~
+
++-----------------------------------+-----------------------------------+
+| **Function**                      | **Description**                   |
++===================================+===================================+
+| Sum                               | SUM(1,5) – It returns the sum of  |
+|                                   | 1 and 5 which is 6.               |
++-----------------------------------+-----------------------------------+
+| Average                           | Average(1,5) – It returns the     |
+|                                   | average value of 1 and 5 which is |
+|                                   | 3.                                |
++-----------------------------------+-----------------------------------+
+| AverageExZero                     | AverageExZero(1,5,0,0) - It       |
+|                                   | excludes the value 0 and returns  |
+|                                   | the average value of 1 and 5      |
+|                                   | which is 3.                       |
++-----------------------------------+-----------------------------------+
+| AverageExNeg                      | AverageExNeg(1,5,-1,-4) - It      |
+|                                   | excludes the negative values -1   |
+|                                   | and -4 and returns the average    |
+|                                   | value of 1 and 5 which is 3.      |
++-----------------------------------+-----------------------------------+
+| AverageExZeroNeg                  | AverageExNeg(1,5,-1,0) - It       |
+|                                   | excludes the negative value -1    |
+|                                   | and value 0 and returns the       |
+|                                   | average value of 1 and 5 which is |
+|                                   | 3.                                |
++-----------------------------------+-----------------------------------+
+| Count                             | Count([4,2,3]) – It returns the   |
+|                                   | count of all the values which is  |
+|                                   | 3.                                |
++-----------------------------------+-----------------------------------+
+| ABS                               | ABS(-3) returns a value of 3 and  |
+|                                   | ABS(3) returns a value of 3,      |
+|                                   | because the ABS function returns  |
+|                                   | a number's distance from zero.    |
++-----------------------------------+-----------------------------------+
+| Min                               | Min(2,3,4) - It returns the       |
+|                                   | smallest numeric value in a range |
+|                                   | of values which is 2.             |
++-----------------------------------+-----------------------------------+
+| Max                               | Min(2,3,4) - It returns the       |
+|                                   | largest numeric value in a range  |
+|                                   | of values which is 4.             |
++-----------------------------------+-----------------------------------+
+| Power                             | Power(D,2) - It represents the    |
+|                                   | number of times you need to raise |
+|                                   | the base number. For example, if  |
+|                                   | the Base Number D is 6 then it    |
+|                                   | returns the value as 36 which is  |
+|                                   | 6*6 .                             |
++-----------------------------------+-----------------------------------+
+
+*Math Functions* 
+
+Finance Functions
+~~~~~~~~~~~~~~~~~
+
+
++-----------------------------------+-----------------------------------+
+| **Function**                      | **Description**                   |
++===================================+===================================+
+| IRR – Internal Rate of Return     | **IRR(values,[guess])** - IRR     |
+|                                   | will return the Internal Rate of  |
+|                                   | Return for a given cash flow,     |
+|                                   | that is, the initial investment   |
+|                                   | value and a series of net income  |
+|                                   | values. It helps calculate the    |
+|                                   | rate of return an investment      |
+|                                   | would earn based on series of     |
+|                                   | cash flows. It is frequently used |
+|                                   | by businesses to compare and      |
+|                                   | decide between capital projects.  |
+|                                   |                                   |
+|                                   | 1.Values (required argument) –    |
+|                                   | This is an array of values that   |
+|                                   | represent the series of cash      |
+|                                   | flows. Cash flows include         |
+|                                   | investment and net income values. |
+|                                   | Values can be a reference to a    |
+|                                   | range of cells containing values. |
+|                                   |                                   |
+|                                   | 2.[Guess] (optional argument) –   |
+|                                   | This is a number guessed by the   |
+|                                   | user that is close to the         |
+|                                   | expected internal rate of return  |
+|                                   | (as there can be two solutions    |
+|                                   | for the internal rate of return). |
+|                                   | If omitted, the function will     |
+|                                   | take a default value of 0.1       |
+|                                   | (=10%).                           |
+|                                   |                                   |
+|                                   | **Note:** The First value needs   |
+|                                   | to be in negative                 |
++-----------------------------------+-----------------------------------+
+| NPV - Net Present Value           | **NPV(rate,value1,[value2],…)**   |
+|                                   |                                   |
+|                                   | **ie. NPV(discount rate, series   |
+|                                   | of cash flow)** - The NPV         |
+|                                   | Function will calculate the Net   |
+|                                   | Present Value (NPV) for a series  |
+|                                   | of cash flows and a given         |
+|                                   | discount rate. It is useful in    |
+|                                   | determining the value of an       |
+|                                   | investment or understanding the   |
+|                                   | feasibility of a project.         |
+|                                   |                                   |
+|                                   | 1.Rate (required argument) – This |
+|                                   | is the rate of discount over the  |
+|                                   | length of the period.             |
+|                                   |                                   |
+|                                   | 2.Value1, Value2 – Value1 is a    |
+|                                   | required option. They are numeric |
+|                                   | values that represent a series of |
+|                                   | payments and income where:        |
+|                                   |                                   |
+|                                   | -Negative payments represent      |
+|                                   | outgoing payments.                |
+|                                   |                                   |
+|                                   | -Positive payments represent      |
+|                                   | incoming payments.                |
++-----------------------------------+-----------------------------------+
+| PMT – Periodic Payment            | PMT(rate, nper, pv, [fv], [type]) |
+|                                   | - The PMT function helps          |
+|                                   | calculate the total payment       |
+|                                   | (principal and interest) required |
+|                                   | to settle a loan or an investment |
+|                                   | with a fixed interest rate over a |
+|                                   | specific time period.             |
+|                                   |                                   |
+|                                   | 1.Rate (required argument) – The  |
+|                                   | interest rate of the loan.        |
+|                                   |                                   |
+|                                   | 2.Nper (required argument) –      |
+|                                   | Total number of payments for the  |
+|                                   | loan taken.                       |
+|                                   |                                   |
+|                                   | 3.Pv (required argument) – The    |
+|                                   | present value or total amount     |
+|                                   | that a series of future payments  |
+|                                   | is worth now. It is also termed   |
+|                                   | as the principal of a loan.       |
+|                                   |                                   |
+|                                   | 4.Fv (optional argument) – This   |
+|                                   | is the future value or a cash     |
+|                                   | balance we want to attain after   |
+|                                   | the last payment is made. If Fv   |
+|                                   | is omitted, it is assumed to be 0 |
+|                                   | (zero), that is, the future value |
+|                                   | of a loan is 0.                   |
+|                                   |                                   |
+|                                   | 5.Type (optional argument) – The  |
+|                                   | type of day count basis to use.   |
+|                                   |                                   |
+|                                   | **Note:**                         |
+|                                   |                                   |
+|                                   | 1.#NUM! error – Occurs when:      |
+|                                   |                                   |
+|                                   | The given rate value is less than |
+|                                   | or equal to -1.                   |
+|                                   |                                   |
+|                                   | The given nper value is equal to  |
+|                                   | 0.                                |
+|                                   |                                   |
+|                                   | 2.#VALUE! error – Occurs when any |
+|                                   | of the arguments provided are     |
+|                                   | non-numeric.                      |
+|                                   |                                   |
+|                                   | 3.When calculating monthly or     |
+|                                   | quarterly payments, we need to    |
+|                                   | convert annual interest rates or  |
+|                                   | the number of periods to months   |
+|                                   | or quarters.                      |
+|                                   |                                   |
+|                                   | 4.If we wish to find out the      |
+|                                   | total amount that was paid for    |
+|                                   | the duration of the loan, we need |
+|                                   | to multiply the PMT as calculated |
+|                                   | by nper.                          |
++-----------------------------------+-----------------------------------+
+| IPMT - Prinicpal for given period | **IPMT(rate, per, nper, pv, [fv], |
+|                                   | [type])** - The IPMT function     |
+|                                   | calculates the interest portion   |
+|                                   | based on a given loan payment and |
+|                                   | payment period. We can calculate, |
+|                                   | using IPMT, the interest amount   |
+|                                   | of a payment for the first        |
+|                                   | period, last period, or any       |
+|                                   | period in between.                |
+|                                   |                                   |
+|                                   | 1.Rate (required argument) – This |
+|                                   | is the interest per period.       |
+|                                   |                                   |
+|                                   | 2.Per (required argument) – This  |
+|                                   | is the period for which we want   |
+|                                   | to find the interest and must be  |
+|                                   | in the range from 1 to nper.      |
+|                                   |                                   |
+|                                   | 3.Nper (required argument) – The  |
+|                                   | total number of payment periods.  |
+|                                   |                                   |
+|                                   | 4.Pv (required argument) – This   |
+|                                   | is the present value, or the lump |
+|                                   | sum amount, that a series of      |
+|                                   | future payments is worth as of    |
+|                                   | now.                              |
+|                                   |                                   |
+|                                   | 5.Fv (optional argument) – The    |
+|                                   | future value or a cash balance    |
+|                                   | that we wish to attain after the  |
+|                                   | last payment is made. If we omit  |
+|                                   | the Fv argument, the function     |
+|                                   | assumes it to be zero. The future |
+|                                   | value of a loan would be taken as |
+|                                   | zero.                             |
+|                                   |                                   |
+|                                   | 6.Type (optional argument) –      |
+|                                   | Accepts the numbers 0 or 1 and    |
+|                                   | indicates when payments are due.  |
+|                                   | If omitted, it is assumed to be   |
+|                                   | 0. Set type to 0 if payments are  |
+|                                   | at the end of the period, and to  |
+|                                   | 1 if payments are due at the      |
+|                                   | start.                            |
+|                                   |                                   |
+|                                   | **Note:** #NUM! error – Occurs if |
+|                                   | the supplied per argument is less |
+|                                   | than zero or is greater than the  |
+|                                   | supplied value of                 |
+|                                   | nper.(ie.,per<nper)               |
++-----------------------------------+-----------------------------------+
+| FV – Future Value                 | **FV(rate,nper,pmt,[pv],[type])** |
+|                                   | - This function helps calculate   |
+|                                   | the future value of an            |
+|                                   | investment.                       |
+|                                   |                                   |
+|                                   | 1.Rate (required argument) – This |
+|                                   | is the interest rate for each     |
+|                                   | period.                           |
+|                                   |                                   |
+|                                   | 2.Nper (required argument) – The  |
+|                                   | total number of payment periods.  |
+|                                   |                                   |
+|                                   | 3.Pmt (optional argument) – This  |
+|                                   | specifies the payment per period. |
+|                                   | If we omit this argument, we need |
+|                                   | to provide the PV argument.       |
+|                                   |                                   |
+|                                   | 4.PV (optional argument) – This   |
+|                                   | specifies the present value (PV)  |
+|                                   | of the investment/loan. The PV    |
+|                                   | argument, if omitted, defaults to |
+|                                   | zero. If we omit the argument, we |
+|                                   | need to provide the Pmt argument. |
+|                                   |                                   |
+|                                   | 5.Type (optional argument) – This |
+|                                   | defines whether payments are made |
+|                                   | at start or end of the year. The  |
+|                                   | argument can either be 0 (payment |
+|                                   | is made at the end of the period) |
+|                                   | or 1 (the payment is made at the  |
+|                                   | start of the period).             |
++-----------------------------------+-----------------------------------+
+| PV - Present Value/Principal      | **PV(rate, nper, pmt, [fv],       |
+| Value                             | [type])** - It calculates the     |
+|                                   | present value of a loan or an     |
+|                                   | investment.                       |
+|                                   |                                   |
+|                                   | 1.rate (required argument) – The  |
+|                                   | interest rate per compounding     |
+|                                   | period. A loan with a 12% annual  |
+|                                   | interest rate and monthly         |
+|                                   | required payments would have a    |
+|                                   | monthly interest rate of 12%/12   |
+|                                   | or 1%. Therefore, the rate would  |
+|                                   | be 1%.                            |
+|                                   |                                   |
+|                                   | 2.nper (required argument) – The  |
+|                                   | number of payment periods. For    |
+|                                   | example, a 3 year loan with       |
+|                                   | monthly payments would have 36    |
+|                                   | periods. Therefore, nper would be |
+|                                   | 36 months.                        |
+|                                   |                                   |
+|                                   | 3.pmt (required argument) – The   |
+|                                   | fixed payment per period.         |
+|                                   |                                   |
+|                                   | 4.fv (optional argument) – An     |
+|                                   | investment’s future value at the  |
+|                                   | end of all payment periods        |
+|                                   | (nper). If there is no input for  |
+|                                   | fv, Excel will assume the input   |
+|                                   | is 0.                             |
+|                                   |                                   |
+|                                   | 5.type (optional argument) – Type |
+|                                   | indicates when payments are       |
+|                                   | issued. There are only two        |
+|                                   | inputs, 0 and 1. If type is       |
+|                                   | omitted or 0 is the input,        |
+|                                   | payments are made at period end.  |
+|                                   | If set to 1, payments are made at |
+|                                   | period beginning.                 |
++-----------------------------------+-----------------------------------+
+| CUMIPMT - Cumulative Interest     | **CUMIPMT(rate, nper, pv,         |
+| Paid                              | start_period, end_period, type)** |
+|                                   | - The CUMIPMT Function helps in   |
+|                                   | calculating the cumulative        |
+|                                   | interest paid on a loan taken     |
+|                                   | out, or earned on an investment   |
+|                                   | made.                             |
+|                                   |                                   |
+|                                   | 1.Rate (required argument) – This |
+|                                   | is the rate of interest per       |
+|                                   | period.                           |
+|                                   |                                   |
+|                                   | 2.Nper (required argument) – The  |
+|                                   | total number of payment periods   |
+|                                   | for which the loan or investment  |
+|                                   | is to be paid.                    |
+|                                   |                                   |
+|                                   | 3.Pv (required argument) – This   |
+|                                   | is the Present Value of the       |
+|                                   | loan/investment.                  |
+|                                   |                                   |
+|                                   | 4.Start_period (required          |
+|                                   | argument) – The number of the     |
+|                                   | first period over which the       |
+|                                   | interest is to be calculated. It  |
+|                                   | needs to be an integer between 1  |
+|                                   | and the specified NPER.           |
+|                                   |                                   |
+|                                   | 6.End_period (required argument)  |
+|                                   | – This is the last period over    |
+|                                   | which interest is to be           |
+|                                   | calculated. It must be an integer |
+|                                   | between 1 and the specified NPER. |
+|                                   |                                   |
+|                                   | 7.Type (required argument) – This |
+|                                   | value can be 0 or 1. It is an     |
+|                                   | integer that specifies if the     |
+|                                   | interest payment is made at the   |
+|                                   | start of the period (0) or the    |
+|                                   | end of the period (1).            |
+|                                   |                                   |
+|                                   | **Note:**                         |
+|                                   |                                   |
+|                                   | #NUM! error – Occurs in the       |
+|                                   | following scenarios:              |
+|                                   |                                   |
+|                                   | 1.When the given start_period or  |
+|                                   | end_period is less than or equal  |
+|                                   | to zero.                          |
+|                                   |                                   |
+|                                   | 2.When the given start_period is  |
+|                                   | greater than end_period.          |
+|                                   |                                   |
+|                                   | 3.When any of the given arguments |
+|                                   | – rate, nper, or PV – is less     |
+|                                   | than or equal to zero.            |
+|                                   |                                   |
+|                                   | 4.The argument type is not equal  |
+|                                   | to 0 or 1.                        |
++-----------------------------------+-----------------------------------+
+| CUMPRINC - Cumulative Principal   | CUMPRINC(rate, nper, pv,          |
+| Paid                              | start_period, end_period, type) - |
+|                                   | CUMPRINC Function helps calculate |
+|                                   | the cumulative principal amount   |
+|                                   | paid on a loan, or the cumulative |
+|                                   | amount accrued by an investment.  |
+|                                   | The function assumes a fixed      |
+|                                   | interest rate and payment         |
+|                                   | schedule. Most of the times,      |
+|                                   | CUMPRINC and CUMIPNT are used     |
+|                                   | together.                         |
+|                                   |                                   |
+|                                   | 1.Rate (required argument) – This |
+|                                   | is the rate of interest per       |
+|                                   | period.                           |
+|                                   |                                   |
+|                                   | 2.NPER (required argument) – The  |
+|                                   | total number of payment periods   |
+|                                   | for which the loan or investment  |
+|                                   | is to be paid.                    |
+|                                   |                                   |
+|                                   | 3.PV (required argument) – This   |
+|                                   | is the Present Value of the       |
+|                                   | loan/Investment.                  |
+|                                   |                                   |
+|                                   | 4.Start_period (required          |
+|                                   | argument) – The number of the     |
+|                                   | first period over which the       |
+|                                   | interest is to be calculated. It  |
+|                                   | needs to be an integer between 1  |
+|                                   | and the specified NPER.           |
+|                                   |                                   |
+|                                   | 5.End_period (required argument)  |
+|                                   | – The last period over which      |
+|                                   | interest is to be calculated. It  |
+|                                   | must be an integer between 1 and  |
+|                                   | the specified NPER.               |
+|                                   |                                   |
+|                                   | 6.Type (required argument) – This |
+|                                   | specifies the timing of the       |
+|                                   | payment. It can be 0 or 1. It is  |
+|                                   | an integer that specifies if the  |
+|                                   | payment is made at the start of   |
+|                                   | the period (0) or at the end of   |
+|                                   | the period (1)                    |
+|                                   |                                   |
+|                                   | **Note:**                         |
+|                                   |                                   |
+|                                   | #NUM! error occurs in the         |
+|                                   | following scenarios:              |
+|                                   |                                   |
+|                                   | 1.When the given start_period or  |
+|                                   | end_period is less than or equal  |
+|                                   | to zero.                          |
+|                                   |                                   |
+|                                   | 2.When the given start_period is  |
+|                                   | greater than the end_period.      |
+|                                   |                                   |
+|                                   | 3.When any of the given arguments |
+|                                   | – rate, nper, or PV – is less     |
+|                                   | than or equal to zero.            |
+|                                   |                                   |
+|                                   | 4.The argument type is not equal  |
+|                                   | to 0 or 1.                        |
++-----------------------------------+-----------------------------------+
+| RATE - interest rate per period   | **RATE(nper, pmt, pv, [fv],       |
+| of an annuity                     | [type], [guess])** - The RATE     |
+|                                   | function is used to calculate the |
+|                                   | interest rate charged on a loan   |
+|                                   | or the rate of return needed to   |
+|                                   | reach a specified amount on an    |
+|                                   | investment over a given period.   |
+|                                   |                                   |
+|                                   | 1.Nper (required argument) – The  |
+|                                   | total number of periods (months,  |
+|                                   | quarters, years, etc.) over which |
+|                                   | the loan or investment is to be   |
+|                                   | paid.                             |
+|                                   |                                   |
+|                                   | 2.Pmt (required argument) – This  |
+|                                   | is the payment for each period.   |
+|                                   | This number must be unchanged     |
+|                                   | over the life of the loan. Pmt    |
+|                                   | includes principal and interest   |
+|                                   | but no other fees or taxes. If    |
+|                                   | pmt is omitted, fv must be        |
+|                                   | inputted.                         |
+|                                   |                                   |
+|                                   | 3.PV (required argument) – The    |
+|                                   | present value of all future       |
+|                                   | payments; what all future         |
+|                                   | payments would be worth in the    |
+|                                   | present.                          |
+|                                   |                                   |
+|                                   | 4.FV (optional argument) – This   |
+|                                   | is the future value that is the   |
+|                                   | goal of the investment. This      |
+|                                   | value is what we aim to have      |
+|                                   | after the last payment is made.   |
+|                                   | If we omit fv, it is assumed to   |
+|                                   | be 0 (the future value of a loan, |
+|                                   | for example, is 0) and we must    |
+|                                   | include a pmt argument instead.   |
+|                                   |                                   |
+|                                   | 5.Type (optional argument) –      |
+|                                   | Determines how the formula will   |
+|                                   | consider the due dates for        |
+|                                   | payments. If type is omitted or 0 |
+|                                   | is inputted, payments are due at  |
+|                                   | period end. If 1 is inputted,     |
+|                                   | payments are due at period        |
+|                                   | beginning.                        |
+|                                   |                                   |
+|                                   | 6.Guess (optional argument) – Our |
+|                                   | guess of what the interest rate   |
+|                                   | should be. This provides a start  |
+|                                   | point for the RATE function so    |
+|                                   | that it may converge on an answer |
+|                                   | easier before reaching 20         |
+|                                   | iterations.                       |
+|                                   |                                   |
+|                                   | When omitted, RATE assumes the    |
+|                                   | guess to be 10%.                  |
+|                                   |                                   |
+|                                   | If RATE does not converge,        |
+|                                   | attempt other values for this     |
+|                                   | input.                            |
+|                                   |                                   |
+|                                   | **Note:**                         |
+|                                   |                                   |
+|                                   | #1. #NUM! error – If the results  |
+|                                   | of RATE do not converge to within |
+|                                   | 0.0000001 after 20 iterations,    |
+|                                   | RATE returns the #NUM! error      |
+|                                   | value. This may be caused by      |
+|                                   | failure to use the negative or    |
+|                                   | positive sign with regards to     |
+|                                   | cash flow conventions.            |
++-----------------------------------+-----------------------------------+
+| SQRT                              | SQRT(N1) – It returns the square  |
+|                                   | root value of Node N1.            |
++-----------------------------------+-----------------------------------+
+| EXP                               | EXP(N1) - It returns the          |
+|                                   | exponential value of Node N1.     |
++-----------------------------------+-----------------------------------+
+| LOG                               | LOG(N1) - It returns the          |
+|                                   | logarithmic value of Node N1.     |
++-----------------------------------+-----------------------------------+
+
+*Finance Functions* 
+
+Range Functions
+~~~~~~~~~~~~~~~
+
+
++-----------------------------------+-----------------------------------+
+| **Function**                      | **Description**                   |
++===================================+===================================+
+| Range                             | N1.ACTUAL.RANGE(1,3) - It returns |
+|                                   | the values of periods 1,2 and 3   |
+|                                   | of actual series.                 |
++-----------------------------------+-----------------------------------+
+| LastNPeriods                      | N1.ACTUAL.LastNPeriods(2) - It    |
+|                                   | returns period1 and period2 value |
+|                                   | if the current period is 3. It    |
+|                                   | returns period2 and period3 value |
+|                                   | if the current period is 4 and so |
+|                                   | ...                               |
++-----------------------------------+-----------------------------------+
+| Get                               | N1.ACTUAL.get(2) - It returns the |
+|                                   | value of period 2.                |
++-----------------------------------+-----------------------------------+
+| ForEach                           | ForEach(\ `N1.CH <http://n1.ch/>` |
+|                                   | __,                               |
+|                                   | THIS.ACTUAl.P1) - In this example |
+|                                   | for each children of VDTNode N1   |
+|                                   | new Formula instance with         |
+|                                   | THIS.ACTUAl.P1 as formula and     |
+|                                   | respective children as nodeRef is |
+|                                   | created and evaluated.            |
++-----------------------------------+-----------------------------------+
+
+*Range Functions* 
 
 Template Nodes selection in Calculation Method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -399,7 +1022,7 @@ our example.
     Templated Node
 
 Display 
-~~~~~~~~
+~~~~~~~
 
 In the Display Settings, you will be able to configure the Node Display
 settings such as Node Display, Scale, Value Decimal Places, Value
@@ -654,6 +1277,57 @@ and based on that condition, the status bar for the Node Revenue is green color 
 "*" denotes that the Metric values get calculated based on the Period Level. For example when it is a Year, it will take the value of 12 being multiplied with the range value that we provide.
 
 Now set the option to "Hidden: No Rule will be applied to this Node". You can observe that no range values can be provided for the Conditional Formatting and since there will be no status color for that Node being simulated. 
+
+Secondary KPI
+~~~~~~~~~~~~~
+
+Using the Secondary KPI option, you will be able to configure the KPI values for the Node based on the Formula and Template options.
+For our example, the tree structure looks similar to the Figure shown below:
+
+.. figure:: _static/kpi1.png
+    :align: center
+    :alt: alternate text
+
+    valQ Tree structure with Nodes 
+
+As part of Secondary KPI configuration, navigate to the Edit Node window of the Node "Copper Price".
+Select Secondary KPI and set the Formula option for this Node. Now configure the KPI1 to the Label "L1" and 
+Custom Formula to the value "10" (see Figure below).
+
+.. figure:: _static/kpi2.png
+    :align: center
+    :alt: alternate text
+
+    Configure Formula option for Node "Copper Price" 
+
+Now based on the above configuration, you will be able to view the Node "Copper Price" with Label as "L1" and 
+Custom Formula as "10.00" (see Figure below).
+
+.. figure:: _static/kpi3.png
+    :align: center
+    :alt: alternate text
+
+    Copper Price Node
+
+As part of our example, navigate to the to the Edit Node window of the Node Revenue.  
+Select Secondary KPI and set the Template option for this Node. For our example, select the "Copper Price" Node 
+option from the "Display same formula(s) as" drop down where you could view the Formula already created as L1 (see 
+Figure below).
+
+.. figure:: _static/kpi4.png
+    :align: center
+    :alt: alternate text
+
+    Revenue Node - Template option
+
+Now click "Finish" and you will be able to view the Node "Revenue" with Label as "L1" and 
+Custom Formula as "10.00" similar to the Node "Copper Price".
+
+.. figure:: _static/kpi5.png
+    :align: center
+    :alt: alternate text
+
+    Revenue Node showing Copper Price Node Formula 
 
 Create a Simple Model
 ---------------------
@@ -1238,14 +1912,6 @@ Additional Properties of Node Tab
 |                       |                       | Node, Manual and      |
 |                       |                       | Templated based on    |
 |                       |                       | other node.           |
-|                       |                       |                       |
-|                       |                       | **Note:** When the    |
-|                       |                       | Calc. Method is       |
-|                       |                       | selected as Linked to |
-|                       |                       | Node option, then you |
-|                       |                       | can select the        |
-|                       |                       | desired Node from the |
-|                       |                       | Nodes List.           |
 +-----------------------+-----------------------+-----------------------+
 |                       | Source Key            | This property sets    |
 |                       |                       | the Source Key for    |
@@ -2298,14 +2964,6 @@ The Navigation Panel in the valQ screen will be configured based on the below li
 |                       |                       | Method returns no     |
 |                       |                       | value for the Node.   |
 +-----------------------+-----------------------+-----------------------+
-|                       | Waterfall Chart Type  | The Pop up screen will|
-|                       |                       | be appearing with the |
-|                       |                       | type of the Waterfall |
-|                       |                       | Chart being selected. |
-|                       |                       | The options are       |
-|                       |                       | Vertical and          |
-|                       |                       | Horizontal.           |
-+-----------------------+-----------------------+-----------------------+
 | Number Formatting     | Scale Suffix          | This property sets    |
 |                       |                       | the Thousands,        |
 |                       |                       | Millions, Billions    |
@@ -2439,6 +3097,14 @@ The Navigation Panel in the valQ screen will be configured based on the below li
 |                       |                       | color and Node        |
 |                       |                       | Connectors color      |
 |                       |                       | for the Tree Widget.  |
++-----------------------+-----------------------+-----------------------+
+| PopUp Screen          | Waterfall Chart Type  | The Pop up screen will|
+|                       |                       | be appearing with the |
+|                       |                       | type of the Waterfall |
+|                       |                       | Chart being selected. |
+|                       |                       | The options are       |
+|                       |                       | Vertical and          |
+|                       |                       | Horizontal.           |
 +-----------------------+-----------------------+-----------------------+
 
 *Additional Properties of Settings Tab*
