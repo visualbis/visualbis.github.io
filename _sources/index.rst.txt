@@ -14,8 +14,12 @@ Welcome to valQ Custom Visual for Microsoft Power BI!
    Introduction
    Definitions
    Generalfeatures
-   
-   
+   valQ
+   ModelCategory
+   PlanCategory
+   SimulateCategory
+   AnalyzeCategory
+   Knownissues
    
    
   
