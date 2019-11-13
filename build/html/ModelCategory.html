@@ -1,0 +1,2518 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Model Category &mdash; valQ Custom Visual for Microsoft Power BI 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Plan Category" href="PlanCategory.html" />
+    <link rel="prev" title="valQ in Power BI" href="valQ.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> valQ Custom Visual for Microsoft Power BI
+          
+
+          
+            
+            <img src="_static/vbilogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Copyright.html">Copyright</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#trademark-information">Trademark Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#patent-information">Patent Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#microsoft-power-bi-trademarks">Microsoft Power BI Trademarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#document-history">Document History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#who-should-read-this-guide">Who should read this guide?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#what-is-the-visual-bi-valq-for-power-bi-as-a-custom-visual-component">What is the Visual BI valQ for Power BI as a Custom Visual Component?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html">General Features of valQ Custom Visual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#instructions-for-valq-custom-visual">Instructions for valQ Custom Visual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#input-data">Input Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#tree-drill-down">Tree Drill Down</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#zoom-and-pan">Zoom and Pan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#expand-collapse-of-tree-view">Expand/Collapse of Tree View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#value-display-and-simulation-period">Value Display and Simulation Period</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#sub-models-filters">Sub Models - Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#kpis">KPIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#data-simulation">Data Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#key-inputs">Key Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#scenarios-functionality">Scenarios Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#constraints">Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#contextual-help-information">Contextual Help Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#understanding-variances">Understanding Variances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#understanding-the-node-widget-information">Understanding the Node Widget Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#conducting-what-if-analysis">Conducting what-if analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#getting-more-information-about-a-value-driver">Getting more information about a Value driver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#saving-and-opening-scenarios">Saving and Opening Scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valQ.html">valQ in Power BI</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model Category</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#new-tab">New Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-a-sample-model">Open a Sample Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#template-nodes-selection-in-calculation-method">Template Nodes selection in Calculation Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#composite-node-display">Composite Node Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simulation">Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#business-definition">Business Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conditional-formatting">Conditional Formatting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-simple-model">Create a Simple Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#read-only-dynamic-tree-in-editor">Read only Dynamic Tree in Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-scaling-on-dynamic-tree">Dynamic Scaling on Dynamic Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#create-an-advanced-model">Create an Advanced Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-an-advanced-model">Import an Advanced Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#import-from-excel">Import from Excel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-from-an-export-file">Import from an Export File</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-properties-of-new-tab">Additional Properties of New Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-tab">Node Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quick-editor-in-node-tab">Quick Editor in Node Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-properties-of-node-tab">Additional Properties of Node Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-series-tab">Data Series Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-series-manager">Data Series Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-aggregation-labels">Time Aggregation Labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-sorting">Data Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-properties-of-data-series-tab">Additional Properties of Data Series Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#settings-tab">Settings Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-panel">Navigation Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nodes">Nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#contribution-and-performance-variance-percentage">Contribution and Performance Variance Percentage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#canvas">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#number-formatting">Number Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Conditional Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#color-theme">Color Theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-properties-of-settings-tab">Additional Properties of Settings Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#general-tab">General Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#license-registration">License Registration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export">Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writeback">Writeback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-properties-of-the-general-tab">Additional Properties of the General Tab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PlanCategory.html">Plan Category</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#input-editor-functionality">Input Editor Functionality</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-1">Scenario 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-2">Scenario 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-3">Scenario 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-4">Scenario 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-5">Scenario 5</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#other-common-features-of-the-input-editor">Other common features of the Input Editor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#allocate-children">Allocate Children</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#adding-a-note">Adding a Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#view-history">View History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#nodes-filtering">Nodes Filtering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Category</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnalyzeCategory.html">Analyze Category</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#weekly">Weekly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#monthly">Monthly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#quarter-to-date">Quarter-to-date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#quarter">Quarter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#half-year">Half Year</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#half-year-to-date">Half Year-to-date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#year-to-date">Year-to-date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#year-to-go">Year-to-go</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#full-year">Full Year</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Knownissues.html">Known Issues and Limitations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">valQ Custom Visual for Microsoft Power BI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Model Category</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-category">
+<h1>Model Category<a class="headerlink" href="#model-category" title="Permalink to this headline">¶</a></h1>
+<p>The Model category has two panels in which the left panel represents the Advanced Editor and the right panel
+denotes the canvas which represents the Value Driver Tree visuals (see Figure below).</p>
+<div class="figure align-center" id="id2">
+<img alt="alternate text" src="_images/catg.png" />
+<p class="caption"><span class="caption-text">Left Panel and Right Canvas</span></p>
+</div>
+<p>The Model Category has five different Tab options (see Figure below).</p>
+<div class="figure align-center" id="id3">
+<img alt="alternate text" src="_images/tabs.png" />
+<p class="caption"><span class="caption-text">Tab option for the Model Category</span></p>
+</div>
+<p>The Tab options for the Model Category has been listed below:</p>
+<ol class="arabic simple">
+<li>New Tab – To configure the design for the Value Driver Tree using the
+options such as Sample Demo Tree, Create a Simple Dynamic Tree,
+Import an Advanced Tree and Create a New value driver tree from the
+scratch.</li>
+<li>Node Tab – To configure the settings of Nodes and Child Nodes for the
+Value Driver Tree</li>
+<li>Data Series Tab – To configure the data settings such as Data Series Manager, Time Aggregation Labels
+and Data Sorting.</li>
+<li>Settings Tab – To configure the settings parameters such as Navigational Panel, Nodes, Canvas, Number Formatting, Conditional Formatting and Color Theme.</li>
+<li>General Tab – To configure the General settings such as License Registration, Export and Writeback functions.</li>
+</ol>
+<p>In the next sections, you will be able to understand on how to design a value driver tree
+using these five different Tab categories in detail.</p>
+<p>As an initial step, follow the below steps to configure the design for
+the value driver tree in Power BI.</p>
+<ol class="arabic simple">
+<li>Navigate to the “Visualizations Panel” and “Fields” Panel in Power BI
+(see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/11.1.png"><img alt="alternate text" src="_images/11.1.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Power BI with Visualizations and Fields Panel</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>In the Visualizations Panel, select the valQ Custom Visual and extend
+the screen to its full view as shown in the Figure below.</li>
+</ol>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/eleven.png"><img alt="alternate text" src="_images/eleven.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ Screen - Measures to be assigned</span></p>
+</div>
+<ol class="arabic simple" start="3">
+<li>To create a value driver tree (valQ) in Power BI, it is mandatory to
+assign a Data Source to the value driver tree. For our example, a
+data source (sample data shown below) has been assigned to the value
+driver tree.</li>
+</ol>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/11.2.png"><img alt="alternate text" src="_images/11.2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Sample Data</span></p>
+</div>
+<ol class="arabic simple" start="4">
+<li>Now at least one Measure Value has to be assigned to the property
+“Values” in Visualizations panel. In our example, we have assigned
+the Measure Value “∑ Actual” to the property “Values” by clicking the
+check box option against the Measure Value “∑ Actual” (see Figure
+below).</li>
+</ol>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/11.3.png"><img alt="alternate text" src="_images/11.3.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Assigning the Measure Value</span></p>
+</div>
+<div class="section" id="new-tab">
+<h2>New Tab<a class="headerlink" href="#new-tab" title="Permalink to this headline">¶</a></h2>
+<p>The Value Driver Tree can be created in Power BI using the below listed
+options by clicking the New Tab in the left panel (see Figure below)</p>
+<ul class="simple">
+<li>Open a Sample Model</li>
+<li>Create a Simple Model</li>
+<li>Create an Advanced Model</li>
+<li>Import an Advanced Model</li>
+</ul>
+<div class="figure align-center" id="id8">
+<img alt="alternate text" src="_images/12.1.png" />
+<p class="caption"><span class="caption-text">New Tab</span></p>
+</div>
+<div class="section" id="open-a-sample-model">
+<span id="osm"></span><h3>Open a Sample Model<a class="headerlink" href="#open-a-sample-model" title="Permalink to this headline">¶</a></h3>
+<p>Click the “New” Tab in the left panel. Now navigate to the Open a Sample
+Model option. You will be able to explore a Demo Tree. By clicking the
+Open a Sample Model option, you will be able to view the Loading sample screen as shown below and also you
+can search for the specific sample to get loaded (see Figure below).</p>
+<div class="figure align-center" id="id9">
+<img alt="alternate text" src="_images/12.2a.png" />
+<p class="caption"><span class="caption-text">Loading screen</span></p>
+</div>
+<p>For our example, the sample “Mining Industry” has been selected.</p>
+<div class="figure align-center" id="id10">
+<img alt="alternate text" src="_images/12.2.png" />
+<p class="caption"><span class="caption-text">Selection of sample model</span></p>
+</div>
+<p>Based on the selection, you will be able to view the valQ screen as shown
+below. As part of the latest Release, each Node in the Advance Editor panel will be having an Icon
+which represents the Node Type.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/12.3.png"><img alt="alternate text" src="_images/12.3.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Nodes settings</span></p>
+</div>
+<p>The Nodes hierarchy will be displayed in the Advance Editor option as
+shown in the above Figure. Here you will be able to add number of child
+nodes from the parent node “Net Profit”. By clicking the Parent Node,
+you will be able to add number of child nodes as shown below. Also you
+will be able to expand, collapse and delete the entire Nodes Hierarchy
+using the options “Expand”, “Collapse” and “Delete” (see Figure above).</p>
+<p>As part of the New Release, the “Lock” and “Unlock” options have been included in the
+Advance Editor for the Node Tab (see Figure below). By clicking the lock option, you will not
+be able to edit the configuration done for the Node (see Figure below).</p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/lck1.png"><img alt="alternate text" src="_images/lck1.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Lock option in Node Tab</span></p>
+</div>
+<p>By clicking the Unlock option, you will be able to edit the configuration done for the Node (see Figure below).</p>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="_images/lck2.png"><img alt="alternate text" src="_images/lck2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Unlock option in Node Tab</span></p>
+</div>
+<p>By providing the Node Name in the Search option on the right canvas, you
+will be able to search for the particular Node when there are more
+number of nodes appearing on the right canvas.</p>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="_images/12.4.png"><img alt="alternate text" src="_images/12.4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Node Search option in right canvas</span></p>
+</div>
+<p>For our example, the Node name is given as “Operating Hours” and based
+on the search you will be able to view the Node as shown in the Figure
+below.</p>
+<div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="_images/12.5.png"><img alt="alternate text" src="_images/12.5.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Display of the Searched Node</span></p>
+</div>
+<div class="figure align-center" id="id16">
+<img alt="alternate text" src="_images/12.6.png" />
+<p class="caption"><span class="caption-text">Nodes Structure with Add option</span></p>
+</div>
+<p>In the above Figure, you can observe that by clicking the “+” button, a
+Node “Copy of Net Profit” has been added. Similarly you can edit the
+Parent Node details by clicking the Edit button as shown below. For our
+example, the Edit button has been clicked.</p>
+<div class="figure align-center" id="id17">
+<img alt="alternate text" src="_images/12.7.png" />
+<p class="caption"><span class="caption-text">Nodes Structure with Edit option</span></p>
+</div>
+<p>By clicking the Edit option you will be able to view the Edit Settings
+for the Node. The Edit Settings are categorized as follows:</p>
+<ol class="arabic simple">
+<li>General</li>
+<li>Configuration</li>
+<li>Display</li>
+<li>Simulation</li>
+<li>Business Definition</li>
+<li>Conditional Formatting</li>
+</ol>
+<div class="section" id="general">
+<h4>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h4>
+<p>In General settings you will be able to configure the Node details such
+as Unique ID, Title and the Title Prefix when outside the Tree with the
+values as shown in the below Figure. The Title Prefix can be set at Node
+Level and during simulation it is useful to identify at which node the
+parameter value changes. The additional properties of the Node Tab has
+been listed in Section 13.2.</p>
+<div class="figure align-center" id="id18">
+<img alt="alternate text" src="_images/12.8.png" />
+<p class="caption"><span class="caption-text">Edit Node – General Settings</span></p>
+</div>
+<p>Based on the above configuration, you will be able to view the valQ
+screen as shown below.</p>
+<div class="figure align-center" id="id19">
+<a class="reference internal image-reference" href="_images/12.9.png"><img alt="alternate text" src="_images/12.9.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with General settings</span></p>
+</div>
+<p>From the above Figure, you can observe that the Unique ID for the Parent
+Node is “TOP” and the Title of the Parent Node is “Net Profit”.</p>
+<p>In our other example as shown below, we have configured the Title Prefix
+for two different Nodes (see Figures below).</p>
+<div class="figure align-center" id="id20">
+<img alt="alternate text" src="_images/12.10.png" />
+<p class="caption"><span class="caption-text">Node with Prefix value as Spouse 1</span></p>
+</div>
+<div class="figure align-center" id="id21">
+<img alt="alternate text" src="_images/12.11.png" />
+<p class="caption"><span class="caption-text">Node with Prefix value as Spouse 2</span></p>
+</div>
+<p>Based on the above set of configurations, you will be able to view the
+valQ screens as shown below.</p>
+<div class="figure align-center" id="id22">
+<a class="reference internal image-reference" href="_images/12.12.png"><img alt="alternate text" src="_images/12.12.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Spouse 1 Prefix</span></p>
+</div>
+<div class="figure align-center" id="id23">
+<a class="reference internal image-reference" href="_images/12.13.png"><img alt="alternate text" src="_images/12.13.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Spouse 2 Prefix</span></p>
+</div>
+<p>From the above two Figures you can observe that the “Gross Salary” is
+the common Title for two different Nodes. In order to differentiate
+them, we have provided the value for “Title Prefix when outside the
+Tree” as Spouse1 for one Node and Spouse 2 for the other Node. After
+simulation, you can see which Node’s value has been changed.</p>
+</div>
+<div class="section" id="configuration">
+<h4>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h4>
+<p>In Configuration Settings, you will be able to configure the Node
+details such as Calculation Method, Time Aggregation, Desired Trend and
+Value Range with the values as shown in the below Figure.</p>
+<div class="figure align-center" id="id24">
+<img alt="alternate text" src="_images/12.14.png" />
+<p class="caption"><span class="caption-text">Edit Node – Configuration Settings</span></p>
+</div>
+<p>Based on the above Configuration settings, you will be able to view the
+valQ screen as shown in the below Figure.</p>
+<div class="figure align-center" id="id25">
+<a class="reference internal image-reference" href="_images/12.15.png"><img alt="alternate text" src="_images/12.15.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ with Configuration settings</span></p>
+</div>
+<p>From the above Figure you can observe that in the Navigation Panel, the
+value that is displayed in the Constraints section will lie in the range
+from minimum 10 to maximum 100 for a specific month based on the
+configuration done for the Value Range. In our example, the calculation
+method is selected as “Subtract Children (a-b-c)” meaning that the child
+node having greater value will get subtracted from the child node having
+smaller value and its result will be displayed in the Parent Node. The
+Time Aggregation is set to Sum of Periods where we have considered 12
+months as period. As the result of simulation, each Node will display
+the values based on the Sum of Periods. Also the “Desired Trend” has
+been set to the Increase option. When simulated, the desired Trend for
+the Revenue will be increasing and the value for the Total Cost will be
+decreasing.</p>
+<p>For other options of calculation method, you can refer the link: <a class="reference external" href="https://valq.com/blogs/assigning-values-to-nodes-in-valq/">https://valq.com/blogs/assigning-values-to-nodes-in-valq/</a></p>
+<p>For the Calculation Method being selected as “Data Source”, you can follow the steps as explained in the following link : <a class="reference external" href="https://valq.com/blogs/3-methods-of-mapping-valq-nodes-to-data/">https://valq.com/blogs/3-methods-of-mapping-valq-nodes-to-data/</a></p>
+</div>
+<div class="section" id="template-nodes-selection-in-calculation-method">
+<h4>Template Nodes selection in Calculation Method<a class="headerlink" href="#template-nodes-selection-in-calculation-method" title="Permalink to this headline">¶</a></h4>
+<p>Also you can create a Template Node for the already existing Node. It
+is very specific that the Template Nodes should not map the Parent
+Node. You need to select the particular Node and copy a Node under the
+selected Node for creating the Template Node.</p>
+<p>In the below Figure as an example, you can observe that a copy of
+Revenue Node has been created by the right click copy and paste actions.
+Now the copied Revenue Node version is labelled as “Revenue 2” in
+General Property of the Edit Node Window (see Figure below).</p>
+<div class="figure align-center" id="id26">
+<img alt="alternate text" src="_images/13.3.png" />
+<p class="caption"><span class="caption-text">Edit Node: Copy of Revenue Node labelled as Revenue 2</span></p>
+</div>
+<p>Now navigate to the Configuration property of the Edit Node Window. Set
+the Calculation Method to the option Template based on the node. Also
+set the Node to use as Template to the option 1:Revenue (see Figure
+below).</p>
+<div class="figure align-center" id="id27">
+<img alt="alternate text" src="_images/13.4.png" />
+<p class="caption"><span class="caption-text">Edit Node: Calculation Method selected as Template based on other node and Revenue Node to be used as Template</span></p>
+</div>
+<p>Based on the above configuration, you will be able to view the Templated
+Node Revenue 2 having all its Nodes similar to the Revenue Node as per
+our example.</p>
+<div class="figure align-center" id="id28">
+<a class="reference internal image-reference" href="_images/13.5.png"><img alt="alternate text" src="_images/13.5.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Templated Node</span></p>
+</div>
+</div>
+<div class="section" id="display">
+<h4>Display<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h4>
+<p>In the Display Settings, you will be able to configure the Node Display
+settings such as Node Display, Scale, Value Decimal Places, Value
+Prefix, Value Suffix and Details on Click with the
+values as shown in the below Figure.</p>
+<div class="figure align-center" id="id29">
+<img alt="alternate text" src="_images/12.16.png" />
+<p class="caption"><span class="caption-text">Edit Node – Display Settings</span></p>
+</div>
+<p>Based on the above Display settings, you will be able to view the valQ
+screen as shown in the below Figure.</p>
+<div class="figure align-center" id="id30">
+<a class="reference internal image-reference" href="_images/12.17.png"><img alt="alternate text" src="_images/12.17.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ with Display settings</span></p>
+</div>
+<p>From the above Figure, you can observe that the Node Display is set to
+“Show” option. The Scale has been set to the User Selected option and
+now you can edit the Scaling options in the Value Display under Settings
+Tab. When the Scale is set to other options you will not be able to edit
+the Scaling options in the Value Display. You can also view the Nodes
+with the values configured with Value Decimal Places as “0”, Value
+Prefix as “$” and Value Suffix as “r”.</p>
+<p>Since the Details on Click option is enabled in the Display settings,
+you can observe the Pop up screen being displayed after clicking the Node
+“Net Profit” (see Figure below). If the Details on Click option is
+disabled in the Display settings, then you will not be able to view the
+Pop up screen.</p>
+<div class="figure align-center" id="id31">
+<a class="reference internal image-reference" href="_images/12.18.png"><img alt="alternate text" src="_images/12.18.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Pop up screen</span></p>
+</div>
+</div>
+<div class="section" id="composite-node-display">
+<h4>Composite Node Display<a class="headerlink" href="#composite-node-display" title="Permalink to this headline">¶</a></h4>
+<p>A Node in a tree can now be added with a maximum of two composite nodes which can be taken from any nodes.
+For our example, the below Figure shows the Tree structure with several nodes.</p>
+<div class="figure align-center" id="id32">
+<a class="reference internal image-reference" href="_images/cnd1.png"><img alt="alternate text" src="_images/cnd1.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Tree with several nodes</span></p>
+</div>
+<p>For our example, two child nodes from the Node “Total Cost” needs to be included as composite nodes to the
+Node “Revenue”. For adding the composite nodes, go to the configuration settings window of the Node “Revenue”
+by clicking the Edit and Configure Node option (see Figure below).</p>
+<div class="figure align-center" id="id33">
+<a class="reference internal image-reference" href="_images/cnd2.png"><img alt="alternate text" src="_images/cnd2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Adding Composite Nodes</span></p>
+</div>
+<p>In the Edit Node panel, go to the Display settings and add the Nodes “10:Production Cost” and
+“36: Realisation Cost” as Composite Nodes to the Node Revenue (see Figure above). Now the Tree
+structure will get configured based on the above settings (see Figure below).</p>
+<div class="figure align-center" id="id34">
+<a class="reference internal image-reference" href="_images/cnd3.png"><img alt="alternate text" src="_images/cnd3.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Tree with composite nodes</span></p>
+</div>
+<p>You can observe that the Nodes “10:Production Cost” and “36: Realisation Cost” have been added as the
+composite nodes to the node “Revenue”. Also when a simulation is done in the actual
+Nodes (10:Production Cost” and “36: Realisation Cost), the similar simulation will get reflected in the
+composite nodes and it is vice versa (see Figure below).</p>
+<div class="figure align-center" id="id35">
+<a class="reference internal image-reference" href="_images/cnd4.png"><img alt="alternate text" src="_images/cnd4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Composite Node with simulated values</span></p>
+</div>
+<p>The composite nodes will have no effect in the Table view structure of the Tree.
+In the Quick Editor screen, you can view the composite node ids in a separate column by enabling
+the composite node option from the “selected columns” drop down menu (see Figure below).</p>
+<div class="figure align-center" id="id36">
+<a class="reference internal image-reference" href="_images/cnd5.png"><img alt="alternate text" src="_images/cnd5.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Quick Editor with composite node id display</span></p>
+</div>
+</div>
+<div class="section" id="simulation">
+<h4>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h4>
+<p>In the Simulation Settings, you will be able to configure Simulation details such as selection
+of Default Simulation Method and assigning the Node for the Linked Simulation (see Figure below).
+You have the option to enable/disable the Simulation function for the Node (see Figure below).</p>
+<div class="figure align-center" id="id37">
+<img alt="alternate text" src="_images/12.19.png" />
+<p class="caption"><span class="caption-text">valQ with Simulation Settings</span></p>
+</div>
+<p>In this Simulation Settings, you have selected the Default Method as
+“Constant” for the Simulation and you have selected the Node for the
+Linked Simulation as “First Node” (see Figure above). Based on the above
+settings you will be able to view the valQ page as shown in the Figure
+below. The other options for the Default Simulation Method are Change
+Percentage, Manual and Growth Percentage.</p>
+<div class="figure align-center" id="id38">
+<a class="reference internal image-reference" href="_images/12.20.png"><img alt="alternate text" src="_images/12.20.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Constant value selection</span></p>
+</div>
+<p>From the above Figure, you will be able to view the pop window as shown
+in the above screen by clicking the Arrow icon in the Net Profit Node as
+shown in the Figure below.</p>
+<div class="figure align-center" id="id39">
+<img alt="alternate text" src="_images/12.21.png" />
+<p class="caption"><span class="caption-text">Net Profit Node</span></p>
+</div>
+<p>Now click the Edit option in the pop window as shown in the Figure
+below.</p>
+<div class="figure align-center" id="id40">
+<a class="reference internal image-reference" href="_images/12.22.png"><img alt="alternate text" src="_images/12.22.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Edit option</span></p>
+</div>
+<p>By clicking the Edit option, you will be able to view and edit the input
+values for the Simulation Period (see Figure below).</p>
+<div class="figure align-center" id="id41">
+<a class="reference internal image-reference" href="_images/12.23.png"><img alt="alternate text" src="_images/12.23.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Edit Inputs for Simulation Periods</span></p>
+</div>
+<p>For our example, the value for March month has been edited and as a
+result it gets reflected for all the Nodes.</p>
+</div>
+<div class="section" id="business-definition">
+<h4>Business Definition<a class="headerlink" href="#business-definition" title="Permalink to this headline">¶</a></h4>
+<p>Using this option, you will be able to configure the Business Definition
+details such as Description, Header, Footer and Technical Notes with the
+values as shown in the below Figure.</p>
+<div class="figure align-center" id="id42">
+<img alt="alternate text" src="_images/12.24.png" />
+<p class="caption"><span class="caption-text">valQ with Business Definition Settings</span></p>
+</div>
+<p>Based on the above settings, you will be able to view the Business
+Definitions details in the Pop up screen as shown below.</p>
+<div class="figure align-center" id="id43">
+<a class="reference internal image-reference" href="_images/12.25.png"><img alt="alternate text" src="_images/12.25.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Pop up screen with Business Definitions</span></p>
+</div>
+</div>
+<div class="section" id="conditional-formatting">
+<h4>Conditional Formatting<a class="headerlink" href="#conditional-formatting" title="Permalink to this headline">¶</a></h4>
+<p>Using the Conditional Formatting option, you will be able to apply the Alert Thresholds and Rules at the specific Node Level (see Figure below). For our example, the Node “Revenue”
+has been selected.</p>
+<div class="figure align-center" id="id44">
+<img alt="alternate text" src="_images/cfn1.png" />
+<p class="caption"><span class="caption-text">Conditional Formatting Settings for Node</span></p>
+</div>
+<p>In the Conditional Formatting settings for the Node “Revenue”, you have 3 different options as highlighted in the above Figure.</p>
+<p>When the option “Global or Inherited Rule” is selected, then the Conditional Formatting Rules configured as Global Level in the Settings Tab
+will be applied here.</p>
+<p>Now set the option as “Custom Rule: Overwrites default or any inherited rules” as shown in the below Figure.</p>
+<div class="figure align-center" id="id45">
+<img alt="alternate text" src="_images/cfn2.png" />
+<p class="caption"><span class="caption-text">Conditional Formatting Settings for Node - Custom Rule option with Percentage selection</span></p>
+</div>
+<p>The Custom Rule option can be configured based on variance percentage values and the values applied at period level (see Figure above).</p>
+<p>For our first example, set the option for the Custom Rule as “Percentage” and also enable the property “Apply to Descendants”. Set the Threshold values as shown in the above Figure.
+After simulation, you can find that the Variance percentage value for the Node “Revenue” falls in the Threshold range (4%)* which is between -10% to -1% and based on that condition, the status bar for the Node Revenue is yellow color (see Figure below).</p>
+<div class="figure align-center" id="id46">
+<a class="reference internal image-reference" href="_images/cfn3.png"><img alt="alternate text" src="_images/cfn3.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Custom Rule option with Percentage value selection for the Node “Revenue”</span></p>
+</div>
+<p>Also you can observe that the Descendant Node “Copper Price” has been updated with the same Threshold settings based on our configuration.
+The Variance percentage value for the Descendant Node “Copper Price” falls in the Threshold range (8%)* which is Above 1% and based on that condition, the status bar for the Descendant Node “Copper Price” is green color (see Figure below).</p>
+<div class="figure align-center" id="id47">
+<a class="reference internal image-reference" href="_images/cfn4.png"><img alt="alternate text" src="_images/cfn4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Custom Rule option with Percentage value selection for the Descendant Node “Copper Price”</span></p>
+</div>
+<p>For our second example, set the option for the Custom Rule as “Value (applied at Period Level) - see Figure below.</p>
+<div class="figure align-center" id="id48">
+<img alt="alternate text" src="_images/cfn5.png" />
+<p class="caption"><span class="caption-text">Custom Rule option with value selection for the Node “Revenue”</span></p>
+</div>
+<p>Set the Threshold values as shown in the above Figure. After simulation, you can find that the
+Metric value for the Node “Revenue” falls in the Threshold range (522.3)* which is Above 1
+and based on that condition, the status bar for the Node Revenue is green color (see Figure below).</p>
+<div class="figure align-center" id="id49">
+<a class="reference internal image-reference" href="_images/cfn6.png"><img alt="alternate text" src="_images/cfn6.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Custom Rule option with Value selection for the Node “Revenue”</span></p>
+</div>
+<p><strong>Note:</strong>
+“*” denotes that the Metric values get calculated based on the Period Level. For example when it is a Year, it will take the value of 12 being multiplied with the range value that we provide.</p>
+<p>Now set the option to “Hidden: No Rule will be applied to this Node”. You can observe that no range values can be provided for the Conditional Formatting and since there will be no status color for that Node being simulated.</p>
+</div>
+</div>
+<div class="section" id="create-a-simple-model">
+<h3>Create a Simple Model<a class="headerlink" href="#create-a-simple-model" title="Permalink to this headline">¶</a></h3>
+<p>Using this option, it is very simple for the beginners to create a tree
+automatically based on their own data source. By clicking the Create a
+Simple Model option, you will be able to view the valQ screen as shown
+in the below Figure.</p>
+<div class="figure align-center" id="id50">
+<a class="reference internal image-reference" href="_images/12.26.png"><img alt="alternate text" src="_images/12.26.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Simple Dynamic Tree created with one single Measure</span></p>
+</div>
+<p>By default, the Measure “Actual” has been selected as a Mandatory
+criteria for getting the Tree widget. Now you can select the other
+Measures and Dimensions based on your choice as indicated in the Figure
+below.</p>
+<div class="figure align-center" id="id51">
+<a class="reference internal image-reference" href="_images/12.27.png"><img alt="alternate text" src="_images/12.27.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Simple Dynamic Tree created with Measures and Dimensions</span></p>
+</div>
+<p>From the above Figure, you can observe that the other Measure “Forecast”
+is assigned to “Value” and the Dimensions namely Account and Product has
+been assigned to the “Category” and the Period_MON is assigned to “Time
+period”. Now based the assigned data source, the Tree is being
+configured. Hence now you can create a tree directly from your data. For
+step by step instructions on how to get started to build a Dynamic
+Model, please follow this link:
+<a class="reference external" href="https://valq.com/wp-content/uploads/valq-for-microsoft-power-bi-beginners-tutorial.pdf">https://ValQ.com/wp-content/uploads/ValQ-for-microsoft-power-bi-beginners-tutorial.pdf</a>.</p>
+<p><strong>Note</strong>: For Dynamic Model, you will be able to view the Root Node and
+first three Nodes in the next level hierarchy under the Sub Models
+section of the Navigation Panel (see Figure below).</p>
+<div class="figure align-center" id="id52">
+<a class="reference internal image-reference" href="_images/dsm.png"><img alt="alternate text" src="_images/dsm.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Sub Models Section showing the Root Node and first three Nodes in the next level hierarchy</span></p>
+</div>
+<div class="section" id="read-only-dynamic-tree-in-editor">
+<h4>Read only Dynamic Tree in Editor<a class="headerlink" href="#read-only-dynamic-tree-in-editor" title="Permalink to this headline">¶</a></h4>
+<p>When Dynamic Model is selected, you will be able to only view the value
+driver tree with Parent and Children Nodes and you cannot undergo any
+configuration part on it. But you can generate a copy of the Parent Node
+and proceed with configuration part based on your choice (see Figure
+below).</p>
+<div class="figure align-center" id="id53">
+<a class="reference internal image-reference" href="_images/12.28.png"><img alt="alternate text" src="_images/12.28.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Read Only Dynamic Tree</span></p>
+</div>
+</div>
+<div class="section" id="dynamic-scaling-on-dynamic-tree">
+<h4>Dynamic Scaling on Dynamic Tree<a class="headerlink" href="#dynamic-scaling-on-dynamic-tree" title="Permalink to this headline">¶</a></h4>
+<p>Based on your data source, the value driver tree will get generated and
+the Number Scaling for all the Nodes will be updated appropriately based
+on the data source (see Figure below). For our example, the Number
+Scaling is “0.0b”.</p>
+<div class="figure align-center" id="id54">
+<a class="reference internal image-reference" href="_images/12.29.png"><img alt="alternate text" src="_images/12.29.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Dynamic Scaling on Dynamic Tree</span></p>
+</div>
+<p>As part of the New Release, you have the option to convert the Dynamic Model to an Advanced Model (see Figure below).</p>
+<div class="figure align-center" id="id55">
+<a class="reference internal image-reference" href="_images/conv1.png"><img alt="alternate text" src="_images/conv1.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Option for converting Dynamic Model to an Advanced Model</span></p>
+</div>
+<p>When the option is clicked, now you will be prompted for the Message window as shown below.</p>
+<div class="figure align-center" id="id56">
+<img alt="alternate text" src="_images/conv1a.png" />
+<p class="caption"><span class="caption-text">Confirmation Message</span></p>
+</div>
+<p>After clicking Yes, you will be able to edit the configuration for all the level of Nodes similar
+to the Advance Model (see Figure below).</p>
+<div class="figure align-center" id="id57">
+<a class="reference internal image-reference" href="_images/conv2.png"><img alt="alternate text" src="_images/conv2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Dynamic Model converted to an Advanced Model</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="create-an-advanced-model">
+<h3>Create an Advanced Model<a class="headerlink" href="#create-an-advanced-model" title="Permalink to this headline">¶</a></h3>
+<p>This option is used to create a Tree in valQ manually Node by Node based
+on your choice. By clicking the Create New from Scratch option, you will
+be able to view the valQ screen as shown in the below Figure.</p>
+<div class="figure align-center" id="id58">
+<a class="reference internal image-reference" href="_images/12.38.png"><img alt="alternate text" src="_images/12.38.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Create New from Scratch</span></p>
+</div>
+<p>For our example we have created a Parent Node and two child Nodes (see
+Figure below).</p>
+<div class="figure align-center" id="id59">
+<a class="reference internal image-reference" href="_images/12.39.png"><img alt="alternate text" src="_images/12.39.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Tree with one Parent Node and two Child Nodes</span></p>
+</div>
+<p>Now with the help of <a class="reference internal" href="#osm"><span class="std std-ref">Section: Open a Sample Model</span></a>, you will be able
+to configure the General, Configuration, Display, Simulation, Business Definition and Conditional Formatting settings for the Tree (Please refer  <a class="reference internal" href="#osm"><span class="std std-ref">Section: Open a Sample Model</span></a> for
+more details).</p>
+</div>
+<div class="section" id="import-an-advanced-model">
+<h3>Import an Advanced Model<a class="headerlink" href="#import-an-advanced-model" title="Permalink to this headline">¶</a></h3>
+<p>Using the “Import an Advanced Model” option, you will be able to import
+data through two different options as shown below.</p>
+<div class="figure align-center" id="id60">
+<img alt="alternate text" src="_images/12.30.png" />
+<p class="caption"><span class="caption-text">valQ – Import from Excel</span></p>
+</div>
+<div class="section" id="import-from-excel">
+<h4>Import from Excel<a class="headerlink" href="#import-from-excel" title="Permalink to this headline">¶</a></h4>
+<p>Using the option “Import from Excel”, you will be able to paste the JSON
+File Data Format text into the Text Editor as shown in the below Figure.</p>
+<div class="figure align-center" id="id61">
+<img alt="alternate text" src="_images/12.31.png" />
+<p class="caption"><span class="caption-text">Configuration Data from Excel Format</span></p>
+</div>
+<p>Now based on the above configuration, you will be able to view the Tree
+formed with Nodes in the valQ screen.</p>
+<div class="figure align-center" id="id62">
+<a class="reference internal image-reference" href="_images/12.32.png"><img alt="alternate text" src="_images/12.32.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen derived from Excel Data</span></p>
+</div>
+<p>As part of the New Release, you will be able to retain the existing Navigation
+Panel configuration and apply the same for the next Tree configuration.
+For our example, the Figure below shows the Navigation panel for the
+first Tree configuration.</p>
+<div class="figure align-center" id="id63">
+<a class="reference internal image-reference" href="_images/12.33.png"><img alt="alternate text" src="_images/12.33.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Navigation Panel for the first tree configuration</span></p>
+</div>
+<p>Now navigate to the Import an Advanced Model option in New Tab and paste
+the JSON File Data Format text for the second tree into the Text Editor
+as shown in the below Figure.</p>
+<div class="figure align-center" id="id64">
+<img alt="alternate text" src="_images/12.34.png" />
+<p class="caption"><span class="caption-text">Import a Tree</span></p>
+</div>
+<p>Now select the option “I am reimporting the current model – retain my
+settings” so that you will able to view the second tree configuration
+being applied with the Navigation Panel settings already configured for
+the first tree (see Figure below).</p>
+<div class="figure align-center" id="id65">
+<a class="reference internal image-reference" href="_images/12.35.png"><img alt="alternate text" src="_images/12.35.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Navigation Panel for the second tree configuration</span></p>
+</div>
+</div>
+<div class="section" id="import-from-an-export-file">
+<span id="ief"></span><h4>Import from an Export File<a class="headerlink" href="#import-from-an-export-file" title="Permalink to this headline">¶</a></h4>
+<p>Using this option “Import from an Export File”, you will be able to
+paste the Export file data format from an already exported tree data as
+shown in the below Figure. This Export File will be generated by
+navigating to the Settings Tab and by clicking the Export button.</p>
+<div class="figure align-center" id="id66">
+<img alt="alternate text" src="_images/12.36.png" />
+<p class="caption"><span class="caption-text">Configuration Data from Export File Data Format</span></p>
+</div>
+<p>Now based on the above configuration, you will be able to view the Tree
+formed with Nodes in the valQ screen.</p>
+<div class="figure align-center" id="id67">
+<a class="reference internal image-reference" href="_images/12.37.png"><img alt="alternate text" src="_images/12.37.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen derived from Export File Data Format</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="additional-properties-of-new-tab">
+<h3>Additional Properties of New Tab<a class="headerlink" href="#additional-properties-of-new-tab" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Property</strong></th>
+<th class="head"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Open a Sample Model</td>
+<td>Using this model, you can load
+the required model from the
+sample valQ Models. The sample
+Models are Mining Industry, P&amp;L
+for Small and Medium-Size
+Business, Personal Finance and
+Simple Sales Projections.</td>
+</tr>
+<tr class="row-odd"><td>Create a Simple Model</td>
+<td>Using this Model, you can build a
+Dynamic valQ Model (For details,
+please refer:
+<a class="reference external" href="https://valq.com/wp-content/uploads/valq-for-microsoft-power-bi-beginners-tutorial.pdf">https://ValQ.com/wp-content/uplo
+ads/ValQ-for-microsoft-power-bi-b
+eginners-tutorial.pdf</a>
+)</td>
+</tr>
+<tr class="row-even"><td>Create an Advanced Model</td>
+<td>Using this Model, you can import
+a Tree by selecting the data from
+an Excel file or by selecting the
+data from an Export File.</td>
+</tr>
+<tr class="row-odd"><td>Import an Advanced Model</td>
+<td>This Model can be used for
+creating a Tree with Nodes right
+from the beginning.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Additional Properties of New Tab</em></p>
+</div>
+</div>
+<div class="section" id="node-tab">
+<h2>Node Tab<a class="headerlink" href="#node-tab" title="Permalink to this headline">¶</a></h2>
+<p>Each node represents a metric, and can contain the following:</p>
+<ul class="simple">
+<li>Name of the value driver or KPI</li>
+<li>A sparkline graph indicating the recent trend</li>
+<li>The value of the metric in bold letters</li>
+</ul>
+<div class="figure align-center" id="id68">
+<img alt="alternate text" src="_images/13.1.png" />
+<p class="caption"><span class="caption-text">Node Details</span></p>
+</div>
+<p>In addition, each node also contains several performance metrics (see
+Figure below). They are listed as follows:</p>
+<ul class="simple">
+<li>The Fiscal Year variance of the metric vs. a benchmark (in this case,
+Sales Forecast vs. Sales Budget) – this is shown in both % and
+absolute terms</li>
+<li>Absolute value of the metric for the current month (usually the first
+period in the series)</li>
+<li>Variance of the metric vs. a benchmark for the current month – this
+is shown in both % and absolute terms.</li>
+</ul>
+<p>A node may be decorated by a performance indicator color band on the
+left – typically Green (for good), Amber (neither good nor bad) and Red
+(Poor).</p>
+<div class="figure align-center" id="id69">
+<img alt="alternate text" src="_images/13.2.png" />
+<p class="caption"><span class="caption-text">Node Details</span></p>
+</div>
+<p>The entire configuration part of the Node Tab has been already explained
+in detail in <a class="reference internal" href="#osm"><span class="std std-ref">Section: Open a Sample Model</span></a>.</p>
+<div class="section" id="quick-editor-in-node-tab">
+<h3>Quick Editor in Node Tab<a class="headerlink" href="#quick-editor-in-node-tab" title="Permalink to this headline">¶</a></h3>
+<p>Using the Quick Editor option in the Node Tab, you will be able to view
+the entire Tree Hierarchy in a Grid View. For our example, the below
+Figure shows the normal Tree Hierarchy View.</p>
+<div class="figure align-center" id="id70">
+<a class="reference internal image-reference" href="_images/qe1.png"><img alt="alternate text" src="_images/qe1.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Normal Tree Hierarchy View</span></p>
+</div>
+<p>After clicking the Quick Editor option as shown in the above Figure, you
+will be able to view the Grid View as shown below. You can observe that
+there will be a Business View information in the Formula column and it
+will get displayed when you select the Business View option (see Figure
+below).</p>
+<div class="figure align-center" id="id71">
+<a class="reference internal image-reference" href="_images/qe2.png"><img alt="alternate text" src="_images/qe2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid View</span></p>
+</div>
+<p>In the Grid View, you will be able to edit the changes and save it so
+that the changes will get reflected in the Tree Structure which can be
+viewed in the canvas. In the Grid View, you can also Expand and Collapse
+the Node Structure using the Expand and Collapse icons (see Figure
+below).</p>
+<div class="figure align-center" id="id72">
+<a class="reference internal image-reference" href="_images/qe3.png"><img alt="alternate text" src="_images/qe3.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid View in Expanded Form</span></p>
+</div>
+<p>For our example, the above Figure shows the expanded form of the Grid
+View. The below Figure shows the collapsed form of the Grid View.</p>
+<div class="figure align-center" id="id73">
+<a class="reference internal image-reference" href="_images/qe4.png"><img alt="alternate text" src="_images/qe4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid View in Collapsed Form</span></p>
+</div>
+<p>You will be able to import and export the data in the form of excel file
+using the Import from Excel and Export to Excel buttons as shown in the
+below Figure.</p>
+<div class="figure align-center" id="id74">
+<a class="reference internal image-reference" href="_images/qe5.png"><img alt="alternate text" src="_images/qe5.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid View - Import from Excel and Export to Excel</span></p>
+</div>
+<p>The Export to Excel File button will be only functional in the web
+version of the Power BI (see Figure below).</p>
+<div class="figure align-center" id="id75">
+<a class="reference internal image-reference" href="_images/qe6.png"><img alt="alternate text" src="_images/qe6.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Export to Excel File</span></p>
+</div>
+<p>The exported file can be edited and it can be imported by clicking the
+Import from Excel File button.</p>
+<div class="figure align-center" id="id76">
+<a class="reference internal image-reference" href="_images/qe7.png"><img alt="alternate text" src="_images/qe7.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Import from Excel File</span></p>
+</div>
+<p>The import function can be done by browsing the location of the file
+(see Figure below).</p>
+<div class="figure align-center" id="id77">
+<a class="reference internal image-reference" href="_images/qe8.png"><img alt="alternate text" src="_images/qe8.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">File Location</span></p>
+</div>
+<p>The Columns cab be filtered based on the selection from “Selected
+Columns” Drop Down (see Figure below). All the Columns can be selected
+to get displayed in the grid or the user can select the columns of their
+choice.</p>
+<div class="figure align-center" id="id78">
+<a class="reference internal image-reference" href="_images/qe9.png"><img alt="alternate text" src="_images/qe9.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Filtering Columns in the grid</span></p>
+</div>
+<p>The below Figure shows that all the columns are being selected and they
+are displayed in the grid. The user can scroll the Horizontal scroll bar
+in order to view the remaining columns.</p>
+<div class="figure align-center" id="id79">
+<a class="reference internal image-reference" href="_images/qe10.png"><img alt="alternate text" src="_images/qe10.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid Display with all the columns being selected.</span></p>
+</div>
+<p>The below Figure shows that only the selected columns get displayed in
+the grid.</p>
+<div class="figure align-center" id="id80">
+<a class="reference internal image-reference" href="_images/qe11.png"><img alt="alternate text" src="_images/qe11.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid Display with the selected columns</span></p>
+</div>
+<p>Also the user has the option to edit the properties like Formula,
+Calculation Method and Aggregation Method directly in the Grid view
+where it gets updated in the actual properties in the Advanced Editor.
+In our example, you can view that the Formula has been double clicked
+for editing (see Figure below).</p>
+<div class="figure align-center" id="id81">
+<a class="reference internal image-reference" href="_images/qe12.png"><img alt="alternate text" src="_images/qe12.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid view edit for Formula Column</span></p>
+</div>
+<p>The above Figure shows that the Formula for the row item Copper Sold has
+been edited. As another example, the below Figure shows that the
+Calculation Method has been edited.</p>
+<div class="figure align-center" id="id82">
+<a class="reference internal image-reference" href="_images/qe13.png"><img alt="alternate text" src="_images/qe13.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid view edit for Calculation Method Column</span></p>
+</div>
+<p>In a similar way, the following columns can be edited in the Grid view.</p>
+<ul class="simple">
+<li>Manual Data for Primary</li>
+<li>Manual Data for Comparison</li>
+</ul>
+<p>The below Figures represents the screen shots for both Manual Data for
+Primary and Manual Data for Secondary.</p>
+<div class="figure align-center" id="id83">
+<a class="reference internal image-reference" href="_images/qe14.png"><img alt="alternate text" src="_images/qe14.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid View Edit for Primary Data</span></p>
+</div>
+<div class="figure align-center" id="id84">
+<a class="reference internal image-reference" href="_images/qe15.png"><img alt="alternate text" src="_images/qe15.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid View Edit for Comparison Data</span></p>
+</div>
+<p>The Node Search for the columns Linked Node, Linked Simulation Node and
+Weighted Average Node in the Data Grid will be in Drop Down List and the
+user can select the appropriate Node from the Drop Down List. For our
+example, the Node Search for the Linked Simulation Node has been done
+(see Figure below).</p>
+<div class="figure align-center" id="id85">
+<a class="reference internal image-reference" href="_images/qe16.png"><img alt="alternate text" src="_images/qe16.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Node Search for Linked Simulation Node Column</span></p>
+</div>
+<p>Similarly the Node Search for the Source Key Column will be in Drop Down
+List showing the Nodes from the assigned Data Source and the user can
+select the appropriate Node from the Drop Down List (see Figure below).</p>
+<div class="figure align-center" id="id86">
+<a class="reference internal image-reference" href="_images/qe17.png"><img alt="alternate text" src="_images/qe17.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Node Search for Source Key Column</span></p>
+</div>
+<p>There is an option to lock the simulation for the Node in the Grid View.
+The same function can be also done in the exported Excel File and the
+Excel file can be imported in the Grid to see the updates done for the
+locked simulation.</p>
+<p>The below Figure shows the Locked Simulation in the Grid View.</p>
+<div class="figure align-center" id="id87">
+<a class="reference internal image-reference" href="_images/qe18.png"><img alt="alternate text" src="_images/qe18.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Locked Simulation in Grid View</span></p>
+</div>
+<p>The below Figure shows the Locked Simulation in the Excel File which can
+be imported to the Grid view.</p>
+<div class="figure align-center" id="id88">
+<a class="reference internal image-reference" href="_images/qe19.png"><img alt="alternate text" src="_images/qe19.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Locked Simulation in Excel File</span></p>
+</div>
+<p>The rows can be reordered for the child nodes which exists under a
+Parent Node. The below Figure shows the Grid view before reordering the
+child nodes.</p>
+<div class="figure align-center" id="id89">
+<a class="reference internal image-reference" href="_images/qe20.png"><img alt="alternate text" src="_images/qe20.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid view before reordering the child nodes</span></p>
+</div>
+<p>The below Figure shows the Grid view after reordering the child nodes.</p>
+<div class="figure align-center" id="id90">
+<a class="reference internal image-reference" href="_images/qe21.png"><img alt="alternate text" src="_images/qe21.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Grid view after reordering the child nodes</span></p>
+</div>
+</div>
+<div class="section" id="additional-properties-of-node-tab">
+<h3>Additional Properties of Node Tab<a class="headerlink" href="#additional-properties-of-node-tab" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Area</strong></th>
+<th class="head"><strong>Property</strong></th>
+<th class="head"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>General</td>
+<td>Unique ID</td>
+<td>This property shows
+the Unique ID for the
+Node and it can be
+edited.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Title</td>
+<td>This property sets
+the Title for Node.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Title Prefix when
+outside Tree</td>
+<td>This property sets
+the Title Prefix for
+the Node when outside
+the Tree.</td>
+</tr>
+<tr class="row-odd"><td>Configuration</td>
+<td>Calculation Method</td>
+<td><p class="first">This property sets
+the Calculation
+Method for the Node.
+The options are Data
+Source, Sum Children
+(a+b+c….), Subtract
+Children (a-b-c….),
+Multiply Children
+(a*b*c….), Divide
+Children (a/b/c….),
+Formula, Linked to
+Node, Manual and
+Templated based on
+other node.</p>
+<p class="last"><strong>Note:</strong> When the
+Calc. Method is
+selected as Linked to
+Node option, then you
+can select the
+desired Node from the
+Nodes List.</p>
+</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Source Key</td>
+<td>This property sets
+the Source Key for
+the Node. You can map
+the Node value with
+data source using the
+source key.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Time Aggregation</td>
+<td>This property sets
+the Time Aggregation
+for the Node. The
+options are Sum of
+Periods, Average,
+Formula, Last and
+Cumulative.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Desired Trend</td>
+<td><p class="first">This property sets
+the Desired Trend for
+the Node. The options
+are Decrease and
+Increase.</p>
+<p class="last">For example, the
+desired Trend for the
+Revenue usually
+increases and the
+desired Trend for the
+Cost decreases.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Value Range</td>
+<td>This property sets
+the Value Range for
+the Node.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Dynamic Children from
+Data Source</td>
+<td><p class="first">If the referenced
+data source row is a
+hierarchy node with
+children or has
+dimension below in
+the data source, the
+children can be
+automatically
+generated based on
+the data source.</p>
+<p class="last">If Node Mapping
+selected is
+“Automatic based on
+text” then any
+special character and
+space in the member
+text will be replaced
+by “__”(double
+underscore) in the
+Unique Id for the
+Node. Eg. “Total
+Cost” will become
+“Total__Cost”.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Dynamic Children
+Simulation</td>
+<td>Children settings
+will generally be
+cascaded from the
+configuration of this
+node except
+visualization,
+calculation method
+and simulation. The
+children will always
+be with visual style
+normal. Aggregation
+formulas can
+dynamically be
+generated and
+simulation feature
+set based on the
+below options like
+All, Nodes w/o
+children and None.</td>
+</tr>
+<tr class="row-even"><td>Display</td>
+<td>Node display</td>
+<td>This property decides
+on how the Node will
+be displayed in the
+Tree Widget. The
+options are Show,
+Derived and Hidden.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Scale</td>
+<td>This property sets
+the Scale for the
+Node. The options are
+None, User Selected,
+0m, 0k and Pct.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Value Decimal Places</td>
+<td>This property sets
+the Value Decimal
+Places for the Node.
+The range is from 0
+to 7.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Value Prefix</td>
+<td>This property sets
+the Prefix Value for
+the Node.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Value Suffix</td>
+<td>This property sets
+the Suffix Value for
+the Node.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Details On Click</td>
+<td>This property shows
+the Pop up screen upon
+clicking.</td>
+</tr>
+<tr class="row-even"><td>Simulation</td>
+<td>Enable Simulation</td>
+<td>This property enables
+or disables the
+Simulation.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Default Method</td>
+<td><p class="first">This property sets
+the Default Method
+for the Simulation.
+The options are</p>
+<ol class="last arabic">
+<li><p class="first">Change Percentage:</p>
+<p>% Change applied
+to baseline in
+future periods.</p>
+</li>
+<li><p class="first">Manual:</p>
+<p>Values set
+manually for each
+period.</p>
+</li>
+<li><p class="first">Growth Percentage:</p>
+<p>% Growth applied
+to baseline in
+future periods.</p>
+</li>
+<li><p class="first">Constant:</p>
+<p>Constant Value for
+future periods.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Linked Simulation</td>
+<td>Using this property,
+you can select the
+desired Node from the
+Nodes List for Linked
+Simulation. It updates
+the simulation
+concurrently with the
+Linked Node.</td>
+</tr>
+<tr class="row-odd"><td>Business Definition</td>
+<td>&#160;</td>
+<td><p class="first">This information will
+be included in each
+node’s details page
+(open by clicking on
+the node in the tree
+widget). They are
+listed as follows:</p>
+<ol class="last arabic">
+<li><p class="first">Description:</p>
+<p>This property sets
+the Description
+for the Node.</p>
+</li>
+<li><p class="first">Header:</p>
+<p>This property sets
+the Header for the
+Node.</p>
+</li>
+<li><p class="first">Footer:</p>
+<p>This property sets
+the Footer for the
+Node.</p>
+</li>
+<li><p class="first">Technical Notes:</p>
+<p>This property sets
+the Technical
+Notes for the
+Node.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td>Conditional
+Formatting</td>
+<td>&#160;</td>
+<td><p class="first">The Conditional
+Formatting Rules can
+be set for the Tree.
+The options are</p>
+<ol class="arabic simple">
+<li>Global or
+Inherited Rule</li>
+<li>Custom Rule:
+Overwrites default
+or any inherited
+rule.</li>
+<li>Hidden: No Rule
+will be applied to
+the Node</li>
+</ol>
+<p>You can set the
+values for the Color
+Range.</p>
+<p class="last">When the option is
+selected as “Custom
+Rule”, then you can
+configure the Range
+values at
+Simulation/Variance
+Percentage and Node
+values applied at
+Period Level.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><em>Additional Properties of Node Tab</em></p>
+</div>
+</div>
+<div class="section" id="data-series-tab">
+<h2>Data Series Tab<a class="headerlink" href="#data-series-tab" title="Permalink to this headline">¶</a></h2>
+<p>Using the “Data Series” Tab, you will be able to configure the Data settings
+for the Tree created in valQ. There are 3 different options as listed
+below to configure the data settings for the Tree (see Figure below).</p>
+<ol class="arabic simple">
+<li>Data Series Manager</li>
+<li>Time Aggregation Labels</li>
+<li>Data Sorting</li>
+</ol>
+<div class="figure align-center" id="id91">
+<img alt="alternate text" src="_images/dma.png" />
+<p class="caption"><span class="caption-text">Data Series Tab</span></p>
+</div>
+<div class="section" id="data-series-manager">
+<h3>Data Series Manager<a class="headerlink" href="#data-series-manager" title="Permalink to this headline">¶</a></h3>
+<p>Using the option “Data Series Manager”, you will be able to configure the
+Periods and Data Series for the Tree (see Figure below).</p>
+<div class="figure align-center" id="id92">
+<img alt="alternate text" src="_images/dm1.png" />
+<p class="caption"><span class="caption-text">Data Series Tab – Data Series Manager</span></p>
+</div>
+<p>For our example, we have the data source having periods from Jan to Dec, Budget and Forecast values. The Budget values will be the Comparison values and the Forecast values will be the Baseline values.
+Follow the below steps for configuring the values in the Data Series Manager.</p>
+<ol class="arabic simple">
+<li>Set the property Period(s) per data series to the value 5.</li>
+<li>Configure the Period Labels as Jan, Feb, Mar, Apr, May (see Figure above).</li>
+<li>Enable the property Include comparison data series. You can view both the Baseline and Comparison values.</li>
+<li>When the property Include comparison data series is disabled, then you will be able to view only the Baseline Series.</li>
+<li>Since our data set has the Additional values Additional 1 and Additional 2, it will be displayed as Additional Series (see Figure above).</li>
+<li>When you click the Baseline label, you will be able view the Baseline values as Forecast values as shown below.</li>
+</ol>
+<div class="figure align-center" id="id93">
+<a class="reference internal image-reference" href="_images/dm2.png"><img alt="alternate text" src="_images/dm2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Baseline Values</span></p>
+</div>
+<ol class="arabic simple" start="7">
+<li>When you click the Comparison label, you will be able view the Comparison values as the Budget values as shown below</li>
+</ol>
+<div class="figure align-center" id="id94">
+<a class="reference internal image-reference" href="_images/dm3.png"><img alt="alternate text" src="_images/dm3.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Comparison Values</span></p>
+</div>
+<p>Based on the above set of configuration steps, you will be able to view the valQ screen as shown below.</p>
+<div class="figure align-center" id="id95">
+<a class="reference internal image-reference" href="_images/dm4.png"><img alt="alternate text" src="_images/dm4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen configured with Periods and Data Series</span></p>
+</div>
+<p>You can observe from the above Figure that after simulating the Node
+Sale Allowances, you will be able to view the Baseline data in comparison
+with simulated Baseline data.</p>
+</div>
+<div class="section" id="time-aggregation-labels">
+<h3>Time Aggregation Labels<a class="headerlink" href="#time-aggregation-labels" title="Permalink to this headline">¶</a></h3>
+<p>Using the option “Time Aggregation Labels”, you will be able to
+configure the Active Period, Till Prior Period, All Periods and
+Simulation Period settings (see Figure below).</p>
+<div class="figure align-center" id="id96">
+<img alt="alternate text" src="_images/14.7.png" />
+<p class="caption"><span class="caption-text">Data Label – Time Aggregation Labels</span></p>
+</div>
+<p>Based on the above configuration, you will be able to view the valQ
+screen as shown below.</p>
+<div class="figure align-center" id="id97">
+<a class="reference internal image-reference" href="_images/14.8.png"><img alt="alternate text" src="_images/14.8.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with time aggregation labels</span></p>
+</div>
+<p>From the above Figure, you will be able to view the Time Aggregation
+Labels as highlighted in the valQ screen.</p>
+</div>
+<div class="section" id="data-sorting">
+<h3>Data Sorting<a class="headerlink" href="#data-sorting" title="Permalink to this headline">¶</a></h3>
+<p>Using the Data Sorting settings, you will be able to view and customize
+your Data Source. You will be able to select the Sort fields, sort the
+data with Ascending or Descending Order and select the Start With field
+with the required Month (see Figure below).</p>
+<div class="figure align-center" id="id98">
+<a class="reference internal image-reference" href="_images/14.13.png"><img alt="alternate text" src="_images/14.13.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Data Sorting Settings</span></p>
+</div>
+</div>
+<div class="section" id="additional-properties-of-data-series-tab">
+<h3>Additional Properties of Data Series Tab<a class="headerlink" href="#additional-properties-of-data-series-tab" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Area</th>
+<th class="head">Property</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Data Series Manager</td>
+<td>Periods</td>
+<td>Period(s) per data
+series: It indicates
+the number of values
+in the series. As an
+example, the series
+with Jan, Feb and Mar
+can be entered as 3
+periods.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td>Period Label(s): The
+Labels can be given
+as Jan, Feb, Mar
+(being separated by
+commas.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Data Series</td>
+<td>By enabling this
+property, you will be
+able to include the
+Comparison Data
+Series.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td>The Preview shows all
+the available Data
+Series (both Baseline
+and Comparison) and
+the Additional
+Series.</td>
+</tr>
+<tr class="row-even"><td>Time Aggregation
+Labels</td>
+<td>&#160;</td>
+<td>These labels are used
+in the navigation
+panel, nodes and
+popup screens.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Active period</td>
+<td>This property sets
+only one period of
+interest. A Label and
+a three letter
+abbreviation can be
+provided for this
+property.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Till Prior Period</td>
+<td>This property sets
+Total value from
+beginning to a
+specific period. A
+Label and a three
+letter abbreviation
+can be provided for
+this property.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>All periods</td>
+<td>This property sets
+Total value of all
+periods in the
+series. A Label and a
+three letter
+abbreviation can be
+provided for this
+property.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Simulation Period</td>
+<td>This property sets a
+specific set of
+continuous periods. A
+Label and a three
+letter abbreviation
+can be provided for
+this property.</td>
+</tr>
+<tr class="row-odd"><td>Data Sorting</td>
+<td>&#160;</td>
+<td><p class="first">The data can be
+sorted using the
+below filters:</p>
+<p>1. Choose Sort
+Field(s) from the
+data source</p>
+<p>2. Sort By:
+Ascending/Descending</p>
+<p class="last">3. Start with entry
+from the data source</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><em>Additional Properties of Data Series Tab</em></p>
+</div>
+</div>
+<div class="section" id="settings-tab">
+<h2>Settings Tab<a class="headerlink" href="#settings-tab" title="Permalink to this headline">¶</a></h2>
+<p>Using the Settings Tab, you will be able to configure the settings for
+the Navigation Panel, Nodes, Canvas, Number Formatting, Conditional Formatting and Color Theme.</p>
+<div class="section" id="navigation-panel">
+<h3>Navigation Panel<a class="headerlink" href="#navigation-panel" title="Permalink to this headline">¶</a></h3>
+<p>In the Settings Tab, you can enable/disable the Navigation Panel as shown in the below Figure.</p>
+<div class="figure align-center" id="id99">
+<img alt="alternate text" src="_images/edn.png" />
+<p class="caption"><span class="caption-text">Enable /Disable Navigation Panel</span></p>
+</div>
+<p>In the Navigation Panel settings, you will be able to configure the entire settings for the Navigation Panel. The following properties can be configured for the Navigation Panel.</p>
+<ol class="arabic simple">
+<li>Scenarios - You can enable/disable the Visibility option for the Scenarios using the Eye icon and also set the Label for the Scenario using the Edit icon in the Navigation Panel (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id100">
+<img alt="alternate text" src="_images/nav1.png" />
+<p class="caption"><span class="caption-text">Scenarios</span></p>
+</div>
+<p>You will be also able to download the xml files of the Scenarios from the Scenario Window in the Navigation Panel by clicking the Download option (see Figure below). In our example, the data for the Scenario 2 has been downloaded.</p>
+<div class="figure align-center" id="id101">
+<a class="reference internal image-reference" href="_images/16.4.png"><img alt="alternate text" src="_images/16.4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">xml download of the Scenario 2 data</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Sub Models - You can enable/disable the Visibility option for the Sub Models using the Eye icon and set the Label for the Sub Models using the Edit icon and further select the Nodes from Tree/Sub-Tree List from the Navigation Panel. You can also enable/disable the property for filtering the list based on the selected sub tree (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id102">
+<img alt="alternate text" src="_images/nav2.png" />
+<p class="caption"><span class="caption-text">Scenarios</span></p>
+</div>
+<ol class="arabic simple" start="3">
+<li>Simulation Period - You can enable/disable the Visibility option for the Simulation Period using the Eye icon and also set the Label for the Simulation Period using the Edit icon in the Navigation Panel (see Figure below).
+You can also set the Simulation Period Start and Simulation Period End. When you need to start the simulation from the
+current month, then you can select the “Start to current Month” option (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id103">
+<img alt="alternate text" src="_images/nav3.png" />
+<p class="caption"><span class="caption-text">Simulation Period</span></p>
+</div>
+<ol class="arabic simple" start="4">
+<li>Value Display - You can enable/disable the Visibility option for the Value Display using the Eye icon and set the Label for the Value Display using the Edit icon. You can select the Primary Period, Scaling options and Default Scaling options for the Value Display in the Navigation Panel (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id104">
+<img alt="alternate text" src="_images/nav4.png" />
+<p class="caption"><span class="caption-text">Value Display</span></p>
+</div>
+<ol class="arabic simple" start="5">
+<li>Key Inputs - You can enable/disable the Visibility option for the Key Inputs using the Eye icon and set the Label for the Key Inputs using the Edit icon. Further you can also select the Key Assumptions to be displayed as List by selecting the required Nodes in the Navigation Panel (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id105">
+<img alt="alternate text" src="_images/nav5.png" />
+<p class="caption"><span class="caption-text">Key Inputs</span></p>
+</div>
+<ol class="arabic simple" start="6">
+<li>KPIs - You can enable/disable the Visibility option for the KPIs using the Eye icon, set the Label for the KPIs using the Edit icon and further select the KPIs to be displayed as List by selecting the required Nodes in the Navigation Panel (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id106">
+<img alt="alternate text" src="_images/nav6.png" />
+<p class="caption"><span class="caption-text">KPIs</span></p>
+</div>
+<ol class="arabic simple" start="7">
+<li>Constraints - You can enable/disable the Visibility option for the Constraints using the Eye icon, set the Label for the Constraints using the Edit icon and further select the Constraints to be displayed as List by selecting the required Nodes in the Navigation Panel. You can also enable/disable the property for sorting the constraints based on utilization (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id107">
+<img alt="alternate text" src="_images/nav7.png" />
+<p class="caption"><span class="caption-text">Constraints</span></p>
+</div>
+<p>Based on the above settings, you will be able to view the valQ screen with “Exit Design Mode” button (see Figure below).</p>
+<div class="figure align-center" id="id108">
+<a class="reference internal image-reference" href="_images/nav8.png"><img alt="alternate text" src="_images/nav8.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Exit Design Mode</span></p>
+</div>
+<p>By clicking the Exit Design Mode button in the right canvas, you will be able to view the valQ screen with Navigation Panel based on the above set of configurations, (see Figure below).</p>
+<div class="figure align-center" id="id109">
+<a class="reference internal image-reference" href="_images/nav9.png"><img alt="alternate text" src="_images/nav9.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Navigation Panel</span></p>
+</div>
+</div>
+<div class="section" id="nodes">
+<h3>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h3>
+<p>This Node settings allows you to map the Nodes to queries in the ID, Text or ID + Text Formats. In the Node Mapping settings in valQ, the Data Mapping Format has 2 options as listed below:
+listed below (see Figure below).</p>
+<ol class="arabic simple">
+<li>Map based on ID or Text - For example, you can use this option if the field value exactly matches your Node’s unique
+ID or Text (e.g., Text - ‘Canada’)</li>
+<li>Map based on ID-Text Pair - For example, you can use this option if your field has a key-text format
+(e.g., ‘CA:Canada’), and your Node’s ID corresponds to a key (e.g.,‘CA’).</li>
+</ol>
+<div class="figure align-center" id="id110">
+<img alt="alternate text" src="_images/nm1.png" />
+<p class="caption"><span class="caption-text">Data Mapping Format</span></p>
+</div>
+<p>For our example, we would explore the settings for Map based on ID-Text Pair. The data source which is
+assigned for the Node Mapping is shown below:</p>
+<div class="figure align-center" id="id111">
+<img alt="alternate text" src="_images/14.11.png" />
+<p class="caption"><span class="caption-text">Excel Data Source with Node Mapping</span></p>
+</div>
+<p>From the above Figure, you will be able to view the Node ID as 6 and
+Category as 6:SparklingWater_GrossSales.</p>
+<p>Based on the above configuration, you will be able to view the valQ
+screen as shown below.</p>
+<div class="figure align-center" id="id112">
+<a class="reference internal image-reference" href="_images/14.12.png"><img alt="alternate text" src="_images/14.12.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Node Mapping</span></p>
+</div>
+<p>From the above Figure, you will be able to observe that the key-text
+format here is 6:SparklingWater_GrossSales.</p>
+<p>You will be also able to configure the Default Node Style with three different options namely Standard, Full and Minimal as shown in the
+below Figure.</p>
+<div class="figure align-center" id="id113">
+<img alt="alternate text" src="_images/nm3.png" />
+<p class="caption"><span class="caption-text">Default Node Style</span></p>
+</div>
+<p>You will be able to enable/disable the Node Elements like Variance, Trend Spark Line, Secondary Value/Variance and Descendant Node Count (see Figure below).</p>
+<div class="figure align-center" id="id114">
+<img alt="alternate text" src="_images/nm4.png" />
+<p class="caption"><span class="caption-text">Node Settings</span></p>
+</div>
+<p>By enabling the option “Data Source Exception”, you can use the Data provided in “Manual” Calculation Method
+when the Data Source Method returns no value for the Node.</p>
+<p>For our example, the Waterfall Chart Type is selected as “Horizontal”. Based on the above settings you will be able to
+view the valQ screen as shown below.</p>
+<div class="figure align-center" id="id115">
+<a class="reference internal image-reference" href="_images/nm5.png"><img alt="alternate text" src="_images/nm5.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Node Settings</span></p>
+</div>
+<p>From the above Figure, you can observe that the Node Styles is set to
+“Standard” Type and the Node Elements like Variance, Trend Spark Line,
+Secondary Value/Variance and Descendant Node Count are displayed in the Node
+based on the configuration.</p>
+<p>By clicking the Node, you will observe that the Waterfall chart type in the Pop up screen is rendered as Horizontal Chart Type based on our settings (see Figure below).</p>
+<div class="figure align-center" id="id116">
+<a class="reference internal image-reference" href="_images/nm6.png"><img alt="alternate text" src="_images/nm6.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Pop up screen showing Horizontal Chart Type</span></p>
+</div>
+<p>As part of the New Release, when the Node Style is selected as “Standard”, you can view the Node Elements Variance, Trend Spark Line and Secondary Value/Variance being selected by default (see Figure below).</p>
+<div class="figure align-center" id="id117">
+<img alt="alternate text" src="_images/va1.png" />
+<p class="caption"><span class="caption-text">Node Elements for Standard Node Style</span></p>
+</div>
+<p>When the Node Style is being selected as “Minimal”, then you will be able to view only the Node element Variance being selected by default (see Figure below).</p>
+<div class="figure align-center" id="id118">
+<img alt="alternate text" src="_images/va2.png" />
+<p class="caption"><span class="caption-text">Node Element for Minimal Node Style</span></p>
+</div>
+<p>When the Node Style is being selected as “Full”, then you will be able to view all the  Node elements without any default selection.</p>
+<div class="section" id="contribution-and-performance-variance-percentage">
+<h4>Contribution and Performance Variance Percentage<a class="headerlink" href="#contribution-and-performance-variance-percentage" title="Permalink to this headline">¶</a></h4>
+<p>As part of the New Release, you will be now able to view the Contribution and Performance Variance Percentage
+being displayed at the Node Level. For our example, the Node Style has been selected as “Full” and the Node Elements: Variance, Contribution Percentage,  Performance Variance Percentage, Trend Spark Line and Secondary Value/Variance
+have been selected (see Figure below).</p>
+<div class="figure align-center" id="id119">
+<img alt="alternate text" src="_images/va3.png" />
+<p class="caption"><span class="caption-text">Node Style and Node Element Selection</span></p>
+</div>
+<p>For our example, the property Sort Based On is set to the option “Contribution Percentage” and the property
+Sort Order has been set to the option “Ascending” (see Figure above).</p>
+<p>Based on the above settings, you will be able view the Nodes displaying the Contribution Percentage values in Ascending order (see Figure below).</p>
+<div class="figure align-center" id="id120">
+<a class="reference internal image-reference" href="_images/va4.png"><img alt="alternate text" src="_images/va4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Node showing Contribution Percentage values in Ascending order</span></p>
+</div>
+<p>Similarly, you will be also able to view the Performance Variance Percentage values in the Ascending Order
+based on the configuration (see Figure below).</p>
+<div class="figure align-center" id="id121">
+<a class="reference internal image-reference" href="_images/va5.png"><img alt="alternate text" src="_images/va5.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Node showing Performance Variance Percentage values in Ascending order</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="canvas">
+<h3>Canvas<a class="headerlink" href="#canvas" title="Permalink to this headline">¶</a></h3>
+<p>In the Canvas settings, you will be able to configure the following properties:</p>
+<ol class="arabic simple">
+<li>You can set the property Default Visual to the option Tree or Table based on your choice. For our
+example, the property has been set to the option Table (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id122">
+<img alt="alternate text" src="_images/cv1.png" />
+<p class="caption"><span class="caption-text">Canvas with Default Visual settings</span></p>
+</div>
+<p>Based on the above settings, you will be able to view the valQ screen with the Table appearance (see Figure below).</p>
+<div class="figure align-center" id="id123">
+<a class="reference internal image-reference" href="_images/cv2.png"><img alt="alternate text" src="_images/cv2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Canvas with default Table Visual</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>For our example, set the property “Start the model with the following KPI” to the option “9:Total Cost” (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id124">
+<img alt="alternate text" src="_images/cv3.png" />
+<p class="caption"><span class="caption-text">Canvas Settings</span></p>
+</div>
+<ol class="arabic simple" start="3">
+<li>Set the property ” Expand hierarchy upto the following number of levels by default” to the value 2 (see Figure above).</li>
+<li>In the area Footer Toolbar, enable the property Enable Node Search and enable the property Enable Hiding Empty Nodes.</li>
+<li>Set the property Default Canvas Zoom (%) to the value 100.</li>
+<li>Set the property Default Table Style to the option “Standard”. This settings for the Table can be visualized only when the property “Default Visual” is selected as “Table”.</li>
+<li>Set the property Hint Text as “Hover a node and drag the slider left or right to simulate changes”.</li>
+</ol>
+<p>Based on the above configuration, you will be able to view the valQ screen as shown below.</p>
+<div class="figure align-center" id="id125">
+<a class="reference internal image-reference" href="_images/cv4.png"><img alt="alternate text" src="_images/cv4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Canvas Settings</span></p>
+</div>
+<p>From the above Figure, you can observe that the first node starts with Total Cost. By default the Hierarchy of the Nodes are maintained upto 2 level.
+The Node level Search is enabled and you will not be able to visualize the Nodes with empty values based on the above configuration. You will be able to view the Canvas zoomed at 100% and the Hint is appearing with the
+Text as given in the settings.</p>
+</div>
+<div class="section" id="number-formatting">
+<h3>Number Formatting<a class="headerlink" href="#number-formatting" title="Permalink to this headline">¶</a></h3>
+<p>In the Number Formatting settings, you will be able to configure the following properties:</p>
+<ol class="arabic simple">
+<li>In the area Scale Suffix, set the property Thousands to “k” (see Figure below).</li>
+</ol>
+<div class="figure align-center" id="id126">
+<img alt="alternate text" src="_images/nf1.png" />
+<p class="caption"><span class="caption-text">Number Formatting Settings</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Set the property Millions to “m” (see Figure above).</li>
+<li>Set the property Billions to “b”.</li>
+<li>Set the property Trillions to “t”.</li>
+<li>In the area Display Formatting, set the property Display zeroes as to the option “0”.</li>
+<li>Set the property Display Negative values as to the option “(0)”.</li>
+<li>Set the property Decimal Separator to “.”.</li>
+<li>Set the property Thousands Separator to “,”.</li>
+</ol>
+<p>Based on the above configuration, you will be able to view the valQ screen as shown below.</p>
+<div class="figure align-center" id="id127">
+<a class="reference internal image-reference" href="_images/nf2.png"><img alt="alternate text" src="_images/nf2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Number Formatting Settings</span></p>
+</div>
+<p>From the above Figure, you can observe that the zero value is displayed as “0” based on our configuration. The negative value has been
+represented as “(5,690)”. The thousand separator is represented as 6,942. The scale suffix settings will be displayed based on the
+data set that we use.</p>
+</div>
+<div class="section" id="id1">
+<h3>Conditional Formatting<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>In the Conditional Formatting settings, you will be able to set Alert Threshold and Rules. You will be able to configure the
+following properties for the Conditional Formatting.</p>
+<ol class="arabic simple">
+<li>You can enable/disable the property Enable Conditional Formatting as shown in the below.</li>
+</ol>
+<div class="figure align-center" id="id128">
+<img alt="alternate text" src="_images/cf1.png" />
+<p class="caption"><span class="caption-text">Conditional Formatting Settings</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>In the area Format based on, select the option Variance as shown in the above Figure. Now configure the
+Formatting Threshold values as highlighted in the above Figure. Based on the above settings, you will
+be able to view the Tree as shown below.</li>
+</ol>
+<div class="figure align-center" id="id129">
+<a class="reference internal image-reference" href="_images/cf2.png"><img alt="alternate text" src="_images/cf2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Conditional Formatting - Format based on Variance Percentage</span></p>
+</div>
+<ol class="arabic simple" start="3">
+<li>After simulation, you can observe that the variance percentage value for the Node “Income” falls in the Threshold range 22% which is
+above 0% and based on that condition, the status bar for the Node is green color (see Figure above). Similarly the variance percentage value for
+the Node “Investment and Others” falls in the Threshold range (26%)* which is below -10% and based on that condition, the status bar for the Node is red color.</li>
+<li>Now select the option Simulation as shown in the below Figure.</li>
+</ol>
+<div class="figure align-center" id="id130">
+<img alt="alternate text" src="_images/cf3.png" />
+<p class="caption"><span class="caption-text">Conditional Formatting Settings</span></p>
+</div>
+<ol class="arabic simple" start="5">
+<li>Based on the above settings, you will be able to view the Tree as shown below.</li>
+</ol>
+<div class="figure align-center" id="id131">
+<a class="reference internal image-reference" href="_images/cf4.png"><img alt="alternate text" src="_images/cf4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Conditional Formatting - Format based on Simulation Percentage</span></p>
+</div>
+<ol class="arabic simple" start="6">
+<li>After simulation, you can observe that the simulation percentage value for the Node “Income” falls in the Threshold range 29% which is
+above 0% and based on that condition, the status bar for the Node is green color (see Figure above). Similarly the simulation percentage value for
+the Node “Investment and Others” falls in the Threshold range (37%)* which is below -10% and based on that condition, the status bar for the Node is red color.</li>
+</ol>
+<p>Note: * indicates the negative values.</p>
+</div>
+<div class="section" id="color-theme">
+<h3>Color Theme<a class="headerlink" href="#color-theme" title="Permalink to this headline">¶</a></h3>
+<p>In the Color Theme settings, you will be able to configure the following properties:</p>
+<ol class="arabic simple">
+<li>You will be able to select the Light Theme or Dark Theme based on your choice (see Figure below). For our example, the Light Theme has been selected.</li>
+</ol>
+<div class="figure align-center" id="id132">
+<img alt="alternate text" src="_images/clr1.png" />
+<p class="caption"><span class="caption-text">Color Theme Settings</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Set the property “Choose Navigational Panel Theme” to the option Dark.</li>
+<li>Set the Main and Accent color for the Canvas to the color as shown in the above Figure.</li>
+<li>For the Tree Widget, set the colors for the properties Font Color, Background, Derived Nodes, Highlighted and Connectors to the required colors as shown
+in the above Figure.</li>
+<li>You will be able to view the valQ screen having Light Theme color along with different colors
+selected for both the canvas as well as the tree widget based on the configured settings.</li>
+</ol>
+<div class="figure align-center" id="id133">
+<a class="reference internal image-reference" href="_images/clr2.png"><img alt="alternate text" src="_images/clr2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">valQ screen with Color Theme Settings</span></p>
+</div>
+<p>Also you can observe that the Navigation Panel will be shown in Dark Theme based on the configuration.</p>
+<div class="figure align-center" id="id134">
+<a class="reference internal image-reference" href="_images/clr3.png"><img alt="alternate text" src="_images/clr3.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Navigation Panel with Dark Theme</span></p>
+</div>
+<p>For our example, you have configured the Highlighted color for the Node as Red Color (see Figure below).</p>
+<div class="figure align-center" id="id135">
+<a class="reference internal image-reference" href="_images/hc1.png"><img alt="alternate text" src="_images/hc1.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Highlighted Color Settings for Node</span></p>
+</div>
+<p>Based on the above configuration, you can observe that when you click and Node in the Navigation panel, the Node in the
+right pane will be highlighted based on the color selection. For our example, the Node is being highlighted in Red color.</p>
+<div class="figure align-center" id="id136">
+<a class="reference internal image-reference" href="_images/hc2.png"><img alt="alternate text" src="_images/hc2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Node Highlighted color appearing in Red color</span></p>
+</div>
+</div>
+<div class="section" id="additional-properties-of-settings-tab">
+<h3>Additional Properties of Settings Tab<a class="headerlink" href="#additional-properties-of-settings-tab" title="Permalink to this headline">¶</a></h3>
+<p>The Navigation Panel in the valQ screen will be configured based on the below listed properties.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Area</th>
+<th class="head">Property</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Navigation Panel</td>
+<td>Enable Navigation
+Panel</td>
+<td>This property
+enables/disables the
+Navigation Panel in
+the valQ screen.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Scenarios</td>
+<td>You can
+enable/disable the
+Visibility option for
+the Scenarios using
+the Eye icon and also
+set the Label for the
+Scenario using the
+Edit icon in the
+Navigation Panel
+Settings.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Sub Models</td>
+<td>You can
+enable/disable the
+Visibility option for
+the Sub Models using
+the Eye icon and set
+the Label for the Sub
+Models using the Edit
+icon in the
+Navigation Panel
+Settings. You can
+select the Nodes from
+Tree/Sub-Tree List.
+You can also
+enable/disable the
+property for
+filtering the list
+based on the selected
+sub tree.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Simulation Period</td>
+<td><p class="first">You can
+enable/disable the
+Visibility option for
+the Simulation Period
+using the Eye icon
+and also set the
+Label for the
+Simulation Period
+using the Edit icon
+in the Navigation
+Panel Settings.</p>
+<p class="last">You can also set the
+Simulation Period
+Start and Simulation
+Period End. When you
+need to start the
+simulation from the
+current month, then
+you can select the
+“Start to current
+Month” option</p>
+</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Value Display</td>
+<td>You can
+enable/disable the
+Visibility option for
+the Value Display
+using the Eye icon
+and set the Label for
+the Value Display
+using the Edit icon.
+You can select the
+Primary Period,
+Scaling options and
+Default Scaling
+options for the Value
+Display in the
+Navigation Panel.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Key Inputs</td>
+<td>You can
+enable/disable the
+Visibility option for
+the Key Inputs using
+the Eye icon and set
+the Label for the Key
+Inputs using the Edit
+icon. Further you can
+also select the Key
+Assumptions to be
+displayed as List by
+selecting the
+required Nodes in the
+Navigation Panel</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>KPIs</td>
+<td>You can
+enable/disable the
+Visibility option for
+the KPIs using the
+Eye icon, set the
+Label for the KPIs
+using the Edit icon
+and further select
+the KPIs to be
+displayed as List by
+selecting the
+required Nodes in the
+Navigation Panel.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Constraints</td>
+<td>You can
+enable/disable the
+Visibility option for
+the Constraints using
+the Eye icon, set the
+Label for the
+Constraints using the
+Edit icon and further
+select the
+Constraints to be
+displayed as List by
+selecting the
+required Nodes in the
+Navigation Panel. You
+can also
+enable/disable the
+property for sorting
+the constraints based
+on utilization.</td>
+</tr>
+<tr class="row-even"><td>Nodes</td>
+<td>Data Mapping Format</td>
+<td>This Node settings
+allows you to map the
+Nodes to queries in
+the ID, Text or ID +
+Text Formats.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Map based on ID or
+Text</td>
+<td>For example, you can
+use this option if
+the field value
+exactly matches your
+Node’s unique ID or
+Text (e.g., Text -
+‘Canada’)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Map based on ID-Text
+Pair</td>
+<td>For example, you can
+use this option if
+your field has a
+key-text format
+(e.g., ‘CA:Canada’),
+and your Node’s ID
+corresponds to a key
+(e.g.,‘CA’).</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>ID-Text Pair
+Separator</td>
+<td>You can provide the
+inputs for the
+ID-Text Pair format.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Default Node Style</td>
+<td>This property is used
+to configure the
+style of the Node.
+The options are
+Standard, Full and
+Minimal.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Node Elements</td>
+<td><p class="first">This property is used
+to display the below
+listed elements in
+the Node:</p>
+<ol class="last arabic simple">
+<li>Variance</li>
+<li>Trend Sparkline</li>
+<li>Secondary
+Value/Variance</li>
+<li>Descendant Node
+Count</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Data Source
+Exceptions</td>
+<td>By enabling the
+option “Data Source
+Exception”, you can
+use the Data provided
+in “Manual”
+Calculation Method
+when the Data Source
+Method returns no
+value for the Node.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Waterfall Chart Type</td>
+<td>The Pop up screen will
+be appearing with the
+type of the Waterfall
+Chart being selected.
+The options are
+Vertical and
+Horizontal.</td>
+</tr>
+<tr class="row-even"><td>Number Formatting</td>
+<td>Scale Suffix</td>
+<td>This property sets
+the Thousands,
+Millions, Billions
+and Trillions Suffix
+for the scale.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Display Formatting</td>
+<td><p class="first">This property sets
+the Number Formatting
+for the following
+fields:</p>
+<ol class="last arabic simple">
+<li>Display zeroes as
+None, - or 0</li>
+<li>Display Negative
+Value as ( 0), -0
+or 0-</li>
+<li>Decimal Separator
+as “.”</li>
+<li>Thousand Separator
+as “,”</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td>Canvas</td>
+<td>Default Visual</td>
+<td>This property sets
+the Default Visual as
+Tree or Table in the
+right pane.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Start the Model with
+the following KPI</td>
+<td>The Model will get
+started based on the
+on the selection the
+specific Node from
+the list.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Expand Hierarchy upto
+the following number
+of levels by default</td>
+<td>Using this property,
+you can expand the
+hierarchy upto the
+following number of
+levels by default.
+The minimum level is
+2.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Footer Toolbar –
+Enable Node Search</td>
+<td>This property
+enables/disables the
+Node Search in the
+canvas.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Footer Toolbar –
+Enable hiding empty
+nodes</td>
+<td>This property hide
+Nodes that have no
+value mapped to it or
+have null value for
+all its periods.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Default canvas zoom
+(%)</td>
+<td>This property sets
+the default zoom
+ratio for the canvas.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Enable Conditional
+Formatting</td>
+<td>This property
+enables/disables the
+Conditional
+Formatting</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Default Table Style</td>
+<td>This property is used
+to configure the
+style of the Table.
+The options are
+Standard and Full.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Hint</td>
+<td>This property sets
+the Hint which
+appears at the top of
+the canvas.</td>
+</tr>
+<tr class="row-odd"><td>Conditional
+Formatting</td>
+<td>Enable Conditional
+Formatting</td>
+<td>This property
+enables/disables the
+Conditional
+Formatting property.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Format based on</td>
+<td>Each node will have a
+status bar property
+to indicate whether
+the trend of values
+is favorable and this
+property can be
+configured using
+these options
+Variance and
+Simulation.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Formatting Thresholds
+(%)</td>
+<td><p class="first">The Status bar color
+will be changed based
+on the percentage of
+deviant from initial
+value. The color
+ranges are given
+below:</p>
+<ol class="last arabic simple">
+<li>Red - Below:- 10%</li>
+<li>Yellow - Between:
+-10% to-1%</li>
+<li>White - Between:
+-1% to1%</li>
+<li>Green - Above: 1%</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td>Color Theme</td>
+<td>Choose Canvas Theme</td>
+<td>This Property sets
+the Theme for the
+Node. The options are
+Light Theme and Dark
+Theme.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Choose Navigation
+Panel Theme</td>
+<td>This property sets
+the color for the
+Navigational Theme.
+The options are Dark
+and Light.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Canvas</td>
+<td>This property sets
+the Main Color and
+Accent Color for the
+Canvas.</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Tree widget</td>
+<td>This property sets
+the Font color,
+Background color,
+Derived Nodes color,
+Highlighted Node
+color and Node
+Connectors color
+for the Tree Widget.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Additional Properties of Settings Tab</em></p>
+</div>
+</div>
+<div class="section" id="general-tab">
+<h2>General Tab<a class="headerlink" href="#general-tab" title="Permalink to this headline">¶</a></h2>
+<p>Using the General Tab, you will be able to configure the settings for
+the License Registration, Export and Writeback Functions.</p>
+<div class="section" id="license-registration">
+<h3>License Registration<a class="headerlink" href="#license-registration" title="Permalink to this headline">¶</a></h3>
+<p>You will be able to enter the Subscription License Key in the License Key Text Box to unlock the Additional Features of the valQ (see Figure below).</p>
+<div class="figure align-center" id="id137">
+<img alt="alternate text" src="_images/lcs.png" />
+<p class="caption"><span class="caption-text">License Registration</span></p>
+</div>
+</div>
+<div class="section" id="export">
+<h3>Export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<p>In the Export settings, you will be able to configure the export functionality. There is also an option to
+include the navigation settings panel in the Export File (see Figure below).</p>
+<div class="figure align-center" id="id138">
+<img alt="alternate text" src="_images/epf.png" />
+<p class="caption"><span class="caption-text">Export option</span></p>
+</div>
+<p>The saved file can be exported and this exported file can be used in the
+“Import from Excel” option in “Import an Advanced Model”
+category (<a class="reference internal" href="#ief"><span class="std std-ref">Refer Section: Import from an Export File</span></a>).</p>
+</div>
+<div class="section" id="writeback">
+<h3>Writeback<a class="headerlink" href="#writeback" title="Permalink to this headline">¶</a></h3>
+<p>You will be able to export the Scenarios configured in the valQ through an URL by entering the Writeback URL in the Text Box (see Figure below).</p>
+<div class="figure align-center" id="id139">
+<img alt="alternate text" src="_images/wrb.png" />
+<p class="caption"><span class="caption-text">Export Scenarios via Writeback URL</span></p>
+</div>
+<p>The different simulations of planning results can be written back to the underlying systems using the URL exposed
+as part of the valQ. Using the URL, the user can do write-back scenario nodes to the underlying system.</p>
+<p>For more details on Writeback Functionality, you can refer the link: <a class="reference external" href="https://valq.com/blogs/writeback-valq-data-using-microsoft-flow">https://valq.com/blogs/writeback-valq-data-using-microsoft-flow</a></p>
+</div>
+<div class="section" id="additional-properties-of-the-general-tab">
+<h3>Additional Properties of the General Tab<a class="headerlink" href="#additional-properties-of-the-general-tab" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Area</th>
+<th class="head">Property</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>License Registration</td>
+<td>License Key</td>
+<td>You will be able to
+enter the
+Subscription License
+Key in the License
+Key Text Box to
+unlock the Additional
+Features of the valQ.</td>
+</tr>
+<tr class="row-odd"><td>Export</td>
+<td>Include navigation
+panel settings in the
+export file</td>
+<td>This property when
+activated exports the
+file along with
+Navigation Panel
+settings.</td>
+</tr>
+<tr class="row-even"><td>Writeback</td>
+<td>Export Scenarios via
+Writeback URL</td>
+<td>You will be able to
+export the Scenarios
+configured in the
+valQ through an URL
+by entering the
+Writeback URL in the
+Text Box.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Additional Properties of General Tab</em></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PlanCategory.html" class="btn btn-neutral float-right" title="Plan Category" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="valQ.html" class="btn btn-neutral" title="valQ in Power BI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Visual BI Solutions.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

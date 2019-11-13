@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+# Documenting VBI View
 
-You can use the [editor on GitHub](https://github.com/visualbis/visualbis.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Requires python 3.5.x
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## To install dependencies
 
-### Markdown
+    virtualenv docstuff
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    docstuff\Scripts\activate
 
-```markdown
-Syntax highlighted code block
+    pip install -r requirements.txt --upgrade
 
-# Header 1
-## Header 2
-### Header 3
+## To start documenting a project
 
-- Bulleted
-- List
+    docstuff\Scripts\activate
 
-1. Numbered
-2. List
+    sphinx-quickstart
 
-**Bold** and _Italic_ and `Code` text
+## To generate html
 
-[Link](url) and ![Image](src)
-```
+    docstuff\Scripts\activate
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    make html
 
-### Jekyll Themes
+## To change theme
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/visualbis/visualbis.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Open source\conf.py and in the line
 
-### Support or Contact
+    html_theme = '<Your theme name>'
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+For example: html_theme = 'sphinx-rtd-theme'
+
+## Reference
+
+https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst
+
+
+
+Links:
+code .
+
+Set the link code above the figure, heading,..... items as .. _forgot-password:
+
+If you forgot password, see :ref:`forgot-password`
+
