@@ -1,7 +1,7 @@
-Model Category
+Model Tab
 ##############
 
-The Model category has two panels in which the left panel represents the Advanced Editor and the right panel 
+The Model tab has two panels in which the left panel represents the Advanced Editor and the right panel 
 denotes the canvas which represents the Value Driver Tree visuals (see Figure below).
 
 .. figure:: _static/catg.png 
@@ -10,15 +10,15 @@ denotes the canvas which represents the Value Driver Tree visuals (see Figure be
  
     Left Panel and Right Canvas
 
-The Model Category has five different Tab options (see Figure below).  
+The Model tab has five different Tab options (see Figure below).  
 
 .. figure:: _static/tabs.png  
     :align: center
     :alt: alternate text   
  
-    Tab option for the Model Category
+    Tab option for the Model tab
 
-The Tab options for the Model Category has been listed below:
+The Tab options for the Model tab has been listed below:
 
 
 1. New Tab – To configure the design for the Value Driver Tree using the
@@ -660,7 +660,7 @@ below.
 
 From the above Figure, you can observe that the other Measure “Forecast”
 is assigned to “Value” and the Dimensions namely Account and Product has
-been assigned to the “Category” and the Period_MON is assigned to “Time
+been assigned to the “tab” and the Period_MON is assigned to “Time
 period”. Now based the assigned data source, the Tree is being
 configured. Hence now you can create a tree directly from your data. For
 step by step instructions on how to get started to build a Dynamic
@@ -1771,7 +1771,7 @@ assigned for the Node Mapping is shown below:
     Excel Data Source with Node Mapping
 
 From the above Figure, you will be able to view the Node ID as 6 and
-Category as 6:SparklingWater_GrossSales.
+tab as 6:SparklingWater_GrossSales.
 
 Based on the above configuration, you will be able to view the valQ
 screen as shown below.
@@ -2449,7 +2449,7 @@ include the navigation settings panel in the Export File (see Figure below).
 
 The saved file can be exported and this exported file can be used in the
 “Import from Excel” option in “Import an Advanced Model”
-category (:ref:`Refer Section: Import from an Export File <IEF>`).
+tab (:ref:`Refer Section: Import from an Export File <IEF>`).
 
 Writeback
 ---------
