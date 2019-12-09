@@ -19,6 +19,7 @@ Welcome to valQ Custom Visual for Microsoft Power BI!
    PlanCategory
    SimulateCategory
    AnalyzeCategory
+   SecondaryKPI
    Knownissues
    
    
