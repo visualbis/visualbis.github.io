@@ -1,5 +1,5 @@
 Storage and Collaboration
-================
+=========================
 
 The storage feature allows user to access, store, audit, collaborate, synchronize, and run further analysis on the baseline, comparison, and the simulated data series across the entire model scenarios.
 Users require a dedicated ValQ workspace access authenticated by their Office 365 credentials.

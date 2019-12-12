@@ -319,9 +319,8 @@ From the above Figure you can observe that in the Navigation Panel, the
 value that is displayed in the Constraints section will lie in the range
 from minimum 10 to maximum 100 for a specific month based on the
 configuration done for the Value Range. In our example, the calculation
-method is selected as “Subtract Children (a-b-c)” meaning that the child
-node having greater value will get subtracted from the child node having
-smaller value and its result will be displayed in the Parent Node. The
+method is selected as 'Subtract Children (a-b-c)' meaning that from the first child
+node the other child nodes will get subtracted and its result will be displayed in the Parent Node. The
 Time Aggregation is set to Sum of Periods where we have considered 12
 months as period. As the result of simulation, each Node will display
 the values based on the Sum of Periods. Also the “Desired Trend” has
@@ -329,9 +328,11 @@ been set to the Increase option. When simulated, the desired Trend for
 the Revenue will be increasing and the value for the Total Cost will be
 decreasing.
 
+For the Calculation Method being selected as 'Data Source', you can follow the steps as explained in the following link : https://valq.com/blogs/3-methods-of-mapping-valq-nodes-to-data/
+
 For other options of calculation method, you can refer the link: https://valq.com/blogs/assigning-values-to-nodes-in-valq/
 
-For the Calculation Method being selected as "Data Source", you can follow the steps as explained in the following link : https://valq.com/blogs/3-methods-of-mapping-valq-nodes-to-data/
+On selecting 'Formula' and clicking on the formula field, you will be able to see a dropdown of the formulas that are supported. For a list of formulas that are available in valQ, you can refer to the link :doc:`Functions`
 
 Template Nodes selection in Calculation Method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -630,96 +631,6 @@ and based on that condition, the status bar for the Node Revenue is green color 
 "*" denotes that the Metric values get calculated based on the Period Level. For example when it is a Year, it will take the value of 12 being multiplied with the range value that we provide.
 
 Now set the option to "Hidden: No Rule will be applied to this Node". You can observe that no range values can be provided for the Conditional Formatting and since there will be no status color for that Node being simulated. 
-
-Secondary KPIs
----------------------
-
-Secondary KPIs helps user to aggregate and visualize additional or alternate KPI values in the node widget. 
-Specifically, in a model with two data series, these are the set of secondary metrics captured under the primary value of the node
-
-.. figure:: _static/SecKPI.1.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-As a default, there are three secondary values displayed for a dual series data in the following order
-i. Full Period Variance between baseline and comparison metric (in % and absolute values)
-ii.	Baseline metric value for the first period in the series 
-iii. Variance for the first period between baseline and comparison metric (in % and absolute values) 
-
-.. figure:: _static/SecKPI.2.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-Secondary KPI option lets users to customize these secondary values or metric according to their preference 
-
-Users can achieve this using:
-I.	Secondary KPI option based on Formulas
-II.	Secondary KPI option based on Template
-
-I.	Secondary KPI option based on Formulas
-
-In the below model screenshot, the user can display the data value from Operating Profit %’ and ‘Operating Expense Ratio’ as Secondary KPI values to the TOP node ‘Operating profit’.
-
-.. figure:: _static/SecKPIF.1.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-Under the 'Operating Profit' node setting's 'Secondary KPI' ribbon, user needs to select the 'Formula' button and fill-in the label name and the custom formula for his additional Secondary KPIs
-
-.. figure:: _static/SecKPIF.2.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-.. figure:: _static/SecKPIF.3.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-Upon completing, the user can see ‘Operating Profit %’ and ‘Ops Expense Ratio’ values displayed as Secondary KPI values to ‘Operating profit’
-
-.. figure:: _static/SecKPIF.4.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-
-II.	Secondary KPI option based on Template
-
-In the model, user can display ‘Contribution’ of each of the child nodes Water, Beverages, and Others to their parent node Gross Profit. 
-User should define ‘Contribution’ as a Formula in one of the nodes and call them out for ‘Contribution’ calculation using the Template option at the other nodes.
-
-.. figure:: _static/SecKPIT.1.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-In this example, user can define the formula in 'Water' node under the node setting's Secondary KPI by selecting 'Formula' button and defining the 'Custom Formula'
-Upon completion, 'Contribution %' is displayed as a Secondary value of the node widget.
-
-.. figure:: _static/SecKPIT.2.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-To borrow this formula on other nodes, user can fo into the Secondary KPI setting of the 'Beverages' node, select the 'Template' button, and choose to display the same formula as the 'Water' node.
-User can instantly see the corresponding 'Contribution %' at the 'Beverage' node.
-
-.. figure:: _static/SecKPIT.3.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-Similarly, following the same steps for the 'Other' node helps the user to instantly visualize ‘Contribution %’ for the all the child nodes to Gross Profit
-
-.. figure:: _static/SecKPIT.4.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
 
 Create a Simple Model
 ---------------------
