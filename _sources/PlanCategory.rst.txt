@@ -1,145 +1,107 @@
-Plan Category
+Plan Tab
 =============
 
-The Plan Category has an Input Editor screen through which the user can create multiple series. 
-By clicking the Plan Tab, you will be able to view the Input Editor screen as shown below. 
+With the Plan Tab, it is possible to create new plans based on existing data (e.g. prior period actuals or existing budget) or from scratch (Zero-based budgeting).
 
-.. figure:: _static/pll1.png  
+
+Understanding the features
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On clicking the Plan Tab, the 'New Series' popup opens. Before creating a new series the user is required to click on the 'Lock' button. This ensures that the node hierarchy is fixed and no structural changes are possible unless unlocked again.  
+
+.. figure:: _static/PL_1.png  
     :align: center
     :alt: alternate text
 
-    Input Editor
+    Locking the model
 
-The series which are created using the Input Editor are the Planning Series. 
-The created planning series will get listed as drop down values in the top most panel (see Figure below).
+Once locked, the new series can be renamed and the base series can be chosen. The new series can be created based on 'Budget', 'Forecast' or from scratch by selecting 'Empty Series' option.
+In the figure below, the series has been named 'Jan Forecast' and 'Budget' has been selected as the series to start with. 
 
-.. figure:: _static/pll2.png  
+.. figure:: _static/PL_2.png  
     :align: center
     :alt: alternate text
 
-    Data Series Display
+    Creating a new series
 
-After selecting the required series for both the Primary and Comparison Series, the Tree will get displayed 
-based on the selection (see Figure below). For our example, the Primary Series has been selected as “Budget” 
-and the Comparison Series has been selected as “Forecast”. 
+On clicking 'Submit', the 'Input Editor' screen opens. 
 
-.. figure:: _static/pll3.png  
+The name of the series gets highlighted as shown in the figure below. The footer highlights the base series from which the particular series has been created.
+
+.. figure:: _static/PL_3.png  
     :align: center
     :alt: alternate text
 
-    Tree Structure for the selected Primary and Comparison Series
+    Input Editor screen
 
-Input Editor Functionality
---------------------------
+The newly created series can be set as the primary or the comparison series by clicking on the settings icon. The series can also be renamed or deleted by choosing the appropriate option.
 
-For our example, the below Figure represents the sample Data Source being assigned for the Planning Series.
-
-.. figure:: _static/pl4.png
-    :align: center
-    :alt: alternate text  
-
-    Sample Data Source
-
-With the help of the above shown Data Source, you will be able to create a New series using the Input Editor.  
-The below steps explains us on how to create a Series in the Input Editor.
-
-1.	By clicking the Plan Category, you will be able to view the Input Editor screen. Now you will be able to view the New Series screen as shown below.
-
-.. figure:: _static/pl5.png
-    :align: center
-    :width: 400
-    :alt: alternate text  
-
-    New Series window 
-
-2.	For our example, lock the Tree Structure as shown in the above Figure. This would lock the node structure and to add the new nodes you need to unlock the structure. You need to lock the structure in order to enable the top down adjustments to the rules applied at parent nodes. 
-3.	Now enter the name for the New series. In our example, it is being named as “Aug Fcst” (as it represents the August Forecast) and it is user defined. Select the Base Series and Budget will be the Primary in our case (see Figure below).
-
-.. figure:: _static/pl6.png
-    :align: center
-    :width: 400
-    :alt: alternate text 
-
-    Series Name with Base Series Selection
-
-The Primary Series is the Main Data that will get displayed on the node. The Comparison Series will be the Variance data that will get displayed on the node  and it is be compared to this series.
-
-New Series can be also created from Empty Series : Zero based budgeting and also based on Primary or Comparison series.
-
-4.	At the top of the panel, you will be able to view the Tabs which would highlight the names of the series (see Figure below).
-
-.. figure:: _static/pl7.png
-    :align: center
-    :alt: alternate text 
- 
-    Series Name at the Top Panel
-
-You can also click on the New Series as shown in the above Figure and create a new series. This can be created on existing series, empty series or the newly created series. 
-
-It is to be noted that the Series created using the Input Editor screen will be also listed in the Variance Analysis screen as drop down fields for Base Series and Compared Series. 
-
-In the settings section, you can set the newly created series as primary or the comparative series. We can also rename or delete the series as shown in the below Figure.  
-
-.. figure:: _static/pl8.png
+.. figure:: _static/PL_4.png
     :align: center 
     :width: 200
     :alt: alternate text 
 
-    Series Settings 
+    Context Menu 
 
-5.	There are three different methods of Planning and they are listed below (see Figure below).
+In the 'Action Menu’, options to allocate values, add notes, refresh datasource and view history are present. 
 
-•	Weight
-•	Equals
-•	Trend
-
-.. figure:: _static/pl9.png
-    :align: center
+.. figure:: _static/PL_5.png
+    :align: center 
     :alt: alternate text 
 
-    Planning Methods
+    Action Menu 
 
-Once when the values are allocated for the periods we have the option to allocate the values across the period to different nodes. Here the planning can happen based on Weight or Equal. 
+1. 'Weight' and 'Equals' options can be used to allocate a node's 'Total' value across all periods
+2. 'Trend' and 'Copy-to' options can be used to edit period values
+3. Child nodes can be allocated either by weight or equally by choosing the 'Weight' or 'Equal' option in the 'Allocate children' section. 'Copy-to' can be used to copy a node's value to its sibling nodes. 
+4. 'Hold' and 'Release' can be used to lock or unlock certain cells as needed.
+5. 'Note' option lets the user to add, modify or delete notes.
+6. On clicking 'Refresh Datasource', the newly created series gets updated if there are any changes to the input data.   
+7. 'View History' can be used to view the changes performed and also roll back changes.
 
-6.	The Planning Methods that are available at Year Level are “Weight” and “Equals” (see Figure below). Based on the user selection of the cell, the Planning Methods will get activated.
+There is a 'Search' option which is particularly useful when using large models. On entering a node name or node ID, only the corresponding node and its child nodes get displayed.
 
-.. figure:: _static/pl10.png 
-    :align: center
-    :width: 400
+.. figure:: _static/PL_6.png
+    :align: center 
     :alt: alternate text 
-    
-    User defined cell and planning methods
 
-**Note:**
-The Number format and scaling will be taken from the tree. The Number bar will have the absolute value irrespective of the format and scaling.
+    Search option for filtering nodes
 
-7.	For our example, there are different scenarios for illustrating the Planning Methods and they are explained below:
- 
-Scenario 1
-~~~~~~~~~~
+The model along with the overall and period values get displayed in a table form. In case, the empty series has been chosen as the series to start with, only the structure and relationships are displayed and not the values.
 
-Increase the total revenue by 10%, other revenue remains same and move the Impact to sales revenue.
+On selecting a cell, additional information such as the calculation method and time aggregation for the node appears in the footer. The number format and scaling that were configured while modelling are retained. The 'Number Bar' will have the absolute value irrespective of the format and scaling.
 
-a.	For our example, expand the Total Revenue. Now select the node “Other Revenue” and lock the node (see Figure below).
+.. figure:: _static/PL_8.png
+    :align: center 
+    :alt: alternate text 
+
+    Table view 
+
+Budgeting & allocation scenarios
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Scenario 1**: To increase Total Revenue by 10% and allocate the increase to Sales Revenue with no changes to Other Revenue
+
+a.	For our example, expand the Total Revenue. Now select the node 'Other Revenue' and lock the node (see Figure below).
 
 .. figure:: _static/pl11.png
     :align: center
     :alt: alternate text  
 
-    Scenario 1
+    Locking node
 
-b.	Now select the Total Cell for node “Total Revenue” as shown in the below Figure.
+b.	Now select the Total Cell for node 'Total Revenue' as shown in the below Figure.
 
 .. figure:: _static/pl12.png
     :align: center
     :width: 400
     :alt: alternate text  
 
-    Cell Selection
+    Cell selection
 
-You can also update the number by double clicking the cell, enter the number directly in the number bar or enter the number in the Pop up.
+You can update the number by double clicking the cell and entering the number directly in the number bar. Or you can enter the number in the popup.
 
-c.	Now double click the total cell and type “+10%” at the end of the number and Click on “Weight” as shown in the below Figure.
+c.	Now double click the total cell and type '+10%' at the end of the number and click on 'Weight' as shown in the below Figure.
 
 .. figure:: _static/pl13.png
     :align: center
@@ -148,7 +110,7 @@ c.	Now double click the total cell and type “+10%” at the end of the number 
 
     Total cell value increased to 10 %
 
-d.	Click on Weight option as shown in the above Figure and you will be able to view the Spread by Weights 
+d.	You will be able to view the 'Spread by Weights' screen.
 
 .. figure:: _static/pl14.png
     :align: center
@@ -157,25 +119,22 @@ d.	Click on Weight option as shown in the above Figure and you will be able to v
  
     Spread by Weights
 
-Now select the current node and the current series and select the “Overwrite Values” option. You can also select different weights to allocate. You can further decide to allocate the full amount or the delta amount (see Figure above).
+By default, the current node and the current series are selected. You can also select different weights to allocate. You can further decide to allocate the full amount or the delta amount (see Figure above).
 
-The Overwrite Values option will delete the existing number and re writes the new allocated value and the Append option will add the delta value to the existing value and only the delta value gets allocated in the selected weights (see Figure above). 
+The 'Overwrite Values' option deletes the existing period values and rewrites the new allocated value. The 'Append to Values' option will add the delta value to the existing period values and only the delta value gets allocated based on the selected weights (see Figure above). 
 For our example, the Overwrite option has been selected.
 
-e.	As an end result of the Scenario 1, you will be able to view the Input Editor screen loaded with the configured values (see Figure below). The cells where the planning was impacted turns pink color. 
+e.	As an end result of the Scenario 1, you will be able to view the Input Editor screen updated with the configured values (see Figure below). The cells which were impacted because of the allocation operations turns yellow. 
 
 .. figure:: _static/pl15.png
     :align: center
     :alt: alternate text 
  
-    Scenario 1 with configured values
+    Increased 'Total Revenue' without impacting 'Other Revenue'
 
-Scenario 2
-~~~~~~~~~~
+**Scenario 2**: To increase 'Cost of Sales' by 10% from April onwards
 
-Increase cost of sale by 10% from April Onwards
-
-a.	For our example, select the Node “Cost of Sales” for April month (see Figure below).
+a.	For our example, select the Node 'Cost of Sales' for April month (see Figure below).
 
 .. figure:: _static/pl16.png
     :align: center
@@ -208,29 +167,9 @@ d.	After clicking the Copy to icon, the Input Editor screen looks similar to the
 
     Constant cell values from Apr to Dec
 
-**Note:**
-There is another copy-to function icon as shown in the below Figure.
+**Scenario 3**: To increase 'Other Costs' based on a monthly trend of 2% 
 
-.. figure:: _static/pl20.png
-    :align: center
-    :alt: alternate text 
-
-    Copy-to Icon
-
-This icon when clicked copies the value vertically downwards for the parent node to parent node and from child node to child node as shown in the below Figure. The value is “100” for the parent node and “50” for the  child node (see Figure below).
-
-.. figure:: _static/pl21.png
-    :align: center
-    :alt: alternate text 
-
-    Constant Cell values for parent to parent and child to child nodes 
-
-Scenario 3
-~~~~~~~~~~
-
-Increase other costs a trend of 2% month on month
-
-a.	For our example, select the Node “Other Costs” for Jan month (see Figure below).
+a.	For our example, select the Node 'Other Costs' for Jan month (see Figure below).
 
 .. figure:: _static/pl22.png 
     :align: center
@@ -239,7 +178,7 @@ a.	For our example, select the Node “Other Costs” for Jan month (see Figure 
 
     Cell Selection
 
-b.	Now click the “Trend” icon (see Figure below) 
+b.	Now click the 'Trend' icon (see Figure below) 
 
 .. figure:: _static/pl23.png 
     :align: center
@@ -248,14 +187,14 @@ b.	Now click the “Trend” icon (see Figure below)
  
     Trend icon
 
-c.	Now the Trend pop up opens. For our example, select the “By Percentage” option and enter value 2 in the Increase Trend section. Now select the Overwrite Values option and click “Apply” (see Figure below). 
+c.	Now the Trend pop up opens. For our example, select the 'By Percentage' option and enter value 2 in the Increase Trend section. Now select the Overwrite Values option and click 'Apply' (see Figure below). 
 
 .. figure:: _static/pl24.png 
     :align: center
     :width: 400
     :alt: alternate text  
 
-    Increased Trend by 2 %
+    Increasing Trend of 2 %
 
 d.	Based on the above configuration, you will be able to view the Input Editor screen as shown below.
 
@@ -263,14 +202,11 @@ d.	Based on the above configuration, you will be able to view the Input Editor s
     :align: center
     :alt: alternate text  
  
-    Scenario 3 with configured values from Jan to Dec
+    Increased monthly trend
     
-Scenario 4
-~~~~~~~~~~
+**Scenario 4**: To redistribute 'Support Costs' based on 'Cost of Sales'.
 
-There is no increase in Support Costs at Total level but costs should be allocated in line with the Cost of Sales spread.
-
-a.	For our example, select the Node “Support Costs” for Total column (see Figure below).
+a.	For our example, select the Node 'Support Costs' in Total column (see Figure below).
 
 .. figure:: _static/pl26.png 
     :align: center
@@ -278,7 +214,7 @@ a.	For our example, select the Node “Support Costs” for Total column (see Fi
 
     Cell Selection
 
-b.	Now click the “Weight” icon (see Figure below) 
+b.	Now click the 'Weight' icon (see Figure below) 
 
 .. figure:: _static/pl27.png 
     :align: center
@@ -286,7 +222,7 @@ b.	Now click the “Weight” icon (see Figure below)
  
     Weight icon
 
-c.	Now the Spread by Weight pop up opens. For our example, select the Node as “Cost of Sales”. Select the Overwrite Values option and click “Apply” (see Figure below). The Total Value which is the Support Costs value can be also changed based on your requirement. 
+c.	The Spread by Weight pop up opens. For our example, select the Node as 'Cost of Sales'. Select the 'Overwrite Values' option and click 'Apply' (see Figure below). 
 
 .. figure:: _static/pl28.png 
     :align: center
@@ -295,23 +231,20 @@ c.	Now the Spread by Weight pop up opens. For our example, select the Node as �
 
     Spreads by Weights
 
-d.	As an end result of the Scenario 4, you will be able to view the Input Editor screen loaded with the configured values (see Figure below). 
+d.	As an end result of the Scenario 4, you will be able to view the Input Editor screen loaded with the redistributed values (see Figure below). 
 
 .. figure:: _static/pl29.png 
     :align: center
     :alt: alternate text  
  
-    Scenario 4 with configured values
+    Redistributed values
 
 
-Scenario 5
-~~~~~~~~~~
+**Scenario 5**: To increase 'Rent' by 5% for Q1 and 10% from Q2 Onwards.
 
-Increase Rent by 5% for Q1 and 10% from Q2 Onwards.
-
-a.	Select the Node Rent and lock the entire Row for the Node Rent. 
-b.	Release the lock for the Cells from Jan to Mar. 
-c.	Now select the cell “Jan” for the Node Rent. Increase the value by 5% (see Figure below).
+a.	Select the Node 'Rent' and lock the entire Row. 
+b.	Release the lock for the cells from Jan to Mar. 
+c.	Now select the cell 'Jan'. Increase the value by 5% (see Figure below).
 
 .. figure:: _static/pl30.png 
     :align: center
@@ -329,7 +262,7 @@ d.	Now copy it across the cells. The Input Editor looks similar to the Figure as
     Rent increased by 5% across the cells in the Row
 
 e.	Now release the lock for the complete Row of the Node Rent. 
-f.	Select the cell “Apr” for the Node Rent. Increase the value by 10% (see Figure below).
+f.	Select the cell 'Apr'. Increase the value by 10% (see Figure below).
 
 .. figure:: _static/pl32.png 
     :align: center
@@ -343,29 +276,15 @@ g.	Now copy it across the cells. The Input Editor looks similar to the Figure as
     :align: center
     :alt: alternate text  
  
-    Rent increased by 10% across the cells in the Row from Apr till Dec Month
+    Rent increased by 10% from Apr till Dec 
 
- 
-Other common features of the Input Editor
------------------------------------------
-
-Allocate Children
-~~~~~~~~~~~~~~~~~
-
-There are 2 different options namely "Weight" and "Equal" for the Children Node allocation (see Figure below).
-
-.. figure:: _static/plch.png 
-    :align: center
-    :alt: alternate text  
-
-    Allocate Children Nodes 
-
-As part of the Business Scenario, the allocation for the children nodes will be based on the weight option and also the cell values will be only applied for the delta values.
+Other features
+~~~~~~~~~~~~~~~
 
 Adding a Note
-~~~~~~~~~~~~~
+--------------
 
-a.	In the Input Editor, select the Node “Rent” for Total column (see Figure below).
+a.	In the Input Editor, select the node 'Rent' for Total column (see Figure below).
 
 .. figure:: _static/pl34.png 
     :align: center
@@ -374,7 +293,7 @@ a.	In the Input Editor, select the Node “Rent” for Total column (see Figure 
 
     Cell Selection
 
-b.	Now click on the Note Icon as shown below.
+b.	Now click on the 'Note' Icon as shown below.
 
 .. figure:: _static/pl35.png 
     :align: center
@@ -399,9 +318,10 @@ d.	Once a note is entered, the cell would look similar to the Figure as shown be
     Note Indicator
 
 View History
-~~~~~~~~~~~~
+--------------
 
-Using the View History option, you will be able to view the Change Histories that have been done in the cells for different planning. You can select the specific history and restore them. You can also reset all the Histories by using the Reset All option (see Figure below).
+Using the View History option, you will be able to view the allocation and change history. 'Reset all' would delete all the allocation adjustments made to the series.
+'Restore to this step' traces back to the selected step (see Figure below).
 
 .. figure:: _static/pl38.png 
     :align: center
@@ -410,27 +330,6 @@ Using the View History option, you will be able to view the Change Histories tha
 
     View History
 
-Nodes Filtering 
-~~~~~~~~~~~~~~~
 
-Using the Search option in the Input Editor screen, you can filter the Nodes by providing the Node Name in the Search option as shown below.
-
-.. figure:: _static/pl39.png 
-    :align: center
-    :width: 500
-    :alt: alternate text   
-
-    Search option for Nodes Filtering 
-
-**Note:**
-For the huge models, you can use this filter mode to only see the main node and children node. 
-
-
-Input Editor Functionality
-
-For our example, the below Figure represents the sample Data Source being assigned for the Planning Series.
- 
-Sample Data Source
-With the help of the above shown Data Source, you will be able to create a New series using the Input Editor. The below steps explains us on how to create a Series in the Input Editor.
 
 
