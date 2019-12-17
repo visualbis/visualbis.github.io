@@ -214,6 +214,8 @@ for the Node. The Edit Settings are categorized as follows:
 
 6. Conditional Formatting 
 
+7. Secondary KPI
+
 
 
 General
@@ -310,9 +312,8 @@ From the above Figure you can observe that in the Navigation Panel, the
 value that is displayed in the Constraints section will lie in the range
 from minimum 10 to maximum 100 for a specific month based on the
 configuration done for the Value Range. In our example, the calculation
-method is selected as “Subtract Children (a-b-c)” meaning that the child
-node having greater value will get subtracted from the child node having
-smaller value and its result will be displayed in the Parent Node. The
+method is selected as 'Subtract Children (a-b-c)' meaning that from the first child
+node the other child nodes will get subtracted and its result will be displayed in the Parent Node. The
 Time Aggregation is set to Sum of Periods where we have considered 12
 months as period. As the result of simulation, each Node will display
 the values based on the Sum of Periods. Also the “Desired Trend” has
@@ -320,12 +321,13 @@ been set to the Increase option. When simulated, the desired Trend for
 the Revenue will be increasing and the value for the Total Cost will be
 decreasing.
 
+For the Calculation Method being selected as 'Data Source', you can follow the steps as explained in the following link : https://valq.com/blogs/3-methods-of-mapping-valq-nodes-to-data/
+
 For other options of calculation method, you can refer the link: https://valq.com/blogs/assigning-values-to-nodes-in-valq/
 
-For the Calculation Method being selected as "Data Source", you can follow the steps as explained in the following link : https://valq.com/blogs/3-methods-of-mapping-valq-nodes-to-data/
+On selecting 'Formula' and clicking on the formula field, you will be able to see a dropdown of the formulas that are supported. For a list of formulas that are available in valQ, you can refer to the link :doc:`Functions`
 
-Template Nodes selection in Calculation Method
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Template Nodes** 
 
 Also you can create a Template Node for the already existing Node. It
 is very specific that the Template Nodes should not map the Parent
@@ -410,8 +412,7 @@ Pop up screen.
 
     Pop up screen
 
-Composite Node Display
-~~~~~~~~~~~~~~~~~~~~~~
+**Composite Node Display**
 
 A Node in a tree can now be added with a maximum of two composite nodes which can be taken from any nodes. 
 For our example, the below Figure shows the Tree structure with several nodes.
@@ -623,7 +624,7 @@ and based on that condition, the status bar for the Node Revenue is green color 
 Now set the option to "Hidden: No Rule will be applied to this Node". You can observe that no range values can be provided for the Conditional Formatting and since there will be no status color for that Node being simulated. 
 
 Secondary KPIs
----------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Secondary KPIs helps user to aggregate and visualize additional or alternate KPI values in the node widget. 
 Specifically, in a model with two data series, these are the set of secondary metrics captured under the primary value of the node
@@ -710,7 +711,6 @@ Similarly, following the same steps for the 'Other' node helps the user to insta
     :align: center
     :width: 1000
     :alt: alternate text
-
 
 Create a Simple Model
 ---------------------
