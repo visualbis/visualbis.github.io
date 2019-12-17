@@ -4,7 +4,7 @@ Model Tab
 The Model tab has two panels in which the left panel represents the Advanced Editor and the right panel 
 denotes the canvas which represents the Value Driver Tree visuals (see Figure below).
 
-.. figure:: _static/catg.png 
+.. figure:: _static/catg.png
     :align: center
     :alt: alternate text   
  
@@ -76,8 +76,8 @@ the value driver tree in Power BI.
 
 4. Now at least one Measure Value has to be assigned to the property
    “Values” in Visualizations panel. In our example, we have assigned
-   the Measure Value “∑ Actual” to the property “Values” by clicking the
-   check box option against the Measure Value “∑ Actual” (see Figure
+   the Measure Value “∑ Forecast” to the property “Values” by clicking the
+   check box option against the Measure Value “∑ Forecast” (see Figure
    below).
 
 .. figure:: _static/11.3.png
@@ -114,16 +114,7 @@ Open a Sample Model
 
 Click the “New” Tab in the left panel. Now navigate to the Open a Sample
 Model option. You will be able to explore a Demo Tree. By clicking the
-Open a Sample Model option, you will be able to view the Loading sample screen as shown below and also you 
-can search for the specific sample to get loaded (see Figure below).
-
-.. figure:: _static/12.2a.png
-    :align: center
-    :alt: alternate text
-
-    Loading screen
-
-For our example, the sample “Mining Industry” has been selected.
+'Open a Sample Model' option, you will get a list of 4 sample models.For our example, the sample “Mining Industry” has been selected.
 
 .. figure:: _static/12.2.png
     :align: center
@@ -193,14 +184,14 @@ below.
 
 .. figure:: _static/12.6.png
     :align: center
+    :width: 300
     :alt: alternate text
 
     Nodes Structure with Add option
 
 In the above Figure, you can observe that by clicking the “+” button, a
 Node “Copy of Net Profit” has been added. Similarly you can edit the
-Parent Node details by clicking the Edit button as shown below. For our
-example, the Edit button has been clicked.
+Parent Node details by clicking the Edit button as shown below. 
 
 .. figure:: _static/12.7.png
     :align: center
@@ -434,7 +425,7 @@ For our example, the below Figure shows the Tree structure with several nodes.
 
 For our example, two child nodes from the Node “Total Cost” needs to be included as composite nodes to the 
 Node “Revenue”. For adding the composite nodes, go to the configuration settings window of the Node “Revenue” 
-by clicking the Edit and Configure Node option (see Figure below).
+by clicking the Edit (see Figure below).
 
 .. figure:: _static/cnd2.png
     :align: center

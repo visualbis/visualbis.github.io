@@ -124,8 +124,11 @@ node:
 
     Linked Nodes
 
-To collapse all nodes, click on the collapse icon on the bottom left of
-the canvas |..image::_static/image7|
+To collapse all the nodes, click on the Go to level icon in the bottom left of the canvas
+
+.. figure:: _static/600.png
+    :align: center
+    :alt: alternate text
 
 Zoom and Pan
 ------------
@@ -141,8 +144,11 @@ To pan, click and hold the left bottom of the mouse and drag the tree
 around.
 
 You can also use the zoom button to zoom if your device doesn’t support
-other options |..image::_static/image8|
+other options 
 
+.. figure:: _static/image7.png
+    :align: center
+    :alt: alternate text
 
 Expand/Collapse of Tree View
 ----------------------------
@@ -195,8 +201,7 @@ When **Month** is selected, it shows the first month of the simulation
 interval selected. By default, the simulation period is the selected
 period and the future. This is an important concept as when we simulate,
 we generally don’t want to apply a change to the past as we can’t change
-it. It is possible to also set the ‘to’ period in a simulation, just
-click |..image::_static/image11| and highlight the month you want as the end period of a
+it. It is possible to also set the ‘to’ period in a simulation, and highlight the month you want as the end period of a
 simulation. This is however a special scenario.
 
 .. figure:: _static/4.7.png
@@ -410,8 +415,8 @@ All simulations are highlighted in the upper right corner.
 Click |..image::_static/image33| to return to the original selected version without any
 simulation.
 
-When more number of simulations are done, you will be able to view the More button in the upper right corner. By clicking
-the More button, you will be able to see the remaining simulations as shown in the below Figure.
+When more number of simulations are done, you will be able to view the Show More button in the upper right corner. By clicking
+the Show More button, you will be able to see the remaining simulations as shown in the below Figure.
 
 .. figure:: _static/more.png
     :align: center
@@ -531,12 +536,6 @@ This will create a new Scenario and will highlight the created Scenario as the a
 
     Full Year Scenario Comparison
 
-.. figure:: _static/sf8.png
-    :align: center
-    :width: 1000
-    :alt: alternate text
-
-    Full Year Scenario Comparison
 
 As part of the New Release, you will be able to download the excel file of the compared scenarios based on your choice by clicking the "Download to Excel" option
 in the Scenario Comparison screen as shown below. 
@@ -628,7 +627,7 @@ have opportunities for further improvements (WHITE fonts).
 Notes:
 
 -  RED fonts means over capacity as compared to the maximum limit. (e.g.
-   Production Rate 1.680 tonnes per hour is over capacity as compared to
+   Production Rate 1.681 tonnes per hour is over capacity as compared to
    the maximum limit of 1.600 tonnes per hour).
 
 -  WHITE fonts means still have opportunities for improvement as
