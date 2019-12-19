@@ -1,0 +1,618 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>List of Formulas and Functions &mdash; valQ Custom Visual for Microsoft Power BI 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> valQ Custom Visual for Microsoft Power BI
+          
+
+          
+            
+            <img src="_static/vbilogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Copyright.html">Copyright</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#trademark-information">Trademark Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#patent-information">Patent Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Copyright.html#microsoft-power-bi-trademarks">Microsoft Power BI Trademarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#document-history">Document History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#who-should-read-this-guide">Who should read this guide?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#what-is-the-visual-bi-valq-for-power-bi-as-a-custom-visual-component">What is the Visual BI valQ for Power BI as a Custom Visual Component?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html">General Features of valQ Custom Visual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#instructions-for-valq-custom-visual">Instructions for valQ Custom Visual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#input-data">Input Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#tree-drill-down">Tree Drill Down</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#zoom-and-pan">Zoom and Pan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#expand-collapse-of-tree-view">Expand/Collapse of Tree View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#value-display-and-simulation-period">Value Display and Simulation Period</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#sub-models-filters">Sub Models - Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#kpis">KPIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#data-simulation">Data Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#key-inputs">Key Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#scenarios-functionality">Scenarios Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#constraints">Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#contextual-help-information">Contextual Help Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#understanding-variances">Understanding Variances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#understanding-the-node-widget-information">Understanding the Node Widget Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#conducting-what-if-analysis">Conducting what-if analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#getting-more-information-about-a-value-driver">Getting more information about a Value driver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#saving-and-opening-scenarios">Saving and Opening Scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valQ.html">valQ in Power BI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ModelCategory.html">Model Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#new-tab">New Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#open-a-sample-model">Open a Sample Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#simulation">Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#business-definition">Business Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#conditional-formatting">Conditional Formatting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#secondary-kpis">Secondary KPIs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#create-a-simple-model">Create a Simple Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#read-only-dynamic-tree-in-editor">Read only Dynamic Tree in Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#dynamic-scaling-on-dynamic-tree">Dynamic Scaling on Dynamic Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#create-an-advanced-model">Create an Advanced Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#import-an-advanced-model">Import an Advanced Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#import-from-excel">Import from Excel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#import-from-an-export-file">Import from an Export File</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-new-tab">Additional Properties of New Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#node-tab">Node Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#quick-editor-in-node-tab">Quick Editor in Node Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-node-tab">Additional Properties of Node Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#data-series-tab">Data Series Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#data-series-manager">Data Series Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#time-aggregation-labels">Time Aggregation Labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#data-sorting">Data Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-data-series-tab">Additional Properties of Data Series Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#settings-tab">Settings Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#navigation-panel">Navigation Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#nodes">Nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#contribution-and-performance-variance-percentage">Contribution and Performance Variance Percentage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#canvas">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#number-formatting">Number Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#id1">Conditional Formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#color-theme">Color Theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-settings-tab">Additional Properties of Settings Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#general-tab">General Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#license-registration">License Registration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#export">Export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#writeback">Writeback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#additional-properties-of-the-general-tab">Additional Properties of the General Tab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PlanCategory.html">Plan Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#understanding-the-features">Understanding the features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#budgeting-allocation-scenarios">Budgeting &amp; allocation scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#other-features">Other features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#adding-a-note">Adding a Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#view-history">View History</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnalyzeCategory.html">Analyze Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#variance-analysis">Variance Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Storage and Collaboration.html">Storage and Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Knownissues.html">Known Issues and Limitations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">valQ Custom Visual for Microsoft Power BI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>List of Formulas and Functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="list-of-formulas-and-functions">
+<h1>List of Formulas and Functions<a class="headerlink" href="#list-of-formulas-and-functions" title="Permalink to this headline">¶</a></h1>
+<p>ValQ supports many traditional user-friendly functions that allows you to create complex models. You may recognize many of these from your experience with Microsoft Excel.</p>
+<p>The fuctions are listed by category:</p>
+<p><a class="reference internal" href="#math-functions">MATH FUNCTIONS</a></p>
+<p><a class="reference internal" href="#logical-functions">LOGICAL FUNCTIONS</a></p>
+<p><a class="reference internal" href="#finance-functions">FINANCE FUNCTIONS</a></p>
+<p><a class="reference internal" href="#range-functions">RANGE FUNCTIONS</a></p>
+<p><a class="reference internal" href="#static-identifiers-and-other-formats">STATIC IDENTIFIERS AND OTHER FORMATS</a></p>
+</div>
+<div class="section" id="logical-functions">
+<h1>LOGICAL FUNCTIONS<a class="headerlink" href="#logical-functions" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NAME</strong></p></th>
+<th class="head"><p><strong>SYNTAX</strong></p></th>
+<th class="head"><p><strong>DESCRIPTION</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IF</p></td>
+<td><p>If( logical_test, value_if_true, value_if_false )</p></td>
+<td><p>Checks whether a condition is met, and returns one value if TRUE, and another value if FALSE</p></td>
+</tr>
+<tr class="row-odd"><td><p>SWITCH</p></td>
+<td><p>SWITCH ( expression, value1, result1, value2, result2, … value_n, result_n [, default] )</p></td>
+<td><p>Evaluates an expression against a list of values and returns the result corresponding to the first matching value. If there is no match, an optional default value is returned.</p></td>
+</tr>
+<tr class="row-even"><td><p>AND</p></td>
+<td><p>AND( logical_test1, [logical_test2], … )</p></td>
+<td><p>Checks whether all the arguments are TRUE, and returns TRUE if all arguments are TRUE</p></td>
+</tr>
+<tr class="row-odd"><td><p>OR</p></td>
+<td><p>OR( logical_test1, [logical_test2], … )</p></td>
+<td><p>Checks whether any of the arguments are TRUE, and returns TRUE or FALSE. Returns FALSE only if all arguments are FALSE</p></td>
+</tr>
+<tr class="row-even"><td><p>NOT</p></td>
+<td><p>NOT( logical_test )</p></td>
+<td><p>Changes FALSE to TRUE, or TRUE to FALSE</p></td>
+</tr>
+<tr class="row-odd"><td><p>XOR</p></td>
+<td><p>XOR( logical_test1, [logical_test2], … )</p></td>
+<td><p>Returns a logical ‘Exclusive Or’ of all arguments</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="math-functions">
+<h1>MATH FUNCTIONS<a class="headerlink" href="#math-functions" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NAME</strong></p></th>
+<th class="head"><p><strong>SYNTAX</strong></p></th>
+<th class="head"><p><strong>DESCRIPTION</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SUM</p></td>
+<td><p>Sum(value1,[value2]….)</p></td>
+<td><p>Add all numbers in the arguments, which can be numbers or node references</p></td>
+</tr>
+<tr class="row-odd"><td><p>AVERAGE</p></td>
+<td><p>Average(value1,[value2]….)</p></td>
+<td><p>Returns the average (arithmetic mean) of its arguments, which can be numbers or node references</p></td>
+</tr>
+<tr class="row-even"><td><p>AVERAGEEXZERO</p></td>
+<td><p>AverageExZero(value1,[value2]….)</p></td>
+<td><p>Returns the average (arithmetic mean) of its arguments excluding zeros, which can be numbers or node references</p></td>
+</tr>
+<tr class="row-odd"><td><p>AVERAGEEXNEG</p></td>
+<td><p>AverageExNeg(value1,[value2]….)</p></td>
+<td><p>Returns the average (arithmetic mean) of its arguments excluding negatives, which can be numbers or node references</p></td>
+</tr>
+<tr class="row-even"><td><p>AVERAGEEXZERONEG</p></td>
+<td><p>AverageExZeroNeg(value1,[value2]….)</p></td>
+<td><p>Returns the average (arithmetic mean) of its arguments excluding zeros and negatives, which can be numbers or node references</p></td>
+</tr>
+<tr class="row-odd"><td><p>COUNT</p></td>
+<td><p>Count(value1,[value2]….)</p></td>
+<td><p>Counts the number of items in a range</p></td>
+</tr>
+<tr class="row-even"><td><p>ABS</p></td>
+<td><p>ABS(value)</p></td>
+<td><p>Returns the absolute value of a number, a number without its sign</p></td>
+</tr>
+<tr class="row-odd"><td><p>MIN</p></td>
+<td><p>Min(value1,[value2]….)</p></td>
+<td><p>Returns the smallest number in a set of values. Node references also accepted as arguments</p></td>
+</tr>
+<tr class="row-even"><td><p>MAX</p></td>
+<td><p>Max(value1,[value2]….)</p></td>
+<td><p>Returns the largest number in a set of values. Node references also accepted as arguments</p></td>
+</tr>
+<tr class="row-odd"><td><p>POWER</p></td>
+<td><p>POW(value,power)</p></td>
+<td><p>Returns the result of a number raised to a power</p></td>
+</tr>
+<tr class="row-even"><td><p>SQRT</p></td>
+<td><p>SQRT(value)</p></td>
+<td><p>Returns the square root of a number</p></td>
+</tr>
+<tr class="row-odd"><td><p>EXP</p></td>
+<td><p>EXP(value)</p></td>
+<td><p>Returns e raised to the power of a given number</p></td>
+</tr>
+<tr class="row-even"><td><p>LOG</p></td>
+<td><p>LOG(value,base)</p></td>
+<td><p>Returns the logarithm of a number to the base you specify</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="finance-functions">
+<h1>FINANCE FUNCTIONS<a class="headerlink" href="#finance-functions" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NAME</strong></p></th>
+<th class="head"><p><strong>SYNTAX</strong></p></th>
+<th class="head"><p><strong>DESCRIPTION</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IRR</p></td>
+<td><p>IRR (Values, [Guess])</p></td>
+<td><p>Returns the internal rate of return for a series of cash flows. Node references also accepted as arguments</p></td>
+</tr>
+<tr class="row-odd"><td><p>NPV</p></td>
+<td><p>NPV (Rate, value1, [value2], …)</p></td>
+<td><p>Returns the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values)</p></td>
+</tr>
+<tr class="row-even"><td><p>PMT</p></td>
+<td><p>PMT(Rate, Nper, PV, [FV], [Type])</p></td>
+<td><p>Calculates the payment for a loan based on constant payments and a constant interest rate</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPMT</p></td>
+<td><p>IPMT (Rate, Per, Nper, PV, [FV], [Type])</p></td>
+<td><p>Returns the interest payment for a given period for an investment,based on periodic, constant payments and a constant interest rate</p></td>
+</tr>
+<tr class="row-even"><td><p>FV</p></td>
+<td><p>FV (Rate, Nper, [Pmt], PV, [Type])</p></td>
+<td><p>Returns the future value of an investment based on periodic, constant payments and a constant interest rate</p></td>
+</tr>
+<tr class="row-odd"><td><p>PV</p></td>
+<td><p>PV(Rate, Nper, [Pmt], FV, [Type])</p></td>
+<td><p>Returns the present value of an investment</p></td>
+</tr>
+<tr class="row-even"><td><p>CUMIPMT</p></td>
+<td><p>CUMIPMT (Rate, Nper, PV, start_period, end_period, Type)</p></td>
+<td><p>Returns the cumulative interest paid between two periods</p></td>
+</tr>
+<tr class="row-odd"><td><p>CMPRINC</p></td>
+<td><p>CUMPRINC (Rate, Nper, PV, start_period, end_period, Type)</p></td>
+<td><p>Returns the cumulative principal paid on a loan between two periods</p></td>
+</tr>
+<tr class="row-even"><td><p>RATE</p></td>
+<td><p>RATE(Nper, PMT, PV, [FV], [Type], [Guess])</p></td>
+<td><p>Returns the interest rate per period of a loan or an investment.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="range-functions">
+<h1>RANGE FUNCTIONS<a class="headerlink" href="#range-functions" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NAME</strong></p></th>
+<th class="head"><p><strong>SYNTAX</strong></p></th>
+<th class="head"><p><strong>DESCRIPTION</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Range</p></td>
+<td><p>.Range(start_index,end_index)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>LastNPeriods</p></td>
+<td><p>.LastNPeriods(n)</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Get</p></td>
+<td><p>.Get(period_index)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ForEach</p></td>
+<td><p>ForEach(Array,Iterator)</p></td>
+<td><p>Iterator function</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="static-identifiers-and-other-formats">
+<h1>STATIC IDENTIFIERS AND OTHER FORMATS<a class="headerlink" href="#static-identifiers-and-other-formats" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>CONSTANTS</strong></p></th>
+<th class="head"><p><strong>EXPLANATION</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>THIS</p></td>
+<td><p>Current Node</p></td>
+</tr>
+<tr class="row-odd"><td><p>ME</p></td>
+<td><p>Current Node</p></td>
+</tr>
+<tr class="row-even"><td><p>CURRENT_SERIES</p></td>
+<td><p>Current series label</p></td>
+</tr>
+<tr class="row-odd"><td><p>CURRENT_SERIES_ID</p></td>
+<td><p>Current series id</p></td>
+</tr>
+<tr class="row-even"><td><p>CURRENT_PERIOD_INDEX</p></td>
+<td><p>Current period index</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.PARENT</p></td>
+<td><p>Parent Node</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.CHILDREN</p></td>
+<td><p>Node children</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act</p></td>
+<td><p>Simulated Series of the node</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.tgt</p></td>
+<td><p>Comparison Series of the node</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.base</p></td>
+<td><p>Baseline Series of the node</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.ALL_PERIODS</p></td>
+<td><p>Returns all Period values</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.SIM_PERIODS</p></td>
+<td><p>Returns simulation period values</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.act.ALL_PERIODS</p></td>
+<td><p>Returns all period values of Simulated Series,</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.tgt.ALL_PERIODS</p></td>
+<td><p>Returns all period values of Comparison Series</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.base.ALL_PERIODS</p></td>
+<td><p>Returns all period values of Baseline Series</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act.SIM_PERIODS</p></td>
+<td><p>Returns simulation period values of Simulated Series</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.tgt.SIM_PERIODS</p></td>
+<td><p>Returns simulation period values of Comparison Series</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.base.SIM_PERIODS</p></td>
+<td><p>Returns simulation period values of Baseline Series</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.Range(start_index,end_index)</p></td>
+<td><p>Returns selected range values</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act.Range(start_index,end_index)</p></td>
+<td><p>Returns selected range values of Simulated Series</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.base.Range(start_index,end_index)</p></td>
+<td><p>Returns selected range values of Comparison Series</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.tgt.Range(start_index,end_index)</p></td>
+<td><p>Returns selected range values of Baseline Series</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.Get(period_index)</p></td>
+<td><p>Returns selected period value</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act.Get(period_index)</p></td>
+<td><p>Returns selected period value of Simulated Series</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.base.Get(period_index)</p></td>
+<td><p>Returns selected period value of Comparison Series</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.tgt.Get(period_index)</p></td>
+<td><p>Returns selected period value of Baseline Series</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.LastNPeriods(n)</p></td>
+<td><p>Returns selected range values</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act.LastNPeriods(n)</p></td>
+<td><p>Returns selected range values of Simulated Series</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;NODE&gt;.base.LastNPeriods(n)</p></td>
+<td><p>Returns selected range values of Comparison Series</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.tgt.LastNPeriods(n)</p></td>
+<td><p>Returns selected range values of Baseline Series</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Visual BI Solutions
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

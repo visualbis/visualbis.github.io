@@ -1,7 +1,7 @@
-Simulate Category
+Simulate Tab
 =================
 
-The Simulate category has two panels in which the left panel represents the Navigation Panel and the right panel 
+The Simulate tab has two panels in which the left panel represents the Navigation Panel and the right panel 
 denotes the canvas which represents the Value Driver Tree visuals with different Nodes where the simulation can 
 be done at each Node Level (see Figure below).
 

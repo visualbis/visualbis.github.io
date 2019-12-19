@@ -1,7 +1,7 @@
-Model Category
+Model Tab
 ##############
 
-The Model category has two panels in which the left panel represents the Advanced Editor and the right panel 
+The Model tab has two panels in which the left panel represents the Advanced Editor and the right panel 
 denotes the canvas which represents the Value Driver Tree visuals (see Figure below).
 
 .. figure:: _static/catg.png 
@@ -10,15 +10,15 @@ denotes the canvas which represents the Value Driver Tree visuals (see Figure be
  
     Left Panel and Right Canvas
 
-The Model Category has five different Tab options (see Figure below).  
+The Model tab has five different Tab options (see Figure below).  
 
 .. figure:: _static/tabs.png  
     :align: center
     :alt: alternate text   
  
-    Tab option for the Model Category
+    Tab option for the Model tab
 
-The Tab options for the Model Category has been listed below:
+The Tab options for the Model tab has been listed below:
 
 
 1. New Tab – To configure the design for the Value Driver Tree using the
@@ -223,6 +223,8 @@ for the Node. The Edit Settings are categorized as follows:
 
 6. Conditional Formatting 
 
+7. Secondary KPI
+
 
 
 General
@@ -233,7 +235,7 @@ as Unique ID, Title and the Title Prefix when outside the Tree with the
 values as shown in the below Figure. The Title Prefix can be set at Node
 Level and during simulation it is useful to identify at which node the
 parameter value changes. The additional properties of the Node Tab has
-been listed in :ref:`Section: Additional properties of the Node Tab <ADPR>`. 
+been listed in Section 13.2.
 
 .. figure:: _static/12.8.png
     :align: center
@@ -319,9 +321,8 @@ From the above Figure you can observe that in the Navigation Panel, the
 value that is displayed in the Constraints section will lie in the range
 from minimum 10 to maximum 100 for a specific month based on the
 configuration done for the Value Range. In our example, the calculation
-method is selected as “Subtract Children (a-b-c)” meaning that the child
-node having greater value will get subtracted from the child node having
-smaller value and its result will be displayed in the Parent Node. The
+method is selected as 'Subtract Children (a-b-c)' meaning that from the first child
+node the other child nodes will get subtracted and its result will be displayed in the Parent Node. The
 Time Aggregation is set to Sum of Periods where we have considered 12
 months as period. As the result of simulation, each Node will display
 the values based on the Sum of Periods. Also the “Desired Trend” has
@@ -329,36 +330,13 @@ been set to the Increase option. When simulated, the desired Trend for
 the Revenue will be increasing and the value for the Total Cost will be
 decreasing.
 
+For the Calculation Method being selected as 'Data Source', you can follow the steps as explained in the following link : https://valq.com/blogs/3-methods-of-mapping-valq-nodes-to-data/
+
 For other options of calculation method, you can refer the link: https://valq.com/blogs/assigning-values-to-nodes-in-valq/
 
-For the Calculation Method being selected as "Data Source", you can follow the steps as explained in the following link : https://valq.com/blogs/3-methods-of-mapping-valq-nodes-to-data/
+On selecting 'Formula' and clicking on the formula field, you will be able to see a dropdown of the formulas that are supported. For a list of formulas that are available in valQ, you can refer to the link :doc:`Functions`
 
-Constant Nodes
-~~~~~~~~~~~~~~
-
-Using the Constant Node option, you will be able to use the constant value for any Node. 
-For our example, navigate to the Configuration settings for the Node "Revenue" (see Figure below).
-
-.. figure:: _static/cnode1.png
-    :align: center
-    :alt: alternate text
-
-    Configuration settings for Constant Node 
-
-Now select the Node Type as "Constant". Select the option "Formula" for the 
-Calculation Method and provide the value as "120000" in the Custom Formula Area. 
-Based on the above settings you will be able to view the valQ screen with Node "Revenue" having the 
-constant value as "120000" (see Figure below).
-
-.. figure:: _static/cnode2.png
-    :align: center
-    :alt: alternate text
-
-    Node "Revenue" with  Constant value  
-
-
-Template Nodes selection in Calculation Method
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Template Nodes** 
 
 Also you can create a Template Node for the already existing Node. It
 is very specific that the Template Nodes should not map the Parent
@@ -443,8 +421,7 @@ Pop up screen.
 
     Pop up screen
 
-Composite Node Display
-~~~~~~~~~~~~~~~~~~~~~~
+**Composite Node Display**
 
 A Node in a tree can now be added with a maximum of two composite nodes which can be taken from any nodes. 
 For our example, the below Figure shows the Tree structure with several nodes.
@@ -655,6 +632,95 @@ and based on that condition, the status bar for the Node Revenue is green color 
 
 Now set the option to "Hidden: No Rule will be applied to this Node". You can observe that no range values can be provided for the Conditional Formatting and since there will be no status color for that Node being simulated. 
 
+Secondary KPIs
+~~~~~~~~~~~~~~~~~~~~
+
+Secondary KPIs helps user to aggregate and visualize additional or alternate KPI values in the node widget. 
+Specifically, in a model with two data series, these are the set of secondary metrics captured under the primary value of the node
+
+.. figure:: _static/SecKPI.1.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+As a default, there are three secondary values displayed for a dual series data in the following order
+i. Full Period Variance between baseline and comparison metric (in % and absolute values)
+ii.	Baseline metric value for the first period in the series 
+iii. Variance for the first period between baseline and comparison metric (in % and absolute values) 
+
+.. figure:: _static/SecKPI.2.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+Secondary KPI option lets users to customize these secondary values or metric according to their preference 
+
+Users can achieve this using:
+I.	Secondary KPI option based on Formulas
+II.	Secondary KPI option based on Template
+
+I.	Secondary KPI option based on Formulas
+
+In the below model screenshot, the user can display the data value from Operating Profit %’ and ‘Operating Expense Ratio’ as Secondary KPI values to the TOP node ‘Operating profit’.
+
+.. figure:: _static/SecKPIF.1.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+Under the 'Operating Profit' node setting's 'Secondary KPI' ribbon, user needs to select the 'Formula' button and fill-in the label name and the custom formula for his additional Secondary KPIs
+
+.. figure:: _static/SecKPIF.2.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+.. figure:: _static/SecKPIF.3.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+Upon completing, the user can see ‘Operating Profit %’ and ‘Ops Expense Ratio’ values displayed as Secondary KPI values to ‘Operating profit’
+
+.. figure:: _static/SecKPIF.4.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+
+II.	Secondary KPI option based on Template
+
+In the model, user can display ‘Contribution’ of each of the child nodes Water, Beverages, and Others to their parent node Gross Profit. 
+User should define ‘Contribution’ as a Formula in one of the nodes and call them out for ‘Contribution’ calculation using the Template option at the other nodes.
+
+.. figure:: _static/SecKPIT.1.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+In this example, user can define the formula in 'Water' node under the node setting's Secondary KPI by selecting 'Formula' button and defining the 'Custom Formula'
+Upon completion, 'Contribution %' is displayed as a Secondary value of the node widget.
+
+.. figure:: _static/SecKPIT.2.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+To borrow this formula on other nodes, user can fo into the Secondary KPI setting of the 'Beverages' node, select the 'Template' button, and choose to display the same formula as the 'Water' node.
+User can instantly see the corresponding 'Contribution %' at the 'Beverage' node.
+
+.. figure:: _static/SecKPIT.3.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
+Similarly, following the same steps for the 'Other' node helps the user to instantly visualize ‘Contribution %’ for the all the child nodes to Gross Profit
+
+.. figure:: _static/SecKPIT.4.png
+    :align: center
+    :width: 1000
+    :alt: alternate text
+
 Create a Simple Model
 ---------------------
 
@@ -684,7 +750,7 @@ below.
 
 From the above Figure, you can observe that the other Measure “Forecast”
 is assigned to “Value” and the Dimensions namely Account and Product has
-been assigned to the “Category” and the Period_MON is assigned to “Time
+been assigned to the “tab” and the Period_MON is assigned to “Time
 period”. Now based the assigned data source, the Tree is being
 configured. Hence now you can create a tree directly from your data. For
 step by step instructions on how to get started to build a Dynamic
@@ -1202,8 +1268,6 @@ The below Figure shows the Grid view after reordering the child nodes.
     :alt: alternate text
 
     Grid view after reordering the child nodes
-
-.. _ADPR: 
 
 Additional Properties of Node Tab
 ---------------------------------
@@ -1797,7 +1861,7 @@ assigned for the Node Mapping is shown below:
     Excel Data Source with Node Mapping
 
 From the above Figure, you will be able to view the Node ID as 6 and
-Category as 6:SparklingWater_GrossSales.
+tab as 6:SparklingWater_GrossSales.
 
 Based on the above configuration, you will be able to view the valQ
 screen as shown below.
@@ -2475,7 +2539,7 @@ include the navigation settings panel in the Export File (see Figure below).
 
 The saved file can be exported and this exported file can be used in the
 “Import from Excel” option in “Import an Advanced Model”
-category (:ref:`Refer Section: Import from an Export File <IEF>`).
+tab (:ref:`Refer Section: Import from an Export File <IEF>`).
 
 Writeback
 ---------

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Analyze Category &mdash; valQ Custom Visual for Microsoft Power BI 1.0.0 documentation</title>
+  <title>Analyze Tab &mdash; valQ Custom Visual for Microsoft Power BI 1.0.0 documentation</title>
   
 
   
@@ -17,35 +17,37 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Known Issues and Limitations" href="Knownissues.html" />
-    <link rel="prev" title="Simulate Category" href="SimulateCategory.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    <link rel="next" title="Storage and Collaboration" href="Storage and Collaboration.html" />
+    <link rel="prev" title="Simulate Tab" href="SimulateCategory.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,7 +105,6 @@
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#tree-drill-down">Tree Drill Down</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#zoom-and-pan">Zoom and Pan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#expand-collapse-of-tree-view">Expand/Collapse of Tree View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#minimap">Minimap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#value-display-and-simulation-period">Value Display and Simulation Period</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#sub-models-filters">Sub Models - Filters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#kpis">KPIs</a></li>
@@ -121,17 +122,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#getting-more-information-about-a-value-driver">Getting more information about a Value driver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#saving-and-opening-scenarios">Saving and Opening Scenarios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="valQ.html">valQ in Power BI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ModelCategory.html">Model Category</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="ModelCategory.html">Model Tab</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#new-tab">New Tab</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#open-a-sample-model">Open a Sample Model</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#general">General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#configuration">Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#template-nodes-selection-in-calculation-method">Template Nodes selection in Calculation Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#display">Display</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#composite-node-display">Composite Node Display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#simulation">Simulation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#business-definition">Business Definition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#conditional-formatting">Conditional Formatting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#secondary-kpis">Secondary KPIs</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#create-a-simple-model">Create a Simple Model</a><ul>
@@ -182,37 +182,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PlanCategory.html">Plan Category</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#input-editor-functionality">Input Editor Functionality</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-1">Scenario 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-2">Scenario 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-3">Scenario 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-4">Scenario 4</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-5">Scenario 5</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#other-common-features-of-the-input-editor">Other common features of the Input Editor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#allocate-children">Allocate Children</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PlanCategory.html">Plan Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#understanding-the-features">Understanding the features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#budgeting-allocation-scenarios">Budgeting &amp; allocation scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#other-features">Other features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#adding-a-note">Adding a Note</a></li>
 <li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#view-history">View History</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#nodes-filtering">Nodes Filtering</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Category</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Analyze Category</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#weekly">Weekly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#monthly">Monthly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#quarter-to-date">Quarter-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#quarter">Quarter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#half-year">Half Year</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#half-year-to-date">Half Year-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#year-to-date">Year-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#year-to-go">Year-to-go</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#full-year">Full Year</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Tab</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Analyze Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#variance-analysis">Variance Analysis</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Storage and Collaboration.html">Storage and Collaboration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Knownissues.html">Known Issues and Limitations</a></li>
 </ul>
 
@@ -259,7 +244,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Analyze Category</li>
+      <li>Analyze Tab</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -276,161 +261,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="analyze-category">
-<h1>Analyze Category<a class="headerlink" href="#analyze-category" title="Permalink to this headline">¶</a></h1>
-<p>Using the Analyze Category, you will be able to perform the Variance Analysis for the Base Series versus
-Compared Series. By clicking the Analyze Tab, you will be able to view the Variance Analysis option
-(see Figure below).</p>
+  <div class="section" id="analyze-tab">
+<h1>Analyze Tab<a class="headerlink" href="#analyze-tab" title="Permalink to this headline">¶</a></h1>
+<p>The Analyze Tab allows the user to run advanced analyses on the data. With 1.4, Variance Analysis has been introduced. Several other features such as Sensitivity Analysis and Time Series Analysis are to be released in the upcoming versions.</p>
+<div class="section" id="variance-analysis">
+<h2>Variance Analysis<a class="headerlink" href="#variance-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Variance Analysis displays the variance between the Base and Compared series across all nodes in the model.</p>
+<p>On clicking the ‘Analyze’ Tab, you will be able to view the Variance Analysis option.</p>
 <div class="figure align-center" id="id1">
-<img alt="alternate text" src="_images/varan1.png" />
-<p class="caption"><span class="caption-text">Analyze Category</span></p>
+<img alt="alternate text" src="_images/VA_1.png" />
+<p class="caption"><span class="caption-text">Analyze Tab</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>By clicking the Variance Analysis option, you will be able to view the Variance Analysis screen (see Figure below).
-Now you can  perform the Variance Analysis for the Base Series versus Compared Series by selecting the required
-Period and Filters. For our example, both the Base and Compared Series will have the Budget and Forecast values.
-Also they can have additional series values based on the Data Source that you assign and those values
-can be considered for the Base Series versus Compared Series. For our example, Base Series has been selected as
-“Budget” and the Compared Series has been selected as “Forecast”</p>
+<p>The Variance Analysis page is displayed, showing the variance between the Base and Compared data series.</p>
 <div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="_images/van3.png"><img alt="alternate text" src="_images/van3.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Variance Analysis with Base Series versus Compared Series</span></p>
+<a class="reference internal image-reference" href="_images/VA_2.png"><img alt="alternate text" src="_images/VA_2.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Variance Analysis Page</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<p>The Period selection includes the following options:</p>
-<ol class="arabic simple">
-<li>Weekly</li>
-<li>Monthly</li>
-<li>Quarter-to- date</li>
-<li>Quarter</li>
-<li>Half Year</li>
-<li>Half Year-to-date</li>
-<li>Year-to date</li>
-<li>Year-to-go</li>
-<li>Full Year</li>
-</ol>
-<p>The details for the individual Period Selection has been explained below:</p>
-<div class="section" id="weekly">
-<h2>Weekly<a class="headerlink" href="#weekly" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Weekly”, then the Variance Analysis for the  Base Series versus
-Compared Series will be based on the week selection that falls within a year which is from 1st to 52nd week.</p>
-</div>
-<div class="section" id="monthly">
-<h2>Monthly<a class="headerlink" href="#monthly" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Monthly”, then the Variance Analysis for the  Base Series versus
-Compared Series will be based on the month selection that falls within a year which is from Jan to Dec.</p>
-</div>
-<div class="section" id="quarter-to-date">
-<h2>Quarter-to-date<a class="headerlink" href="#quarter-to-date" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Quarter-to-date”, then the Variance Analysis for the
-Base Series versus Compared Series will be based on the Quarter-to-date selection that
-falls within a Quarter in Year. For example, if the Base Period is selected as “Feb”, then the
-Variance Analysis will be performed for Jan and Feb months alone (see Figure below).</p>
+<p>The series that were created in the ‘Plan’ Tab can also be selected as Base Series or Compared Series by clicking on the drop-down.</p>
 <div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="_images/van4.png"><img alt="alternate text" src="_images/van4.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Period selected as Quarter-to-date</span></p>
+<a class="reference internal image-reference" href="_images/VA_3.png"><img alt="alternate text" src="_images/VA_3.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Choosing series created using Plan Tab</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="quarter">
-<h2>Quarter<a class="headerlink" href="#quarter" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Quarter”, then the Variance Analysis for the Base Series versus Compared Series
-will be based on the Quarter selection that falls within a year which is from Jan to Mar, Apr to Jun,
-Jul to Sep and Oct to Dec. For example, if the Base Period is selected as “Feb”, then the
-Variance Analysis will be performed for the first Quarter from Jan to Mar month (see Figure below).</p>
+<p>The period across which the two series are to be compared can be customized by clicking on the drop-down in the ‘Period’ field.</p>
 <div class="figure align-center" id="id4">
-<a class="reference internal image-reference" href="_images/van5.png"><img alt="alternate text" src="_images/van5.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Period selected as Quarter</span></p>
+<a class="reference internal image-reference" href="_images/VA_4.png"><img alt="alternate text" src="_images/VA_4.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Customizing periods</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="half-year">
-<h2>Half Year<a class="headerlink" href="#half-year" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Half Year”, then the Variance Analysis for the  Base Series versus
-Compared Series will be based on the Half Year selection that falls within a year which is from Jan to Jun
-and Jul to Dec. For example, if the Base Period is selected as “Feb”, then the
-Variance Analysis will be performed for the first Half Year which is from Jan to Jun month (see Figure below).</p>
+<p>Variance analysis can also be performed for the two series across different periods by selecting the ‘Compare to different period’ option and choosing the period in the drop-down.</p>
 <div class="figure align-center" id="id5">
-<a class="reference internal image-reference" href="_images/van6.png"><img alt="alternate text" src="_images/van6.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Period selected as Half Year</span></p>
+<a class="reference internal image-reference" href="_images/VA_5.png"><img alt="alternate text" src="_images/VA_5.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Comparing across different periods</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="half-year-to-date">
-<h2>Half Year-to-date<a class="headerlink" href="#half-year-to-date" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Half Year-to-date”, then the Variance Analysis for the  Base Series versus
-Compared Series will be based on the Half Year-to-date selection that falls within a Half Year.
-For example, if the Base Period is selected as “Apr”, then the Variance Analysis will be
-performed from Jan to Apr month which falls in the First Half Year period (see Figure below).</p>
+<p>It is to be noted that Base Series and Compared Series cannot be same when comparing for the same Base Period. However, when comparing across different periods Base Series and Compared Series can be same.</p>
+<p>The ‘Filter’ option has the ability to filter the nodes based on the ‘Variance’ values. The number of nodes and the period can be selected by the user.</p>
 <div class="figure align-center" id="id6">
-<a class="reference internal image-reference" href="_images/van7.png"><img alt="alternate text" src="_images/van7.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Period selected as Half Year-to-date</span></p>
+<a class="reference internal image-reference" href="_images/VA_6.png"><img alt="alternate text" src="_images/VA_6.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Filtering the top 10 nodes based on monthly variance values</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="year-to-date">
-<h2>Year-to-date<a class="headerlink" href="#year-to-date" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Year-to-date”, then the Variance Analysis for the  Base Series versus
-Compared Series will be based on the Year-to-date selection that falls within a Year. For example, if the
-Base Period is selected as “Oct”, then the Variance Analysis will be performed from Jan to Oct month
-which falls in a Year period (see Figure below).</p>
+<p>The user can also choose to display either Absolute Variance or % Variance or both by selecting the appropriate checkboxes.</p>
 <div class="figure align-center" id="id7">
-<a class="reference internal image-reference" href="_images/van8.png"><img alt="alternate text" src="_images/van8.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Period selected as Year-to-date</span></p>
+<a class="reference internal image-reference" href="_images/VA_7.png"><img alt="alternate text" src="_images/VA_7.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Displaying Absolute Variance and/or % Variance values</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="year-to-go">
-<h2>Year-to-go<a class="headerlink" href="#year-to-go" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Year-to-go”, then the Variance Analysis for the  Base Series versus
-Compared Series will be based on the Year-to-go selection that falls within a Year. For example, if the
-Base Period is selected as “Feb”, then the Variance Analysis will be performed from Mar to Dec month
-leaving the rest of the months from Jan to Feb (see Figure below).</p>
+<p>It is possible to download the results of the analysis as an Excel file when using Power BI Service.</p>
 <div class="figure align-center" id="id8">
-<a class="reference internal image-reference" href="_images/van9.png"><img alt="alternate text" src="_images/van9.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Period selected as Year-to-go</span></p>
+<a class="reference internal image-reference" href="_images/VA_8.png"><img alt="alternate text" src="_images/VA_8.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Downloading as Excel</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="full-year">
-<h2>Full Year<a class="headerlink" href="#full-year" title="Permalink to this headline">¶</a></h2>
-<p>When the Period is selected as “Full Year”, then the Variance Analysis for the  Base Series versus
-Compared Series will be based on the Full Year selection that falls within a year which is from Jan to Dec.
-For example, if the Base Period is selected as “Jul”, then the Variance Analysis will be performed for the
-Full Year which is from Jan to Dec month (see Figure below).</p>
+<p>The downloaded analysis looks like the one shown below.</p>
 <div class="figure align-center" id="id9">
-<a class="reference internal image-reference" href="_images/van10.png"><img alt="alternate text" src="_images/van10.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Period selected as Full Year</span></p>
-</div>
-<p>The Variance Analysis for the  Base Series versus Compared Series can be also performed based on comparing the
-same Base Period or comparing to different Base Period (see Figure below). The above mentioned Period
-selections have been explained  based on the Base Period being selected as “Compare same period”.</p>
-<div class="figure align-center" id="id10">
-<a class="reference internal image-reference" href="_images/van11.png"><img alt="alternate text" src="_images/van11.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Budget vs Forecast for the same Base Period</span></p>
-</div>
-<p>As an example, the below Figure shows the Variance Analysis that was performed based on comparing the
-different Base Period.</p>
-<div class="figure align-center" id="id11">
-<a class="reference internal image-reference" href="_images/van11a.png"><img alt="alternate text" src="_images/van11a.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Budget vs Forecast for the different Base Period</span></p>
-</div>
-<p>It is to be noted that the Base Series selection and the Compared Series selection should not have the
-similar option for the same Base Period. As an example, Budget selected as Base Series cannot be compared with
-Budget selected as Compared Series for any Base Period.</p>
-<p>The Periods can be also selected collectively and the Variance Analysis for the selected combination
-will be displayed as shown in the below Figure. In our example, the Period has been collectively selected
-as Monthly and Half Year.</p>
-<div class="figure align-center" id="id12">
-<a class="reference internal image-reference" href="_images/van12.png"><img alt="alternate text" src="_images/van12.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Period selected as Monthly and Half Year</span></p>
-</div>
-<p>From the above Figure, you can observe that the Variance Analysis has been performed for the periods
-“Monthly” and “Half Year”. Also the Base Period for Budget is selected as “Jan” and the Base Period for
-the Forecast is selected as “Mar”.</p>
-<p>The Filter option has the ability to filter the records based on the Variance values. It shows the
-Top number of Variance values for the selected Period (see Figure below).</p>
-<div class="figure align-center" id="id13">
-<a class="reference internal image-reference" href="_images/van13.png"><img alt="alternate text" src="_images/van13.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Top 10 Variance Values for the Period being selected as Monthly, Half Year and Year-to-date.</span></p>
-</div>
-<p>The options Show Absolute Variance and Show % Variance when activated will display the Absolute Variance
-and % Variance values in a separate column in the grid.</p>
-<div class="figure align-center" id="id14">
-<a class="reference internal image-reference" href="_images/van14.png"><img alt="alternate text" src="_images/van14.png" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-text">Absolute Variance and % Variance values</span></p>
+<a class="reference internal image-reference" href="_images/VA_9.png"><img alt="alternate text" src="_images/VA_9.png" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-text">Downloaded analysis result</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -443,10 +324,10 @@ and % Variance values in a separate column in the grid.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Knownissues.html" class="btn btn-neutral float-right" title="Known Issues and Limitations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Storage and Collaboration.html" class="btn btn-neutral float-right" title="Storage and Collaboration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="SimulateCategory.html" class="btn btn-neutral" title="Simulate Category" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="SimulateCategory.html" class="btn btn-neutral float-left" title="Simulate Tab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -455,7 +336,7 @@ and % Variance values in a separate column in the grid.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Visual BI Solutions.
+        &copy; Copyright 2019, Visual BI Solutions
 
     </p>
   </div> 
@@ -471,32 +352,16 @@ and % Variance values in a separate column in the grid.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="General Features of valQ Custom Visual" href="Generalfeatures.html" />
     <link rel="prev" title="Introduction" href="Introduction.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,7 +105,6 @@
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#tree-drill-down">Tree Drill Down</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#zoom-and-pan">Zoom and Pan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#expand-collapse-of-tree-view">Expand/Collapse of Tree View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#minimap">Minimap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#value-display-and-simulation-period">Value Display and Simulation Period</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#sub-models-filters">Sub Models - Filters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#kpis">KPIs</a></li>
@@ -121,17 +122,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#getting-more-information-about-a-value-driver">Getting more information about a Value driver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#saving-and-opening-scenarios">Saving and Opening Scenarios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="valQ.html">valQ in Power BI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ModelCategory.html">Model Category</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="ModelCategory.html">Model Tab</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#new-tab">New Tab</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#open-a-sample-model">Open a Sample Model</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#general">General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#configuration">Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#template-nodes-selection-in-calculation-method">Template Nodes selection in Calculation Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#display">Display</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#composite-node-display">Composite Node Display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#simulation">Simulation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#business-definition">Business Definition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#conditional-formatting">Conditional Formatting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#secondary-kpis">Secondary KPIs</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#create-a-simple-model">Create a Simple Model</a><ul>
@@ -182,37 +182,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PlanCategory.html">Plan Category</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#input-editor-functionality">Input Editor Functionality</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-1">Scenario 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-2">Scenario 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-3">Scenario 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-4">Scenario 4</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#scenario-5">Scenario 5</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#other-common-features-of-the-input-editor">Other common features of the Input Editor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#allocate-children">Allocate Children</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PlanCategory.html">Plan Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#understanding-the-features">Understanding the features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#budgeting-allocation-scenarios">Budgeting &amp; allocation scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlanCategory.html#other-features">Other features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#adding-a-note">Adding a Note</a></li>
 <li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#view-history">View History</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PlanCategory.html#nodes-filtering">Nodes Filtering</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Category</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AnalyzeCategory.html">Analyze Category</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#weekly">Weekly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#monthly">Monthly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#quarter-to-date">Quarter-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#quarter">Quarter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#half-year">Half Year</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#half-year-to-date">Half Year-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#year-to-date">Year-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#year-to-go">Year-to-go</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#full-year">Full Year</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnalyzeCategory.html">Analyze Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#variance-analysis">Variance Analysis</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Storage and Collaboration.html">Storage and Collaboration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Knownissues.html">Known Issues and Limitations</a></li>
 </ul>
 
@@ -278,51 +263,51 @@
             
   <div class="section" id="definitions">
 <h1>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Power BI</td>
-<td>Microsoft Power BI</td>
+<tbody>
+<tr class="row-odd"><td><p>Power BI</p></td>
+<td><p>Microsoft Power BI</p></td>
 </tr>
-<tr class="row-even"><td>valQ</td>
-<td>valQ for Microsoft Power BI</td>
+<tr class="row-even"><td><p>valQ</p></td>
+<td><p>valQ for Microsoft Power BI</p></td>
 </tr>
-<tr class="row-odd"><td>Value Driver Tree</td>
-<td>Mathematical or conceptual
+<tr class="row-odd"><td><p>Value Driver Tree</p></td>
+<td><p>Mathematical or conceptual
 business models visualised in a
 way that links the business KPI’s
 (what management or stakeholders
 care about) to the operational
 drivers (the things that can be
-influenced to change the KPI’s).</td>
+influenced to change the KPI’s).</p></td>
 </tr>
-<tr class="row-even"><td>Node</td>
-<td>A generic reference to a unique
+<tr class="row-even"><td><p>Node</p></td>
+<td><p>A generic reference to a unique
 KPI or Value Driver in a value
-driver tree</td>
+driver tree</p></td>
 </tr>
-<tr class="row-odd"><td>Node Widget</td>
-<td>The visualization of a KPI or
+<tr class="row-odd"><td><p>Node Widget</p></td>
+<td><p>The visualization of a KPI or
 Value Driver in a value driver
-tree</td>
+tree</p></td>
 </tr>
-<tr class="row-even"><td>Derived Node</td>
-<td>Additional Information for a node
+<tr class="row-even"><td><p>Derived Node</p></td>
+<td><p>Additional Information for a node
 but not directly related to the
 calculation hierarchy. This will
 often be key benchmarking KPI’s
-such as cost/production unit.</td>
+such as cost/production unit.</p></td>
 </tr>
-<tr class="row-odd"><td>Parent</td>
-<td>A reference to the Node one level
-above in the Value Driver Tree</td>
+<tr class="row-odd"><td><p>Parent</p></td>
+<td><p>A reference to the Node one level
+above in the Value Driver Tree</p></td>
 </tr>
-<tr class="row-even"><td>Children</td>
-<td>A reference to the collection of
-nodes immediately below a Node</td>
+<tr class="row-even"><td><p>Children</p></td>
+<td><p>A reference to the collection of
+nodes immediately below a Node</p></td>
 </tr>
 </tbody>
 </table>
@@ -340,7 +325,7 @@ nodes immediately below a Node</td>
         <a href="Generalfeatures.html" class="btn btn-neutral float-right" title="General Features of valQ Custom Visual" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -349,7 +334,7 @@ nodes immediately below a Node</td>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Visual BI Solutions.
+        &copy; Copyright 2019, Visual BI Solutions
 
     </p>
   </div> 
@@ -365,32 +350,16 @@ nodes immediately below a Node</td>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

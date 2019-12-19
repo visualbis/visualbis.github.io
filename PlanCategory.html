@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Plan Category &mdash; valQ Custom Visual for Microsoft Power BI 1.0.0 documentation</title>
+  <title>Plan Tab &mdash; valQ Custom Visual for Microsoft Power BI 1.0.0 documentation</title>
   
 
   
@@ -17,35 +17,37 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Simulate Category" href="SimulateCategory.html" />
-    <link rel="prev" title="Model Category" href="ModelCategory.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    <link rel="next" title="Simulate Tab" href="SimulateCategory.html" />
+    <link rel="prev" title="Model Tab" href="ModelCategory.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -103,7 +105,6 @@
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#tree-drill-down">Tree Drill Down</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#zoom-and-pan">Zoom and Pan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#expand-collapse-of-tree-view">Expand/Collapse of Tree View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#minimap">Minimap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#value-display-and-simulation-period">Value Display and Simulation Period</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#sub-models-filters">Sub Models - Filters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Generalfeatures.html#kpis">KPIs</a></li>
@@ -121,17 +122,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#getting-more-information-about-a-value-driver">Getting more information about a Value driver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Generalfeatures.html#saving-and-opening-scenarios">Saving and Opening Scenarios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="valQ.html">valQ in Power BI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ModelCategory.html">Model Category</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="ModelCategory.html">Model Tab</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ModelCategory.html#new-tab">New Tab</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#open-a-sample-model">Open a Sample Model</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#general">General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#configuration">Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#template-nodes-selection-in-calculation-method">Template Nodes selection in Calculation Method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#display">Display</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#composite-node-display">Composite Node Display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#simulation">Simulation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#business-definition">Business Definition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#conditional-formatting">Conditional Formatting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModelCategory.html#secondary-kpis">Secondary KPIs</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ModelCategory.html#create-a-simple-model">Create a Simple Model</a><ul>
@@ -182,37 +182,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Plan Category</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#input-editor-functionality">Input Editor Functionality</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#scenario-1">Scenario 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scenario-2">Scenario 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scenario-3">Scenario 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scenario-4">Scenario 4</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scenario-5">Scenario 5</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#other-common-features-of-the-input-editor">Other common features of the Input Editor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#allocate-children">Allocate Children</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plan Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-the-features">Understanding the features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#budgeting-allocation-scenarios">Budgeting &amp; allocation scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-features">Other features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#adding-a-note">Adding a Note</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#view-history">View History</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#nodes-filtering">Nodes Filtering</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Category</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AnalyzeCategory.html">Analyze Category</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#weekly">Weekly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#monthly">Monthly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#quarter-to-date">Quarter-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#quarter">Quarter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#half-year">Half Year</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#half-year-to-date">Half Year-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#year-to-date">Year-to-date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#year-to-go">Year-to-go</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#full-year">Full Year</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SimulateCategory.html">Simulate Tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnalyzeCategory.html">Analyze Tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeCategory.html#variance-analysis">Variance Analysis</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Storage and Collaboration.html">Storage and Collaboration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Knownissues.html">Known Issues and Limitations</a></li>
 </ul>
 
@@ -259,7 +244,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Plan Category</li>
+      <li>Plan Tab</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -276,341 +261,262 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="plan-category">
-<h1>Plan Category<a class="headerlink" href="#plan-category" title="Permalink to this headline">¶</a></h1>
-<p>The Plan Category has an Input Editor screen through which the user can create multiple series.
-By clicking the Plan Tab, you will be able to view the Input Editor screen as shown below.</p>
+  <div class="section" id="plan-tab">
+<h1>Plan Tab<a class="headerlink" href="#plan-tab" title="Permalink to this headline">¶</a></h1>
+<p>With the Plan Tab, it is possible to create new plans based on existing data (e.g. prior period actuals or existing budget) or from scratch (Zero-based budgeting).</p>
+<div class="section" id="understanding-the-features">
+<h2>Understanding the features<a class="headerlink" href="#understanding-the-features" title="Permalink to this headline">¶</a></h2>
+<p>On clicking the Plan Tab, the ‘New Series’ popup opens. Before creating a new series the user is required to click on the ‘Lock’ button. This ensures that the node hierarchy is fixed and no structural changes are possible unless unlocked again.</p>
 <div class="figure align-center" id="id1">
-<img alt="alternate text" src="_images/pll1.png" />
-<p class="caption"><span class="caption-text">Input Editor</span></p>
+<img alt="alternate text" src="_images/PL_1.png" />
+<p class="caption"><span class="caption-text">Locking the model</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>The series which are created using the Input Editor are the Planning Series.
-The created planning series will get listed as drop down values in the top most panel (see Figure below).</p>
+<p>Once locked, the new series can be renamed and the base series can be chosen. The new series can be created based on ‘Budget’, ‘Forecast’ or from scratch by selecting ‘Empty Series’ option.
+In the figure below, the series has been named ‘Jan Forecast’ and ‘Budget’ has been selected as the series to start with.</p>
 <div class="figure align-center" id="id2">
-<img alt="alternate text" src="_images/pll2.png" />
-<p class="caption"><span class="caption-text">Data Series Display</span></p>
+<img alt="alternate text" src="_images/PL_2.png" />
+<p class="caption"><span class="caption-text">Creating a new series</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<p>After selecting the required series for both the Primary and Comparison Series, the Tree will get displayed
-based on the selection (see Figure below). For our example, the Primary Series has been selected as “Budget”
-and the Comparison Series has been selected as “Forecast”.</p>
+<p>On clicking ‘Submit’, the ‘Input Editor’ screen opens.</p>
+<p>The name of the series gets highlighted as shown in the figure below. The footer highlights the base series from which the particular series has been created.</p>
 <div class="figure align-center" id="id3">
-<img alt="alternate text" src="_images/pll3.png" />
-<p class="caption"><span class="caption-text">Tree Structure for the selected Primary and Comparison Series</span></p>
+<img alt="alternate text" src="_images/PL_3.png" />
+<p class="caption"><span class="caption-text">Input Editor screen</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="input-editor-functionality">
-<h2>Input Editor Functionality<a class="headerlink" href="#input-editor-functionality" title="Permalink to this headline">¶</a></h2>
-<p>For our example, the below Figure represents the sample Data Source being assigned for the Planning Series.</p>
+<p>The newly created series can be set as the primary or the comparison series by clicking on the settings icon. The series can also be renamed or deleted by choosing the appropriate option.</p>
 <div class="figure align-center" id="id4">
-<img alt="alternate text" src="_images/pl4.png" />
-<p class="caption"><span class="caption-text">Sample Data Source</span></p>
+<a class="reference internal image-reference" href="_images/PL_4.png"><img alt="alternate text" src="_images/PL_4.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Context Menu</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
-<p>With the help of the above shown Data Source, you will be able to create a New series using the Input Editor.
-The below steps explains us on how to create a Series in the Input Editor.</p>
-<ol class="arabic simple">
-<li>By clicking the Plan Category, you will be able to view the Input Editor screen. Now you will be able to view the New Series screen as shown below.</li>
-</ol>
+<p>In the ‘Action Menu’, options to allocate values, add notes, refresh datasource and view history are present.</p>
 <div class="figure align-center" id="id5">
-<a class="reference internal image-reference" href="_images/pl5.png"><img alt="alternate text" src="_images/pl5.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">New Series window</span></p>
+<img alt="alternate text" src="_images/PL_5.png" />
+<p class="caption"><span class="caption-text">Action Menu</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="arabic simple" start="2">
-<li>For our example, lock the Tree Structure as shown in the above Figure. This would lock the node structure and to add the new nodes you need to unlock the structure. You need to lock the structure in order to enable the top down adjustments to the rules applied at parent nodes.</li>
-<li>Now enter the name for the New series. In our example, it is being named as “Aug Fcst” (as it represents the August Forecast) and it is user defined. Select the Base Series and Budget will be the Primary in our case (see Figure below).</li>
+<ol class="arabic simple">
+<li><p>‘Weight’ and ‘Equals’ options can be used to allocate a node’s ‘Total’ value across all periods</p></li>
+<li><p>‘Trend’ and ‘Copy-to’ options can be used to edit period values</p></li>
+<li><p>Child nodes can be allocated either by weight or equally by choosing the ‘Weight’ or ‘Equal’ option in the ‘Allocate children’ section. ‘Copy-to’ can be used to copy a node’s value to its sibling nodes.</p></li>
+<li><p>‘Hold’ and ‘Release’ can be used to lock or unlock certain cells as needed.</p></li>
+<li><p>‘Note’ option lets the user to add, modify or delete notes.</p></li>
+<li><p>On clicking ‘Refresh Datasource’, the newly created series gets updated if there are any changes to the input data.</p></li>
+<li><p>‘View History’ can be used to view the changes performed and also roll back changes.</p></li>
 </ol>
+<p>There is a ‘Search’ option which is particularly useful when using large models. On entering a node name or node ID, only the corresponding node and its child nodes get displayed.</p>
 <div class="figure align-center" id="id6">
-<a class="reference internal image-reference" href="_images/pl6.png"><img alt="alternate text" src="_images/pl6.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Series Name with Base Series Selection</span></p>
+<img alt="alternate text" src="_images/PL_6.png" />
+<p class="caption"><span class="caption-text">Search option for filtering nodes</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
-<p>The Primary Series is the Main Data that will get displayed on the node. The Comparison Series will be the Variance data that will get displayed on the node  and it is be compared to this series.</p>
-<p>New Series can be also created from Empty Series : Zero based budgeting and also based on Primary or Comparison series.</p>
-<ol class="arabic simple" start="4">
-<li>At the top of the panel, you will be able to view the Tabs which would highlight the names of the series (see Figure below).</li>
-</ol>
+<p>The model along with the overall and period values get displayed in a table form. In case, the empty series has been chosen as the series to start with, only the structure and relationships are displayed and not the values.</p>
+<p>On selecting a cell, additional information such as the calculation method and time aggregation for the node appears in the footer. The number format and scaling that were configured while modelling are retained. The ‘Number Bar’ will have the absolute value irrespective of the format and scaling.</p>
 <div class="figure align-center" id="id7">
-<img alt="alternate text" src="_images/pl7.png" />
-<p class="caption"><span class="caption-text">Series Name at the Top Panel</span></p>
+<img alt="alternate text" src="_images/PL_8.png" />
+<p class="caption"><span class="caption-text">Table view</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
-<p>You can also click on the New Series as shown in the above Figure and create a new series. This can be created on existing series, empty series or the newly created series.</p>
-<p>It is to be noted that the Series created using the Input Editor screen will be also listed in the Variance Analysis screen as drop down fields for Base Series and Compared Series.</p>
-<p>In the settings section, you can set the newly created series as primary or the comparative series. We can also rename or delete the series as shown in the below Figure.</p>
-<div class="figure align-center" id="id8">
-<a class="reference internal image-reference" href="_images/pl8.png"><img alt="alternate text" src="_images/pl8.png" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">Series Settings</span></p>
 </div>
-<ol class="arabic simple" start="5">
-<li>There are three different methods of Planning and they are listed below (see Figure below).</li>
+<div class="section" id="budgeting-allocation-scenarios">
+<h2>Budgeting &amp; allocation scenarios<a class="headerlink" href="#budgeting-allocation-scenarios" title="Permalink to this headline">¶</a></h2>
+<p><strong>Scenario 1</strong>: To increase Total Revenue by 10% and allocate the increase to Sales Revenue with no changes to Other Revenue</p>
+<ol class="loweralpha simple">
+<li><p>For our example, expand the Total Revenue. Now select the node ‘Other Revenue’ and lock the node (see Figure below).</p></li>
 </ol>
-<ul class="simple">
-<li>Weight</li>
-<li>Equals</li>
-<li>Trend</li>
-</ul>
-<div class="figure align-center" id="id9">
-<img alt="alternate text" src="_images/pl9.png" />
-<p class="caption"><span class="caption-text">Planning Methods</span></p>
+<div class="figure align-center" id="id8">
+<img alt="alternate text" src="_images/pl11.png" />
+<p class="caption"><span class="caption-text">Locking node</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-<p>Once when the values are allocated for the periods we have the option to allocate the values across the period to different nodes. Here the planning can happen based on Weight or Equal.</p>
-<ol class="arabic simple" start="6">
-<li>The Planning Methods that are available at Year Level are “Weight” and “Equals” (see Figure below). Based on the user selection of the cell, the Planning Methods will get activated.</li>
+<ol class="loweralpha simple" start="2">
+<li><p>Now select the Total Cell for node ‘Total Revenue’ as shown in the below Figure.</p></li>
+</ol>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/pl12.png"><img alt="alternate text" src="_images/pl12.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Cell selection</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can update the number by double clicking the cell and entering the number directly in the number bar. Or you can enter the number in the popup.</p>
+<ol class="loweralpha simple" start="3">
+<li><p>Now double click the total cell and type ‘+10%’ at the end of the number and click on ‘Weight’ as shown in the below Figure.</p></li>
 </ol>
 <div class="figure align-center" id="id10">
-<a class="reference internal image-reference" href="_images/pl10.png"><img alt="alternate text" src="_images/pl10.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">User defined cell and planning methods</span></p>
+<a class="reference internal image-reference" href="_images/pl13.png"><img alt="alternate text" src="_images/pl13.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Total cell value increased to 10 %</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-<p><strong>Note:</strong>
-The Number format and scaling will be taken from the tree. The Number bar will have the absolute value irrespective of the format and scaling.</p>
-<ol class="arabic simple" start="7">
-<li>For our example, there are different scenarios for illustrating the Planning Methods and they are explained below:</li>
-</ol>
-<div class="section" id="scenario-1">
-<h3>Scenario 1<a class="headerlink" href="#scenario-1" title="Permalink to this headline">¶</a></h3>
-<p>Increase the total revenue by 10%, other revenue remains same and move the Impact to sales revenue.</p>
-<ol class="loweralpha simple">
-<li>For our example, expand the Total Revenue. Now select the node “Other Revenue” and lock the node (see Figure below).</li>
+<ol class="loweralpha simple" start="4">
+<li><p>You will be able to view the ‘Spread by Weights’ screen.</p></li>
 </ol>
 <div class="figure align-center" id="id11">
-<img alt="alternate text" src="_images/pl11.png" />
-<p class="caption"><span class="caption-text">Scenario 1</span></p>
-</div>
-<ol class="loweralpha simple" start="2">
-<li>Now select the Total Cell for node “Total Revenue” as shown in the below Figure.</li>
-</ol>
-<div class="figure align-center" id="id12">
-<a class="reference internal image-reference" href="_images/pl12.png"><img alt="alternate text" src="_images/pl12.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Cell Selection</span></p>
-</div>
-<p>You can also update the number by double clicking the cell, enter the number directly in the number bar or enter the number in the Pop up.</p>
-<ol class="loweralpha simple" start="3">
-<li>Now double click the total cell and type “+10%” at the end of the number and Click on “Weight” as shown in the below Figure.</li>
-</ol>
-<div class="figure align-center" id="id13">
-<a class="reference internal image-reference" href="_images/pl13.png"><img alt="alternate text" src="_images/pl13.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Total cell value increased to 10 %</span></p>
-</div>
-<ol class="loweralpha simple" start="4">
-<li>Click on Weight option as shown in the above Figure and you will be able to view the Spread by Weights</li>
-</ol>
-<div class="figure align-center" id="id14">
 <a class="reference internal image-reference" href="_images/pl14.png"><img alt="alternate text" src="_images/pl14.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Spread by Weights</span></p>
+<p class="caption"><span class="caption-text">Spread by Weights</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
-<p>Now select the current node and the current series and select the “Overwrite Values” option. You can also select different weights to allocate. You can further decide to allocate the full amount or the delta amount (see Figure above).</p>
-<p>The Overwrite Values option will delete the existing number and re writes the new allocated value and the Append option will add the delta value to the existing value and only the delta value gets allocated in the selected weights (see Figure above).
+<p>By default, the current node and the current series are selected. You can also select different weights to allocate. You can further decide to allocate the full amount or the delta amount (see Figure above).</p>
+<p>The ‘Overwrite Values’ option deletes the existing period values and rewrites the new allocated value. The ‘Append to Values’ option will add the delta value to the existing period values and only the delta value gets allocated based on the selected weights (see Figure above).
 For our example, the Overwrite option has been selected.</p>
 <ol class="loweralpha simple" start="5">
-<li>As an end result of the Scenario 1, you will be able to view the Input Editor screen loaded with the configured values (see Figure below). The cells where the planning was impacted turns pink color.</li>
+<li><p>As an end result of the Scenario 1, you will be able to view the Input Editor screen updated with the configured values (see Figure below). The cells which were impacted because of the allocation operations turns yellow.</p></li>
+</ol>
+<div class="figure align-center" id="id12">
+<img alt="alternate text" src="_images/pl15.png" />
+<p class="caption"><span class="caption-text">Increased ‘Total Revenue’ without impacting ‘Other Revenue’</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Scenario 2</strong>: To increase ‘Cost of Sales’ by 10% from April onwards</p>
+<ol class="loweralpha simple">
+<li><p>For our example, select the Node ‘Cost of Sales’ for April month (see Figure below).</p></li>
+</ol>
+<div class="figure align-center" id="id13">
+<img alt="alternate text" src="_images/pl16.png" />
+<p class="caption"><span class="caption-text">Cell Selection</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><p>Increase the cell value by 10% and click Enter (see Figure below).</p></li>
+</ol>
+<div class="figure align-center" id="id14">
+<img alt="alternate text" src="_images/pl17.png" />
+<p class="caption"><span class="caption-text">Cost of Sales for April increased by 10%</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="loweralpha simple" start="3">
+<li><p>Now click the “Copy To” icon to copy the value from April across the periods till December (see Figure below)</p></li>
 </ol>
 <div class="figure align-center" id="id15">
-<img alt="alternate text" src="_images/pl15.png" />
-<p class="caption"><span class="caption-text">Scenario 1 with configured values</span></p>
+<a class="reference internal image-reference" href="_images/pl18.png"><img alt="alternate text" src="_images/pl18.png" style="width: 75px;" /></a>
+<p class="caption"><span class="caption-text">Copy-to icon</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="scenario-2">
-<h3>Scenario 2<a class="headerlink" href="#scenario-2" title="Permalink to this headline">¶</a></h3>
-<p>Increase cost of sale by 10% from April Onwards</p>
-<ol class="loweralpha simple">
-<li>For our example, select the Node “Cost of Sales” for April month (see Figure below).</li>
+<ol class="loweralpha simple" start="4">
+<li><p>After clicking the Copy to icon, the Input Editor screen looks similar to the Figure shown below.</p></li>
 </ol>
 <div class="figure align-center" id="id16">
-<img alt="alternate text" src="_images/pl16.png" />
-<p class="caption"><span class="caption-text">Cell Selection</span></p>
+<img alt="alternate text" src="_images/pl19.png" />
+<p class="caption"><span class="caption-text">Constant cell values from Apr to Dec</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="loweralpha simple" start="2">
-<li>Increase the cell value by 10% and click Enter (see Figure below).</li>
+<p><strong>Scenario 3</strong>: To increase ‘Other Costs’ based on a monthly trend of 2%</p>
+<ol class="loweralpha simple">
+<li><p>For our example, select the Node ‘Other Costs’ for Jan month (see Figure below).</p></li>
 </ol>
 <div class="figure align-center" id="id17">
-<img alt="alternate text" src="_images/pl17.png" />
-<p class="caption"><span class="caption-text">Cost of Sales for April increased by 10%</span></p>
+<a class="reference internal image-reference" href="_images/pl22.png"><img alt="alternate text" src="_images/pl22.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Cell Selection</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="loweralpha simple" start="3">
-<li>Now click the “Copy To” icon to copy the value from April across the periods till December (see Figure below)</li>
+<ol class="loweralpha simple" start="2">
+<li><p>Now click the ‘Trend’ icon (see Figure below)</p></li>
 </ol>
 <div class="figure align-center" id="id18">
-<a class="reference internal image-reference" href="_images/pl18.png"><img alt="alternate text" src="_images/pl18.png" style="width: 75px;" /></a>
-<p class="caption"><span class="caption-text">Copy-to icon</span></p>
+<a class="reference internal image-reference" href="_images/pl23.png"><img alt="alternate text" src="_images/pl23.png" style="width: 60px;" /></a>
+<p class="caption"><span class="caption-text">Trend icon</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="loweralpha simple" start="4">
-<li>After clicking the Copy to icon, the Input Editor screen looks similar to the Figure shown below.</li>
+<ol class="loweralpha simple" start="3">
+<li><p>Now the Trend pop up opens. For our example, select the ‘By Percentage’ option and enter value 2 in the Increase Trend section. Now select the Overwrite Values option and click ‘Apply’ (see Figure below).</p></li>
 </ol>
 <div class="figure align-center" id="id19">
-<img alt="alternate text" src="_images/pl19.png" />
-<p class="caption"><span class="caption-text">Constant cell values from Apr to Dec</span></p>
+<a class="reference internal image-reference" href="_images/pl24.png"><img alt="alternate text" src="_images/pl24.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Increasing Trend of 2 %</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
-<p><strong>Note:</strong>
-There is another copy-to function icon as shown in the below Figure.</p>
+<ol class="loweralpha simple" start="4">
+<li><p>Based on the above configuration, you will be able to view the Input Editor screen as shown below.</p></li>
+</ol>
 <div class="figure align-center" id="id20">
-<img alt="alternate text" src="_images/pl20.png" />
-<p class="caption"><span class="caption-text">Copy-to Icon</span></p>
+<img alt="alternate text" src="_images/pl25.png" />
+<p class="caption"><span class="caption-text">Increased monthly trend</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
-<p>This icon when clicked copies the value vertically downwards for the parent node to parent node and from child node to child node as shown in the below Figure. The value is “100” for the parent node and “50” for the  child node (see Figure below).</p>
-<div class="figure align-center" id="id21">
-<img alt="alternate text" src="_images/pl21.png" />
-<p class="caption"><span class="caption-text">Constant Cell values for parent to parent and child to child nodes</span></p>
-</div>
-</div>
-<div class="section" id="scenario-3">
-<h3>Scenario 3<a class="headerlink" href="#scenario-3" title="Permalink to this headline">¶</a></h3>
-<p>Increase other costs a trend of 2% month on month</p>
+<p><strong>Scenario 4</strong>: To redistribute ‘Support Costs’ based on ‘Cost of Sales’.</p>
 <ol class="loweralpha simple">
-<li>For our example, select the Node “Other Costs” for Jan month (see Figure below).</li>
+<li><p>For our example, select the Node ‘Support Costs’ in Total column (see Figure below).</p></li>
+</ol>
+<div class="figure align-center" id="id21">
+<img alt="alternate text" src="_images/pl26.png" />
+<p class="caption"><span class="caption-text">Cell Selection</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><p>Now click the ‘Weight’ icon (see Figure below)</p></li>
 </ol>
 <div class="figure align-center" id="id22">
-<a class="reference internal image-reference" href="_images/pl22.png"><img alt="alternate text" src="_images/pl22.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Cell Selection</span></p>
+<img alt="alternate text" src="_images/pl27.png" />
+<p class="caption"><span class="caption-text">Weight icon</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="loweralpha simple" start="2">
-<li>Now click the “Trend” icon (see Figure below)</li>
+<ol class="loweralpha simple" start="3">
+<li><p>The Spread by Weight pop up opens. For our example, select the Node as ‘Cost of Sales’. Select the ‘Overwrite Values’ option and click ‘Apply’ (see Figure below).</p></li>
 </ol>
 <div class="figure align-center" id="id23">
-<a class="reference internal image-reference" href="_images/pl23.png"><img alt="alternate text" src="_images/pl23.png" style="width: 60px;" /></a>
-<p class="caption"><span class="caption-text">Trend icon</span></p>
+<a class="reference internal image-reference" href="_images/pl28.png"><img alt="alternate text" src="_images/pl28.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Spreads by Weights</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="loweralpha simple" start="3">
-<li>Now the Trend pop up opens. For our example, select the “By Percentage” option and enter value 2 in the Increase Trend section. Now select the Overwrite Values option and click “Apply” (see Figure below).</li>
+<ol class="loweralpha simple" start="4">
+<li><p>As an end result of the Scenario 4, you will be able to view the Input Editor screen loaded with the redistributed values (see Figure below).</p></li>
 </ol>
 <div class="figure align-center" id="id24">
-<a class="reference internal image-reference" href="_images/pl24.png"><img alt="alternate text" src="_images/pl24.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Increased Trend by 2 %</span></p>
+<img alt="alternate text" src="_images/pl29.png" />
+<p class="caption"><span class="caption-text">Redistributed values</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="loweralpha simple" start="4">
-<li>Based on the above configuration, you will be able to view the Input Editor screen as shown below.</li>
+<p><strong>Scenario 5</strong>: To increase ‘Rent’ by 5% for Q1 and 10% from Q2 Onwards.</p>
+<ol class="loweralpha simple">
+<li><p>Select the Node ‘Rent’ and lock the entire Row.</p></li>
+<li><p>Release the lock for the cells from Jan to Mar.</p></li>
+<li><p>Now select the cell ‘Jan’. Increase the value by 5% (see Figure below).</p></li>
 </ol>
 <div class="figure align-center" id="id25">
-<img alt="alternate text" src="_images/pl25.png" />
-<p class="caption"><span class="caption-text">Scenario 3 with configured values from Jan to Dec</span></p>
+<a class="reference internal image-reference" href="_images/pl30.png"><img alt="alternate text" src="_images/pl30.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Rent increased by 5% for Jan Month</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="scenario-4">
-<h3>Scenario 4<a class="headerlink" href="#scenario-4" title="Permalink to this headline">¶</a></h3>
-<p>There is no increase in Support Costs at Total level but costs should be allocated in line with the Cost of Sales spread.</p>
-<ol class="loweralpha simple">
-<li>For our example, select the Node “Support Costs” for Total column (see Figure below).</li>
+<ol class="loweralpha simple" start="4">
+<li><p>Now copy it across the cells. The Input Editor looks similar to the Figure as shown below.</p></li>
 </ol>
 <div class="figure align-center" id="id26">
-<img alt="alternate text" src="_images/pl26.png" />
-<p class="caption"><span class="caption-text">Cell Selection</span></p>
-</div>
-<ol class="loweralpha simple" start="2">
-<li>Now click the “Weight” icon (see Figure below)</li>
-</ol>
-<div class="figure align-center" id="id27">
-<img alt="alternate text" src="_images/pl27.png" />
-<p class="caption"><span class="caption-text">Weight icon</span></p>
-</div>
-<ol class="loweralpha simple" start="3">
-<li>Now the Spread by Weight pop up opens. For our example, select the Node as “Cost of Sales”. Select the Overwrite Values option and click “Apply” (see Figure below). The Total Value which is the Support Costs value can be also changed based on your requirement.</li>
-</ol>
-<div class="figure align-center" id="id28">
-<a class="reference internal image-reference" href="_images/pl28.png"><img alt="alternate text" src="_images/pl28.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Spreads by Weights</span></p>
-</div>
-<ol class="loweralpha simple" start="4">
-<li>As an end result of the Scenario 4, you will be able to view the Input Editor screen loaded with the configured values (see Figure below).</li>
-</ol>
-<div class="figure align-center" id="id29">
-<img alt="alternate text" src="_images/pl29.png" />
-<p class="caption"><span class="caption-text">Scenario 4 with configured values</span></p>
-</div>
-</div>
-<div class="section" id="scenario-5">
-<h3>Scenario 5<a class="headerlink" href="#scenario-5" title="Permalink to this headline">¶</a></h3>
-<p>Increase Rent by 5% for Q1 and 10% from Q2 Onwards.</p>
-<ol class="loweralpha simple">
-<li>Select the Node Rent and lock the entire Row for the Node Rent.</li>
-<li>Release the lock for the Cells from Jan to Mar.</li>
-<li>Now select the cell “Jan” for the Node Rent. Increase the value by 5% (see Figure below).</li>
-</ol>
-<div class="figure align-center" id="id30">
-<a class="reference internal image-reference" href="_images/pl30.png"><img alt="alternate text" src="_images/pl30.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Rent increased by 5% for Jan Month</span></p>
-</div>
-<ol class="loweralpha simple" start="4">
-<li>Now copy it across the cells. The Input Editor looks similar to the Figure as shown below.</li>
-</ol>
-<div class="figure align-center" id="id31">
 <img alt="alternate text" src="_images/pl31.png" />
-<p class="caption"><span class="caption-text">Rent increased by 5% across the cells in the Row</span></p>
+<p class="caption"><span class="caption-text">Rent increased by 5% across the cells in the Row</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="loweralpha simple" start="5">
-<li>Now release the lock for the complete Row of the Node Rent.</li>
-<li>Select the cell “Apr” for the Node Rent. Increase the value by 10% (see Figure below).</li>
+<li><p>Now release the lock for the complete Row of the Node Rent.</p></li>
+<li><p>Select the cell ‘Apr’. Increase the value by 10% (see Figure below).</p></li>
 </ol>
-<div class="figure align-center" id="id32">
+<div class="figure align-center" id="id27">
 <img alt="alternate text" src="_images/pl32.png" />
-<p class="caption"><span class="caption-text">Rent increased by 10% for Apr Month</span></p>
+<p class="caption"><span class="caption-text">Rent increased by 10% for Apr Month</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="loweralpha simple" start="7">
-<li>Now copy it across the cells. The Input Editor looks similar to the Figure as shown below.</li>
+<li><p>Now copy it across the cells. The Input Editor looks similar to the Figure as shown below.</p></li>
 </ol>
-<div class="figure align-center" id="id33">
+<div class="figure align-center" id="id28">
 <img alt="alternate text" src="_images/pl33.png" />
-<p class="caption"><span class="caption-text">Rent increased by 10% across the cells in the Row from Apr till Dec Month</span></p>
+<p class="caption"><span class="caption-text">Rent increased by 10% from Apr till Dec</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</div>
-<div class="section" id="other-common-features-of-the-input-editor">
-<h2>Other common features of the Input Editor<a class="headerlink" href="#other-common-features-of-the-input-editor" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="allocate-children">
-<h3>Allocate Children<a class="headerlink" href="#allocate-children" title="Permalink to this headline">¶</a></h3>
-<p>There are 2 different options namely “Weight” and “Equal” for the Children Node allocation (see Figure below).</p>
-<div class="figure align-center" id="id34">
-<img alt="alternate text" src="_images/plch.png" />
-<p class="caption"><span class="caption-text">Allocate Children Nodes</span></p>
-</div>
-<p>As part of the Business Scenario, the allocation for the children nodes will be based on the weight option and also the cell values will be only applied for the delta values.</p>
-</div>
+<div class="section" id="other-features">
+<h2>Other features<a class="headerlink" href="#other-features" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="adding-a-note">
 <h3>Adding a Note<a class="headerlink" href="#adding-a-note" title="Permalink to this headline">¶</a></h3>
 <ol class="loweralpha simple">
-<li>In the Input Editor, select the Node “Rent” for Total column (see Figure below).</li>
+<li><p>In the Input Editor, select the node ‘Rent’ for Total column (see Figure below).</p></li>
 </ol>
-<div class="figure align-center" id="id35">
+<div class="figure align-center" id="id29">
 <a class="reference internal image-reference" href="_images/pl34.png"><img alt="alternate text" src="_images/pl34.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">Cell Selection</span></p>
+<p class="caption"><span class="caption-text">Cell Selection</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="loweralpha simple" start="2">
-<li>Now click on the Note Icon as shown below.</li>
+<li><p>Now click on the ‘Note’ Icon as shown below.</p></li>
 </ol>
-<div class="figure align-center" id="id36">
+<div class="figure align-center" id="id30">
 <img alt="alternate text" src="_images/pl35.png" />
-<p class="caption"><span class="caption-text">Note Icon</span></p>
+<p class="caption"><span class="caption-text">Note Icon</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="loweralpha simple" start="3">
-<li>Enter the details in the note pop up as shown below.</li>
+<li><p>Enter the details in the note pop up as shown below.</p></li>
 </ol>
-<div class="figure align-center" id="id37">
+<div class="figure align-center" id="id31">
 <img alt="alternate text" src="_images/pl36.png" />
-<p class="caption"><span class="caption-text">Comments for the cell</span></p>
+<p class="caption"><span class="caption-text">Comments for the cell</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="loweralpha simple" start="4">
-<li>Once a note is entered, the cell would look similar to the Figure as shown below. On the right top corner, you can view a Note Indicator.</li>
+<li><p>Once a note is entered, the cell would look similar to the Figure as shown below. On the right top corner, you can view a Note Indicator.</p></li>
 </ol>
-<div class="figure align-center" id="id38">
+<div class="figure align-center" id="id32">
 <img alt="alternate text" src="_images/pl37.png" />
-<p class="caption"><span class="caption-text">Note Indicator</span></p>
+<p class="caption"><span class="caption-text">Note Indicator</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="view-history">
 <h3>View History<a class="headerlink" href="#view-history" title="Permalink to this headline">¶</a></h3>
-<p>Using the View History option, you will be able to view the Change Histories that have been done in the cells for different planning. You can select the specific history and restore them. You can also reset all the Histories by using the Reset All option (see Figure below).</p>
-<div class="figure align-center" id="id39">
+<p>Using the View History option, you will be able to view the allocation and change history. ‘Reset all’ would delete all the allocation adjustments made to the series.
+‘Restore to this step’ traces back to the selected step (see Figure below).</p>
+<div class="figure align-center" id="id33">
 <a class="reference internal image-reference" href="_images/pl38.png"><img alt="alternate text" src="_images/pl38.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">View History</span></p>
+<p class="caption"><span class="caption-text">View History</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="nodes-filtering">
-<h3>Nodes Filtering<a class="headerlink" href="#nodes-filtering" title="Permalink to this headline">¶</a></h3>
-<p>Using the Search option in the Input Editor screen, you can filter the Nodes by providing the Node Name in the Search option as shown below.</p>
-<div class="figure align-center" id="id40">
-<a class="reference internal image-reference" href="_images/pl39.png"><img alt="alternate text" src="_images/pl39.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">Search option for Nodes Filtering</span></p>
-</div>
-<p><strong>Note:</strong>
-For the huge models, you can use this filter mode to only see the main node and children node.</p>
-<p>Input Editor Functionality</p>
-<p>For our example, the below Figure represents the sample Data Source being assigned for the Planning Series.</p>
-<p>Sample Data Source
-With the help of the above shown Data Source, you will be able to create a New series using the Input Editor. The below steps explains us on how to create a Series in the Input Editor.</p>
 </div>
 </div>
 </div>
@@ -623,10 +529,10 @@ With the help of the above shown Data Source, you will be able to create a New s
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="SimulateCategory.html" class="btn btn-neutral float-right" title="Simulate Category" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="SimulateCategory.html" class="btn btn-neutral float-right" title="Simulate Tab" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ModelCategory.html" class="btn btn-neutral" title="Model Category" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ModelCategory.html" class="btn btn-neutral float-left" title="Model Tab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -635,7 +541,7 @@ With the help of the above shown Data Source, you will be able to create a New s
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Visual BI Solutions.
+        &copy; Copyright 2019, Visual BI Solutions
 
     </p>
   </div> 
@@ -651,32 +557,16 @@ With the help of the above shown Data Source, you will be able to create a New s
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
