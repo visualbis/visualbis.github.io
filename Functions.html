@@ -17,34 +17,35 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -270,306 +271,306 @@
 </div>
 <div class="section" id="logical-functions">
 <h1>LOGICAL FUNCTIONS<a class="headerlink" href="#logical-functions" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="14%" />
-<col width="30%" />
-<col width="56%" />
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 56%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>NAME</strong></th>
-<th class="head"><strong>SYNTAX</strong></th>
-<th class="head"><strong>DESCRIPTION</strong></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NAME</strong></p></th>
+<th class="head"><p><strong>SYNTAX</strong></p></th>
+<th class="head"><p><strong>DESCRIPTION</strong></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>IF</td>
-<td>If( logical_test, value_if_true, value_if_false )</td>
-<td>Checks whether a condition is met, and returns one value if TRUE, and another value if FALSE</td>
+<tbody>
+<tr class="row-even"><td><p>IF</p></td>
+<td><p>If( logical_test, value_if_true, value_if_false )</p></td>
+<td><p>Checks whether a condition is met, and returns one value if TRUE, and another value if FALSE</p></td>
 </tr>
-<tr class="row-odd"><td>SWITCH</td>
-<td>SWITCH ( expression, value1, result1, value2, result2, … value_n, result_n [, default] )</td>
-<td>Evaluates an expression against a list of values and returns the result corresponding to the first matching value. If there is no match, an optional default value is returned.</td>
+<tr class="row-odd"><td><p>SWITCH</p></td>
+<td><p>SWITCH ( expression, value1, result1, value2, result2, … value_n, result_n [, default] )</p></td>
+<td><p>Evaluates an expression against a list of values and returns the result corresponding to the first matching value. If there is no match, an optional default value is returned.</p></td>
 </tr>
-<tr class="row-even"><td>AND</td>
-<td>AND( logical_test1, [logical_test2], … )</td>
-<td>Checks whether all the arguments are TRUE, and returns TRUE if all arguments are TRUE</td>
+<tr class="row-even"><td><p>AND</p></td>
+<td><p>AND( logical_test1, [logical_test2], … )</p></td>
+<td><p>Checks whether all the arguments are TRUE, and returns TRUE if all arguments are TRUE</p></td>
 </tr>
-<tr class="row-odd"><td>OR</td>
-<td>OR( logical_test1, [logical_test2], … )</td>
-<td>Checks whether any of the arguments are TRUE, and returns TRUE or FALSE. Returns FALSE only if all arguments are FALSE</td>
+<tr class="row-odd"><td><p>OR</p></td>
+<td><p>OR( logical_test1, [logical_test2], … )</p></td>
+<td><p>Checks whether any of the arguments are TRUE, and returns TRUE or FALSE. Returns FALSE only if all arguments are FALSE</p></td>
 </tr>
-<tr class="row-even"><td>NOT</td>
-<td>NOT( logical_test )</td>
-<td>Changes FALSE to TRUE, or TRUE to FALSE</td>
+<tr class="row-even"><td><p>NOT</p></td>
+<td><p>NOT( logical_test )</p></td>
+<td><p>Changes FALSE to TRUE, or TRUE to FALSE</p></td>
 </tr>
-<tr class="row-odd"><td>XOR</td>
-<td>XOR( logical_test1, [logical_test2], … )</td>
-<td>Returns a logical ‘Exclusive Or’ of all arguments</td>
+<tr class="row-odd"><td><p>XOR</p></td>
+<td><p>XOR( logical_test1, [logical_test2], … )</p></td>
+<td><p>Returns a logical ‘Exclusive Or’ of all arguments</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="math-functions">
 <h1>MATH FUNCTIONS<a class="headerlink" href="#math-functions" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="14%" />
-<col width="30%" />
-<col width="56%" />
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 56%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>NAME</strong></th>
-<th class="head"><strong>SYNTAX</strong></th>
-<th class="head"><strong>DESCRIPTION</strong></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NAME</strong></p></th>
+<th class="head"><p><strong>SYNTAX</strong></p></th>
+<th class="head"><p><strong>DESCRIPTION</strong></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>SUM</td>
-<td>Sum(value1,[value2]….)</td>
-<td>Add all numbers in the arguments, which can be numbers or node references</td>
+<tbody>
+<tr class="row-even"><td><p>SUM</p></td>
+<td><p>Sum(value1,[value2]….)</p></td>
+<td><p>Add all numbers in the arguments, which can be numbers or node references</p></td>
 </tr>
-<tr class="row-odd"><td>AVERAGE</td>
-<td>Average(value1,[value2]….)</td>
-<td>Returns the average (arithmetic mean) of its arguments, which can be numbers or node references</td>
+<tr class="row-odd"><td><p>AVERAGE</p></td>
+<td><p>Average(value1,[value2]….)</p></td>
+<td><p>Returns the average (arithmetic mean) of its arguments, which can be numbers or node references</p></td>
 </tr>
-<tr class="row-even"><td>AVERAGEEXZERO</td>
-<td>AverageExZero(value1,[value2]….)</td>
-<td>Returns the average (arithmetic mean) of its arguments excluding zeros, which can be numbers or node references</td>
+<tr class="row-even"><td><p>AVERAGEEXZERO</p></td>
+<td><p>AverageExZero(value1,[value2]….)</p></td>
+<td><p>Returns the average (arithmetic mean) of its arguments excluding zeros, which can be numbers or node references</p></td>
 </tr>
-<tr class="row-odd"><td>AVERAGEEXNEG</td>
-<td>AverageExNeg(value1,[value2]….)</td>
-<td>Returns the average (arithmetic mean) of its arguments excluding negatives, which can be numbers or node references</td>
+<tr class="row-odd"><td><p>AVERAGEEXNEG</p></td>
+<td><p>AverageExNeg(value1,[value2]….)</p></td>
+<td><p>Returns the average (arithmetic mean) of its arguments excluding negatives, which can be numbers or node references</p></td>
 </tr>
-<tr class="row-even"><td>AVERAGEEXZERONEG</td>
-<td>AverageExZeroNeg(value1,[value2]….)</td>
-<td>Returns the average (arithmetic mean) of its arguments excluding zeros and negatives, which can be numbers or node references</td>
+<tr class="row-even"><td><p>AVERAGEEXZERONEG</p></td>
+<td><p>AverageExZeroNeg(value1,[value2]….)</p></td>
+<td><p>Returns the average (arithmetic mean) of its arguments excluding zeros and negatives, which can be numbers or node references</p></td>
 </tr>
-<tr class="row-odd"><td>COUNT</td>
-<td>Count(value1,[value2]….)</td>
-<td>Counts the number of items in a range</td>
+<tr class="row-odd"><td><p>COUNT</p></td>
+<td><p>Count(value1,[value2]….)</p></td>
+<td><p>Counts the number of items in a range</p></td>
 </tr>
-<tr class="row-even"><td>ABS</td>
-<td>ABS(value)</td>
-<td>Returns the absolute value of a number, a number without its sign</td>
+<tr class="row-even"><td><p>ABS</p></td>
+<td><p>ABS(value)</p></td>
+<td><p>Returns the absolute value of a number, a number without its sign</p></td>
 </tr>
-<tr class="row-odd"><td>MIN</td>
-<td>Min(value1,[value2]….)</td>
-<td>Returns the smallest number in a set of values. Node references also accepted as arguments</td>
+<tr class="row-odd"><td><p>MIN</p></td>
+<td><p>Min(value1,[value2]….)</p></td>
+<td><p>Returns the smallest number in a set of values. Node references also accepted as arguments</p></td>
 </tr>
-<tr class="row-even"><td>MAX</td>
-<td>Max(value1,[value2]….)</td>
-<td>Returns the largest number in a set of values. Node references also accepted as arguments</td>
+<tr class="row-even"><td><p>MAX</p></td>
+<td><p>Max(value1,[value2]….)</p></td>
+<td><p>Returns the largest number in a set of values. Node references also accepted as arguments</p></td>
 </tr>
-<tr class="row-odd"><td>POWER</td>
-<td>POW(value,power)</td>
-<td>Returns the result of a number raised to a power</td>
+<tr class="row-odd"><td><p>POWER</p></td>
+<td><p>POW(value,power)</p></td>
+<td><p>Returns the result of a number raised to a power</p></td>
 </tr>
-<tr class="row-even"><td>SQRT</td>
-<td>SQRT(value)</td>
-<td>Returns the square root of a number</td>
+<tr class="row-even"><td><p>SQRT</p></td>
+<td><p>SQRT(value)</p></td>
+<td><p>Returns the square root of a number</p></td>
 </tr>
-<tr class="row-odd"><td>EXP</td>
-<td>EXP(value)</td>
-<td>Returns e raised to the power of a given number</td>
+<tr class="row-odd"><td><p>EXP</p></td>
+<td><p>EXP(value)</p></td>
+<td><p>Returns e raised to the power of a given number</p></td>
 </tr>
-<tr class="row-even"><td>LOG</td>
-<td>LOG(value,base)</td>
-<td>Returns the logarithm of a number to the base you specify</td>
+<tr class="row-even"><td><p>LOG</p></td>
+<td><p>LOG(value,base)</p></td>
+<td><p>Returns the logarithm of a number to the base you specify</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="finance-functions">
 <h1>FINANCE FUNCTIONS<a class="headerlink" href="#finance-functions" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="14%" />
-<col width="30%" />
-<col width="56%" />
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 56%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>NAME</strong></th>
-<th class="head"><strong>SYNTAX</strong></th>
-<th class="head"><strong>DESCRIPTION</strong></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NAME</strong></p></th>
+<th class="head"><p><strong>SYNTAX</strong></p></th>
+<th class="head"><p><strong>DESCRIPTION</strong></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>IRR</td>
-<td>IRR (Values, [Guess])</td>
-<td>Returns the internal rate of return for a series of cash flows. Node references also accepted as arguments</td>
+<tbody>
+<tr class="row-even"><td><p>IRR</p></td>
+<td><p>IRR (Values, [Guess])</p></td>
+<td><p>Returns the internal rate of return for a series of cash flows. Node references also accepted as arguments</p></td>
 </tr>
-<tr class="row-odd"><td>NPV</td>
-<td>NPV (Rate, value1, [value2], …)</td>
-<td>Returns the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values)</td>
+<tr class="row-odd"><td><p>NPV</p></td>
+<td><p>NPV (Rate, value1, [value2], …)</p></td>
+<td><p>Returns the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values)</p></td>
 </tr>
-<tr class="row-even"><td>PMT</td>
-<td>PMT(Rate, Nper, PV, [FV], [Type])</td>
-<td>Calculates the payment for a loan based on constant payments and a constant interest rate</td>
+<tr class="row-even"><td><p>PMT</p></td>
+<td><p>PMT(Rate, Nper, PV, [FV], [Type])</p></td>
+<td><p>Calculates the payment for a loan based on constant payments and a constant interest rate</p></td>
 </tr>
-<tr class="row-odd"><td>IPMT</td>
-<td>IPMT (Rate, Per, Nper, PV, [FV], [Type])</td>
-<td>Returns the interest payment for a given period for an investment,based on periodic, constant payments and a constant interest rate</td>
+<tr class="row-odd"><td><p>IPMT</p></td>
+<td><p>IPMT (Rate, Per, Nper, PV, [FV], [Type])</p></td>
+<td><p>Returns the interest payment for a given period for an investment,based on periodic, constant payments and a constant interest rate</p></td>
 </tr>
-<tr class="row-even"><td>FV</td>
-<td>FV (Rate, Nper, [Pmt], PV, [Type])</td>
-<td>Returns the future value of an investment based on periodic, constant payments and a constant interest rate</td>
+<tr class="row-even"><td><p>FV</p></td>
+<td><p>FV (Rate, Nper, [Pmt], PV, [Type])</p></td>
+<td><p>Returns the future value of an investment based on periodic, constant payments and a constant interest rate</p></td>
 </tr>
-<tr class="row-odd"><td>PV</td>
-<td>PV(Rate, Nper, [Pmt], FV, [Type])</td>
-<td>Returns the present value of an investment</td>
+<tr class="row-odd"><td><p>PV</p></td>
+<td><p>PV(Rate, Nper, [Pmt], FV, [Type])</p></td>
+<td><p>Returns the present value of an investment</p></td>
 </tr>
-<tr class="row-even"><td>CUMIPMT</td>
-<td>CUMIPMT (Rate, Nper, PV, start_period, end_period, Type)</td>
-<td>Returns the cumulative interest paid between two periods</td>
+<tr class="row-even"><td><p>CUMIPMT</p></td>
+<td><p>CUMIPMT (Rate, Nper, PV, start_period, end_period, Type)</p></td>
+<td><p>Returns the cumulative interest paid between two periods</p></td>
 </tr>
-<tr class="row-odd"><td>CMPRINC</td>
-<td>CUMPRINC (Rate, Nper, PV, start_period, end_period, Type)</td>
-<td>Returns the cumulative principal paid on a loan between two periods</td>
+<tr class="row-odd"><td><p>CMPRINC</p></td>
+<td><p>CUMPRINC (Rate, Nper, PV, start_period, end_period, Type)</p></td>
+<td><p>Returns the cumulative principal paid on a loan between two periods</p></td>
 </tr>
-<tr class="row-even"><td>RATE</td>
-<td>RATE(Nper, PMT, PV, [FV], [Type], [Guess])</td>
-<td>Returns the interest rate per period of a loan or an investment.</td>
+<tr class="row-even"><td><p>RATE</p></td>
+<td><p>RATE(Nper, PMT, PV, [FV], [Type], [Guess])</p></td>
+<td><p>Returns the interest rate per period of a loan or an investment.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="range-functions">
 <h1>RANGE FUNCTIONS<a class="headerlink" href="#range-functions" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="14%" />
-<col width="30%" />
-<col width="56%" />
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 56%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>NAME</strong></th>
-<th class="head"><strong>SYNTAX</strong></th>
-<th class="head"><strong>DESCRIPTION</strong></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NAME</strong></p></th>
+<th class="head"><p><strong>SYNTAX</strong></p></th>
+<th class="head"><p><strong>DESCRIPTION</strong></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>Range</td>
-<td>.Range(start_index,end_index)</td>
-<td>&#160;</td>
+<tbody>
+<tr class="row-even"><td><p>Range</p></td>
+<td><p>.Range(start_index,end_index)</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td>LastNPeriods</td>
-<td>.LastNPeriods(n)</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p>LastNPeriods</p></td>
+<td><p>.LastNPeriods(n)</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td>Get</td>
-<td>.Get(period_index)</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>Get</p></td>
+<td><p>.Get(period_index)</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td>ForEach</td>
-<td>ForEach(Array,Iterator)</td>
-<td>Iterator function</td>
+<tr class="row-odd"><td><p>ForEach</p></td>
+<td><p>ForEach(Array,Iterator)</p></td>
+<td><p>Iterator function</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="static-identifiers-and-other-formats">
 <h1>STATIC IDENTIFIERS AND OTHER FORMATS<a class="headerlink" href="#static-identifiers-and-other-formats" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="32%" />
-<col width="68%" />
+<col style="width: 32%" />
+<col style="width: 68%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>CONSTANTS</strong></th>
-<th class="head"><strong>EXPLANATION</strong></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>CONSTANTS</strong></p></th>
+<th class="head"><p><strong>EXPLANATION</strong></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>THIS</td>
-<td>Current Node</td>
+<tbody>
+<tr class="row-even"><td><p>THIS</p></td>
+<td><p>Current Node</p></td>
 </tr>
-<tr class="row-odd"><td>ME</td>
-<td>Current Node</td>
+<tr class="row-odd"><td><p>ME</p></td>
+<td><p>Current Node</p></td>
 </tr>
-<tr class="row-even"><td>CURRENT_SERIES</td>
-<td>Current series label</td>
+<tr class="row-even"><td><p>CURRENT_SERIES</p></td>
+<td><p>Current series label</p></td>
 </tr>
-<tr class="row-odd"><td>CURRENT_SERIES_ID</td>
-<td>Current series id</td>
+<tr class="row-odd"><td><p>CURRENT_SERIES_ID</p></td>
+<td><p>Current series id</p></td>
 </tr>
-<tr class="row-even"><td>CURRENT_PERIOD_INDEX</td>
-<td>Current period index</td>
+<tr class="row-even"><td><p>CURRENT_PERIOD_INDEX</p></td>
+<td><p>Current period index</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.PARENT</td>
-<td>Parent Node</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.PARENT</p></td>
+<td><p>Parent Node</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.CHILDREN</td>
-<td>Node children</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.CHILDREN</p></td>
+<td><p>Node children</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.act</td>
-<td>Simulated Series of the node</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act</p></td>
+<td><p>Simulated Series of the node</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.tgt</td>
-<td>Comparison Series of the node</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.tgt</p></td>
+<td><p>Comparison Series of the node</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.base</td>
-<td>Baseline Series of the node</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.base</p></td>
+<td><p>Baseline Series of the node</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.ALL_PERIODS</td>
-<td>Returns all Period values</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.ALL_PERIODS</p></td>
+<td><p>Returns all Period values</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.SIM_PERIODS</td>
-<td>Returns simulation period values</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.SIM_PERIODS</p></td>
+<td><p>Returns simulation period values</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.act.ALL_PERIODS</td>
-<td>Returns all period values of Simulated Series,</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.act.ALL_PERIODS</p></td>
+<td><p>Returns all period values of Simulated Series,</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.tgt.ALL_PERIODS</td>
-<td>Returns all period values of Comparison Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.tgt.ALL_PERIODS</p></td>
+<td><p>Returns all period values of Comparison Series</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.base.ALL_PERIODS</td>
-<td>Returns all period values of Baseline Series</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.base.ALL_PERIODS</p></td>
+<td><p>Returns all period values of Baseline Series</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.act.SIM_PERIODS</td>
-<td>Returns simulation period values of Simulated Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act.SIM_PERIODS</p></td>
+<td><p>Returns simulation period values of Simulated Series</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.tgt.SIM_PERIODS</td>
-<td>Returns simulation period values of Comparison Series</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.tgt.SIM_PERIODS</p></td>
+<td><p>Returns simulation period values of Comparison Series</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.base.SIM_PERIODS</td>
-<td>Returns simulation period values of Baseline Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.base.SIM_PERIODS</p></td>
+<td><p>Returns simulation period values of Baseline Series</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.Range(start_index,end_index)</td>
-<td>Returns selected range values</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.Range(start_index,end_index)</p></td>
+<td><p>Returns selected range values</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.act.Range(start_index,end_index)</td>
-<td>Returns selected range values of Simulated Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act.Range(start_index,end_index)</p></td>
+<td><p>Returns selected range values of Simulated Series</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.base.Range(start_index,end_index)</td>
-<td>Returns selected range values of Comparison Series</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.base.Range(start_index,end_index)</p></td>
+<td><p>Returns selected range values of Comparison Series</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.tgt.Range(start_index,end_index)</td>
-<td>Returns selected range values of Baseline Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.tgt.Range(start_index,end_index)</p></td>
+<td><p>Returns selected range values of Baseline Series</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.Get(period_index)</td>
-<td>Returns selected period value</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.Get(period_index)</p></td>
+<td><p>Returns selected period value</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.act.Get(period_index)</td>
-<td>Returns selected period value of Simulated Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act.Get(period_index)</p></td>
+<td><p>Returns selected period value of Simulated Series</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.base.Get(period_index)</td>
-<td>Returns selected period value of Comparison Series</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.base.Get(period_index)</p></td>
+<td><p>Returns selected period value of Comparison Series</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.tgt.Get(period_index)</td>
-<td>Returns selected period value of Baseline Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.tgt.Get(period_index)</p></td>
+<td><p>Returns selected period value of Baseline Series</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.LastNPeriods(n)</td>
-<td>Returns selected range values</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.LastNPeriods(n)</p></td>
+<td><p>Returns selected range values</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.act.LastNPeriods(n)</td>
-<td>Returns selected range values of Simulated Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.act.LastNPeriods(n)</p></td>
+<td><p>Returns selected range values of Simulated Series</p></td>
 </tr>
-<tr class="row-even"><td>&lt;NODE&gt;.base.LastNPeriods(n)</td>
-<td>Returns selected range values of Comparison Series</td>
+<tr class="row-even"><td><p>&lt;NODE&gt;.base.LastNPeriods(n)</p></td>
+<td><p>Returns selected range values of Comparison Series</p></td>
 </tr>
-<tr class="row-odd"><td>&lt;NODE&gt;.tgt.LastNPeriods(n)</td>
-<td>Returns selected range values of Baseline Series</td>
+<tr class="row-odd"><td><p>&lt;NODE&gt;.tgt.LastNPeriods(n)</p></td>
+<td><p>Returns selected range values of Baseline Series</p></td>
 </tr>
 </tbody>
 </table>
@@ -586,7 +587,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Visual BI Solutions.
+        &copy; Copyright 2019, Visual BI Solutions
 
     </p>
   </div> 
@@ -602,35 +603,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
