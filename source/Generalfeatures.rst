@@ -938,6 +938,64 @@ There is also an option to export the value driver tree data set to xml.
 It will create an unformatted spreadsheet with the tree and all the node
 data.
 
+Workspace in ValQ 
+=============================
+ValQ Workspace is an account provisioned for a dedicated set of users - to help them utilize collaborative features of the product such as saving scenarios, commenting, viewing history logs and managing users. You can setup and manage your workspace by following the below instructions.
+
+1. Creating a workspace
+------------------------
+You can create a workspace when you visit the ValQ.com website followed by signing up for the enterprise trial or purchasing ValQ from the shop.
+At this point, you should also specify the number of users you plan to add to this workspace. The workspace name given here cannot be modified.
+
+.. figure:: _static/W.1.png
+    :align: center
+    :alt: alternate text
+
+Upon creation, you will be assigned as the workspace admin by default, and a link to the workspace admin console is shared to your e-mail address.
+As an admin. you can invite relevant users into the workspace for collaboration. Workspace members can utilize the features of the product, as per the pricing plan selected.
+
+.. figure:: _static/W.2.png
+    :align: center
+    :alt: alternate text
+
+2. Inviting other users to the workspace
+-----------------------------------------
+You can invite other users to the workspace from the Admin Console. After signing up and logging in at the admin portal, you can go to the 'User Manager' section, click 'Add Members' and fill in the users' email address to extend the invitation to the workspace.
+The invited members would receive an email notification. The members can sign into ValQ using the 'Login' button.
+
+.. figure:: _static/W.4.png
+    :align: center
+    :alt: alternate text
+
+3. Assigning roles for the workspace users
+-------------------------------------------
+As an admin, you can choose between 'Member' and 'Admin' as roles for the users in the workspace. You can also remove any users, if needed. This is available at the 'User Manager' section in the admin console.
+
+.. figure:: _static/W.5.png
+    :align: center
+    :alt: alternate text
+
+4. Choosing a workspace
+------------------------
+If you are an user with access to multiple workspaces, you can choose between these workspaces during the login at the ValQ custom visual.
+
+If you are an admin managing different workspaces, you can also choose between workspaces during the login. Additionally, you can select or switch between these workspaces at the profile dropdown within Admin Console.
+
+.. figure:: _static/W.6.png
+    :align: center
+    :alt: alternate text
+
+5. Workspace for pricing plans
+-----------------------------------
+You can utilize the advantages of having a workspace by purchasing our 'Teams Pricing' or adding multiple users to our 'Per User Pricing'.
+
+For example, our Professional plan under Teams Pricing comes with a discounted price for 25 users or more.
+You would have to fill-in the Workspace name while purchasing a plan. Upon successful purchase, all the 25 or more users will be able to access the workspace.
+
+.. figure:: _static/W.7.png
+    :align: center
+    :alt: alternate text
+
 .. |visualBI_final| image:: media/image1.png
    :width: 2.30208in
    :height: 0.88542in

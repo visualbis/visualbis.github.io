@@ -1,74 +1,116 @@
 Storage and Collaboration
 =========================
 
-The storage feature allows user to access, store, audit, collaborate, synchronize, and run further analysis on the baseline, comparison, and the simulated data series across the entire model scenarios.
-Users require a dedicated ValQ workspace access authenticated by their Office 365 credentials.
+You can use this enhancement on the product to upload, save & store, audit, comment, and collaborate on your model. You can also export and/or run further analysis on the baseline, comparison, and the simulated data series available across the entire model.
 
-After successful login, user can see additional options such as Sync, Comments, and History Log
+1. Uploading the ValQ Model
+----------------------------
 
-.. figure:: _static/SC.1.png   
+After logging in to the relevant workspace, you can see the 'Upload' button and your profile icon at the bezel. 
+
+.. figure:: _static/SC5.1.png   
     :align: center
     :alt: alternate text   
 
-In the screenshot model, lets assume the user deletes a node 'Ryan Smith' 
+.. figure:: _static/SC5.2.png   
+    :align: center
+    :alt: alternate text   
 
-.. figure:: _static/SC.2.1.png   
+
+In the screenshot model, lets assume you delete a node 'Ryan Smith' 
+
+.. figure:: _static/SC5.3.png   
     :align: center
     :alt: alternate text  
 
-Lets also assume the user simulates on another node 'Chris Morris'
 
-.. figure:: _static/SC.2.2.png   
+Lets also assume you simulate on the node 'Chris Morris'
+
+.. figure:: _static/SC5.4.png   
     :align: center
     :alt: alternate text  
 
-User can comment on the changes made by clicking the 'Comments' icon on top of the node. The comment along with the username and time log is saved and displayed.
 
-.. figure:: _static/SC.3.png   
+You can save these changes at the workspace by clicking 'Upload' near your profile icon, naming your model, and clicking 'upload' at the popup window.
+
+.. figure:: _static/SC5.5.png   
+    :align: center
+    :alt: alternate text 
+
+
+Once your model is uploaded, you can see additional icons at the bezel such as Save, Comments, and additional options having Exporting, History log, & Settings.
+
+.. figure:: _static/SC5.6.png   
+    :align: center
+    :alt: alternate text 
+
+2. Commenting
+--------------
+
+You can comment on the changes you have made by clicking the 'Comment' icon on top of the node. After posting, your comment is saved alongside your username and time log.
+
+.. figure:: _static/SC5.7.png   
+    :align: center
+    :alt: alternate text  
+.. figure:: _static/SC5.8.png   
+    :align: center
+    :alt: alternate text
+
+Alternatively, you can check the comment log for the entire model by clicking 'Comments' icon at the bezel.
+Comments are displayed at a Scenario-Node level.
+
+.. figure:: _static/SC5.10.png   
     :align: center
     :alt: alternate text  
 
-User can synchronize and store the changes to the workspace by clicking the 'Sync' icon, naming the model, and clicking 'Upload'.
+3. History Log
+---------------
 
-.. figure:: _static/SC.4.png   
+As you go to additional options and click 'History Log', you can see the model and scenario level changes made in a chronological order.
+This feature helps with auditing the ValQ model.
+
+.. figure:: _static/SC5.9.png   
     :align: center
     :alt: alternate text  
 
-The 'History Log' has captured the model and scenario level changes made by the user in a chronological order.
-This icon helps in auditing the changes in the ValQ model.
+4. Collaboration
+-----------------
 
-.. figure:: _static/SC.5.png   
-    :align: center
-    :alt: alternate text  
+After saving, you can collaborate on your model changes with other users under the same workspace.
+Assuming a 'Member' from the workspace simulates on the existing scenario, creates a new scenario, deletes another node, comments on the changes made, and saves the model.
 
-The comments can also be tracked under the model level 'Comments' icon.
-Comments window displays all user comments at Scenario-Node level.
+Once you log back in, all the changes in the ValQ model made by the member are available for viewing.
 
-.. figure:: _static/SC.6.png   
-    :align: center
-    :alt: alternate text  
-
-ValQ has also been made collaborative - Users who are a part of the same workspace can also collaborate on the same ValQ model.
-Assuming a second user accessing the same model simulates on the existing scenario, creates additional scenario, adds a new node, and comments on the changes done.
-To store these changes, the user also synchronizes them to the workapce.
-
-Once the first user logs in, all the changes made by the second user are synced up and displayed at the ValQ canvas.
-
-.. figure:: _static/SC.7.png   
+.. figure:: _static/SC5.11.png   
     :align: center
     :alt: alternate text  
 
 The changes at a Model/Scenario level are captured at the History Log.
-The comments in chronological order between users are displayed at a Node-Scenario level
+The comments between the users are displayed at a Node-Scenario level under the 'Comments' icon.
 
-.. figure:: _static/SC.8.png   
+.. figure:: _static/SC5.12.png   
     :align: center
     :alt: alternate text  
 
-Lastly, users can also export their export all the data values fed and generated from ValQ - namely, basline, comparison, and scenario data.
-Under the 'Sync' window, users can export their ValQ data by clicking 'Export model as a web data source', making the data series and scenario selection, and clicking 'Download CSV' (through Power BI Service) or copy-pasting the URLs into Excel (through Power BI Desktop)
+5. Export
+----------
 
-.. figure:: _static/SC.9.1.png   
+Lastly, you can also export all the data values (baseline, comparison, and scenario data) fed and generated at ValQ.
+You can export by clicking the 'Export as datasource' option at the additional options dropdown. 
+
+.. figure:: _static/SC5.16.png   
+    :align: center
+    :alt: alternate text  
+
+Click on the data values you would like to export at the popup.
+
+.. figure:: _static/SC5.14.png   
+    :align: center
+    :alt: alternate text  
+
+Click 'Download CSV' (through Power BI Service) or copy-paste the URLs into Excel (through Power BI Desktop)
+
+.. figure:: _static/SC5.15.png   
     :align: center
     :alt: alternate text  
 
@@ -78,7 +120,9 @@ In Excel, the copied URLs are fed into the 'From Web' - 'Advanced' window to gen
     :align: center
     :alt: alternate text  
 
-Users can also run further simulations to their scenarios and instantly synchronize the new data by refreshing the data query within 'Queries & Connections' in Excel.
+6. Live Syncing export with the ValQ model
+---------------------------------------
+Users can also run further simulations to their scenarios and instantly synchronize the new data at the export file by refreshing the data query within 'Queries & Connections'.
 
 .. figure:: _static/SC.11.png   
     :align: center
