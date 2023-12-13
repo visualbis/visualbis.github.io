@@ -1,7 +1,7 @@
 
 # Inforiver Premium 1.0
 
-Release Date: Jan 22
+## Release Date: Jan 22
 
 - Annotation: Annotate your data directly in the visualization for deeper analysis and communication.
 - Sparkline Enhancements: Customize the value ranges for bullet charts, differentiate target bars in custom bullet charts, and leverage a 4 quartile scale band for enhanced analysis.
@@ -17,11 +17,11 @@ Release Date: Jan 22
 - Label Changes: Improved clarity with "Report+" instead of "Reports+".
 - Ruler Numbering: Indication on the ruler when hiding rows.
 
-Inforiver Premium 1.2
+# Inforiver Premium 1.2
 
-Release Date: Feb 22
+## Release Date: Feb 22
 
-Reports+ Enhancements:
+### Reports+ Enhancements:
 
 - Scroll for Header/Footer Resize: Resizing header/footer now triggers scroll functionality.
 - Word Wrap Options: Added word wrap options for rows, columns, both, and off.
@@ -29,7 +29,7 @@ Reports+ Enhancements:
 - Search Tags: Added "Sign in header" search tags for Display tab search.
 - Template Row for Balanced Hierarchy: Users can now add a template row to the lowest child level for balanced hierarchies.
 
-General Enhancements:
+### General Enhancements:
 
 - Conditional Formatting Symbols: Users can now change text to symbols in conditional formatting.
 - Blend Measure Limitations: Clarified that "Simulation, % contribution to parent, % Contribution to Grand total features won't be supported for blend measure as of now."
@@ -47,9 +47,9 @@ General Enhancements:
 - IBCS Performance Matrix Themes: Implemented a standard IBCS theme and another theme with thicker strokes, no minor gridlines, etc. for improved first impression.
 - Stepped Layout Subtotals: Added option to show/hide subtotals when only child in stepped layout.
 
-Inforiver Premium 1.3
+# Inforiver Premium 1.3
 
-Release Date: Mar 22
+## Release Date: Mar 22
 
 - Audit Log: Tracks changes made to dashboards and reports.
 - Blend Measure: Creates a new measure by combining two existing measures.
@@ -71,9 +71,9 @@ Release Date: Mar 22
 - Rows & Columns: Allows you to add, remove, and resize rows and columns in your dashboards and reports.
 - Header & Footer Customizations: Allows you to customize the header and footer of your dashboards and reports.
 
-Inforiver Premium 1.4
+# Inforiver Premium 1.4
 
-Release Date: April 22
+## Release Date: April 22
 
 - Column Gripper Sub Menu Position: Users can adjust the position of the sub menu within the column gripper.
 - Export and Import Configuration: Users can export and import their configuration settings for the column gripper.
@@ -85,9 +85,9 @@ Release Date: April 22
 - Sparkline - Few Recommendations from Reid: This feature implements specific recommendations made by Reid to improve the Sparklines functionality.
 - Split View: Ability to split by column break: Users can split the view by a specific column break
 
-Inforiver Premium 1.5
+# Inforiver Premium 1.5
 
-Release Date: May 22
+## Release Date: May 22
 
 - Cross-filtering: KPI Explorer selections now filter other visuals on the dashboard.
 - Ragged Hierarchy, Column break: Hide rows based on the current page in the Column break.
